@@ -1,0 +1,2 @@
+https://devblogs.microsoft.com/commandline/connecting-usb-devices-to-wsl/
+https://devblogs.microsoft.com/commandline/oneapi-l0-openvino-and-opencl-coming-to-the-windows-subsystem-for-linux-for-intel-gpus/

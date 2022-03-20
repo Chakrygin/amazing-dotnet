@@ -1,0 +1,23 @@
+name: Scrape
+description: Scrape
+
+runs:
+  using: node16
+  main: dist/index.js
+
+inputs:
+  GITHUB_TOKEN:
+    description: GITHUB_TOKEN
+    required: true
+
+  TELEGRAM_TOKEN:
+    description: TELEGRAM_TOKEN
+    required: true
+
+  TELEGRAM_PUBLIC_CHAT_ID:
+    description: TELEGRAM_PUBLIC_CHAT_ID
+    required: true
+
+  TELEGRAM_REPORT_CHAT_ID:
+    description: TELEGRAM_REPORT_CHAT_ID
+    required: true

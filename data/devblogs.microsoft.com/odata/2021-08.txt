@@ -1,0 +1,3 @@
+https://devblogs.microsoft.com/odata/adding-support-for-count-segment-in-filter-collections-in-odata-webapi/
+https://devblogs.microsoft.com/odata/build-formatter-extensions-in-asp-net-core-odata-8-and-hooks-in-odataconnectedservice/
+https://devblogs.microsoft.com/odata/support-for-fetching-nested-paths-in-odata-web-api/

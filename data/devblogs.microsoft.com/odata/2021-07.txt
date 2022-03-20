@@ -1,0 +1,3 @@
+https://devblogs.microsoft.com/odata/api-versioning-extension-with-asp-net-core-odata-8/
+https://devblogs.microsoft.com/odata/tutorial-creating-a-service-with-odata-8-0/
+https://devblogs.microsoft.com/odata/up-running-w-odata-in-asp-net-6/

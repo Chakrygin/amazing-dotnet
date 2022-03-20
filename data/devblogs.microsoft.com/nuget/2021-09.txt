@@ -1,0 +1,2 @@
+https://devblogs.microsoft.com/nuget/introducing-package-source-mapping/
+https://devblogs.microsoft.com/nuget/introducing-the-new-nuget-org-package-details-page/

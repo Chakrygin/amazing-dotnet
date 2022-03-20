@@ -1,0 +1,4 @@
+https://devblogs.microsoft.com/dotnet/announcing-entity-framework-7-preview-1/
+https://devblogs.microsoft.com/dotnet/dotnet-loves-github-actions/
+https://devblogs.microsoft.com/dotnet/early-peek-at-csharp-11-features/
+https://devblogs.microsoft.com/dotnet/training-a-ml-dotnet-model-with-azure-ml/

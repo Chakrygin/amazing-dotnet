@@ -1,2 +1,1 @@
-# amazing-dotnet
- 
+# Amazing .NET

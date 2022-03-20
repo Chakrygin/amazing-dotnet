@@ -1,0 +1,2 @@
+https://devblogs.microsoft.com/commandline/windows-terminal-as-your-default-command-line-experience/
+https://devblogs.microsoft.com/commandline/windows-wednesday/
