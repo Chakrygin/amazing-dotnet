@@ -35,7 +35,7 @@ async function main() {
       }),
 
       new DevBlogsScraper({
-        name: 'devblogs.microsoft.com/dotnet',
+        name: 'devblogs.microsoft.com/odata',
         blog: {
           title: 'OData',
           link: 'https://devblogs.microsoft.com/odata/',
@@ -43,7 +43,7 @@ async function main() {
       }),
 
       new DevBlogsScraper({
-        name: 'devblogs.microsoft.com/dotnet',
+        name: 'devblogs.microsoft.com/nuget',
         blog: {
           title: 'The NuGet Blog',
           link: 'https://devblogs.microsoft.com/nuget/',
@@ -51,7 +51,7 @@ async function main() {
       }),
 
       new DevBlogsScraper({
-        name: 'devblogs.microsoft.com/dotnet',
+        name: 'devblogs.microsoft.com/typescript',
         blog: {
           title: 'TypeScript',
           link: 'https://devblogs.microsoft.com/typescript/',
@@ -59,7 +59,7 @@ async function main() {
       }),
 
       new DevBlogsScraper({
-        name: 'devblogs.microsoft.com/dotnet',
+        name: 'devblogs.microsoft.com/visualstudio',
         blog: {
           title: 'Visual Studio Blog',
           link: 'https://devblogs.microsoft.com/visualstudio/',
@@ -67,7 +67,7 @@ async function main() {
       }),
 
       new DevBlogsScraper({
-        name: 'devblogs.microsoft.com/dotnet',
+        name: 'devblogs.microsoft.com/commandline',
         blog: {
           title: 'Windows Command Line',
           link: 'https://devblogs.microsoft.com/commandline/',

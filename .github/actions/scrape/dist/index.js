@@ -39532,35 +39532,35 @@ function main() {
                     },
                 }),
                 new devblogs_1.DevBlogsScraper({
-                    name: 'devblogs.microsoft.com/dotnet',
+                    name: 'devblogs.microsoft.com/odata',
                     blog: {
                         title: 'OData',
                         link: 'https://devblogs.microsoft.com/odata/',
                     },
                 }),
                 new devblogs_1.DevBlogsScraper({
-                    name: 'devblogs.microsoft.com/dotnet',
+                    name: 'devblogs.microsoft.com/nuget',
                     blog: {
                         title: 'The NuGet Blog',
                         link: 'https://devblogs.microsoft.com/nuget/',
                     },
                 }),
                 new devblogs_1.DevBlogsScraper({
-                    name: 'devblogs.microsoft.com/dotnet',
+                    name: 'devblogs.microsoft.com/typescript',
                     blog: {
                         title: 'TypeScript',
                         link: 'https://devblogs.microsoft.com/typescript/',
                     },
                 }),
                 new devblogs_1.DevBlogsScraper({
-                    name: 'devblogs.microsoft.com/dotnet',
+                    name: 'devblogs.microsoft.com/visualstudio',
                     blog: {
                         title: 'Visual Studio Blog',
                         link: 'https://devblogs.microsoft.com/visualstudio/',
                     },
                 }),
                 new devblogs_1.DevBlogsScraper({
-                    name: 'devblogs.microsoft.com/dotnet',
+                    name: 'devblogs.microsoft.com/commandline',
                     blog: {
                         title: 'Windows Command Line',
                         link: 'https://devblogs.microsoft.com/commandline/',
