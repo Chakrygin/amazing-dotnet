@@ -5,7 +5,7 @@ export interface Post {
   readonly date: Date;
   readonly blog: Blog;
   readonly author: Author;
-  readonly description: string | string[];
+  readonly description: string[];
   readonly tags: Tag[];
 }
 
@@ -22,4 +22,9 @@ export interface Author {
 export interface Tag {
   readonly title: string;
   readonly link: string;
+}
+
+export module Post {
+  function validate(post: Post) {
+  }
 }

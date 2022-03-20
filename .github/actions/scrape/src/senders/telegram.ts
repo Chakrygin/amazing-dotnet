@@ -1,9 +1,6 @@
 import { Telegram } from 'telegraf'
-
 import { Sender } from '../abstractions';
 import { Post } from '../models'
-
-const THROTTLE_DELAY = 5000;
 
 export interface TelegramSenderOptions {
   readonly token: string;
@@ -23,11 +20,9 @@ export class TelegramSender implements Sender {
     const chatId = this.options.publicChatId;
     const message = this.getPostMessage(post);
 
-    await this.throttle(async () => {
-      await this.telegram.sendPhoto(chatId, post.image, {
-        caption: message,
-        parse_mode: 'HTML',
-      });
+    await this.telegram.sendPhoto(chatId, post.image, {
+      caption: message,
+      parse_mode: 'HTML',
     });
   }
 
@@ -70,39 +65,6 @@ export class TelegramSender implements Sender {
     return lines.join('\n\n');
   }
 
-  async sendError(title: string, error: string | Error) {
-    const chatId = this.options.reportChatId;
-    const message = this.getErrorMessage(title, error);
-
-    await this.telegram.sendMessage(chatId, message, {
-      disable_web_page_preview: true,
-      parse_mode: 'Markdown',
-    });
-  }
-
-  private getErrorMessage(title: string, error: string | Error): string {
-    var lines = [];
-
-    lines.push(`⚠️ **${title}**`);
-
-    if (error instanceof Error) {
-      lines.push(`${error.name} : ${error.message}`);
-
-      if (error.stack) {
-        lines.push('```');
-        lines.push(error.stack);
-        lines.push('```');
-      }
-    }
-    else {
-      lines.push('```');
-      lines.push(error);
-      lines.push('```');
-    }
-
-    return lines.join('\n');
-  }
-
   private getLinkHtml(entity: { title: string, link: string }, style?: 'bold'): string {
     if (style === 'bold') {
       return `<a href="${entity.link}"><b>${entity.title}</b></a>`;
@@ -119,12 +81,5 @@ export class TelegramSender implements Sender {
     });
 
     return `<b>${text}</b>`;
-  }
-
-  private async throttle(func: () => Promise<void>) {
-    await this.delay;
-    await func();
-
-    this.delay = new Promise<void>(resolve => setTimeout(resolve, THROTTLE_DELAY));
   }
 }

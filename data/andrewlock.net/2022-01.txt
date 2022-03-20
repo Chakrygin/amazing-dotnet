@@ -1,0 +1,4 @@
+https://andrewlock.net/creating-a-source-generator-part-4-customising-generated-code-with-marker-attributes/
+https://andrewlock.net/creating-a-source-generator-part-5-finding-a-type-declarations-namespace-and-type-hierarchy/
+https://andrewlock.net/creating-a-source-generator-part-6-saving-source-generator-output-in-source-control/
+https://andrewlock.net/creating-a-source-generator-part-7-solving-the-source-generator-marker-attribute-problem-part1/

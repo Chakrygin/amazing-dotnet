@@ -2,8 +2,10 @@ name: Scrape
 
 on:
   push:
+    paths:
+      - .github/**
   schedule:
-    - cron: 42 * * * *
+    - cron: 42 */2 * * *
 
 jobs:
   Hello:

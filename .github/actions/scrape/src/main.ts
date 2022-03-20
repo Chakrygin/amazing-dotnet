@@ -8,52 +8,71 @@ import { DevBlogsScraper } from './scrapers/devblogs';
 
 import { ConsoleSender } from './senders/console';
 import { TelegramSender } from './senders/telegram';
+import { ThrottleSender } from './senders/throttle'
 
 async function main() {
   try {
 
     const scrapers: Scraper[] = [
-      new DevBlogsScraper({
-        name: 'DevBlogs / .NET Blog',
-        path: 'devblogs.microsoft.com/dotnet',
-        url: 'https://devblogs.microsoft.com/dotnet/',
+      new AndrewLockScraper({
+        name: 'andrewlock.net',
+        blog: {
+          title: '.NET Escapades',
+          link: 'https://andrewlock.net/',
+        },
+        author: {
+          title: 'Andrew Lock',
+          link: 'https://andrewlock.net/about/',
+        },
       }),
 
       new DevBlogsScraper({
-        name: 'DevBlogs / OData Blog',
-        path: 'devblogs.microsoft.com/odata',
-        url: 'https://devblogs.microsoft.com/odata/',
+        name: 'devblogs.microsoft.com/dotnet',
+        blog: {
+          title: '.NET Blog',
+          link: 'https://devblogs.microsoft.com/dotnet/',
+        },
       }),
 
       new DevBlogsScraper({
-        name: 'DevBlogs / NuGet Blog',
-        path: 'devblogs.microsoft.com/nuget',
-        url: 'https://devblogs.microsoft.com/nuget/',
+        name: 'devblogs.microsoft.com/dotnet',
+        blog: {
+          title: 'OData',
+          link: 'https://devblogs.microsoft.com/odata/',
+        },
       }),
 
       new DevBlogsScraper({
-        name: 'DevBlogs / TypeScript Blog',
-        path: 'devblogs.microsoft.com/typescript',
-        url: 'https://devblogs.microsoft.com/typescript/',
+        name: 'devblogs.microsoft.com/dotnet',
+        blog: {
+          title: 'The NuGet Blog',
+          link: 'https://devblogs.microsoft.com/nuget/',
+        },
       }),
 
       new DevBlogsScraper({
-        name: 'DevBlogs / Visual Studio Blog',
-        path: 'devblogs.microsoft.com/visualstudio',
-        url: 'https://devblogs.microsoft.com/visualstudio/',
+        name: 'devblogs.microsoft.com/dotnet',
+        blog: {
+          title: 'TypeScript',
+          link: 'https://devblogs.microsoft.com/typescript/',
+        },
       }),
 
       new DevBlogsScraper({
-        name: 'DevBlogs / Windows Command Line Blog',
-        path: 'devblogs.microsoft.com/commandline',
-        url: 'https://devblogs.microsoft.com/commandline/',
+        name: 'devblogs.microsoft.com/dotnet',
+        blog: {
+          title: 'Visual Studio Blog',
+          link: 'https://devblogs.microsoft.com/visualstudio/',
+        },
       }),
 
-      // new AndrewLockScraper({
-      //   name: 'AndrewLock',
-      //   path: 'andrewlock.net',
-      //   // url: 'https://andrewlock.net/rss.xml',
-      // }),
+      new DevBlogsScraper({
+        name: 'devblogs.microsoft.com/dotnet',
+        blog: {
+          title: 'Windows Command Line',
+          link: 'https://devblogs.microsoft.com/commandline/',
+        },
+      }),
     ];
 
     const sender = createSender();
@@ -70,20 +89,22 @@ async function main() {
 
 function createSender(): Sender {
   if (!process.env.CI || github.context.ref === 'refs/heads/main') {
-    return new TelegramSender({
-      token: getInputString('TELEGRAM_TOKEN'),
-      publicChatId: getInputString('TELEGRAM_PUBLIC_CHAT_ID'),
-      reportChatId: getInputString('TELEGRAM_REPORT_CHAT_ID'),
+    const sender = new TelegramSender({
+      token: getInput('TELEGRAM_TOKEN'),
+      publicChatId: getInput('TELEGRAM_PUBLIC_CHAT_ID'),
+      reportChatId: getInput('TELEGRAM_REPORT_CHAT_ID'),
     });
+
+    return new ThrottleSender(sender, 5000);
   }
 
   return new ConsoleSender();
 }
 
-function getInputString(name: string): string {
+function getInput(name: string): string {
   const value = process.env.CI
     ? core.getInput(name)
-    : process.env[name] ?? '';
+    : process.env[name];
 
   if (!value) {
     const from = process.env.CI ? 'action inputs' : 'environment variables';

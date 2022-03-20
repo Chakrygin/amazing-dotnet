@@ -1,20 +1,19 @@
-import * as core from '@actions/core'
-import fs from 'fs'
+import * as core from '@actions/core';
 
+import fs from 'fs';
 import { join } from 'path';
+
 import { Scraper, Sender } from "../abstractions";
 
 export interface ScraperOptions {
   readonly name: string;
-  readonly path: string;
 }
 
 export abstract class ScraperBase<TOptions extends ScraperOptions> implements Scraper {
-
   constructor(
     protected readonly options: TOptions) { }
 
-  protected readonly storage = new ScraperStorage(this.options.path);
+  protected readonly storage = new ScraperStorage(this.options.name);
 
   async scrape(sender: Sender): Promise<void> {
     await core.group(this.options.name, async () => {
@@ -22,8 +21,7 @@ export abstract class ScraperBase<TOptions extends ScraperOptions> implements Sc
         await this.scrapeInternal(sender);
       }
       catch (error: any) {
-        core.error(error);
-        await sender.sendError(this.options.name, error);
+        core.setFailed(error);
       }
 
       this.storage.save();
@@ -31,7 +29,6 @@ export abstract class ScraperBase<TOptions extends ScraperOptions> implements Sc
   }
 
   protected abstract scrapeInternal(sender: Sender): Promise<void>;
-
 }
 
 class ScraperStorage {
@@ -58,6 +55,10 @@ class ScraperStorage {
   }
 
   private getFileKey(date: Date): string {
+    if (isNaN(date.valueOf())) {
+      throw new Error('Invalid date: ' + date);
+    }
+
     return date.toISOString().substring(0, 7);
   }
 

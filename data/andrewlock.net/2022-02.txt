@@ -1,0 +1,4 @@
+https://andrewlock.net/creating-a-source-generator-part-8-solving-the-source-generator-marker-attribute-problem-part2/
+https://andrewlock.net/finding-the-urls-of-an-aspnetcore-app-from-a-hosted-service-in-dotnet-6/
+https://andrewlock.net/netescapades-enumgenerators-a-source-generator-for-enum-performance/
+https://andrewlock.net/stop-lying-about-netstandard-2-support/

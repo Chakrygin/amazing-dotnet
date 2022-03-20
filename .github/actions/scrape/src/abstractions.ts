@@ -6,5 +6,4 @@ export interface Scraper {
 
 export interface Sender {
   sendPost(post: Post): Promise<void>;
-  sendError(title: string, error: string | Error): Promise<void>;
 }
