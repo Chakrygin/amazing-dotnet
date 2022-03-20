@@ -1,2 +1,1 @@
-https://andrewlock.net/a-deep-dive-into-the-new-task-waitasync-api-in-dotnet-6/
 https://andrewlock.net/cancelling-await-calls-in-dotnet-6-with-task-waitasync/
