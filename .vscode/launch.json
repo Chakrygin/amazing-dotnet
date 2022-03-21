@@ -7,12 +7,12 @@
       "name": "Launch Scrape",
       "console": "integratedTerminal",
       "cwd": "${workspaceFolder}",
-      "program": "./.github/actions/scrape/src/main.ts",
+      "program": "src/main.ts",
       "envFile": "${env:USERPROFILE}/envs/${workspaceFolderBasename}.env",
       "runtimeArgs": [
         "--nolazy",
         "-r",
-        "./.github/actions/scrape/node_modules/ts-node/register"
+        "./node_modules/ts-node/register"
       ],
       "sourceMaps": true,
       "protocol": "inspector",

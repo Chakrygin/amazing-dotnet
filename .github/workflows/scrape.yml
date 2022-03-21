@@ -3,7 +3,7 @@ name: Scrape
 on:
   push:
     paths:
-      - .github/**
+      - dist/**
   schedule:
     - cron: 42 */2 * * *
 
@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Scrape
-        uses: ./.github/actions/scrape
+        uses: ./
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
