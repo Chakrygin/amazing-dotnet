@@ -1,8 +1,4 @@
 #!/bin/sh
 
-for action in $(find ".github/actions" -name "action.yml"); do
-    pushd "$(dirname $action)"
-    npm run build
-    git add "dist/index.js"
-    popd
-done
+npm run build
+git add "dist/index.js"

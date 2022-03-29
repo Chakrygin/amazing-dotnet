@@ -3798,7 +3798,7 @@ exports.request = request;
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 
-var eventTargetShim = __nccwpck_require__(4697);
+var eventTargetShim = __nccwpck_require__(4852);
 
 /**
  * The signal class.
@@ -12842,7 +12842,7 @@ exports.colors = [6, 2, 3, 4, 5, 1];
 try {
 	// Optional dependency (as in, doesn't need to be installed, NOT like optionalDependencies in package.json)
 	// eslint-disable-next-line import/no-extraneous-dependencies
-	const supportsColor = __nccwpck_require__(132);
+	const supportsColor = __nccwpck_require__(9318);
 
 	if (supportsColor && (supportsColor.stderr || supportsColor).level >= 2) {
 		exports.colors = [
@@ -15432,7 +15432,7 @@ Object.defineProperty(exports, "decodeXMLStrict", ({ enumerable: true, get: func
 
 /***/ }),
 
-/***/ 4697:
+/***/ 4852:
 /***/ ((module, exports) => {
 
 "use strict";
@@ -16910,6 +16910,22 @@ function isSubdomain(subdomain, domain) {
 // Exports
 module.exports = wrap({ http: http, https: https });
 module.exports.wrap = wrap;
+
+
+/***/ }),
+
+/***/ 1621:
+/***/ ((module) => {
+
+"use strict";
+
+
+module.exports = (flag, argv = process.argv) => {
+	const prefix = flag.startsWith('-') ? '' : (flag.length === 1 ? '-' : '--');
+	const position = argv.indexOf(prefix + flag);
+	const terminatorPosition = argv.indexOf('--');
+	return position !== -1 && (terminatorPosition === -1 || position < terminatorPosition);
+};
 
 
 /***/ }),
@@ -31656,6 +31672,149 @@ exports["default"] = SandwichStream;
 
 /***/ }),
 
+/***/ 9318:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+"use strict";
+
+const os = __nccwpck_require__(2037);
+const tty = __nccwpck_require__(6224);
+const hasFlag = __nccwpck_require__(1621);
+
+const {env} = process;
+
+let forceColor;
+if (hasFlag('no-color') ||
+	hasFlag('no-colors') ||
+	hasFlag('color=false') ||
+	hasFlag('color=never')) {
+	forceColor = 0;
+} else if (hasFlag('color') ||
+	hasFlag('colors') ||
+	hasFlag('color=true') ||
+	hasFlag('color=always')) {
+	forceColor = 1;
+}
+
+if ('FORCE_COLOR' in env) {
+	if (env.FORCE_COLOR === 'true') {
+		forceColor = 1;
+	} else if (env.FORCE_COLOR === 'false') {
+		forceColor = 0;
+	} else {
+		forceColor = env.FORCE_COLOR.length === 0 ? 1 : Math.min(parseInt(env.FORCE_COLOR, 10), 3);
+	}
+}
+
+function translateLevel(level) {
+	if (level === 0) {
+		return false;
+	}
+
+	return {
+		level,
+		hasBasic: true,
+		has256: level >= 2,
+		has16m: level >= 3
+	};
+}
+
+function supportsColor(haveStream, streamIsTTY) {
+	if (forceColor === 0) {
+		return 0;
+	}
+
+	if (hasFlag('color=16m') ||
+		hasFlag('color=full') ||
+		hasFlag('color=truecolor')) {
+		return 3;
+	}
+
+	if (hasFlag('color=256')) {
+		return 2;
+	}
+
+	if (haveStream && !streamIsTTY && forceColor === undefined) {
+		return 0;
+	}
+
+	const min = forceColor || 0;
+
+	if (env.TERM === 'dumb') {
+		return min;
+	}
+
+	if (process.platform === 'win32') {
+		// Windows 10 build 10586 is the first Windows release that supports 256 colors.
+		// Windows 10 build 14931 is the first release that supports 16m/TrueColor.
+		const osRelease = os.release().split('.');
+		if (
+			Number(osRelease[0]) >= 10 &&
+			Number(osRelease[2]) >= 10586
+		) {
+			return Number(osRelease[2]) >= 14931 ? 3 : 2;
+		}
+
+		return 1;
+	}
+
+	if ('CI' in env) {
+		if (['TRAVIS', 'CIRCLECI', 'APPVEYOR', 'GITLAB_CI', 'GITHUB_ACTIONS', 'BUILDKITE'].some(sign => sign in env) || env.CI_NAME === 'codeship') {
+			return 1;
+		}
+
+		return min;
+	}
+
+	if ('TEAMCITY_VERSION' in env) {
+		return /^(9\.(0*[1-9]\d*)\.|\d{2,}\.)/.test(env.TEAMCITY_VERSION) ? 1 : 0;
+	}
+
+	if (env.COLORTERM === 'truecolor') {
+		return 3;
+	}
+
+	if ('TERM_PROGRAM' in env) {
+		const version = parseInt((env.TERM_PROGRAM_VERSION || '').split('.')[0], 10);
+
+		switch (env.TERM_PROGRAM) {
+			case 'iTerm.app':
+				return version >= 3 ? 3 : 2;
+			case 'Apple_Terminal':
+				return 2;
+			// No default
+		}
+	}
+
+	if (/-256(color)?$/i.test(env.TERM)) {
+		return 2;
+	}
+
+	if (/^screen|^xterm|^vt100|^vt220|^rxvt|color|ansi|cygwin|linux/i.test(env.TERM)) {
+		return 1;
+	}
+
+	if ('COLORTERM' in env) {
+		return 1;
+	}
+
+	return min;
+}
+
+function getSupportLevel(stream) {
+	const level = supportsColor(stream, stream && stream.isTTY);
+	return translateLevel(level);
+}
+
+module.exports = {
+	supportsColor: getSupportLevel,
+	stdout: translateLevel(supportsColor(true, tty.isatty(1))),
+	stderr: translateLevel(supportsColor(true, tty.isatty(2)))
+};
+
+
+/***/ }),
+
 /***/ 4256:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
@@ -39520,72 +39679,37 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const core = __importStar(__nccwpck_require__(2186));
 const github = __importStar(__nccwpck_require__(5438));
-const andrewlock_1 = __nccwpck_require__(1113);
-const devblogs_1 = __nccwpck_require__(1145);
-const console_1 = __nccwpck_require__(3899);
-const telegram_1 = __nccwpck_require__(7228);
-const throttle_1 = __nccwpck_require__(9996);
+const scrapers_1 = __nccwpck_require__(4697);
+const senders_1 = __nccwpck_require__(4346);
+const storage_1 = __nccwpck_require__(9898);
 function main() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
             const scrapers = [
-                new andrewlock_1.AndrewLockScraper({
-                    name: 'andrewlock.net',
-                    blog: {
-                        title: '.NET Escapades',
-                        link: 'https://andrewlock.net/',
-                    },
-                    author: {
-                        title: 'Andrew Lock',
-                        link: 'https://andrewlock.net/about/',
-                    },
-                }),
-                new devblogs_1.DevBlogsScraper({
-                    name: 'devblogs.microsoft.com/dotnet',
-                    blog: {
-                        title: '.NET Blog',
-                        link: 'https://devblogs.microsoft.com/dotnet/',
-                    },
-                }),
-                new devblogs_1.DevBlogsScraper({
-                    name: 'devblogs.microsoft.com/odata',
-                    blog: {
-                        title: 'OData',
-                        link: 'https://devblogs.microsoft.com/odata/',
-                    },
-                }),
-                new devblogs_1.DevBlogsScraper({
-                    name: 'devblogs.microsoft.com/nuget',
-                    blog: {
-                        title: 'The NuGet Blog',
-                        link: 'https://devblogs.microsoft.com/nuget/',
-                    },
-                }),
-                new devblogs_1.DevBlogsScraper({
-                    name: 'devblogs.microsoft.com/typescript',
-                    blog: {
-                        title: 'TypeScript',
-                        link: 'https://devblogs.microsoft.com/typescript/',
-                    },
-                }),
-                new devblogs_1.DevBlogsScraper({
-                    name: 'devblogs.microsoft.com/visualstudio',
-                    blog: {
-                        title: 'Visual Studio Blog',
-                        link: 'https://devblogs.microsoft.com/visualstudio/',
-                    },
-                }),
-                new devblogs_1.DevBlogsScraper({
-                    name: 'devblogs.microsoft.com/commandline',
-                    blog: {
-                        title: 'Windows Command Line',
-                        link: 'https://devblogs.microsoft.com/commandline/',
-                    },
-                }),
+                new scrapers_1.AndrewLockScraper(),
+                new scrapers_1.DevBlogsScraper('dotnet'),
+                new scrapers_1.DevBlogsScraper('odata'),
+                new scrapers_1.DevBlogsScraper('nuget'),
+                new scrapers_1.DevBlogsScraper('typescript'),
+                new scrapers_1.DevBlogsScraper('visualstudio'),
+                new scrapers_1.DevBlogsScraper('commandline'),
             ];
-            const sender = createSender();
+            const publicSender = createSender('public');
+            const privateSender = createSender('private');
             for (const scraper of scrapers) {
-                yield scraper.scrape(sender);
+                yield core.group(scraper.name, () => __awaiter(this, void 0, void 0, function* () {
+                    const storage = new storage_1.Storage(scraper.path);
+                    const sender = storage.exists() && github.context.ref === 'refs/heads/main'
+                        ? publicSender
+                        : privateSender;
+                    try {
+                        yield scraper.scrape(storage, sender);
+                    }
+                    catch (error) {
+                        core.setFailed(error);
+                    }
+                    storage.save();
+                }));
             }
         }
         catch (error) {
@@ -39593,21 +39717,17 @@ function main() {
         }
     });
 }
-function createSender() {
-    if (!process.env.CI || github.context.ref === 'refs/heads/main') {
-        const sender = new telegram_1.TelegramSender({
-            token: getInput('TELEGRAM_TOKEN'),
-            publicChatId: getInput('TELEGRAM_PUBLIC_CHAT_ID'),
-            reportChatId: getInput('TELEGRAM_REPORT_CHAT_ID'),
-        });
-        return new throttle_1.ThrottleSender(sender, 5000);
-    }
-    return new console_1.ConsoleSender();
+function createSender(type) {
+    var sender;
+    const token = getInput('TELEGRAM_TOKEN');
+    const chatId = getInput(`TELEGRAM_${type.toUpperCase()}_CHAT_ID`);
+    sender = new senders_1.TelegramSender(token, chatId);
+    sender = new senders_1.ThrottleSender(sender, 5000);
+    sender = new senders_1.ValidateSender(sender);
+    return sender;
 }
 function getInput(name) {
-    const value = process.env.CI
-        ? core.getInput(name)
-        : process.env[name];
+    const value = process.env.CI ? core.getInput(name) : process.env[name];
     if (!value) {
         const from = process.env.CI ? 'action inputs' : 'environment variables';
         throw new Error(`Failed to retrieve '${name}' value from ${from}.`);
@@ -39619,34 +39739,21 @@ main();
 
 /***/ }),
 
+/***/ 6507:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+
+/***/ }),
+
 /***/ 1113:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
 
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    var desc = Object.getOwnPropertyDescriptor(m, k);
-    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-      desc = { enumerable: true, get: function() { return m[k]; } };
-    }
-    Object.defineProperty(o, k2, desc);
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
-});
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
-    return result;
-};
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -39680,22 +39787,31 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.AndrewLockScraper = void 0;
-const core = __importStar(__nccwpck_require__(2186));
 const rss_parser_1 = __importDefault(__nccwpck_require__(6946));
-const base_1 = __nccwpck_require__(842);
-const validators_1 = __nccwpck_require__(9783);
-class AndrewLockScraper extends base_1.ScraperBase {
-    scrapeInternal(sender) {
+class AndrewLockScraper {
+    constructor() {
+        this.name = 'AndrewLock';
+        this.path = 'andrewlock.net';
+        this.blog = {
+            title: '.NET Escapades',
+            link: 'https://andrewlock.net/'
+        };
+        this.author = {
+            title: 'Andrew Lock',
+            link: 'https://andrewlock.net/about/'
+        };
+    }
+    scrape(storage, sender) {
         var e_1, _a;
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 for (var _b = __asyncValues(this.readPosts()), _c; _c = yield _b.next(), !_c.done;) {
                     const post = _c.value;
-                    if (this.storage.has(post.date, post.link)) {
+                    if (storage.has(post.link, post.date)) {
                         break;
                     }
                     yield sender.sendPost(post);
-                    this.storage.add(post.date, post.link);
+                    storage.add(post.link, post.date);
                 }
             }
             catch (e_1_1) { e_1 = { error: e_1_1 }; }
@@ -39710,8 +39826,8 @@ class AndrewLockScraper extends base_1.ScraperBase {
     readPosts() {
         var _a, _b, _c;
         return __asyncGenerator(this, arguments, function* readPosts_1() {
-            const feedUrl = this.options.blog.link + 'rss.xml';
-            core.info(`Download rss feed by url '${feedUrl}'.`);
+            const feedUrl = this.blog.link + 'rss.xml';
+            console.log(`Download rss feed by url '${feedUrl}'.`);
             const parser = new rss_parser_1.default({
                 customFields: {
                     item: ['media:content', 'media:content', { keepArray: true }],
@@ -39722,51 +39838,52 @@ class AndrewLockScraper extends base_1.ScraperBase {
                 throw new Error('Failed to parse rss feed. No posts found.');
             }
             for (let index = 0; index < feed.items.length; index++) {
-                core.info(`Parse post at index ${index}.`);
+                console.log(`Parse post at index ${index}.`);
                 const item = feed.items[index];
+                const image = this.getImage(item['media:content']);
+                const description = this.getDescription(item.contentSnippet);
+                const tags = this.getTags(item.categories);
                 const post = {
+                    image: image,
                     title: (_a = item.title) !== null && _a !== void 0 ? _a : '',
                     link: (_b = item.link) !== null && _b !== void 0 ? _b : '',
-                    image: this.getImage(item['media:content']),
+                    blog: this.blog,
+                    author: this.author,
                     date: new Date((_c = item.isoDate) !== null && _c !== void 0 ? _c : ''),
-                    blog: this.options.blog,
-                    author: this.options.author,
-                    description: [this.getDescription(item.contentSnippet)],
-                    tags: this.getTags(item.categories),
+                    description: description,
+                    tags: tags,
                 };
-                (0, validators_1.validatePost)(post);
                 yield yield __await(post);
             }
         });
     }
     getImage(content) {
-        const image = content['$'];
-        if (image && image.url && image.medium === 'image') {
-            return image.url;
+        if (content) {
+            const image = content['$'];
+            if (image && image.url && image.medium === 'image') {
+                return image.url;
+            }
         }
         return '';
     }
     getDescription(content) {
-        if (content) {
-            if (!content.endsWith('.')) {
-                content = content + '.';
-            }
-            return content;
+        if (content && !content.endsWith('.')) {
+            content += '.';
         }
-        return '';
+        return content !== null && content !== void 0 ? content : '';
     }
     getTags(categories) {
-        const tags = [];
-        if (categories) {
+        const tags = new Array();
+        if (categories && categories.length > 0) {
             for (const category of categories) {
                 const slug = category
                     .toLocaleLowerCase()
-                    .replace(/^[^a-z0-9-]+/g, '')
-                    .replace(/[^a-z0-9-]+$/g, '')
-                    .replace(/[^a-z0-9-]+/g, '-');
+                    .replace(/^[^a-z0-9]+/g, '')
+                    .replace(/[^a-z0-9]+$/g, '')
+                    .replace(/[^a-z0-9]+/g, '-');
                 tags.push({
                     title: category,
-                    link: `${this.options.blog.link}tag/${slug}/`,
+                    link: `${this.blog.link}tag/${slug}/`,
                 });
             }
         }
@@ -39774,137 +39891,6 @@ class AndrewLockScraper extends base_1.ScraperBase {
     }
 }
 exports.AndrewLockScraper = AndrewLockScraper;
-
-
-/***/ }),
-
-/***/ 842:
-/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
-
-"use strict";
-
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    var desc = Object.getOwnPropertyDescriptor(m, k);
-    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-      desc = { enumerable: true, get: function() { return m[k]; } };
-    }
-    Object.defineProperty(o, k2, desc);
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
-});
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
-    return result;
-};
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.ScraperBase = void 0;
-const core = __importStar(__nccwpck_require__(2186));
-const fs_1 = __importDefault(__nccwpck_require__(7147));
-const path_1 = __nccwpck_require__(1017);
-class ScraperBase {
-    constructor(options) {
-        this.options = options;
-        this.storage = new ScraperStorage(this.options.name);
-    }
-    scrape(sender) {
-        return __awaiter(this, void 0, void 0, function* () {
-            yield core.group(this.options.name, () => __awaiter(this, void 0, void 0, function* () {
-                try {
-                    yield this.scrapeInternal(sender);
-                }
-                catch (error) {
-                    core.setFailed(error);
-                }
-                this.storage.save();
-            }));
-        });
-    }
-}
-exports.ScraperBase = ScraperBase;
-class ScraperStorage {
-    constructor(path) {
-        this.files = new Map();
-        this.path = (0, path_1.join)(process.cwd(), 'data', path);
-    }
-    has(date, link) {
-        const fileKey = this.getFileKey(date);
-        const file = this.getOrAddFile(fileKey);
-        return file.links.has(link);
-    }
-    add(date, link) {
-        const fileKey = this.getFileKey(date);
-        const file = this.getOrAddFile(fileKey);
-        file.links.add(link);
-        file.dirty = true;
-    }
-    getFileKey(date) {
-        if (isNaN(date.valueOf())) {
-            throw new Error('Invalid date: ' + date);
-        }
-        return date.toISOString().substring(0, 7);
-    }
-    getOrAddFile(key) {
-        let file = this.files.get(key);
-        if (!file) {
-            file = {
-                path: (0, path_1.join)(this.path, key + '.txt'),
-                links: new Set(),
-            };
-            if (fs_1.default.existsSync(file.path)) {
-                var links = fs_1.default.readFileSync(file.path)
-                    .toString()
-                    .split('\n')
-                    .map(link => link.trim())
-                    .filter(link => !!link);
-                for (const link of links) {
-                    file.links.add(link);
-                }
-            }
-            this.files.set(key, file);
-        }
-        return file;
-    }
-    save() {
-        var dirty = false;
-        if (!fs_1.default.existsSync(this.path)) {
-            fs_1.default.mkdirSync(this.path, { recursive: true });
-        }
-        for (const file of this.files.values()) {
-            if (file.dirty) {
-                var data = Array.from(file.links).sort().join('\n') + '\n';
-                fs_1.default.writeFileSync(file.path, data);
-                dirty = true;
-            }
-        }
-        if (dirty) {
-            var path = (0, path_1.join)(this.path, 'timestamp');
-            var data = new Date().toISOString();
-            fs_1.default.writeFileSync(path, data);
-        }
-    }
-}
 
 
 /***/ }),
@@ -39970,23 +39956,36 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.DevBlogsScraper = void 0;
-const core = __importStar(__nccwpck_require__(2186));
 const axios_1 = __importDefault(__nccwpck_require__(6545));
 const cheerio = __importStar(__nccwpck_require__(4612));
-const base_1 = __nccwpck_require__(842);
-const validators_1 = __nccwpck_require__(9783);
-class DevBlogsScraper extends base_1.ScraperBase {
-    scrapeInternal(sender) {
+const blogs = {
+    'dotnet': '.NET Blog',
+    'odata': 'OData',
+    'nuget': 'The NuGet Blog',
+    'typescript': 'TypeScript',
+    'visualstudio': 'Visual Studio Blog',
+    'commandline': 'Windows Command Line',
+};
+class DevBlogsScraper {
+    constructor(id) {
+        this.name = `DevBlogs / ${blogs[id]}`;
+        this.path = `devblogs.microsoft.com/${id}`;
+        this.blog = {
+            title: blogs[id],
+            link: `https://devblogs.microsoft.com/${id}/`,
+        };
+    }
+    scrape(storage, sender) {
         var e_1, _a;
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 for (var _b = __asyncValues(this.readPosts()), _c; _c = yield _b.next(), !_c.done;) {
                     const post = _c.value;
-                    if (this.storage.has(post.date, post.link)) {
+                    if (storage.has(post.link, post.date)) {
                         break;
                     }
                     yield sender.sendPost(post);
-                    this.storage.add(post.date, post.link);
+                    storage.add(post.link, post.date);
                 }
             }
             catch (e_1_1) { e_1 = { error: e_1_1 }; }
@@ -40001,43 +40000,39 @@ class DevBlogsScraper extends base_1.ScraperBase {
     readPosts() {
         var _a, _b, _c;
         return __asyncGenerator(this, arguments, function* readPosts_1() {
-            core.info(`Download html page by url '${this.options.blog.link}'.`);
-            const response = yield __await(axios_1.default.get(this.options.blog.link));
+            console.log(`Download html page by url '${this.blog.link}'.`);
+            const response = yield __await(axios_1.default.get(this.blog.link));
             const $ = cheerio.load(response.data);
-            const elements = $('#content .entry-box').toArray();
-            if (elements.length == 0) {
+            const entries = $('#content .entry-box').toArray();
+            if (entries.length == 0) {
                 throw new Error('Failed to parse html page. No posts found.');
             }
-            for (let index = 0; index < elements.length; index++) {
-                core.info(`Parse post at index ${index}.`);
-                const element = $(elements[index]);
-                const title = element.find('.entry-title a');
-                const image = element.find('.entry-image img');
-                const date = element.find('.entry-post-date');
-                const author = element.find('.entry-author-link a');
-                const description = element
-                    .find('.entry-content')
-                    .contents()
-                    .filter(function (index, element) {
-                    return this.type == 'text';
-                })
-                    .text()
-                    .trim();
-                const tags = element
+            for (let index = 0; index < entries.length; index++) {
+                console.log(`Parse post at index ${index}.`);
+                const entry = $(entries[index]);
+                const title = entry.find('.entry-title a');
+                const image = entry.find('.entry-image img');
+                const date = entry.find('.entry-post-date');
+                const author = entry.find('.entry-author-link a');
+                const description = entry
+                    .find('.entry-content').contents()
+                    .filter((_, element) => element.type == 'text')
+                    .text().trim();
+                const tags = entry
                     .find('.card-tags-links .card-tags-linkbox a')
                     .map((_, element) => $(element))
                     .toArray();
                 const post = {
+                    image: (_a = image.attr('data-src')) !== null && _a !== void 0 ? _a : '',
                     title: title.text().trim(),
-                    link: (_a = title.attr('href')) !== null && _a !== void 0 ? _a : '',
-                    image: (_b = image.attr('data-src')) !== null && _b !== void 0 ? _b : '',
-                    date: new Date(date.text()),
-                    blog: this.options.blog,
+                    link: (_b = title.attr('href')) !== null && _b !== void 0 ? _b : '',
+                    blog: this.blog,
                     author: {
                         title: author.text().trim(),
                         link: (_c = author.attr('href')) !== null && _c !== void 0 ? _c : '',
                     },
-                    description: [description],
+                    date: new Date(date.text()),
+                    description: description,
                     tags: tags.map(tag => {
                         var _a;
                         return {
@@ -40046,13 +40041,150 @@ class DevBlogsScraper extends base_1.ScraperBase {
                         };
                     }),
                 };
-                (0, validators_1.validatePost)(post);
                 yield yield __await(post);
             }
         });
     }
 }
 exports.DevBlogsScraper = DevBlogsScraper;
+
+
+/***/ }),
+
+/***/ 142:
+/***/ (function(__unused_webpack_module, exports) {
+
+"use strict";
+
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __asyncValues = (this && this.__asyncValues) || function (o) {
+    if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
+    var m = o[Symbol.asyncIterator], i;
+    return m ? m.call(o) : (o = typeof __values === "function" ? __values(o) : o[Symbol.iterator](), i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () { return this; }, i);
+    function verb(n) { i[n] = o[n] && function (v) { return new Promise(function (resolve, reject) { v = o[n](v), settle(resolve, reject, v.done, v.value); }); }; }
+    function settle(resolve, reject, d, v) { Promise.resolve(v).then(function(v) { resolve({ value: v, done: d }); }, reject); }
+};
+var __await = (this && this.__await) || function (v) { return this instanceof __await ? (this.v = v, this) : new __await(v); }
+var __asyncGenerator = (this && this.__asyncGenerator) || function (thisArg, _arguments, generator) {
+    if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
+    var g = generator.apply(thisArg, _arguments || []), i, q = [];
+    return i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () { return this; }, i;
+    function verb(n) { if (g[n]) i[n] = function (v) { return new Promise(function (a, b) { q.push([n, v, a, b]) > 1 || resume(n, v); }); }; }
+    function resume(n, v) { try { step(g[n](v)); } catch (e) { settle(q[0][3], e); } }
+    function step(r) { r.value instanceof __await ? Promise.resolve(r.value.v).then(fulfill, reject) : settle(q[0][2], r); }
+    function fulfill(value) { resume("next", value); }
+    function reject(value) { resume("throw", value); }
+    function settle(f, v) { if (f(v), q.shift(), q.length) resume(q[0][0], q[0][1]); }
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.DotNetCoreTutorialsScraper = void 0;
+class DotNetCoreTutorialsScraper {
+    constructor() {
+        this.name = 'DotNetCoreTutorials';
+        this.path = 'dotnetcoretutorials.com';
+        this.blog = {
+            title: '.NET Core Tutorials',
+            link: 'https://dotnetcoretutorials.com/'
+        };
+        this.author = {
+            title: 'Wade Gausden',
+            link: 'https://dotnetcoretutorials.com/about/'
+        };
+    }
+    scrape(storage, sender) {
+        var e_1, _a;
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                for (var _b = __asyncValues(this.readPosts()), _c; _c = yield _b.next(), !_c.done;) {
+                    const post = _c.value;
+                    if (storage.has(post.link, post.date)) {
+                        break;
+                    }
+                    yield sender.sendPost(post);
+                    storage.add(post.link, post.date);
+                }
+            }
+            catch (e_1_1) { e_1 = { error: e_1_1 }; }
+            finally {
+                try {
+                    if (_c && !_c.done && (_a = _b.return)) yield _a.call(_b);
+                }
+                finally { if (e_1) throw e_1.error; }
+            }
+        });
+    }
+    readPosts() {
+        return __asyncGenerator(this, arguments, function* readPosts_1() {
+            //     const response = await axios.get(blog.link);
+            //     const $ = cheerio.load(response.data);
+            //     const articles = $('#content article').toArray();
+            //     for (let index = 0; index < articles.length; index++) {
+            //       const article = $(articles[index]);
+            //       const title = article.find('h2 a');
+            //       const titleText = title.text();
+            //       const titleHref = title.attr('href');
+            //       console.log(titleText);
+            //       console.log(titleHref);
+            //       console.log();
+            //       const content = article.find('.entry-content');
+            //       const items = content.children;
+            //       for (const item of content.contents()) {
+            //         const txt = $(item).text();
+            //         console.log(txt);
+            //         console.log();
+            //       }
+            //       console.log();
+            //     }
+        });
+    }
+}
+exports.DotNetCoreTutorialsScraper = DotNetCoreTutorialsScraper;
+
+
+/***/ }),
+
+/***/ 4697:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+__exportStar(__nccwpck_require__(6507), exports);
+__exportStar(__nccwpck_require__(1113), exports);
+__exportStar(__nccwpck_require__(1145), exports);
+__exportStar(__nccwpck_require__(142), exports);
+
+
+/***/ }),
+
+/***/ 221:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
 
 
 /***/ }),
@@ -40090,6 +40222,35 @@ exports.ConsoleSender = ConsoleSender;
 
 /***/ }),
 
+/***/ 4346:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+__exportStar(__nccwpck_require__(221), exports);
+__exportStar(__nccwpck_require__(3899), exports);
+__exportStar(__nccwpck_require__(7228), exports);
+__exportStar(__nccwpck_require__(9996), exports);
+__exportStar(__nccwpck_require__(5116), exports);
+
+
+/***/ }),
+
 /***/ 7228:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
@@ -40108,66 +40269,73 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.TelegramSender = void 0;
 const telegraf_1 = __nccwpck_require__(2993);
 class TelegramSender {
-    constructor(options) {
-        this.options = options;
-        this.telegram = new telegraf_1.Telegram(this.options.token);
-        this.delay = Promise.resolve();
+    constructor(token, chatId) {
+        this.token = token;
+        this.chatId = chatId;
+        this.telegram = new telegraf_1.Telegram(this.token);
     }
     sendPost(post) {
         return __awaiter(this, void 0, void 0, function* () {
-            const chatId = this.options.publicChatId;
-            const message = this.getPostMessage(post);
-            yield this.telegram.sendPhoto(chatId, post.image, {
-                caption: message,
-                parse_mode: 'HTML',
-            });
-        });
-    }
-    getPostMessage(post) {
-        const lines = [];
-        const postLink = this.getLinkHtml(post, 'bold');
-        lines.push(postLink);
-        const blogLink = this.getLinkHtml(post.blog, 'bold');
-        const authorLink = this.getLinkHtml(post.author, 'bold');
-        const date = this.getDateHtml(post.date);
-        lines.push([blogLink, authorLink, date].join(' | '));
-        if (Array.isArray(post.description)) {
-            for (const line of post.description) {
-                lines.push(line);
+            const message = getPostMessage(post);
+            if (post.image) {
+                this.telegram.sendPhoto(this.chatId, post.image, {
+                    caption: message,
+                    parse_mode: 'HTML',
+                });
             }
-        }
-        else {
-            lines.push(post.description);
-        }
-        if (post.tags) {
-            var tagLinks = post.tags
-                .sort((a, b) => {
-                if (a.title < b.title) {
-                    return -1;
+            else {
+                this.telegram.sendMessage(this.chatId, message, {
+                    parse_mode: 'HTML',
+                });
+            }
+            function getPostMessage(post) {
+                const lines = [];
+                lines.push(`<a href="${post.link}"><b>${post.title}</b></a>`);
+                const line = [];
+                if (post.blog) {
+                    line.push(`<a href="${post.blog.link}"><b>${post.blog.title}</b></a>`);
                 }
-                if (a.title > b.title) {
-                    return 1;
+                if (post.author) {
+                    line.push(`<a href="${post.author.link}"><b>${post.author.title}</b></a>`);
                 }
-                return 0;
-            })
-                .map(tag => this.getLinkHtml(tag));
-            lines.push('🏷️ ' + tagLinks.join(', '));
-        }
-        return lines.join('\n\n');
-    }
-    getLinkHtml(entity, style) {
-        if (style === 'bold') {
-            return `<a href="${entity.link}"><b>${entity.title}</b></a>`;
-        }
-        return `<a href="${entity.link}">${entity.title}</a>`;
-    }
-    getDateHtml(date, style) {
-        const text = date.toLocaleDateString("en-US", {
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric',
+                if (post.date) {
+                    const date = post.date.toLocaleDateString('en-US', {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric',
+                    });
+                    line.push(`<b>${date}</b>`);
+                }
+                if (line.length > 0) {
+                    lines.push(line.join(' | '));
+                }
+                if (post.description) {
+                    if (Array.isArray(post.description)) {
+                        for (const line of post.description) {
+                            lines.push(line);
+                        }
+                    }
+                    else {
+                        lines.push(post.description);
+                    }
+                }
+                if (post.tags && post.tags.length > 0) {
+                    var tagLinks = post.tags
+                        .sort((a, b) => {
+                        if (a.title < b.title) {
+                            return -1;
+                        }
+                        if (a.title > b.title) {
+                            return 1;
+                        }
+                        return 0;
+                    })
+                        .map(tag => `<a href="${tag.link}">${tag.title}</a>`);
+                    lines.push('🏷️ ' + tagLinks.join(', '));
+                }
+                return lines.join('\n\n');
+            }
         });
-        return `<b>${text}</b>`;
     }
 }
 exports.TelegramSender = TelegramSender;
@@ -40217,76 +40385,244 @@ exports.ThrottleSender = ThrottleSender;
 
 /***/ }),
 
-/***/ 9783:
-/***/ ((__unused_webpack_module, exports) => {
+/***/ 5116:
+/***/ (function(__unused_webpack_module, exports) {
 
 "use strict";
 
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.validatePost = void 0;
-function validatePost(post) {
-    var errors = [];
-    if (!post.title) {
-        errors.push('title is empty');
+exports.ValidateSender = void 0;
+class ValidateSender {
+    constructor(sender) {
+        this.sender = sender;
     }
-    if (!post.link) {
-        errors.push('link is empty');
-    }
-    else if (!post.link.startsWith('https://')) {
-        errors.push('link is not valid url');
-    }
-    if (!post.image) {
-        errors.push('image is empty');
-    }
-    else if (!post.image.startsWith('https://')) {
-        errors.push('image is not valid url');
-    }
-    if (isNaN(post.date.valueOf())) {
-        errors.push('date is not valid');
-    }
-    if (!post.blog.title) {
-        errors.push('blog title is empty');
-    }
-    if (!post.blog.link) {
-        errors.push('blog link is empty');
-    }
-    else if (!post.blog.link.startsWith('https://')) {
-        errors.push('blog link is not valid url');
-    }
-    if (!post.author.title) {
-        errors.push('author title is empty');
-    }
-    if (!post.author.link) {
-        errors.push('author link is empty');
-    }
-    else if (!post.author.link.startsWith('https://')) {
-        errors.push('author link is not valid url');
-    }
-    if (post.description.length == 0) {
-        errors.push('description is empty');
-    }
-    else {
-        for (const description of post.description) {
-            if (!description) {
-                errors.push('description is empty');
-                break;
+    sendPost(post) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const errors = [];
+            if (post.image !== undefined) {
+                if (!post.image) {
+                    errors.push('image is empty');
+                }
+                if (!post.image.startsWith('https://')) {
+                    errors.push('image is not valid url');
+                }
             }
-        }
-    }
-    for (let index = 0; index < post.tags.length; index++) {
-        const tag = post.tags[index];
-        if (!tag.title) {
-            errors.push(`tag title is empty at index ${index}`);
-        }
-        if (!tag.link) {
-            errors.push(`tag link is empty at index ${index}`);
-        }
-    }
-    if (errors.length > 0) {
-        throw new Error('Post is not valid: ' + errors.join(', ') + '.');
+            if (!post.title) {
+                errors.push('title is empty');
+            }
+            if (!post.link) {
+                errors.push('link is empty');
+            }
+            else if (!post.link.startsWith('https://')) {
+                errors.push('link is not valid url');
+            }
+            if (post.blog) {
+                if (!post.blog.title) {
+                    errors.push('blog title is empty');
+                }
+                if (!post.blog.link) {
+                    errors.push('blog link is empty');
+                }
+                else if (!post.blog.link.startsWith('https://')) {
+                    errors.push('blog link is not valid url');
+                }
+            }
+            if (post.author) {
+                if (!post.author.title) {
+                    errors.push('author title is empty');
+                }
+                if (!post.author.link) {
+                    errors.push('author link is empty');
+                }
+                else if (!post.author.link.startsWith('https://')) {
+                    errors.push('author link is not valid url');
+                }
+            }
+            if (post.date) {
+                const time = post.date.getTime();
+                if (isNaN(time)) {
+                    errors.push('date is not valid');
+                }
+            }
+            if (post.description != undefined) {
+                if (Array.isArray(post.description)) {
+                    for (const description of post.description) {
+                        if (!description) {
+                            errors.push('description is empty');
+                            break;
+                        }
+                    }
+                }
+                else {
+                    if (!post.description) {
+                        errors.push('description is empty');
+                    }
+                }
+            }
+            if (post.tags) {
+                for (let index = 0; index < post.tags.length; index++) {
+                    const tag = post.tags[index];
+                    if (!tag.title) {
+                        errors.push(`tag title at index ${index} is empty`);
+                    }
+                    if (!tag.link) {
+                        errors.push(`tag link at index ${index} is empty`);
+                    }
+                }
+            }
+            if (errors.length > 0) {
+                throw new Error('Post is not valid: ' + errors.join(', ') + '.');
+            }
+            yield this.sender.sendPost(post);
+        });
     }
 }
-exports.validatePost = validatePost;
+exports.ValidateSender = ValidateSender;
+
+
+/***/ }),
+
+/***/ 9898:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.StorageFile = exports.Storage = void 0;
+const path_1 = __nccwpck_require__(1017);
+const fs_1 = __importDefault(__nccwpck_require__(7147));
+class Storage {
+    constructor(path) {
+        this.files = new Map();
+        this.path = (0, path_1.join)(process.cwd(), 'data', path);
+    }
+    exists() {
+        return fs_1.default.existsSync(this.path);
+    }
+    has(value, date) {
+        return date
+            ? this.hasWithDate(value, date)
+            : this.hasWithoutDate(value);
+    }
+    hasWithDate(value, date) {
+        const name = this.getFileName(date);
+        const file = this.getFile(name);
+        return file.has(value);
+    }
+    hasWithoutDate(value) {
+        const names = this.getFileNames();
+        for (const name of names) {
+            const file = this.getFile(name);
+            const has = file.has(value);
+            if (has) {
+                return true;
+            }
+        }
+        return false;
+    }
+    add(value, date) {
+        const name = this.getFileName(date !== null && date !== void 0 ? date : new Date());
+        const file = this.getFile(name);
+        file.add(value);
+    }
+    getFileName(date) {
+        const time = date.getTime();
+        if (isNaN(time)) {
+            throw new Error('Invalid date.');
+        }
+        return date.toISOString().substring(0, 7) + '.txt';
+    }
+    getFileNames() {
+        if (!this.names) {
+            const regexp = /^\d{4}-\d{2}-\d{2}.txt$/;
+            this.names = fs_1.default.readdirSync(this.path)
+                .filter(file => regexp.test(file))
+                .sort()
+                .reverse();
+        }
+        return this.names;
+    }
+    getFile(name) {
+        let file = this.files.get(name);
+        if (!file) {
+            file = new StorageFile(this.path, name);
+            this.files.set(name, file);
+        }
+        return file;
+    }
+    save() {
+        let dirty = false;
+        if (!fs_1.default.existsSync(this.path)) {
+            fs_1.default.mkdirSync(this.path, {
+                recursive: true
+            });
+        }
+        for (const file of this.files.values()) {
+            dirty = file.save() || dirty;
+        }
+        if (dirty) {
+            var path = (0, path_1.join)(this.path, 'timestamp');
+            var data = new Date().toISOString();
+            fs_1.default.writeFileSync(path, data + '\n');
+        }
+    }
+}
+exports.Storage = Storage;
+class StorageFile {
+    constructor(path, name) {
+        this.path = (0, path_1.join)(path, name);
+    }
+    has(value) {
+        const values = this.getValues();
+        return values.has(value);
+    }
+    add(value) {
+        const values = this.getValues();
+        values.add(value);
+        this.dirty = true;
+    }
+    getValues() {
+        if (!this.values) {
+            this.values = new Set();
+            if (fs_1.default.existsSync(this.path)) {
+                var values = fs_1.default.readFileSync(this.path)
+                    .toString()
+                    .split('\n')
+                    .map(value => value.trim())
+                    .filter(value => !!value);
+                for (const value of values) {
+                    this.values.add(value);
+                }
+            }
+        }
+        return this.values;
+    }
+    save() {
+        if (this.values && this.dirty) {
+            var data = Array.from(this.values)
+                .sort()
+                .join('\n');
+            fs_1.default.writeFileSync(this.path, data + '\n');
+            delete this.values;
+            delete this.dirty;
+            return true;
+        }
+        return false;
+    }
+}
+exports.StorageFile = StorageFile;
 
 
 /***/ }),
@@ -40295,14 +40631,6 @@ exports.validatePost = validatePost;
 /***/ ((module) => {
 
 module.exports = eval("require")("encoding");
-
-
-/***/ }),
-
-/***/ 132:
-/***/ ((module) => {
-
-module.exports = eval("require")("supports-color");
 
 
 /***/ }),
