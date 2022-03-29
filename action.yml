@@ -18,6 +18,6 @@ inputs:
     description: TELEGRAM_PUBLIC_CHAT_ID
     required: true
 
-  TELEGRAM_REPORT_CHAT_ID:
-    description: TELEGRAM_REPORT_CHAT_ID
+  TELEGRAM_PRIVATE_CHAT_ID:
+    description: TELEGRAM_PRIVATE_CHAT_ID
     required: true
