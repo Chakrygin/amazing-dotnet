@@ -22,7 +22,7 @@
       ],
       "skipFiles": [
         "<node_internals>/**"
-      ],
+      ]
     }
   ]
 }

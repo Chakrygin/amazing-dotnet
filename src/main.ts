@@ -1,84 +1,56 @@
 import * as core from '@actions/core'
 import * as github from '@actions/github'
 
-import { Scraper, Sender } from './abstractions';
+import {
+  Scraper,
+  AndrewLockScraper,
+  DevBlogsScraper,
+  DotNetCoreTutorialsScraper,
+} from './scrapers'
 
-import { AndrewLockScraper } from './scrapers/andrewlock'
-import { DevBlogsScraper } from './scrapers/devblogs';
+import {
+  Sender,
+  TelegramSender,
+  ThrottleSender,
+  ValidateSender,
+} from './senders'
 
-import { ConsoleSender } from './senders/console';
-import { TelegramSender } from './senders/telegram';
-import { ThrottleSender } from './senders/throttle'
+import { Storage } from './storage'
 
 async function main() {
   try {
 
     const scrapers: Scraper[] = [
-      new AndrewLockScraper({
-        name: 'andrewlock.net',
-        blog: {
-          title: '.NET Escapades',
-          link: 'https://andrewlock.net/',
-        },
-        author: {
-          title: 'Andrew Lock',
-          link: 'https://andrewlock.net/about/',
-        },
-      }),
+      new AndrewLockScraper(),
+      new DevBlogsScraper('dotnet'),
+      new DevBlogsScraper('odata'),
+      new DevBlogsScraper('nuget'),
+      new DevBlogsScraper('typescript'),
+      new DevBlogsScraper('visualstudio'),
+      new DevBlogsScraper('commandline'),
+    ]
 
-      new DevBlogsScraper({
-        name: 'devblogs.microsoft.com/dotnet',
-        blog: {
-          title: '.NET Blog',
-          link: 'https://devblogs.microsoft.com/dotnet/',
-        },
-      }),
-
-      new DevBlogsScraper({
-        name: 'devblogs.microsoft.com/odata',
-        blog: {
-          title: 'OData',
-          link: 'https://devblogs.microsoft.com/odata/',
-        },
-      }),
-
-      new DevBlogsScraper({
-        name: 'devblogs.microsoft.com/nuget',
-        blog: {
-          title: 'The NuGet Blog',
-          link: 'https://devblogs.microsoft.com/nuget/',
-        },
-      }),
-
-      new DevBlogsScraper({
-        name: 'devblogs.microsoft.com/typescript',
-        blog: {
-          title: 'TypeScript',
-          link: 'https://devblogs.microsoft.com/typescript/',
-        },
-      }),
-
-      new DevBlogsScraper({
-        name: 'devblogs.microsoft.com/visualstudio',
-        blog: {
-          title: 'Visual Studio Blog',
-          link: 'https://devblogs.microsoft.com/visualstudio/',
-        },
-      }),
-
-      new DevBlogsScraper({
-        name: 'devblogs.microsoft.com/commandline',
-        blog: {
-          title: 'Windows Command Line',
-          link: 'https://devblogs.microsoft.com/commandline/',
-        },
-      }),
-    ];
-
-    const sender = createSender();
+    const publicSender = createSender('public');
+    const privateSender = createSender('private');
 
     for (const scraper of scrapers) {
-      await scraper.scrape(sender);
+      await core.group(scraper.name, async () => {
+
+        const storage = new Storage(scraper.path);
+        const sender = storage.exists() && github.context.ref === 'refs/heads/main'
+          ? publicSender
+          : privateSender;
+
+        try {
+          await scraper.scrape(storage, sender);
+        }
+        catch (error: any) {
+          core.setFailed(error);
+        }
+
+        storage.save();
+
+      });
     }
 
   }
@@ -87,24 +59,21 @@ async function main() {
   }
 }
 
-function createSender(): Sender {
-  if (!process.env.CI || github.context.ref === 'refs/heads/main') {
-    const sender = new TelegramSender({
-      token: getInput('TELEGRAM_TOKEN'),
-      publicChatId: getInput('TELEGRAM_PUBLIC_CHAT_ID'),
-      reportChatId: getInput('TELEGRAM_REPORT_CHAT_ID'),
-    });
+function createSender(type: 'public' | 'private'): Sender {
+  var sender: Sender;
 
-    return new ThrottleSender(sender, 5000);
-  }
+  const token = getInput('TELEGRAM_TOKEN');
+  const chatId = getInput(`TELEGRAM_${type.toUpperCase()}_CHAT_ID`);
 
-  return new ConsoleSender();
+  sender = new TelegramSender(token, chatId);
+  sender = new ThrottleSender(sender, 5000);
+  sender = new ValidateSender(sender);
+
+  return sender;
 }
 
 function getInput(name: string): string {
-  const value = process.env.CI
-    ? core.getInput(name)
-    : process.env[name];
+  const value = process.env.CI ? core.getInput(name) : process.env[name];
 
   if (!value) {
     const from = process.env.CI ? 'action inputs' : 'environment variables';

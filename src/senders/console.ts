@@ -1,4 +1,4 @@
-import { Sender } from '../abstractions';
+import { Sender } from './abstractions';
 import { Post } from '../models';
 
 export class ConsoleSender implements Sender {

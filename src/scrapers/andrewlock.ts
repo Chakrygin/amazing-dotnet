@@ -1,33 +1,39 @@
-import * as core from '@actions/core';
-
 import RssParser from 'rss-parser';
 
-import { ScraperOptions, ScraperBase } from "./base";
-import { Sender } from "../abstractions";
-import { Post, Blog, Author, Tag } from '../models';
-import { validatePost } from '../validators';
+import { Scraper } from "./abstractions";
+import { Sender } from "../senders/abstractions";
+import { Storage } from "../storage";
+import { Author, Blog, Post, Tag } from "../models";
 
-export interface AndrewLockOptions extends ScraperOptions {
-  readonly blog: Blog;
-  readonly author: Author;
-}
+export class AndrewLockScraper implements Scraper {
+  readonly name = 'AndrewLock';
+  readonly path = 'andrewlock.net';
 
-export class AndrewLockScraper extends ScraperBase<AndrewLockOptions>{
-  protected async scrapeInternal(sender: Sender): Promise<void> {
+  private readonly blog: Blog = {
+    title: '.NET Escapades',
+    link: 'https://andrewlock.net/'
+  }
+
+  private readonly author: Author = {
+    title: 'Andrew Lock',
+    link: 'https://andrewlock.net/about/'
+  }
+
+  async scrape(storage: Storage, sender: Sender): Promise<void> {
     for await (const post of this.readPosts()) {
-      if (this.storage.has(post.date, post.link)) {
+      if (storage.has(post.link, post.date)) {
         break;
       }
 
       await sender.sendPost(post);
 
-      this.storage.add(post.date, post.link);
+      storage.add(post.link, post.date);
     }
   }
 
-  private async *readPosts(): AsyncGenerator<Post> {
-    const feedUrl = this.options.blog.link + 'rss.xml';
-    core.info(`Download rss feed by url '${feedUrl}'.`);
+  private async *readPosts(): AsyncGenerator<Post, void> {
+    const feedUrl = this.blog.link + 'rss.xml';
+    console.log(`Download rss feed by url '${feedUrl}'.`);
 
     const parser = new RssParser({
       customFields: {
@@ -42,62 +48,61 @@ export class AndrewLockScraper extends ScraperBase<AndrewLockOptions>{
     }
 
     for (let index = 0; index < feed.items.length; index++) {
-      core.info(`Parse post at index ${index}.`);
+      console.log(`Parse post at index ${index}.`);
+
       const item = feed.items[index];
+      const image = this.getImage(item['media:content']);
+      const description = this.getDescription(item.contentSnippet);
+      const tags = this.getTags(item.categories);
 
       const post: Post = {
+        image: image,
         title: item.title ?? '',
         link: item.link ?? '',
-        image: this.getImage(item['media:content']),
+        blog: this.blog,
+        author: this.author,
         date: new Date(item.isoDate ?? ''),
-        blog: this.options.blog,
-        author: this.options.author,
-        description: [this.getDescription(item.contentSnippet)],
-        tags: this.getTags(item.categories),
+        description: description,
+        tags: tags,
       };
-
-      validatePost(post);
 
       yield post;
     }
   }
 
   private getImage(content: any): string {
-    const image = content['$'];
-
-    if (image && image.url && image.medium === 'image') {
-      return image.url;
+    if (content) {
+      const image = content['$'];
+      if (image && image.url && image.medium === 'image') {
+        return image.url;
+      }
     }
 
     return '';
   }
 
   private getDescription(content: string | undefined): string {
-    if (content) {
-      if (!content.endsWith('.')) {
-        content = content + '.'
-      }
-
-      return content;
+    if (content && !content.endsWith('.')) {
+      content += '.'
     }
 
-    return '';
+    return content ?? '';
   }
 
   private getTags(categories: string[] | undefined): Tag[] {
-    const tags: Tag[] = [];
+    const tags = new Array<Tag>();
 
-    if (categories) {
+    if (categories && categories.length > 0) {
       for (const category of categories) {
         const slug = category
           .toLocaleLowerCase()
-          .replace(/^[^a-z0-9-]+/g, '')
-          .replace(/[^a-z0-9-]+$/g, '')
-          .replace(/[^a-z0-9-]+/g, '-');
+          .replace(/^[^a-z0-9]+/g, '')
+          .replace(/[^a-z0-9]+$/g, '')
+          .replace(/[^a-z0-9]+/g, '-');
 
         tags.push({
           title: category,
-          link: `${this.options.blog.link}tag/${slug}/`,
+          link: `${this.blog.link}tag/${slug}/`,
         });
       }
     }
