@@ -1,0 +1,5 @@
+https://dotnetcoretutorials.com/2021/11/09/net-6-released/
+https://dotnetcoretutorials.com/2021/11/10/single-file-apps-in-net-6/
+https://dotnetcoretutorials.com/2021/11/25/solving-github-password-authentication-403-errors/
+https://dotnetcoretutorials.com/2021/11/27/turning-off-visual-studio-2022-intellicode-complete-line-intellisense/
+https://dotnetcoretutorials.com/2021/11/30/the-confusing-behaviour-of-ef-core-ondelete-restrict/

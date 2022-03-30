@@ -1,0 +1,2 @@
+https://dotnetcoretutorials.com/2022/01/12/hot-reload-in-c-net-6-visual-studio-2022/
+https://dotnetcoretutorials.com/2022/01/13/protobuf-in-c-net-part-1-getting-started/
