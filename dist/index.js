@@ -39693,6 +39693,7 @@ function main() {
                 new scrapers_1.DevBlogsScraper('typescript'),
                 new scrapers_1.DevBlogsScraper('visualstudio'),
                 new scrapers_1.DevBlogsScraper('commandline'),
+                new scrapers_1.DotNetCoreTutorialsScraper(),
             ];
             const publicSender = createSender('public');
             const privateSender = createSender('private');
@@ -40052,10 +40053,33 @@ exports.DevBlogsScraper = DevBlogsScraper;
 /***/ }),
 
 /***/ 142:
-/***/ (function(__unused_webpack_module, exports) {
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
 
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -40084,20 +40108,26 @@ var __asyncGenerator = (this && this.__asyncGenerator) || function (thisArg, _ar
     function reject(value) { resume("throw", value); }
     function settle(f, v) { if (f(v), q.shift(), q.length) resume(q[0][0], q[0][1]); }
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.DotNetCoreTutorialsScraper = void 0;
+const core = __importStar(__nccwpck_require__(2186));
+const axios_1 = __importDefault(__nccwpck_require__(6545));
+const cheerio = __importStar(__nccwpck_require__(4612));
+const blog = {
+    title: '.NET Core Tutorials',
+    link: 'https://dotnetcoretutorials.com/page/2/'
+};
+const author = {
+    title: 'Wade Gausden',
+    link: 'https://dotnetcoretutorials.com/about/'
+};
 class DotNetCoreTutorialsScraper {
     constructor() {
         this.name = 'DotNetCoreTutorials';
         this.path = 'dotnetcoretutorials.com';
-        this.blog = {
-            title: '.NET Core Tutorials',
-            link: 'https://dotnetcoretutorials.com/'
-        };
-        this.author = {
-            title: 'Wade Gausden',
-            link: 'https://dotnetcoretutorials.com/about/'
-        };
     }
     scrape(storage, sender) {
         var e_1, _a;
@@ -40122,28 +40152,101 @@ class DotNetCoreTutorialsScraper {
         });
     }
     readPosts() {
+        var _a;
         return __asyncGenerator(this, arguments, function* readPosts_1() {
-            //     const response = await axios.get(blog.link);
-            //     const $ = cheerio.load(response.data);
-            //     const articles = $('#content article').toArray();
-            //     for (let index = 0; index < articles.length; index++) {
-            //       const article = $(articles[index]);
-            //       const title = article.find('h2 a');
-            //       const titleText = title.text();
-            //       const titleHref = title.attr('href');
-            //       console.log(titleText);
-            //       console.log(titleHref);
-            //       console.log();
-            //       const content = article.find('.entry-content');
-            //       const items = content.children;
-            //       for (const item of content.contents()) {
-            //         const txt = $(item).text();
-            //         console.log(txt);
-            //         console.log();
-            //       }
-            //       console.log();
-            //     }
+            core.info(`Parsing html page by url '${blog.link}'...`);
+            const response = yield __await(axios_1.default.get(blog.link));
+            const $ = cheerio.load(response.data);
+            const articles = $('#content article').toArray();
+            if (articles.length == 0) {
+                throw new Error('Failed to parse html page. No posts found.');
+            }
+            core.info(`Html page parsed. ${articles.length} posts found.`);
+            for (let index = 0; index < articles.length; index++) {
+                core.info(`Parsing post at index ${index}...`);
+                const article = $(articles[index]);
+                const title = article.find('h2.entry-title a');
+                const date = article.find('time.entry-date').text();
+                const content = article.find('div.entry-content');
+                if (!date) {
+                    throw new Error('Failed to parse post. Date is empty.');
+                }
+                var timestamp = Date.parse(date);
+                if (isNaN(timestamp)) {
+                    throw new Error('Failed to parse post. Date is invalid.');
+                }
+                const image = this.getImage($, article);
+                const description = this.getDescription($, content);
+                const post = {
+                    image: image,
+                    title: title.text().trim(),
+                    link: (_a = title.attr('href')) !== null && _a !== void 0 ? _a : '',
+                    blog: blog,
+                    author: author,
+                    date: new Date(timestamp),
+                    description: description,
+                };
+                core.info(`Post parsed. Title: '${post.title}'.`);
+                yield yield __await(post);
+            }
         });
+    }
+    getImage($, article) {
+        var _a, _b;
+        const img = article.find('img');
+        const width = img.attr('width');
+        if (!width || parseInt(width) < 320) {
+            return undefined;
+        }
+        const height = img.attr('height');
+        if (!height || parseInt(height) < 240) {
+            return undefined;
+        }
+        const src = (_b = (_a = img.attr('data-lazy-src')) !== null && _a !== void 0 ? _a : img.attr('src')) !== null && _b !== void 0 ? _b : '';
+        const success = src.startsWith('https://') && (src.endsWith('.gif') ||
+            src.endsWith('.jpg') ||
+            src.endsWith('.jpeg') ||
+            src.endsWith('.png'));
+        if (!success) {
+            return undefined;
+        }
+        return src;
+    }
+    getDescription($, content) {
+        const description = [];
+        var length = 0;
+        for (const element of content.children()) {
+            if (element.type != 'tag') {
+                continue;
+            }
+            let text = '';
+            if (element.name == 'p') {
+                if ($('br', element).length == 0) {
+                    text = $(element).text().trim();
+                }
+            }
+            else if (element.name == 'ul') {
+                text = $(element).children()
+                    .filter((_, e) => e.type == 'tag' && e.name == 'li')
+                    .map((_, e) => '- ' + $(e).text().trim())
+                    .toArray().join('\n');
+            }
+            if (!text) {
+                break;
+            }
+            length += text.length;
+            description.push(text);
+            if (length > 500 || description.length > 10) {
+                break;
+            }
+        }
+        if (description.length > 0) {
+            const text = description[description.length - 1];
+            if (text.endsWith(':')) {
+                description.push('…');
+            }
+        }
+        return description;
     }
 }
 exports.DotNetCoreTutorialsScraper = DotNetCoreTutorialsScraper;

@@ -28,6 +28,7 @@ async function main() {
       new DevBlogsScraper('typescript'),
       new DevBlogsScraper('visualstudio'),
       new DevBlogsScraper('commandline'),
+      new DotNetCoreTutorialsScraper(),
     ]
 
     const publicSender = createSender('public');

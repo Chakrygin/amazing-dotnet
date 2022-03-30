@@ -17,12 +17,12 @@ export class TelegramSender implements Sender {
       this.telegram.sendPhoto(this.chatId, post.image, {
         caption: message,
         parse_mode: 'HTML',
-      })
+      });
     }
     else {
       this.telegram.sendMessage(this.chatId, message, {
         parse_mode: 'HTML',
-      })
+      });
     }
 
     function getPostMessage(post: Post): string {
