@@ -1,3 +1,0 @@
-https://dotnetcoretutorials.com/2021/12/03/finding-async-method-calls-missing-await/
-https://dotnetcoretutorials.com/2021/12/11/temporal-tables-in-sql-server/
-https://dotnetcoretutorials.com/2021/12/31/an-open-qna-invitation/

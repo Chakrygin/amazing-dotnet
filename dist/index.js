@@ -40118,7 +40118,7 @@ const axios_1 = __importDefault(__nccwpck_require__(6545));
 const cheerio = __importStar(__nccwpck_require__(4612));
 const blog = {
     title: '.NET Core Tutorials',
-    link: 'https://dotnetcoretutorials.com/page/2/'
+    link: 'https://dotnetcoretutorials.com/'
 };
 const author = {
     title: 'Wade Gausden',

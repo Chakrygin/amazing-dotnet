@@ -10,7 +10,7 @@ import { Author, Blog, Post, Tag } from "../models";
 
 const blog: Blog = {
   title: '.NET Core Tutorials',
-  link: 'https://dotnetcoretutorials.com/page/2/'
+  link: 'https://dotnetcoretutorials.com/'
 }
 
 const author: Author = {
