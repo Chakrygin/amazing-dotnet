@@ -13,14 +13,20 @@ export class TelegramSender implements Sender {
   async sendPost(post: Post): Promise<void> {
     const message = getPostMessage(post);
 
-    if (post.image) {
-      this.telegram.sendPhoto(this.chatId, post.image, {
+    if (!post.image) {
+      this.telegram.sendMessage(this.chatId, message, {
+        parse_mode: 'HTML',
+      });
+    }
+    else if (post.image.endsWith('.gif')) {
+      this.telegram.sendAnimation(this.chatId, post.image, {
         caption: message,
         parse_mode: 'HTML',
       });
     }
     else {
-      this.telegram.sendMessage(this.chatId, message, {
+      this.telegram.sendPhoto(this.chatId, post.image, {
+        caption: message,
         parse_mode: 'HTML',
       });
     }
@@ -58,7 +64,7 @@ export class TelegramSender implements Sender {
         lines.push(line.join(' | '));
       }
 
-      if (post.description) {
+      if (post.description != undefined) {
         if (Array.isArray(post.description)) {
           for (const line of post.description) {
             lines.push(line);

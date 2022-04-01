@@ -1,7 +1,9 @@
+import * as core from '@actions/core';
+
 import RssParser from 'rss-parser';
 
-import { Scraper } from "./abstractions";
-import { Sender } from "../senders/abstractions";
+import { Scraper } from "../scrapers";
+import { Sender } from "../senders";
 import { Storage } from "../storage";
 import { Author, Blog, Post, Tag } from "../models";
 
@@ -12,7 +14,7 @@ export class AndrewLockScraper implements Scraper {
   private readonly blog: Blog = {
     title: '.NET Escapades',
     link: 'https://andrewlock.net/'
-  }
+  };
 
   private readonly author: Author = {
     title: 'Andrew Lock',
@@ -21,19 +23,21 @@ export class AndrewLockScraper implements Scraper {
 
   async scrape(storage: Storage, sender: Sender): Promise<void> {
     for await (const post of this.readPosts()) {
+      core.info('Post already exists in storage. Break scraping.');
       if (storage.has(post.link, post.date)) {
         break;
       }
 
+      core.info('Sending post...');
       await sender.sendPost(post);
 
+      core.info('Storing post...');
       storage.add(post.link, post.date);
     }
   }
 
   private async *readPosts(): AsyncGenerator<Post, void> {
-    const feedUrl = this.blog.link + 'rss.xml';
-    console.log(`Download rss feed by url '${feedUrl}'.`);
+    core.info(`Parsing rss feed by url '${this.blog.link}rss.xml'...`);
 
     const parser = new RssParser({
       customFields: {
@@ -41,19 +45,31 @@ export class AndrewLockScraper implements Scraper {
       },
     });
 
-    const feed = await parser.parseURL(feedUrl);
+    const feed = await parser.parseURL(this.blog.link + 'rss.xml');
 
     if (feed.items.length == 0) {
       throw new Error('Failed to parse rss feed. No posts found.');
     }
 
+    core.info(`Rss feed parsed. ${feed.items.length} posts found.`);
+
     for (let index = 0; index < feed.items.length; index++) {
-      console.log(`Parse post at index ${index}.`);
+      core.info(`Parsing post at index ${index}...`);
 
       const item = feed.items[index];
+
       const image = this.getImage(item['media:content']);
       const description = this.getDescription(item.contentSnippet);
       const tags = this.getTags(item.categories);
+
+      if (!item.isoDate) {
+        throw new Error('Failed to parse post. Date is empty.');
+      }
+
+      var timestamp = Date.parse(item.isoDate);
+      if (isNaN(timestamp)) {
+        throw new Error('Failed to parse post. Date is invalid.');
+      }
 
       const post: Post = {
         image: image,
@@ -61,38 +77,40 @@ export class AndrewLockScraper implements Scraper {
         link: item.link ?? '',
         blog: this.blog,
         author: this.author,
-        date: new Date(item.isoDate ?? ''),
+        date: new Date(timestamp),
         description: description,
         tags: tags,
       };
+
+      core.info(`Post parsed.`);
+      core.info(`Post title is '${post.title}'.`);
+      core.info(`Post link is '${post.link}'.`);
 
       yield post;
     }
   }
 
-  private getImage(content: any): string {
+  private getImage(content: any): string | undefined {
     if (content) {
       const image = content['$'];
       if (image && image.url && image.medium === 'image') {
         return image.url;
       }
     }
-
-    return '';
   }
 
-  private getDescription(content: string | undefined): string {
+  private getDescription(content: string | undefined): string | undefined {
     if (content && !content.endsWith('.')) {
       content += '.'
     }
 
-    return content ?? '';
+    return content;
   }
 
-  private getTags(categories: string[] | undefined): Tag[] {
-    const tags = new Array<Tag>();
-
+  private getTags(categories: string[] | undefined): Tag[] | undefined {
     if (categories && categories.length > 0) {
+      const tags = new Array<Tag>();
+
       for (const category of categories) {
         const slug = category
           .toLocaleLowerCase()
@@ -105,8 +123,8 @@ export class AndrewLockScraper implements Scraper {
           link: `${this.blog.link}tag/${slug}/`,
         });
       }
-    }
 
-    return tags;
+      return tags;
+    }
   }
 }

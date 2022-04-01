@@ -3,41 +3,44 @@ import * as core from '@actions/core';
 import axios from 'axios';
 import * as cheerio from 'cheerio';
 
-import { Scraper } from "./abstractions";
-import { Sender } from "../senders/abstractions";
+import { Scraper } from "../scrapers";
+import { Sender } from "../senders";
 import { Storage } from "../storage";
 import { Author, Blog, Post, Tag } from "../models";
-
-const blog: Blog = {
-  title: '.NET Core Tutorials',
-  link: 'https://dotnetcoretutorials.com/'
-}
-
-const author: Author = {
-  title: 'Wade Gausden',
-  link: 'https://dotnetcoretutorials.com/about/'
-}
 
 export class DotNetCoreTutorialsScraper implements Scraper {
   readonly name = 'DotNetCoreTutorials';
   readonly path = 'dotnetcoretutorials.com';
 
+  private readonly blog: Blog = {
+    title: '.NET Core Tutorials',
+    link: 'https://dotnetcoretutorials.com/'
+  }
+
+  private readonly author: Author = {
+    title: 'Wade Gausden',
+    link: 'https://dotnetcoretutorials.com/about/'
+  }
+
   async scrape(storage: Storage, sender: Sender): Promise<void> {
     for await (const post of this.readPosts()) {
       if (storage.has(post.link, post.date)) {
+        core.info('Post already exists in storage. Break scraping.');
         break;
       }
 
+      core.info('Sending post...');
       await sender.sendPost(post);
 
+      core.info('Storing post...');
       storage.add(post.link, post.date);
     }
   }
 
   private async *readPosts(): AsyncGenerator<Post, void> {
-    core.info(`Parsing html page by url '${blog.link}'...`);
+    core.info(`Parsing html page by url '${this.blog.link}'...`);
 
-    const response = await axios.get(blog.link);
+    const response = await axios.get(this.blog.link);
     const $ = cheerio.load(response.data);
     const articles = $('#content article').toArray();
 
@@ -64,51 +67,37 @@ export class DotNetCoreTutorialsScraper implements Scraper {
         throw new Error('Failed to parse post. Date is invalid.');
       }
 
-      const image = this.getImage($, article);
+      const image = this.getImage(article);
       const description = this.getDescription($, content);
 
       const post: Post = {
         image: image,
         title: title.text().trim(),
         link: title.attr('href') ?? '',
-        blog: blog,
-        author: author,
+        blog: this.blog,
+        author: this.author,
         date: new Date(timestamp),
         description: description,
       };
 
-      core.info(`Post parsed. Title: '${post.title}'.`);
+      core.info(`Post parsed.`);
+      core.info(`Post title is '${post.title}'.`);
+      core.info(`Post link is '${post.link}'.`);
 
       yield post;
     }
   }
 
-  private getImage($: cheerio.CheerioAPI, article: cheerio.Cheerio<cheerio.Element>): string | undefined {
+  private getImage(article: cheerio.Cheerio<cheerio.Element>): string | undefined {
     const img = article.find('img');
-
     const width = img.attr('width');
-    if (!width || parseInt(width) < 320) {
-      return undefined;
-    }
-
     const height = img.attr('height');
-    if (!height || parseInt(height) < 240) {
-      return undefined;
+
+    if (width && height) {
+      if (parseInt(width) >= 320 && parseInt(height) >= 240) {
+        return img.attr('data-lazy-src') ?? img.attr('src');
+      }
     }
-
-    const src = img.attr('data-lazy-src') ?? img.attr('src') ?? '';
-    const success =
-      src.startsWith('https://') && (
-        src.endsWith('.gif') ||
-        src.endsWith('.jpg') ||
-        src.endsWith('.jpeg') ||
-        src.endsWith('.png'));
-
-    if (!success) {
-      return undefined;
-    }
-
-    return src;
   }
 
   private getDescription($: cheerio.CheerioAPI, content: cheerio.Cheerio<cheerio.Element>): string[] {
@@ -141,8 +130,7 @@ export class DotNetCoreTutorialsScraper implements Scraper {
       length += text.length;
       description.push(text);
 
-      if (length > 500 || description.length > 10) {
-
+      if (length >= 500 || description.length >= 10) {
         break;
       }
     }

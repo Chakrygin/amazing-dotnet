@@ -39755,6 +39755,29 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 
 "use strict";
 
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -39788,6 +39811,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.AndrewLockScraper = void 0;
+const core = __importStar(__nccwpck_require__(2186));
 const rss_parser_1 = __importDefault(__nccwpck_require__(6946));
 class AndrewLockScraper {
     constructor() {
@@ -39808,10 +39832,13 @@ class AndrewLockScraper {
             try {
                 for (var _b = __asyncValues(this.readPosts()), _c; _c = yield _b.next(), !_c.done;) {
                     const post = _c.value;
+                    core.info('Post already exists in storage. Break scraping.');
                     if (storage.has(post.link, post.date)) {
                         break;
                     }
+                    core.info('Sending post...');
                     yield sender.sendPost(post);
+                    core.info('Storing post...');
                     storage.add(post.link, post.date);
                 }
             }
@@ -39825,35 +39852,45 @@ class AndrewLockScraper {
         });
     }
     readPosts() {
-        var _a, _b, _c;
+        var _a, _b;
         return __asyncGenerator(this, arguments, function* readPosts_1() {
-            const feedUrl = this.blog.link + 'rss.xml';
-            console.log(`Download rss feed by url '${feedUrl}'.`);
+            core.info(`Parsing rss feed by url '${this.blog.link}rss.xml'...`);
             const parser = new rss_parser_1.default({
                 customFields: {
                     item: ['media:content', 'media:content', { keepArray: true }],
                 },
             });
-            const feed = yield __await(parser.parseURL(feedUrl));
+            const feed = yield __await(parser.parseURL(this.blog.link + 'rss.xml'));
             if (feed.items.length == 0) {
                 throw new Error('Failed to parse rss feed. No posts found.');
             }
+            core.info(`Rss feed parsed. ${feed.items.length} posts found.`);
             for (let index = 0; index < feed.items.length; index++) {
-                console.log(`Parse post at index ${index}.`);
+                core.info(`Parsing post at index ${index}...`);
                 const item = feed.items[index];
                 const image = this.getImage(item['media:content']);
                 const description = this.getDescription(item.contentSnippet);
                 const tags = this.getTags(item.categories);
+                if (!item.isoDate) {
+                    throw new Error('Failed to parse post. Date is empty.');
+                }
+                var timestamp = Date.parse(item.isoDate);
+                if (isNaN(timestamp)) {
+                    throw new Error('Failed to parse post. Date is invalid.');
+                }
                 const post = {
                     image: image,
                     title: (_a = item.title) !== null && _a !== void 0 ? _a : '',
                     link: (_b = item.link) !== null && _b !== void 0 ? _b : '',
                     blog: this.blog,
                     author: this.author,
-                    date: new Date((_c = item.isoDate) !== null && _c !== void 0 ? _c : ''),
+                    date: new Date(timestamp),
                     description: description,
                     tags: tags,
                 };
+                core.info(`Post parsed.`);
+                core.info(`Post title is '${post.title}'.`);
+                core.info(`Post link is '${post.link}'.`);
                 yield yield __await(post);
             }
         });
@@ -39865,17 +39902,16 @@ class AndrewLockScraper {
                 return image.url;
             }
         }
-        return '';
     }
     getDescription(content) {
         if (content && !content.endsWith('.')) {
             content += '.';
         }
-        return content !== null && content !== void 0 ? content : '';
+        return content;
     }
     getTags(categories) {
-        const tags = new Array();
         if (categories && categories.length > 0) {
+            const tags = new Array();
             for (const category of categories) {
                 const slug = category
                     .toLocaleLowerCase()
@@ -39887,8 +39923,8 @@ class AndrewLockScraper {
                     link: `${this.blog.link}tag/${slug}/`,
                 });
             }
+            return tags;
         }
-        return tags;
     }
 }
 exports.AndrewLockScraper = AndrewLockScraper;
@@ -39957,6 +39993,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.DevBlogsScraper = void 0;
+const core = __importStar(__nccwpck_require__(2186));
 const axios_1 = __importDefault(__nccwpck_require__(6545));
 const cheerio = __importStar(__nccwpck_require__(4612));
 const blogs = {
@@ -39969,11 +40006,12 @@ const blogs = {
 };
 class DevBlogsScraper {
     constructor(id) {
-        this.name = `DevBlogs / ${blogs[id]}`;
-        this.path = `devblogs.microsoft.com/${id}`;
+        this.id = id;
+        this.name = `DevBlogs / ${blogs[this.id]}`;
+        this.path = `devblogs.microsoft.com/${this.id}`;
         this.blog = {
-            title: blogs[id],
-            link: `https://devblogs.microsoft.com/${id}/`,
+            title: blogs[this.id],
+            link: `https://devblogs.microsoft.com/${this.id}/`,
         };
     }
     scrape(storage, sender) {
@@ -39983,9 +40021,12 @@ class DevBlogsScraper {
                 for (var _b = __asyncValues(this.readPosts()), _c; _c = yield _b.next(), !_c.done;) {
                     const post = _c.value;
                     if (storage.has(post.link, post.date)) {
+                        core.info('Post already exists in storage. Break scraping.');
                         break;
                     }
+                    core.info('Sending post...');
                     yield sender.sendPost(post);
+                    core.info('Storing post...');
                     storage.add(post.link, post.date);
                 }
             }
@@ -40001,20 +40042,28 @@ class DevBlogsScraper {
     readPosts() {
         var _a, _b, _c;
         return __asyncGenerator(this, arguments, function* readPosts_1() {
-            console.log(`Download html page by url '${this.blog.link}'.`);
+            core.info(`Parsing html page by url '${this.blog.link}'...`);
             const response = yield __await(axios_1.default.get(this.blog.link));
             const $ = cheerio.load(response.data);
             const entries = $('#content .entry-box').toArray();
             if (entries.length == 0) {
                 throw new Error('Failed to parse html page. No posts found.');
             }
+            core.info(`Html page parsed. ${entries.length} posts found.`);
             for (let index = 0; index < entries.length; index++) {
-                console.log(`Parse post at index ${index}.`);
+                core.info(`Parsing post at index ${index}...`);
                 const entry = $(entries[index]);
                 const title = entry.find('.entry-title a');
                 const image = entry.find('.entry-image img');
-                const date = entry.find('.entry-post-date');
+                const date = entry.find('.entry-post-date').text();
                 const author = entry.find('.entry-author-link a');
+                if (!date) {
+                    throw new Error('Failed to parse post. Date is empty.');
+                }
+                var timestamp = Date.parse(date);
+                if (isNaN(timestamp)) {
+                    throw new Error('Failed to parse post. Date is invalid.');
+                }
                 const description = entry
                     .find('.entry-content').contents()
                     .filter((_, element) => element.type == 'text')
@@ -40032,7 +40081,7 @@ class DevBlogsScraper {
                         title: author.text().trim(),
                         link: (_c = author.attr('href')) !== null && _c !== void 0 ? _c : '',
                     },
-                    date: new Date(date.text()),
+                    date: new Date(timestamp),
                     description: description,
                     tags: tags.map(tag => {
                         var _a;
@@ -40042,6 +40091,9 @@ class DevBlogsScraper {
                         };
                     }),
                 };
+                core.info(`Post parsed.`);
+                core.info(`Post title is '${post.title}'.`);
+                core.info(`Post link is '${post.link}'.`);
                 yield yield __await(post);
             }
         });
@@ -40116,18 +40168,18 @@ exports.DotNetCoreTutorialsScraper = void 0;
 const core = __importStar(__nccwpck_require__(2186));
 const axios_1 = __importDefault(__nccwpck_require__(6545));
 const cheerio = __importStar(__nccwpck_require__(4612));
-const blog = {
-    title: '.NET Core Tutorials',
-    link: 'https://dotnetcoretutorials.com/'
-};
-const author = {
-    title: 'Wade Gausden',
-    link: 'https://dotnetcoretutorials.com/about/'
-};
 class DotNetCoreTutorialsScraper {
     constructor() {
         this.name = 'DotNetCoreTutorials';
         this.path = 'dotnetcoretutorials.com';
+        this.blog = {
+            title: '.NET Core Tutorials',
+            link: 'https://dotnetcoretutorials.com/'
+        };
+        this.author = {
+            title: 'Wade Gausden',
+            link: 'https://dotnetcoretutorials.com/about/'
+        };
     }
     scrape(storage, sender) {
         var e_1, _a;
@@ -40136,9 +40188,12 @@ class DotNetCoreTutorialsScraper {
                 for (var _b = __asyncValues(this.readPosts()), _c; _c = yield _b.next(), !_c.done;) {
                     const post = _c.value;
                     if (storage.has(post.link, post.date)) {
+                        core.info('Post already exists in storage. Break scraping.');
                         break;
                     }
+                    core.info('Sending post...');
                     yield sender.sendPost(post);
+                    core.info('Storing post...');
                     storage.add(post.link, post.date);
                 }
             }
@@ -40154,8 +40209,8 @@ class DotNetCoreTutorialsScraper {
     readPosts() {
         var _a;
         return __asyncGenerator(this, arguments, function* readPosts_1() {
-            core.info(`Parsing html page by url '${blog.link}'...`);
-            const response = yield __await(axios_1.default.get(blog.link));
+            core.info(`Parsing html page by url '${this.blog.link}'...`);
+            const response = yield __await(axios_1.default.get(this.blog.link));
             const $ = cheerio.load(response.data);
             const articles = $('#content article').toArray();
             if (articles.length == 0) {
@@ -40175,42 +40230,34 @@ class DotNetCoreTutorialsScraper {
                 if (isNaN(timestamp)) {
                     throw new Error('Failed to parse post. Date is invalid.');
                 }
-                const image = this.getImage($, article);
+                const image = this.getImage(article);
                 const description = this.getDescription($, content);
                 const post = {
                     image: image,
                     title: title.text().trim(),
                     link: (_a = title.attr('href')) !== null && _a !== void 0 ? _a : '',
-                    blog: blog,
-                    author: author,
+                    blog: this.blog,
+                    author: this.author,
                     date: new Date(timestamp),
                     description: description,
                 };
-                core.info(`Post parsed. Title: '${post.title}'.`);
+                core.info(`Post parsed.`);
+                core.info(`Post title is '${post.title}'.`);
+                core.info(`Post link is '${post.link}'.`);
                 yield yield __await(post);
             }
         });
     }
-    getImage($, article) {
-        var _a, _b;
+    getImage(article) {
+        var _a;
         const img = article.find('img');
         const width = img.attr('width');
-        if (!width || parseInt(width) < 320) {
-            return undefined;
-        }
         const height = img.attr('height');
-        if (!height || parseInt(height) < 240) {
-            return undefined;
+        if (width && height) {
+            if (parseInt(width) >= 320 && parseInt(height) >= 240) {
+                return (_a = img.attr('data-lazy-src')) !== null && _a !== void 0 ? _a : img.attr('src');
+            }
         }
-        const src = (_b = (_a = img.attr('data-lazy-src')) !== null && _a !== void 0 ? _a : img.attr('src')) !== null && _b !== void 0 ? _b : '';
-        const success = src.startsWith('https://') && (src.endsWith('.gif') ||
-            src.endsWith('.jpg') ||
-            src.endsWith('.jpeg') ||
-            src.endsWith('.png'));
-        if (!success) {
-            return undefined;
-        }
-        return src;
     }
     getDescription($, content) {
         const description = [];
@@ -40236,7 +40283,7 @@ class DotNetCoreTutorialsScraper {
             }
             length += text.length;
             description.push(text);
-            if (length > 500 || description.length > 10) {
+            if (length >= 500 || description.length >= 10) {
                 break;
             }
         }
@@ -40380,14 +40427,20 @@ class TelegramSender {
     sendPost(post) {
         return __awaiter(this, void 0, void 0, function* () {
             const message = getPostMessage(post);
-            if (post.image) {
-                this.telegram.sendPhoto(this.chatId, post.image, {
+            if (!post.image) {
+                this.telegram.sendMessage(this.chatId, message, {
+                    parse_mode: 'HTML',
+                });
+            }
+            else if (post.image.endsWith('.gif')) {
+                this.telegram.sendAnimation(this.chatId, post.image, {
                     caption: message,
                     parse_mode: 'HTML',
                 });
             }
             else {
-                this.telegram.sendMessage(this.chatId, message, {
+                this.telegram.sendPhoto(this.chatId, post.image, {
+                    caption: message,
                     parse_mode: 'HTML',
                 });
             }
@@ -40412,7 +40465,7 @@ class TelegramSender {
                 if (line.length > 0) {
                     lines.push(line.join(' | '));
                 }
-                if (post.description) {
+                if (post.description != undefined) {
                     if (Array.isArray(post.description)) {
                         for (const line of post.description) {
                             lines.push(line);
@@ -40511,12 +40564,21 @@ class ValidateSender {
     sendPost(post) {
         return __awaiter(this, void 0, void 0, function* () {
             const errors = [];
-            if (post.image !== undefined) {
+            if (post.image != undefined) {
                 if (!post.image) {
                     errors.push('image is empty');
                 }
-                if (!post.image.startsWith('https://')) {
+                else if (!post.image.startsWith('https://')) {
                     errors.push('image is not valid url');
+                }
+                else {
+                    const valid = post.image.endsWith('.png') ||
+                        post.image.endsWith('.jpg') ||
+                        post.image.endsWith('.jpeg') ||
+                        post.image.endsWith('.gif');
+                    if (!valid) {
+                        errors.push('image has not valid extension');
+                    }
                 }
             }
             if (!post.title) {

@@ -8,13 +8,23 @@ export class ValidateSender implements Sender {
   async sendPost(post: Post): Promise<void> {
     const errors = [];
 
-    if (post.image !== undefined) {
+    if (post.image != undefined) {
       if (!post.image) {
         errors.push('image is empty');
       }
-
-      if (!post.image.startsWith('https://')) {
+      else if (!post.image.startsWith('https://')) {
         errors.push('image is not valid url');
+      }
+      else {
+        const valid =
+          post.image.endsWith('.png') ||
+          post.image.endsWith('.jpg') ||
+          post.image.endsWith('.jpeg') ||
+          post.image.endsWith('.gif');
+
+        if (!valid) {
+          errors.push('image has not valid extension');
+        }
       }
     }
 
