@@ -39687,6 +39687,7 @@ function main() {
         try {
             const scrapers = [
                 new scrapers_1.AndrewLockScraper(),
+                new scrapers_1.CodeOpinionScraper(),
                 new scrapers_1.DevBlogsScraper('dotnet'),
                 new scrapers_1.DevBlogsScraper('odata'),
                 new scrapers_1.DevBlogsScraper('nuget'),
@@ -39928,6 +39929,189 @@ class AndrewLockScraper {
     }
 }
 exports.AndrewLockScraper = AndrewLockScraper;
+
+
+/***/ }),
+
+/***/ 2771:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __asyncValues = (this && this.__asyncValues) || function (o) {
+    if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
+    var m = o[Symbol.asyncIterator], i;
+    return m ? m.call(o) : (o = typeof __values === "function" ? __values(o) : o[Symbol.iterator](), i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () { return this; }, i);
+    function verb(n) { i[n] = o[n] && function (v) { return new Promise(function (resolve, reject) { v = o[n](v), settle(resolve, reject, v.done, v.value); }); }; }
+    function settle(resolve, reject, d, v) { Promise.resolve(v).then(function(v) { resolve({ value: v, done: d }); }, reject); }
+};
+var __await = (this && this.__await) || function (v) { return this instanceof __await ? (this.v = v, this) : new __await(v); }
+var __asyncGenerator = (this && this.__asyncGenerator) || function (thisArg, _arguments, generator) {
+    if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
+    var g = generator.apply(thisArg, _arguments || []), i, q = [];
+    return i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () { return this; }, i;
+    function verb(n) { if (g[n]) i[n] = function (v) { return new Promise(function (a, b) { q.push([n, v, a, b]) > 1 || resume(n, v); }); }; }
+    function resume(n, v) { try { step(g[n](v)); } catch (e) { settle(q[0][3], e); } }
+    function step(r) { r.value instanceof __await ? Promise.resolve(r.value.v).then(fulfill, reject) : settle(q[0][2], r); }
+    function fulfill(value) { resume("next", value); }
+    function reject(value) { resume("throw", value); }
+    function settle(f, v) { if (f(v), q.shift(), q.length) resume(q[0][0], q[0][1]); }
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.CodeOpinionScraper = void 0;
+const core = __importStar(__nccwpck_require__(2186));
+const axios_1 = __importDefault(__nccwpck_require__(6545));
+const cheerio = __importStar(__nccwpck_require__(4612));
+class CodeOpinionScraper {
+    constructor() {
+        this.name = 'CodeOpinion';
+        this.path = 'codeopinion.com';
+        this.blog = {
+            title: 'CodeOpinion',
+            link: 'https://codeopinion.com/'
+        };
+        this.author = {
+            title: 'Derek Comartin',
+            link: 'https://mvp.microsoft.com/en-us/PublicProfile/5002380'
+        };
+    }
+    scrape(storage, sender) {
+        var e_1, _a;
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                for (var _b = __asyncValues(this.readPosts()), _c; _c = yield _b.next(), !_c.done;) {
+                    const post = _c.value;
+                    core.info('Post already exists in storage. Break scraping.');
+                    if (storage.has(post.link, post.date)) {
+                        break;
+                    }
+                    core.info('Sending post...');
+                    yield sender.sendPost(post);
+                    core.info('Storing post...');
+                    storage.add(post.link, post.date);
+                }
+            }
+            catch (e_1_1) { e_1 = { error: e_1_1 }; }
+            finally {
+                try {
+                    if (_c && !_c.done && (_a = _b.return)) yield _a.call(_b);
+                }
+                finally { if (e_1) throw e_1.error; }
+            }
+        });
+    }
+    readPosts() {
+        var _a;
+        return __asyncGenerator(this, arguments, function* readPosts_1() {
+            core.info(`Parsing html page by url '${this.blog.link}'...`);
+            const response = yield __await(axios_1.default.get(this.blog.link));
+            const $ = cheerio.load(response.data);
+            const articles = $('#main article').toArray();
+            if (articles.length == 0) {
+                throw new Error('Failed to parse html page. No posts found.');
+            }
+            core.info(`Html page parsed. ${articles.length} posts found.`);
+            for (let index = 0; index < articles.length; index++) {
+                core.info(`Parsing post at index ${index}...`);
+                const article = $(articles[index]);
+                const title = article.find('h2.entry-title a');
+                const date = article.find('time.entry-date').text();
+                const content = article.find('div.entry-content');
+                if (!date) {
+                    throw new Error('Failed to parse post. Date is empty.');
+                }
+                var timestamp = Date.parse(date);
+                if (isNaN(timestamp)) {
+                    throw new Error('Failed to parse post. Date is invalid.');
+                }
+                const image = this.getImage(article);
+                const description = this.getDescription($, content);
+                const post = {
+                    image: image,
+                    title: title.text().trim(),
+                    link: (_a = title.attr('href')) !== null && _a !== void 0 ? _a : '',
+                    blog: this.blog,
+                    author: this.author,
+                    date: new Date(timestamp),
+                    description: description,
+                };
+                core.info(`Post parsed.`);
+                core.info(`Post title is '${post.title}'.`);
+                core.info(`Post link is '${post.link}'.`);
+                yield yield __await(post);
+            }
+        });
+    }
+    getImage(article) {
+        const link = article.find('.container-youtube a[href^=https://www.youtube.com/]');
+        const href = link.attr('href');
+        if (href) {
+            const index = href.indexOf('?');
+            if (index > 0) {
+                const query = href.substring(index + 1);
+                const pairs = query.split('&');
+                for (const pair of pairs) {
+                    const [name, value] = pair.split('=');
+                    if (name == 'v') {
+                        return `https://img.youtube.com/vi/${value}/maxresdefault.jpg`;
+                    }
+                }
+                return query;
+            }
+        }
+    }
+    getDescription($, content) {
+        const description = [];
+        for (const element of content.children()) {
+            if (element.name == 'p') {
+                const text = $(element).text().trim();
+                if (text) {
+                    description.push(text);
+                }
+            }
+            else {
+                break;
+            }
+        }
+        return description;
+    }
+}
+exports.CodeOpinionScraper = CodeOpinionScraper;
 
 
 /***/ }),
@@ -40323,6 +40507,7 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 __exportStar(__nccwpck_require__(6507), exports);
 __exportStar(__nccwpck_require__(1113), exports);
+__exportStar(__nccwpck_require__(2771), exports);
 __exportStar(__nccwpck_require__(1145), exports);
 __exportStar(__nccwpck_require__(142), exports);
 

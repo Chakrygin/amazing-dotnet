@@ -4,6 +4,7 @@ import * as github from '@actions/github'
 import {
   Scraper,
   AndrewLockScraper,
+  CodeOpinionScraper,
   DevBlogsScraper,
   DotNetCoreTutorialsScraper,
 } from './scrapers'
@@ -22,6 +23,7 @@ async function main() {
 
     const scrapers: Scraper[] = [
       new AndrewLockScraper(),
+      new CodeOpinionScraper(),
       new DevBlogsScraper('dotnet'),
       new DevBlogsScraper('odata'),
       new DevBlogsScraper('nuget'),
