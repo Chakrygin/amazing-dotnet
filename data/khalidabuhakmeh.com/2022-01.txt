@@ -1,0 +1,2 @@
+https://khalidabuhakmeh.com/dotnet-watch-launchsetting-for-aspnet-core
+https://khalidabuhakmeh.com/static-abstract-members-in-csharp-10-interfaces

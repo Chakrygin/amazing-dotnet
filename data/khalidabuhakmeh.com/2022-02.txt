@@ -1,0 +1,4 @@
+https://khalidabuhakmeh.com/image-style-transfer-with-csharp-onnx-and-imagesharp
+https://khalidabuhakmeh.com/logging-trace-output-using-ilogger-in-dotnet-applications
+https://khalidabuhakmeh.com/running-sql-server-queries-in-docker
+https://khalidabuhakmeh.com/testing-aspnet-core-6-apps

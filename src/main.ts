@@ -7,6 +7,7 @@ import {
   CodeOpinionScraper,
   DevBlogsScraper,
   DotNetCoreTutorialsScraper,
+  KhalidAbuhakmehScraper,
 } from './scrapers'
 
 import {
@@ -31,6 +32,7 @@ async function main() {
       new DevBlogsScraper('visualstudio'),
       new DevBlogsScraper('commandline'),
       new DotNetCoreTutorialsScraper(),
+      new KhalidAbuhakmehScraper(),
     ]
 
     const publicSender = createSender('public');

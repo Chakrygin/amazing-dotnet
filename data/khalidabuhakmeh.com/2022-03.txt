@@ -1,0 +1,4 @@
+https://khalidabuhakmeh.com/aspnet-core-6-mvc-upgrade-systemtextjson-serialization-issues
+https://khalidabuhakmeh.com/loop-around-index-with-csharp-collections
+https://khalidabuhakmeh.com/unit-tests-for-legacy-systems-with-dotnet-6
+https://khalidabuhakmeh.com/using-libman-to-manage-client-side-dependencies
