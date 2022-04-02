@@ -104,7 +104,9 @@ export class CodeOpinionScraper implements Scraper {
 
     for (const element of elements) {
       if (element.name == 'p') {
-        const text = $(element).text().trim();
+        const p = $(element);
+        const text = p.text().trim();
+
         if (text) {
           description.push(text);
         }

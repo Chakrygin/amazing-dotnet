@@ -1,2 +1,4 @@
 https://devblogs.microsoft.com/visualstudio/line-staging-interactive-staging/
+https://devblogs.microsoft.com/visualstudio/typing-less-coding-more-how-we-delivered-intellicode-whole-line-completions-with-a-transformer-model/
+https://devblogs.microsoft.com/visualstudio/visual-studio-2022-17-1-is-now-available/
 https://devblogs.microsoft.com/visualstudio/visual-studio-2022-for-mac-preview-6/

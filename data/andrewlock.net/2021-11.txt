@@ -1,2 +1,0 @@
-https://andrewlock.net/exploring-dotnet-6-part-11-callerargumentexpression-and-throw-helpers/
-https://andrewlock.net/exploring-dotnet-6-part-12-upgrading-a-dotnet-5-startup-based-app-to-dotnet-6/

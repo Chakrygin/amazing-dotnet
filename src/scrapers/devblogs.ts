@@ -65,13 +65,7 @@ export class DevBlogsScraper implements Scraper {
       const title = entry.find('.entry-title a');
       const author = entry.find('.entry-author-link a');
       const date = entry.find('.entry-post-date').text();
-
-      const description = entry
-        .find('.entry-content')
-        .contents()
-        .filter((_, element) => element.type == 'text')
-        .text()
-        .trim();
+      const description = this.getDescription(entry, $);
 
       const tags = entry
         .find('.card-tags-links .card-tags-linkbox a')
@@ -102,5 +96,29 @@ export class DevBlogsScraper implements Scraper {
 
       yield post;
     }
+  }
+
+
+  private getDescription(entry: cheerio.Cheerio<cheerio.Element>, $: cheerio.CheerioAPI): string[] {
+    const description = [];
+
+    const elements = entry
+      .find('.entry-content')
+      .contents();
+
+    for (const element of elements) {
+      if (element.type == 'text') {
+        const text = $(element).text();
+        const lines = text.split('\n')
+          .map(line => line.trim())
+          .filter(line => line);
+
+        for (const line of lines) {
+          description.push(line);
+        }
+      }
+    }
+
+    return description;
   }
 }

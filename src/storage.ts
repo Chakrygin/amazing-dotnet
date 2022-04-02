@@ -11,7 +11,8 @@ export class Storage {
   private names?: string[];
 
   exists(): boolean {
-    return fs.existsSync(this.path);
+    const path = join(this.path, 'timestamp');
+    return fs.existsSync(path);
   }
 
   has(value: string, date?: Date): boolean {
