@@ -23,8 +23,8 @@ export class AndrewLockScraper implements Scraper {
 
   async scrape(storage: Storage, sender: Sender): Promise<void> {
     for await (const post of this.readPosts()) {
-      core.info('Post already exists in storage. Break scraping.');
       if (storage.has(post.link, post.date)) {
+        core.info('Post already exists in storage. Break scraping.');
         break;
       }
 

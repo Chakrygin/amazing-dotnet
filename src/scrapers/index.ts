@@ -1,5 +1,6 @@
 export * from './abstractions'
 export * from './andrewlock'
+export * from './codemaze'
 export * from './codeopinion'
 export * from './devblogs'
 export * from './dotnetcoretutorials'

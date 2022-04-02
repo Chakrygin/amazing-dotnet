@@ -8,6 +8,7 @@ import {
   DevBlogsScraper,
   DotNetCoreTutorialsScraper,
   KhalidAbuhakmehScraper,
+  CodeMazeScraper,
 } from './scrapers'
 
 import {
@@ -24,6 +25,7 @@ async function main() {
 
     const scrapers: Scraper[] = [
       new AndrewLockScraper(),
+      new CodeMazeScraper(),
       new CodeOpinionScraper(),
       new DevBlogsScraper('dotnet'),
       new DevBlogsScraper('odata'),
