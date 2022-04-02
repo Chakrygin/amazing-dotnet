@@ -40582,7 +40582,7 @@ const axios_1 = __importDefault(__nccwpck_require__(6545));
 const cheerio = __importStar(__nccwpck_require__(4612));
 class KhalidAbuhakmehScraper {
     constructor() {
-        this.name = 'Khalid Abuhakmeh';
+        this.name = 'KhalidAbuhakmeh';
         this.path = 'khalidabuhakmeh.com';
         this.blog = {
             title: 'Khalid Abuhakmeh',

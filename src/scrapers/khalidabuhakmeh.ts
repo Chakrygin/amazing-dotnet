@@ -9,7 +9,7 @@ import { Storage } from "../storage";
 import { Blog, Post, Tag } from "../models";
 
 export class KhalidAbuhakmehScraper implements Scraper {
-  readonly name = 'Khalid Abuhakmeh';
+  readonly name = 'KhalidAbuhakmeh';
   readonly path = 'khalidabuhakmeh.com';
 
   private readonly blog: Blog = {
