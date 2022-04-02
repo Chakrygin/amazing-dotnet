@@ -61,24 +61,17 @@ export class DevBlogsScraper implements Scraper {
       core.info(`Parsing post at index ${index}...`);
 
       const entry = $(entries[index]);
+      const image = entry.find('.entry-image img').attr('data-src');
       const title = entry.find('.entry-title a');
-      const image = entry.find('.entry-image img');
-      const date = entry.find('.entry-post-date').text();
       const author = entry.find('.entry-author-link a');
-
-      if (!date) {
-        throw new Error('Failed to parse post. Date is empty.');
-      }
-
-      var timestamp = Date.parse(date);
-      if (isNaN(timestamp)) {
-        throw new Error('Failed to parse post. Date is invalid.');
-      }
+      const date = entry.find('.entry-post-date').text();
 
       const description = entry
-        .find('.entry-content').contents()
+        .find('.entry-content')
+        .contents()
         .filter((_, element) => element.type == 'text')
-        .text().trim();
+        .text()
+        .trim();
 
       const tags = entry
         .find('.card-tags-links .card-tags-linkbox a')
@@ -86,7 +79,7 @@ export class DevBlogsScraper implements Scraper {
         .toArray();
 
       const post: Post = {
-        image: image.attr('data-src') ?? '',
+        image: image,
         title: title.text().trim(),
         link: title.attr('href') ?? '',
         blog: this.blog,
@@ -94,7 +87,7 @@ export class DevBlogsScraper implements Scraper {
           title: author.text().trim(),
           link: author.attr('href') ?? '',
         },
-        date: new Date(timestamp),
+        date: new Date(date),
         description: description,
         tags: tags.map(tag => {
           return {
@@ -104,7 +97,6 @@ export class DevBlogsScraper implements Scraper {
         }),
       };
 
-      core.info(`Post parsed.`);
       core.info(`Post title is '${post.title}'.`);
       core.info(`Post link is '${post.link}'.`);
 

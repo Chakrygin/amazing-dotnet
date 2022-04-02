@@ -39855,7 +39855,7 @@ class AndrewLockScraper {
         });
     }
     readPosts() {
-        var _a, _b;
+        var _a, _b, _c;
         return __asyncGenerator(this, arguments, function* readPosts_1() {
             core.info(`Parsing rss feed by url '${this.blog.link}rss.xml'...`);
             const parser = new rss_parser_1.default({
@@ -39871,51 +39871,43 @@ class AndrewLockScraper {
             for (let index = 0; index < feed.items.length; index++) {
                 core.info(`Parsing post at index ${index}...`);
                 const item = feed.items[index];
-                const image = this.getImage(item['media:content']);
-                const description = this.getDescription(item.contentSnippet);
-                const tags = this.getTags(item.categories);
-                if (!item.isoDate) {
-                    throw new Error('Failed to parse post. Date is empty.');
-                }
-                var timestamp = Date.parse(item.isoDate);
-                if (isNaN(timestamp)) {
-                    throw new Error('Failed to parse post. Date is invalid.');
-                }
+                const image = this.getImage(item);
+                const description = this.getDescription(item);
+                const tags = this.getTags(item);
                 const post = {
                     image: image,
                     title: (_a = item.title) !== null && _a !== void 0 ? _a : '',
                     link: (_b = item.link) !== null && _b !== void 0 ? _b : '',
                     blog: this.blog,
                     author: this.author,
-                    date: new Date(timestamp),
+                    date: new Date((_c = item.isoDate) !== null && _c !== void 0 ? _c : ''),
                     description: description,
                     tags: tags,
                 };
-                core.info(`Post parsed.`);
                 core.info(`Post title is '${post.title}'.`);
                 core.info(`Post link is '${post.link}'.`);
                 yield yield __await(post);
             }
         });
     }
-    getImage(content) {
-        if (content) {
-            const image = content['$'];
-            if (image && image.url && image.medium === 'image') {
-                return image.url;
-            }
+    getImage(item) {
+        const content = item['media:content'];
+        if (content.$.medium === 'image') {
+            return content.$.url;
         }
     }
-    getDescription(content) {
-        if (content && !content.endsWith('.')) {
-            content += '.';
+    getDescription(item) {
+        var _a;
+        let description = (_a = item.contentSnippet) === null || _a === void 0 ? void 0 : _a.trim();
+        if (description && !description.endsWith('.')) {
+            description += '.';
         }
-        return content;
+        return description;
     }
-    getTags(categories) {
-        if (categories && categories.length > 0) {
-            const tags = new Array();
-            for (const category of categories) {
+    getTags(item) {
+        if (item.categories && item.categories.length > 0) {
+            const tags = [];
+            for (const category of item.categories) {
                 const slug = category
                     .toLocaleLowerCase()
                     .replace(/^[^a-z0-9]+/g, '')
@@ -40051,7 +40043,7 @@ class CodeMazeScraper {
                 const title = article.find('h2.entry-title a');
                 const author = this.getAuthor(article);
                 const date = this.getDate(article);
-                const description = article.find('.post-content-inner');
+                const description = article.find('.post-content-inner').text().trim();
                 const post = {
                     image: image,
                     title: title.text().trim(),
@@ -40059,9 +40051,8 @@ class CodeMazeScraper {
                     blog: this.blog,
                     author: author,
                     date: new Date(date),
-                    description: description.text().trim(),
+                    description: description,
                 };
-                core.info(`Post parsed.`);
                 core.info(`Post title is '${post.title}'.`);
                 core.info(`Post link is '${post.link}'.`);
                 yield yield __await(post);
@@ -40083,10 +40074,11 @@ class CodeMazeScraper {
         return date.trim();
     }
     getAuthor(article) {
+        var _a;
         const author = article.find('.post-meta .author a');
         const title = author.text().trim();
-        const link = author.attr('href');
-        if (title && link && title !== 'Code Maze') {
+        const link = (_a = author.attr('href')) !== null && _a !== void 0 ? _a : '';
+        if (title !== 'Code Maze') {
             return { title, link };
         }
     }
@@ -40212,28 +40204,19 @@ class CodeOpinionScraper {
             for (let index = 0; index < articles.length; index++) {
                 core.info(`Parsing post at index ${index}...`);
                 const article = $(articles[index]);
+                const image = this.getImage(article);
                 const title = article.find('h2.entry-title a');
                 const date = article.find('time.entry-date').text();
-                const content = article.find('div.entry-content');
-                if (!date) {
-                    throw new Error('Failed to parse post. Date is empty.');
-                }
-                var timestamp = Date.parse(date);
-                if (isNaN(timestamp)) {
-                    throw new Error('Failed to parse post. Date is invalid.');
-                }
-                const image = this.getImage(article);
-                const description = this.getDescription($, content);
+                const description = this.getDescription(article, $);
                 const post = {
                     image: image,
                     title: title.text().trim(),
                     link: (_a = title.attr('href')) !== null && _a !== void 0 ? _a : '',
                     blog: this.blog,
                     author: this.author,
-                    date: new Date(timestamp),
+                    date: new Date(date),
                     description: description,
                 };
-                core.info(`Post parsed.`);
                 core.info(`Post title is '${post.title}'.`);
                 core.info(`Post link is '${post.link}'.`);
                 yield yield __await(post);
@@ -40241,8 +40224,7 @@ class CodeOpinionScraper {
         });
     }
     getImage(article) {
-        const link = article.find('.container-youtube a[href^=https://www.youtube.com/]');
-        const href = link.attr('href');
+        let href = article.find('.container-youtube a[href^=https://www.youtube.com/]').attr('href');
         if (href) {
             const index = href.indexOf('?');
             if (index > 0) {
@@ -40254,13 +40236,15 @@ class CodeOpinionScraper {
                         return `https://img.youtube.com/vi/${value}/maxresdefault.jpg`;
                     }
                 }
-                return query;
             }
         }
     }
-    getDescription($, content) {
+    getDescription(article, $) {
         const description = [];
-        for (const element of content.children()) {
+        const elements = article
+            .find('div.entry-content')
+            .children();
+        for (const element of elements) {
             if (element.name == 'p') {
                 const text = $(element).text().trim();
                 if (text) {
@@ -40387,7 +40371,7 @@ class DevBlogsScraper {
         });
     }
     readPosts() {
-        var _a, _b, _c;
+        var _a, _b;
         return __asyncGenerator(this, arguments, function* readPosts_1() {
             core.info(`Parsing html page by url '${this.blog.link}'...`);
             const response = yield __await(axios_1.default.get(this.blog.link));
@@ -40400,35 +40384,30 @@ class DevBlogsScraper {
             for (let index = 0; index < entries.length; index++) {
                 core.info(`Parsing post at index ${index}...`);
                 const entry = $(entries[index]);
+                const image = entry.find('.entry-image img').attr('data-src');
                 const title = entry.find('.entry-title a');
-                const image = entry.find('.entry-image img');
-                const date = entry.find('.entry-post-date').text();
                 const author = entry.find('.entry-author-link a');
-                if (!date) {
-                    throw new Error('Failed to parse post. Date is empty.');
-                }
-                var timestamp = Date.parse(date);
-                if (isNaN(timestamp)) {
-                    throw new Error('Failed to parse post. Date is invalid.');
-                }
+                const date = entry.find('.entry-post-date').text();
                 const description = entry
-                    .find('.entry-content').contents()
+                    .find('.entry-content')
+                    .contents()
                     .filter((_, element) => element.type == 'text')
-                    .text().trim();
+                    .text()
+                    .trim();
                 const tags = entry
                     .find('.card-tags-links .card-tags-linkbox a')
                     .map((_, element) => $(element))
                     .toArray();
                 const post = {
-                    image: (_a = image.attr('data-src')) !== null && _a !== void 0 ? _a : '',
+                    image: image,
                     title: title.text().trim(),
-                    link: (_b = title.attr('href')) !== null && _b !== void 0 ? _b : '',
+                    link: (_a = title.attr('href')) !== null && _a !== void 0 ? _a : '',
                     blog: this.blog,
                     author: {
                         title: author.text().trim(),
-                        link: (_c = author.attr('href')) !== null && _c !== void 0 ? _c : '',
+                        link: (_b = author.attr('href')) !== null && _b !== void 0 ? _b : '',
                     },
-                    date: new Date(timestamp),
+                    date: new Date(date),
                     description: description,
                     tags: tags.map(tag => {
                         var _a;
@@ -40438,7 +40417,6 @@ class DevBlogsScraper {
                         };
                     }),
                 };
-                core.info(`Post parsed.`);
                 core.info(`Post title is '${post.title}'.`);
                 core.info(`Post link is '${post.link}'.`);
                 yield yield __await(post);
@@ -40567,28 +40545,19 @@ class DotNetCoreTutorialsScraper {
             for (let index = 0; index < articles.length; index++) {
                 core.info(`Parsing post at index ${index}...`);
                 const article = $(articles[index]);
+                const image = this.getImage(article);
                 const title = article.find('h2.entry-title a');
                 const date = article.find('time.entry-date').text();
-                const content = article.find('div.entry-content');
-                if (!date) {
-                    throw new Error('Failed to parse post. Date is empty.');
-                }
-                var timestamp = Date.parse(date);
-                if (isNaN(timestamp)) {
-                    throw new Error('Failed to parse post. Date is invalid.');
-                }
-                const image = this.getImage(article);
-                const description = this.getDescription($, content);
+                const description = this.getDescription(article, $);
                 const post = {
                     image: image,
                     title: title.text().trim(),
                     link: (_a = title.attr('href')) !== null && _a !== void 0 ? _a : '',
                     blog: this.blog,
                     author: this.author,
-                    date: new Date(timestamp),
+                    date: new Date(date),
                     description: description,
                 };
-                core.info(`Post parsed.`);
                 core.info(`Post title is '${post.title}'.`);
                 core.info(`Post link is '${post.link}'.`);
                 yield yield __await(post);
@@ -40606,10 +40575,13 @@ class DotNetCoreTutorialsScraper {
             }
         }
     }
-    getDescription($, content) {
+    getDescription(article, $) {
         const description = [];
+        const elements = article
+            .find('div.entry-content')
+            .children();
         var length = 0;
-        for (const element of content.children()) {
+        for (const element of elements) {
             if (element.type != 'tag') {
                 continue;
             }
@@ -40778,6 +40750,7 @@ class KhalidAbuhakmehScraper {
         });
     }
     readPosts() {
+        var _a;
         return __asyncGenerator(this, arguments, function* readPosts_1() {
             core.info(`Parsing html page by url '${this.blog.link}'...`);
             const response = yield __await(axios_1.default.get(this.blog.link));
@@ -40790,29 +40763,29 @@ class KhalidAbuhakmehScraper {
             for (let index = 0; index < articles.length; index++) {
                 core.info(`Parsing post at index ${index}...`);
                 const article = $(articles[index]);
+                const image = this.getImage(article);
                 const title = article.find('h2.post-title a');
                 const date = article.find('time.published').text();
-                if (!date) {
-                    throw new Error('Failed to parse post. Date is empty.');
-                }
-                var timestamp = Date.parse(date);
-                if (isNaN(timestamp)) {
-                    throw new Error('Failed to parse post. Date is invalid.');
-                }
-                const image = this.getImage(article);
-                const link = this.getLink(title);
-                const description = this.getDescription($, article);
-                const tags = this.getTags($, article);
+                const description = this.getDescription(article, $);
+                const tags = article
+                    .find('.post-content .post-tags a')
+                    .map((_, element) => $(element))
+                    .toArray();
                 const post = {
                     image: image,
                     title: title.text().trim(),
-                    link: link,
+                    link: (_a = this.getFullHref(title.attr('href'))) !== null && _a !== void 0 ? _a : '',
                     blog: this.blog,
-                    date: new Date(timestamp),
+                    date: new Date(date),
                     description: description,
-                    tags: tags,
+                    tags: tags.map(tag => {
+                        var _a, _b;
+                        return {
+                            title: (_a = tag.text().replace(/^#/, '')) !== null && _a !== void 0 ? _a : '',
+                            link: (_b = this.getFullHref(tag.attr('href'))) !== null && _b !== void 0 ? _b : '',
+                        };
+                    }),
                 };
-                core.info(`Post parsed.`);
                 core.info(`Post title is '${post.title}'.`);
                 core.info(`Post link is '${post.link}'.`);
                 yield yield __await(post);
@@ -40820,8 +40793,7 @@ class KhalidAbuhakmehScraper {
         });
     }
     getImage(article) {
-        const img = article.find('.post-thumbnail img');
-        let src = img.attr('src');
+        let src = article.find('.post-thumbnail img').attr('src');
         if (src) {
             const index = src.lastIndexOf('https://');
             if (index > 0) {
@@ -40830,28 +40802,19 @@ class KhalidAbuhakmehScraper {
         }
         return src;
     }
-    getLink(title) {
-        let href = title.attr('href');
-        if (href && href.startsWith('/')) {
-            href = this.blog.link + href.substring(1);
-        }
-        return href !== null && href !== void 0 ? href : '';
-    }
-    getDescription($, article) {
+    getDescription(article, $) {
         const description = [];
-        const content = article
+        const elements = article
             .find('.post-content')
             .children();
-        for (const element of content) {
+        for (const element of elements) {
             if (element.name == 'p') {
                 const p = $(element);
                 if (p.hasClass('post-tags') || p.hasClass('read-more')) {
                     break;
                 }
                 const text = p.text().trim();
-                if (text) {
-                    description.push(text);
-                }
+                description.push(text);
             }
             else {
                 break;
@@ -40859,28 +40822,11 @@ class KhalidAbuhakmehScraper {
         }
         return description;
     }
-    getTags($, article) {
-        const tags = article
-            .find('.post-content .post-tags a')
-            .map((_, element) => $(element));
-        if (tags.length > 0) {
-            const result = [];
-            for (const tag of tags) {
-                let text = tag.text().trim();
-                if (text.startsWith('#')) {
-                    text = text.substring(1);
-                }
-                let href = tag.attr('href');
-                if (href && href.startsWith('/')) {
-                    href = this.blog.link + href.substring(1);
-                }
-                result.push({
-                    title: text,
-                    link: href !== null && href !== void 0 ? href : '',
-                });
-            }
-            return result;
+    getFullHref(href) {
+        if (href && href.startsWith('/')) {
+            href = this.blog.link + href.substring(1);
         }
+        return href;
     }
 }
 exports.KhalidAbuhakmehScraper = KhalidAbuhakmehScraper;

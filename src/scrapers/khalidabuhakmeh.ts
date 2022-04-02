@@ -6,7 +6,7 @@ import * as cheerio from 'cheerio';
 import { Scraper } from "../scrapers";
 import { Sender } from "../senders";
 import { Storage } from "../storage";
-import { Blog, Post, Tag } from "../models";
+import { Blog, Post } from "../models";
 
 export class KhalidAbuhakmehScraper implements Scraper {
   readonly name = 'KhalidAbuhakmeh';
@@ -49,34 +49,31 @@ export class KhalidAbuhakmehScraper implements Scraper {
       core.info(`Parsing post at index ${index}...`);
 
       const article = $(articles[index]);
+      const image = this.getImage(article);
       const title = article.find('h2.post-title a');
       const date = article.find('time.published').text();
+      const description = this.getDescription(article, $);
 
-      if (!date) {
-        throw new Error('Failed to parse post. Date is empty.');
-      }
-
-      var timestamp = Date.parse(date);
-      if (isNaN(timestamp)) {
-        throw new Error('Failed to parse post. Date is invalid.');
-      }
-
-      const image = this.getImage(article);
-      const link = this.getLink(title);
-      const description = this.getDescription($, article);
-      const tags = this.getTags($, article);
+      const tags = article
+        .find('.post-content .post-tags a')
+        .map((_, element) => $(element))
+        .toArray();
 
       const post: Post = {
         image: image,
         title: title.text().trim(),
-        link: link,
+        link: this.getFullHref(title.attr('href')) ?? '',
         blog: this.blog,
-        date: new Date(timestamp),
+        date: new Date(date),
         description: description,
-        tags: tags,
+        tags: tags.map(tag => {
+          return {
+            title: tag.text().replace(/^#/, '') ?? '',
+            link: this.getFullHref(tag.attr('href')) ?? '',
+          }
+        }),
       };
 
-      core.info(`Post parsed.`);
       core.info(`Post title is '${post.title}'.`);
       core.info(`Post link is '${post.link}'.`);
 
@@ -85,9 +82,7 @@ export class KhalidAbuhakmehScraper implements Scraper {
   }
 
   private getImage(article: cheerio.Cheerio<cheerio.Element>): string | undefined {
-    const img = article.find('.post-thumbnail img');
-
-    let src = img.attr('src');
+    let src = article.find('.post-thumbnail img').attr('src');
     if (src) {
       const index = src.lastIndexOf('https://');
       if (index > 0) {
@@ -98,22 +93,14 @@ export class KhalidAbuhakmehScraper implements Scraper {
     return src;
   }
 
-  private getLink(title: cheerio.Cheerio<cheerio.Element>): string {
-    let href = title.attr('href');
-    if (href && href.startsWith('/')) {
-      href = this.blog.link + href.substring(1);
-    }
-
-    return href ?? '';
-  }
-
-  private getDescription($: cheerio.CheerioAPI, article: cheerio.Cheerio<cheerio.Element>): string[] {
+  private getDescription(article: cheerio.Cheerio<cheerio.Element>, $: cheerio.CheerioAPI): string[] {
     const description = [];
-    const content = article
+
+    const elements = article
       .find('.post-content')
       .children();
 
-    for (const element of content) {
+    for (const element of elements) {
       if (element.name == 'p') {
         const p = $(element);
 
@@ -122,9 +109,7 @@ export class KhalidAbuhakmehScraper implements Scraper {
         }
 
         const text = p.text().trim();
-        if (text) {
-          description.push(text);
-        }
+        description.push(text);
       }
       else {
         break;
@@ -134,32 +119,11 @@ export class KhalidAbuhakmehScraper implements Scraper {
     return description;
   }
 
-  private getTags($: cheerio.CheerioAPI, article: cheerio.Cheerio<cheerio.Element>): Tag[] | undefined {
-    const tags = article
-      .find('.post-content .post-tags a')
-      .map((_, element) => $(element));
-
-    if (tags.length > 0) {
-      const result = [];
-
-      for (const tag of tags) {
-        let text = tag.text().trim();
-        if (text.startsWith('#')) {
-          text = text.substring(1);
-        }
-
-        let href = tag.attr('href');
-        if (href && href.startsWith('/')) {
-          href = this.blog.link + href.substring(1);
-        }
-
-        result.push({
-          title: text,
-          link: href ?? '',
-        });
-      }
-
-      return result;
+  private getFullHref(href: string | undefined): string | undefined {
+    if (href && href.startsWith('/')) {
+      href = this.blog.link + href.substring(1);
     }
+
+    return href;
   }
 }

@@ -6,7 +6,7 @@ import * as cheerio from 'cheerio';
 import { Scraper } from "../scrapers";
 import { Sender } from "../senders";
 import { Storage } from "../storage";
-import { Author, Blog, Post, Tag } from "../models";
+import { Author, Blog, Post } from "../models";
 
 export class CodeMazeScraper implements Scraper {
   readonly name = 'CodeMaze';
@@ -53,7 +53,7 @@ export class CodeMazeScraper implements Scraper {
       const title = article.find('h2.entry-title a');
       const author = this.getAuthor(article);
       const date = this.getDate(article);
-      const description = article.find('.post-content-inner');
+      const description = article.find('.post-content-inner').text().trim();
 
       const post: Post = {
         image: image,
@@ -62,10 +62,9 @@ export class CodeMazeScraper implements Scraper {
         blog: this.blog,
         author: author,
         date: new Date(date),
-        description: description.text().trim(),
+        description: description,
       };
 
-      core.info(`Post parsed.`);
       core.info(`Post title is '${post.title}'.`);
       core.info(`Post link is '${post.link}'.`);
 
@@ -94,10 +93,10 @@ export class CodeMazeScraper implements Scraper {
   private getAuthor(article: cheerio.Cheerio<cheerio.Element>): Author | undefined {
     const author = article.find('.post-meta .author a');
     const title = author.text().trim();
-    const link = author.attr('href');
+    const link = author.attr('href') ?? '';
 
-    if (title && link && title !== 'Code Maze') {
-      return { title, link }
+    if (title !== 'Code Maze') {
+      return { title, link };
     }
   }
 }

@@ -3,10 +3,10 @@ import * as core from '@actions/core';
 import axios from 'axios';
 import * as cheerio from 'cheerio';
 
-import { Scraper } from "../scrapers";
+import { Scraper } from ".";
 import { Sender } from "../senders";
 import { Storage } from "../storage";
-import { Author, Blog, Post, Tag } from "../models";
+import { Author, Blog, Post } from "../models";
 
 export class CodeOpinionScraper implements Scraper {
   readonly name = 'CodeOpinion';
@@ -54,21 +54,10 @@ export class CodeOpinionScraper implements Scraper {
       core.info(`Parsing post at index ${index}...`);
 
       const article = $(articles[index]);
+      const image = this.getImage(article);
       const title = article.find('h2.entry-title a');
       const date = article.find('time.entry-date').text();
-      const content = article.find('div.entry-content');
-
-      if (!date) {
-        throw new Error('Failed to parse post. Date is empty.');
-      }
-
-      var timestamp = Date.parse(date);
-      if (isNaN(timestamp)) {
-        throw new Error('Failed to parse post. Date is invalid.');
-      }
-
-      const image = this.getImage(article);
-      const description = this.getDescription($, content);
+      const description = this.getDescription(article, $);
 
       const post: Post = {
         image: image,
@@ -76,11 +65,10 @@ export class CodeOpinionScraper implements Scraper {
         link: title.attr('href') ?? '',
         blog: this.blog,
         author: this.author,
-        date: new Date(timestamp),
+        date: new Date(date),
         description: description,
       };
 
-      core.info(`Post parsed.`);
       core.info(`Post title is '${post.title}'.`);
       core.info(`Post link is '${post.link}'.`);
 
@@ -89,31 +77,32 @@ export class CodeOpinionScraper implements Scraper {
   }
 
   private getImage(article: cheerio.Cheerio<cheerio.Element>): string | undefined {
-    const link = article.find('.container-youtube a[href^=https://www.youtube.com/]');
-    const href = link.attr('href');
-
+    let href = article.find('.container-youtube a[href^=https://www.youtube.com/]').attr('href');
     if (href) {
       const index = href.indexOf('?');
       if (index > 0) {
-        const query = href.substring(index + 1);
+        const query = href.substring(index + 1)
         const pairs = query.split('&');
 
         for (const pair of pairs) {
           const [name, value] = pair.split('=');
+
           if (name == 'v') {
             return `https://img.youtube.com/vi/${value}/maxresdefault.jpg`
           }
         }
-
-        return query;
       }
     }
   }
 
-  private getDescription($: cheerio.CheerioAPI, content: cheerio.Cheerio<cheerio.Element>): string[] {
+  private getDescription(article: cheerio.Cheerio<cheerio.Element>, $: cheerio.CheerioAPI): string[] {
     const description = [];
 
-    for (const element of content.children()) {
+    const elements = article
+      .find('div.entry-content')
+      .children();
+
+    for (const element of elements) {
       if (element.name == 'p') {
         const text = $(element).text().trim();
         if (text) {

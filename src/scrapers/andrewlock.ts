@@ -57,19 +57,9 @@ export class AndrewLockScraper implements Scraper {
       core.info(`Parsing post at index ${index}...`);
 
       const item = feed.items[index];
-
-      const image = this.getImage(item['media:content']);
-      const description = this.getDescription(item.contentSnippet);
-      const tags = this.getTags(item.categories);
-
-      if (!item.isoDate) {
-        throw new Error('Failed to parse post. Date is empty.');
-      }
-
-      var timestamp = Date.parse(item.isoDate);
-      if (isNaN(timestamp)) {
-        throw new Error('Failed to parse post. Date is invalid.');
-      }
+      const image = this.getImage(item);
+      const description = this.getDescription(item);
+      const tags = this.getTags(item);
 
       const post: Post = {
         image: image,
@@ -77,12 +67,11 @@ export class AndrewLockScraper implements Scraper {
         link: item.link ?? '',
         blog: this.blog,
         author: this.author,
-        date: new Date(timestamp),
+        date: new Date(item.isoDate ?? ''),
         description: description,
         tags: tags,
       };
 
-      core.info(`Post parsed.`);
       core.info(`Post title is '${post.title}'.`);
       core.info(`Post link is '${post.link}'.`);
 
@@ -90,28 +79,34 @@ export class AndrewLockScraper implements Scraper {
     }
   }
 
-  private getImage(content: any): string | undefined {
-    if (content) {
-      const image = content['$'];
-      if (image && image.url && image.medium === 'image') {
-        return image.url;
+  private getImage(item: { 'media:content': any }): string | undefined {
+    interface MediaContent {
+      readonly $: {
+        readonly medium: string;
+        readonly url: string;
       }
     }
+
+    const content = item['media:content'] as MediaContent;
+    if (content.$.medium === 'image') {
+      return content.$.url;
+    }
   }
 
-  private getDescription(content: string | undefined): string | undefined {
-    if (content && !content.endsWith('.')) {
-      content += '.'
+  private getDescription(item: RssParser.Item): string | undefined {
+    let description = item.contentSnippet?.trim();
+    if (description && !description.endsWith('.')) {
+      description += '.'
     }
 
-    return content;
+    return description;
   }
 
-  private getTags(categories: string[] | undefined): Tag[] | undefined {
-    if (categories && categories.length > 0) {
-      const tags = new Array<Tag>();
+  private getTags(item: RssParser.Item): Tag[] | undefined {
+    if (item.categories && item.categories.length > 0) {
+      const tags = [];
 
-      for (const category of categories) {
+      for (const category of item.categories) {
         const slug = category
           .toLocaleLowerCase()
           .replace(/^[^a-z0-9]+/g, '')
