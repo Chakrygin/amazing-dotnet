@@ -1,6 +1,6 @@
 import { Telegram } from 'telegraf';
 
-import { Sender } from './abstractions';
+import { Sender } from '../senders';
 import { Post } from '../models';
 
 export class TelegramSender implements Sender {
@@ -13,19 +13,19 @@ export class TelegramSender implements Sender {
   async sendPost(post: Post): Promise<void> {
     const message = getPostMessage(post);
 
-    if (!post.image) {
-      this.telegram.sendMessage(this.chatId, message, {
+    if (!post.image || message.length > 1024) {
+      await this.telegram.sendMessage(this.chatId, message, {
         parse_mode: 'HTML',
       });
     }
     else if (post.image.endsWith('.gif')) {
-      this.telegram.sendAnimation(this.chatId, post.image, {
+      await this.telegram.sendAnimation(this.chatId, post.image, {
         caption: message,
         parse_mode: 'HTML',
       });
     }
     else {
-      this.telegram.sendPhoto(this.chatId, post.image, {
+      await this.telegram.sendPhoto(this.chatId, post.image, {
         caption: message,
         parse_mode: 'HTML',
       });
@@ -35,22 +35,28 @@ export class TelegramSender implements Sender {
       const lines = [];
 
       lines.push(
-        `<a href="${post.link}"><b>${post.title}</b></a>`);
+        `<a href="${post.link}"><b>${encode(post.title)}</b></a>`);
 
       const line = [];
 
       if (post.blog) {
         line.push(
-          `<a href="${post.blog.link}"><b>${post.blog.title}</b></a>`);
+          `<a href="${post.blog.link}"><b>${encode(post.blog.title)}</b></a>`);
+      }
+
+      if (post.company) {
+        line.push(
+          `<a href="${post.company.link}"><b>${encode(post.company.title)}</b></a>`);
       }
 
       if (post.author) {
         line.push(
-          `<a href="${post.author.link}"><b>${post.author.title}</b></a>`);
+          `<a href="${post.author.link}"><b>${encode(post.author.title)}</b></a>`);
       }
 
       if (post.date) {
-        const date = post.date.toLocaleDateString('en-US', {
+        const locale = post.locale ?? 'en-US';
+        const date = post.date.toLocaleDateString(locale, {
           year: 'numeric',
           month: 'long',
           day: 'numeric',
@@ -67,11 +73,11 @@ export class TelegramSender implements Sender {
       if (post.description != undefined) {
         if (Array.isArray(post.description)) {
           for (const line of post.description) {
-            lines.push(line);
+            lines.push(encode(line));
           }
         }
         else {
-          lines.push(post.description);
+          lines.push(encode(post.description));
         }
       }
 
@@ -86,7 +92,7 @@ export class TelegramSender implements Sender {
             }
             return 0;
           })
-          .map(tag => `<a href="${tag.link}">${tag.title}</a>`);
+          .map(tag => `<a href="${tag.link}">${encode(tag.title)}</a>`);
 
         lines.push('🏷️ ' + tagLinks.join(', '));
       }
@@ -94,4 +100,10 @@ export class TelegramSender implements Sender {
       return lines.join('\n\n');
     }
   }
+}
+
+export function encode(html: string) {
+  return html
+    .replace('<', '&lt;')
+    .replace('>', '&gt;');
 }

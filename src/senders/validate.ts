@@ -1,4 +1,4 @@
-import { Sender } from './abstractions';
+import { Sender } from '../senders';
 import { Post } from '../models';
 
 export class ValidateSender implements Sender {
@@ -49,6 +49,19 @@ export class ValidateSender implements Sender {
       }
       else if (!post.blog.link.startsWith('https://')) {
         errors.push('blog link is not valid url');
+      }
+    }
+
+    if (post.company) {
+      if (!post.company.title) {
+        errors.push('company title is empty');
+      }
+
+      if (!post.company.link) {
+        errors.push('company link is empty');
+      }
+      else if (!post.company.link.startsWith('https://')) {
+        errors.push('company link is not valid url');
       }
     }
 

@@ -1,4 +1,6 @@
-import { Sender } from './abstractions';
+import * as core from '@actions/core'
+
+import { Sender } from '../senders';
 import { Post } from '../models';
 
 export class ConsoleSender implements Sender {
@@ -8,7 +10,6 @@ export class ConsoleSender implements Sender {
 
   private print(name: string, value: any): void {
     const json = JSON.stringify(value, null, 2);
-    console.log(`${name}: ${json}`);
-    console.log();
+    core.info(`${name}: ${json}\n`);
   }
 }

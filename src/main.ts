@@ -9,6 +9,7 @@ import {
   DotNetCoreTutorialsScraper,
   KhalidAbuhakmehScraper,
   CodeMazeScraper,
+  HabrScraper,
 } from './scrapers'
 
 import {
@@ -24,17 +25,18 @@ async function main() {
   try {
 
     const scrapers: Scraper[] = [
-      new AndrewLockScraper(),
-      new CodeMazeScraper(),
-      new CodeOpinionScraper(),
-      new DevBlogsScraper('dotnet'),
-      new DevBlogsScraper('odata'),
-      new DevBlogsScraper('nuget'),
-      new DevBlogsScraper('typescript'),
-      new DevBlogsScraper('visualstudio'),
-      new DevBlogsScraper('commandline'),
-      new DotNetCoreTutorialsScraper(),
-      new KhalidAbuhakmehScraper(),
+      // new AndrewLockScraper(),
+      // new CodeMazeScraper(),
+      // new CodeOpinionScraper(),
+      // new DevBlogsScraper('dotnet'),
+      // new DevBlogsScraper('odata'),
+      // new DevBlogsScraper('nuget'),
+      // new DevBlogsScraper('typescript'),
+      // new DevBlogsScraper('visualstudio'),
+      // new DevBlogsScraper('commandline'),
+      // new DotNetCoreTutorialsScraper(),
+      new HabrScraper(),
+      // new KhalidAbuhakmehScraper(),
     ]
 
     const publicSender = createSender('public');

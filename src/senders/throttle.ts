@@ -1,4 +1,4 @@
-import { Sender } from './abstractions';
+import { Sender } from '../senders';
 import { Post } from '../models';
 
 export class ThrottleSender implements Sender {
