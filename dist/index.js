@@ -39686,18 +39686,18 @@ function main() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
             const scrapers = [
-                // new AndrewLockScraper(),
-                // new CodeMazeScraper(),
-                // new CodeOpinionScraper(),
-                // new DevBlogsScraper('dotnet'),
-                // new DevBlogsScraper('odata'),
-                // new DevBlogsScraper('nuget'),
-                // new DevBlogsScraper('typescript'),
-                // new DevBlogsScraper('visualstudio'),
-                // new DevBlogsScraper('commandline'),
-                // new DotNetCoreTutorialsScraper(),
+                new scrapers_1.AndrewLockScraper(),
+                new scrapers_1.CodeMazeScraper(),
+                new scrapers_1.CodeOpinionScraper(),
+                new scrapers_1.DevBlogsScraper('dotnet'),
+                new scrapers_1.DevBlogsScraper('odata'),
+                new scrapers_1.DevBlogsScraper('nuget'),
+                new scrapers_1.DevBlogsScraper('typescript'),
+                new scrapers_1.DevBlogsScraper('visualstudio'),
+                new scrapers_1.DevBlogsScraper('commandline'),
+                new scrapers_1.DotNetCoreTutorialsScraper(),
                 new scrapers_1.HabrScraper(),
-                // new KhalidAbuhakmehScraper(),
+                new scrapers_1.KhalidAbuhakmehScraper(),
             ];
             const publicSender = createSender('public');
             const privateSender = createSender('private');
