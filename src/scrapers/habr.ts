@@ -60,7 +60,7 @@ export class HabrScraper implements Scraper {
       const date = article.find('.tm-article-snippet__datetime-published time').attr('datetime') ?? '';
       const description = this.getDescription(article, $);
       const [company, tags] = this.getCompanyAndTags(article, $);
-      const rating = parseInt(article.find('.tm-votes-meter__value').text())
+      const rating = article.find('.tm-votes-meter__value').text()
 
       const post: HabrPost = {
         image: image,
@@ -76,8 +76,12 @@ export class HabrScraper implements Scraper {
         locale: 'ru-RU',
         description: description,
         tags: tags,
-        rating: rating,
+        rating: parseInt(rating),
       };
+
+      if (isNaN(post.rating)) {
+        throw new Error('Failed to parse post. Rating is invalid.');
+      }
 
       core.info(`Post title is '${post.title}'.`);
       core.info(`Post link is '${post.link}'.`);

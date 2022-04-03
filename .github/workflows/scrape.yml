@@ -3,8 +3,9 @@ name: Scrape
 on:
   push:
     paths:
-      - dist/**
+      - dist/index.js
   schedule:
+    # At minute 42 past every 2nd hour.
     - cron: 42 */2 * * *
 
 jobs:
