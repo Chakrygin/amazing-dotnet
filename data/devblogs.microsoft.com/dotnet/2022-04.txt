@@ -1,0 +1,1 @@
+https://devblogs.microsoft.com/dotnet/dotnet-framework-45-46-461-end-of-support/
