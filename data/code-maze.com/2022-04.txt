@@ -4,5 +4,6 @@ https://code-maze.com/csharp-convert-string-title-case/
 https://code-maze.com/csharp-deserialize-json-into-dynamic-object/
 https://code-maze.com/csharp-random-class/
 https://code-maze.com/linq-csharp-basic-concepts/
+https://code-maze.com/linq-to-xml/
 https://code-maze.com/sort-list-by-object-property-dotnet/
 https://code-maze.com/timer-csharp/
