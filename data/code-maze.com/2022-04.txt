@@ -2,6 +2,7 @@ https://code-maze.com/aspnetcore-passwordless-authentication/
 https://code-maze.com/code-maze-weekly-118/
 https://code-maze.com/csharp-convert-string-title-case/
 https://code-maze.com/csharp-deserialize-json-into-dynamic-object/
+https://code-maze.com/csharp-print-elements-of-an-array/
 https://code-maze.com/csharp-random-class/
 https://code-maze.com/linq-csharp-basic-concepts/
 https://code-maze.com/linq-to-xml/
