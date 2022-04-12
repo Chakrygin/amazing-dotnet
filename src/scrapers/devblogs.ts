@@ -79,7 +79,7 @@ export class DevBlogsScraper implements Scraper {
         blog: this.blog,
         author: {
           title: author.text().trim(),
-          link: author.attr('href') ?? '',
+          link: this.getFullHref(author.attr('href')) ?? '',
         },
         date: new Date(date),
         description: description,
@@ -120,5 +120,13 @@ export class DevBlogsScraper implements Scraper {
     }
 
     return description;
+  }
+
+  private getFullHref(href: string | undefined): string | undefined {
+    if (href && href.startsWith('/')) {
+      href = 'https://devblogs.microsoft.com' + href;
+    }
+
+    return href;
   }
 }
