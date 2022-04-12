@@ -1,1 +1,2 @@
+https://khalidabuhakmeh.com/adding-alt-text-to-twitter-images-using-csharp
 https://khalidabuhakmeh.com/client-side-image-previews-with-javascript
