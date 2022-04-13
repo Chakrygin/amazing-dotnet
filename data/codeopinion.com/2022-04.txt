@@ -1,1 +1,2 @@
 https://codeopinion.com/anti-corruption-layer-for-mapping-between-boundaries/
+https://codeopinion.com/asynchronous-request-response-pattern-for-non-blocking-workflows/
