@@ -12,3 +12,4 @@ https://code-maze.com/linq-to-xml/
 https://code-maze.com/sort-list-by-object-property-dotnet/
 https://code-maze.com/timer-csharp/
 https://code-maze.com/try-catch-block-csharp/
+https://code-maze.com/upload-files-drag-drop-paste-blazor/
