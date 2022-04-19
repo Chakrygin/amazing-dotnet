@@ -1,2 +1,3 @@
 https://andrewlock.net/keeping-up-with-dotnet-learning-about-new-features-and-apis/
+https://andrewlock.net/running-javascript-in-a-dotnet-app-with-javascriptengineswitcher/
 https://andrewlock.net/working-on-two-git-branches-at-once-with-git-worktree/
