@@ -1,2 +1,3 @@
 https://khalidabuhakmeh.com/adding-alt-text-to-twitter-images-using-csharp
+https://khalidabuhakmeh.com/aspnet-core-interview-questions-and-answers
 https://khalidabuhakmeh.com/client-side-image-previews-with-javascript
