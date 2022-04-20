@@ -1,3 +1,4 @@
 https://devblogs.microsoft.com/visualstudio/cpu-usage-tool-improvements/
+https://devblogs.microsoft.com/visualstudio/introducing-a-new-way-to-search-your-code-and-visual-studio-features/
 https://devblogs.microsoft.com/visualstudio/supercharge-your-git-experience-in-vs/
 https://devblogs.microsoft.com/visualstudio/visual-studio-2022-for-mac-preview-9/
