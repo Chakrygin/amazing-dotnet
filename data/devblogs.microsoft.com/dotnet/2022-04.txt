@@ -5,5 +5,6 @@ https://devblogs.microsoft.com/dotnet/csharp-11-preview-updates/
 https://devblogs.microsoft.com/dotnet/dotnet-framework-45-46-461-end-of-support/
 https://devblogs.microsoft.com/dotnet/dotnet-framework-april-2022-updates/
 https://devblogs.microsoft.com/dotnet/dotnet-maui-rc-1/
+https://devblogs.microsoft.com/dotnet/dotnet-maui-rc-2/
 https://devblogs.microsoft.com/dotnet/framework-april-2022-updates/
 https://devblogs.microsoft.com/dotnet/server-operating-systems-auto-updates/
