@@ -3,3 +3,4 @@ https://devblogs.microsoft.com/visualstudio/introducing-a-new-way-to-search-your
 https://devblogs.microsoft.com/visualstudio/supercharge-your-git-experience-in-vs/
 https://devblogs.microsoft.com/visualstudio/view-net-collections-with-the-new-ienumerable-debugger-visualizer/
 https://devblogs.microsoft.com/visualstudio/visual-studio-2022-for-mac-preview-9/
+https://devblogs.microsoft.com/visualstudio/visual-studio-2022-for-mac-release-candidate/
