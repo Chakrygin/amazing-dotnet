@@ -104,6 +104,6 @@ export class TelegramSender implements Sender {
 
 export function encode(html: string) {
   return html
-    .replace('<', '&lt;')
-    .replace('>', '&gt;');
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
 }
