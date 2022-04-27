@@ -1,5 +1,6 @@
 https://code-maze.com/aspnetcore-distributed-caching/
 https://code-maze.com/aspnetcore-download-multiple-files-from-azure-blob-storage/
+https://code-maze.com/aspnetcore-long-running-tasks-monolith-app/
 https://code-maze.com/aspnetcore-passwordless-authentication/
 https://code-maze.com/code-maze-weekly-118/
 https://code-maze.com/code-maze-weekly-119/
