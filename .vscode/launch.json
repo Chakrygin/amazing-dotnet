@@ -8,7 +8,7 @@
       "console": "integratedTerminal",
       "cwd": "${workspaceFolder}",
       "program": "src/main.ts",
-      "envFile": "${env:USERPROFILE}/envs/${workspaceFolderBasename}.env",
+      "envFile": "${env:USERPROFILE}/${workspaceFolderBasename}.env",
       "runtimeArgs": [
         "--nolazy",
         "-r",

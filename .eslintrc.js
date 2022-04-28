@@ -18,6 +18,10 @@ module.exports = {
     'indent': ['error', 2],
     'linebreak-style': ['error', 'windows'],
     'quotes': ['error', 'single'],
-    'semi': ['error', 'always']
+    'semi': ['error', 'always'],
+    '@typescript-eslint/no-unused-vars': ['warn', {
+      'argsIgnorePattern': '^_',
+      'destructuredArrayIgnorePattern': '^_',
+    }],
   }
 };

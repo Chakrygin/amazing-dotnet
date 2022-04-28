@@ -10,6 +10,7 @@
     "@actions/github": "^5.0.1",
     "axios": "^0.27.0",
     "cheerio": "^1.0.0-rc.10",
+    "moment": "^2.29.3",
     "rss-parser": "^3.12.0",
     "telegraf": "^4.7.0"
   },

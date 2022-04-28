@@ -81,7 +81,7 @@ export class Storage {
     return file;
   }
 
-  save() {
+  save(): boolean {
     let dirty = false;
 
     if (!fs.existsSync(this.path)) {
@@ -95,10 +95,12 @@ export class Storage {
     }
 
     if (dirty) {
-      var path = join(this.path, 'timestamp');
-      var data = new Date().toISOString();
+      const path = join(this.path, 'timestamp');
+      const data = new Date().toISOString();
       fs.writeFileSync(path, data + '\n');
     }
+
+    return dirty;
   }
 }
 

@@ -1,5 +1,5 @@
-import * as core from '@actions/core'
-import * as github from '@actions/github'
+import * as core from '@actions/core';
+import * as github from '@actions/github';
 
 import {
   Scraper,
@@ -10,16 +10,18 @@ import {
   KhalidAbuhakmehScraper,
   CodeMazeScraper,
   HabrScraper,
-} from './scrapers'
+} from './scrapers';
 
 import {
   Sender,
   TelegramSender,
   ThrottleSender,
   ValidateSender,
-} from './senders'
+} from './senders';
 
-import { Storage } from './storage'
+import { Storage } from './storage';
+import Metadata from './Metadata';
+import moment from 'moment';
 
 async function main() {
   try {
@@ -37,29 +39,68 @@ async function main() {
       new DotNetCoreTutorialsScraper(),
       new HabrScraper(),
       new KhalidAbuhakmehScraper(),
-    ]
+    ];
 
     const publicSender = createSender('public');
     const privateSender = createSender('private');
 
-    for (const scraper of scrapers) {
-      await core.group(scraper.name, async () => {
+    const metadata = new Metadata();
 
-        const storage = new Storage(scraper.path);
-        const sender = storage.exists() && github.context.ref === 'refs/heads/main'
-          ? publicSender
-          : privateSender;
+    try {
 
-        try {
-          await scraper.scrape(storage, sender);
-        }
-        catch (error: any) {
-          core.setFailed(error);
-        }
+      for (const scraper of scrapers) {
+        await core.group(scraper.name, async () => {
 
-        storage.save();
+          const lastError = metadata.getLastError(scraper.name);
+          if (lastError) {
+            if (lastError.counter > 10) {
+              core.error('');
+              return;
+            }
 
-      });
+            if (moment().diff(lastError.timestamp, 'days') < 1) {
+              core.warning('');
+              return;
+            }
+
+            metadata.resetLastError(scraper.name);
+          }
+
+          const lastUpdate = metadata.getLastUpdate(scraper.name);
+          if (lastUpdate && !lastUpdate.idle) {
+            if (moment().diff(lastUpdate.timestamp, 'months') >= 6) {
+              // TODO: Report...
+              // reporter.sendWarning('');
+
+              metadata.setLastUpdateIdle(scraper.name);
+            }
+          }
+
+          const storage = new Storage(scraper.path);
+          const sender = storage.exists() && github.context.ref === 'refs/heads/main'
+            ? publicSender
+            : privateSender;
+
+          try {
+            await scraper.scrape(storage, sender);
+          }
+          catch (error: any) {
+            core.setFailed(error);
+            metadata.setLastError(scraper.name, error);
+          }
+          finally {
+            const saved = storage.save();
+            if (saved || !lastUpdate) {
+              metadata.setLastUpdate(scraper.name);
+            }
+          }
+
+        });
+      }
+
+    }
+    finally {
+      metadata.save();
     }
 
   }
@@ -69,7 +110,7 @@ async function main() {
 }
 
 function createSender(type: 'public' | 'private'): Sender {
-  var sender: Sender;
+  let sender: Sender;
 
   const token = getInput('TELEGRAM_TOKEN');
   const chatId = getInput(`TELEGRAM_${type.toUpperCase()}_CHAT_ID`);
