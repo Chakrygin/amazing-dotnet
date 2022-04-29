@@ -5,6 +5,7 @@ https://code-maze.com/aspnetcore-passwordless-authentication/
 https://code-maze.com/code-maze-weekly-118/
 https://code-maze.com/code-maze-weekly-119/
 https://code-maze.com/code-maze-weekly-120/
+https://code-maze.com/code-maze-weekly-121/
 https://code-maze.com/csharp-convert-string-title-case/
 https://code-maze.com/csharp-deserialize-json-into-dynamic-object/
 https://code-maze.com/csharp-json-deserialization-poco-class/
