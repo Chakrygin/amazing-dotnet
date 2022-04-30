@@ -14,6 +14,7 @@ https://code-maze.com/csharp-priority-queue/
 https://code-maze.com/csharp-random-class/
 https://code-maze.com/dotnet-format-command-csharp/
 https://code-maze.com/ef-core-solve-command-or-file-was-not-found/
+https://code-maze.com/google-charts-angular-aspnetcore-webapi/
 https://code-maze.com/insertion-sort-csharp/
 https://code-maze.com/linq-csharp-basic-concepts/
 https://code-maze.com/linq-to-xml/
