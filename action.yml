@@ -6,10 +6,6 @@ runs:
   main: dist/index.js
 
 inputs:
-  GITHUB_TOKEN:
-    description: GITHUB_TOKEN
-    required: true
-
   TELEGRAM_TOKEN:
     description: TELEGRAM_TOKEN
     required: true

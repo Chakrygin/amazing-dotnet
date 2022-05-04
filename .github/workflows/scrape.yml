@@ -19,7 +19,6 @@ jobs:
       - name: Scrape
         uses: ./
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_PUBLIC_CHAT_ID: ${{ secrets.TELEGRAM_PUBLIC_CHAT_ID }}
           TELEGRAM_PRIVATE_CHAT_ID: ${{ secrets.TELEGRAM_PRIVATE_CHAT_ID }}
@@ -27,7 +26,7 @@ jobs:
       # https://github.com/marketplace/actions/add-commit
       - name: Commit
         uses: EndBug/add-and-commit@v9.0.0
-        if: ${{ github.ref == 'refs/heads/main' }}
+        if: ${{ always() && github.ref == 'refs/heads/main' }}
         with:
           add: data
           message: Commit scrape results
