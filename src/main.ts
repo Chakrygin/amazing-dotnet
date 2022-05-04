@@ -20,8 +20,6 @@ import {
 } from './senders';
 
 import { Storage } from './storage';
-import Metadata from './Metadata';
-import moment from 'moment';
 
 async function main() {
   try {
@@ -44,63 +42,25 @@ async function main() {
     const publicSender = createSender('public');
     const privateSender = createSender('private');
 
-    const metadata = new Metadata();
+    for (const scraper of scrapers) {
+      await core.group(scraper.name, async () => {
 
-    try {
+        const storage = new Storage(scraper.path);
+        const sender = storage.exists() && github.context.ref === 'refs/heads/main'
+          ? publicSender
+          : privateSender;
 
-      for (const scraper of scrapers) {
-        await core.group(scraper.name, async () => {
+        try {
+          await scraper.scrape(storage, sender);
+        }
+        catch (error: any) {
+          core.setFailed(error);
+        }
+        finally {
+          storage.save();
+        }
 
-          const lastError = metadata.getLastError(scraper.name);
-          if (lastError) {
-            if (lastError.counter > 10) {
-              core.error('');
-              return;
-            }
-
-            if (moment().diff(lastError.timestamp, 'days') < 1) {
-              core.warning('');
-              return;
-            }
-
-            metadata.resetLastError(scraper.name);
-          }
-
-          const lastUpdate = metadata.getLastUpdate(scraper.name);
-          if (lastUpdate && !lastUpdate.idle) {
-            if (moment().diff(lastUpdate.timestamp, 'months') >= 6) {
-              // TODO: Report...
-              // reporter.sendWarning('');
-
-              metadata.setLastUpdateIdle(scraper.name);
-            }
-          }
-
-          const storage = new Storage(scraper.path);
-          const sender = storage.exists() && github.context.ref === 'refs/heads/main'
-            ? publicSender
-            : privateSender;
-
-          try {
-            await scraper.scrape(storage, sender);
-          }
-          catch (error: any) {
-            core.setFailed(error);
-            metadata.setLastError(scraper.name, error);
-          }
-          finally {
-            const saved = storage.save();
-            if (saved || !lastUpdate) {
-              metadata.setLastUpdate(scraper.name);
-            }
-          }
-
-        });
-      }
-
-    }
-    finally {
-      metadata.save();
+      });
     }
 
   }
