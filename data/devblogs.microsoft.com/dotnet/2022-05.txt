@@ -1,1 +1,2 @@
+https://devblogs.microsoft.com/dotnet/microsoft-graph-dotnet-6-journey/
 https://devblogs.microsoft.com/dotnet/yarp-reverse-proxy-1-1-release/
