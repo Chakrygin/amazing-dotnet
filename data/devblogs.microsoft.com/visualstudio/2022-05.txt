@@ -1,1 +1,2 @@
 https://devblogs.microsoft.com/visualstudio/case-study-double-performance-in-under-30-minutes/
+https://devblogs.microsoft.com/visualstudio/visual-studio-on-an-ultra-wide-monitor/
