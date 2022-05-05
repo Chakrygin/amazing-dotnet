@@ -1,4 +1,5 @@
 https://code-maze.com/aspnetcore-webapi-add-multiple-post-actions/
+https://code-maze.com/aspnetcore-webapi-return-html/
 https://code-maze.com/google-charts-angular-aspnetcore-webapi/
 https://code-maze.com/linq-sorting-and-filtering/
 https://code-maze.com/set-csharp-language-version-all-projects-in-solution/
