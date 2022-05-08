@@ -1,16 +1,17 @@
-import { Sender } from '../senders';
-import { Post } from '../models';
+import Sender from './Sender';
 
-export class ThrottleSender implements Sender {
+import { Message } from '../models';
+
+export default class ThrottleSender implements Sender {
   constructor(
     private readonly sender: Sender,
     private readonly timeout: number) { }
 
   private delay = Promise.resolve();
 
-  async sendPost(post: Post): Promise<void> {
+  async send(message: Message): Promise<void> {
     await this.throttle(async () => {
-      await this.sender.sendPost(post);
+      await this.sender.send(message);
     });
   }
 

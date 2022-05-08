@@ -2,11 +2,13 @@ import * as core from '@actions/core';
 
 import axios from 'axios';
 import * as cheerio from 'cheerio';
+import moment from 'moment';
 
-import { Scraper } from "../scrapers";
-import { Sender } from "../senders";
-import { Storage } from "../storage";
-import { Blog, Post } from "../models";
+import Scraper from './Scraper';
+import Storage from '../Storage';
+import Sender from '../senders/Sender';
+
+import { Message, Source } from '../models';
 
 const blogs = {
   'dotnet': '.NET Blog',
@@ -15,39 +17,39 @@ const blogs = {
   'typescript': 'TypeScript',
   'visualstudio': 'Visual Studio Blog',
   'commandline': 'Windows Command Line',
-}
+};
 
-export class DevBlogsScraper implements Scraper {
+export default class DevBlogsScraper implements Scraper {
   constructor(
     private readonly id: keyof typeof blogs) { }
 
   readonly name = `DevBlogs / ${blogs[this.id]}`;
   readonly path = `devblogs.microsoft.com/${this.id}`;
 
-  private readonly blog: Blog = {
+  private readonly source: Source = {
     title: blogs[this.id],
-    link: `https://devblogs.microsoft.com/${this.id}/`,
+    href: `https://devblogs.microsoft.com/${this.id}/`,
   };
 
   async scrape(storage: Storage, sender: Sender): Promise<void> {
-    for await (const post of this.readPosts()) {
-      if (storage.has(post.link, post.date)) {
+    for await (const message of this.getMessages()) {
+      if (storage.has(message.href, message.date)) {
         core.info('Post already exists in storage. Break scraping.');
         break;
       }
 
       core.info('Sending post...');
-      await sender.sendPost(post);
+      await sender.send(message);
 
       core.info('Storing post...');
-      storage.add(post.link, post.date);
+      storage.add(message.href, message.date);
     }
   }
 
-  private async *readPosts(): AsyncGenerator<Post, void> {
-    core.info(`Parsing html page by url '${this.blog.link}'...`);
+  private async *getMessages(): AsyncGenerator<Message & Required<Pick<Message, 'date'>>, void> {
+    core.info(`Parsing html page by url '${this.source.href}'...`);
 
-    const response = await axios.get(this.blog.link);
+    const response = await axios.get(this.source.href);
     const $ = cheerio.load(response.data);
     const entries = $('#content .entry-box').toArray();
 
@@ -72,32 +74,31 @@ export class DevBlogsScraper implements Scraper {
         .map((_, element) => $(element))
         .toArray();
 
-      const post: Post = {
+      const post: Message & Required<Pick<Message, 'date'>> = {
         image: image,
         title: title.text().trim(),
-        link: title.attr('href') ?? '',
-        blog: this.blog,
+        href: title.attr('href') ?? '',
+        source: this.source,
         author: {
           title: author.text().trim(),
-          link: this.getFullHref(author.attr('href')) ?? '',
+          href: author.attr('href') ?? '',
         },
-        date: new Date(date),
+        date: moment(date),
         description: description,
         tags: tags.map(tag => {
           return {
             title: tag.text().trim(),
-            link: tag.attr('href') ?? '',
+            href: tag.attr('href') ?? '',
           };
         }),
       };
 
       core.info(`Post title is '${post.title}'.`);
-      core.info(`Post link is '${post.link}'.`);
+      core.info(`Post href is '${post.href}'.`);
 
       yield post;
     }
   }
-
 
   private getDescription(entry: cheerio.Cheerio<cheerio.Element>, $: cheerio.CheerioAPI): string[] {
     const description = [];
@@ -120,13 +121,5 @@ export class DevBlogsScraper implements Scraper {
     }
 
     return description;
-  }
-
-  private getFullHref(href: string | undefined): string | undefined {
-    if (href && href.startsWith('/')) {
-      href = 'https://devblogs.microsoft.com' + href;
-    }
-
-    return href;
   }
 }

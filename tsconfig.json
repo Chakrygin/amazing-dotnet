@@ -9,9 +9,9 @@
   },
   "include": [
     "src",
-    "tests"
+    "tests",
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
   ],
 }

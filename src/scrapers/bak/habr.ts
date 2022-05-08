@@ -4,7 +4,7 @@ import axios from 'axios';
 import * as cheerio from 'cheerio';
 
 import { Scraper } from "../scrapers";
-import { Sender } from "../senders";
+import { Sender } from "../bak";
 import { Storage } from "../storage";
 import { Author, Blog, Company, Post, Tag } from "../models";
 
