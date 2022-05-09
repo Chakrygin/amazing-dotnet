@@ -1,6 +1,6 @@
 import fs from 'fs';
 import moment from 'moment';
-import { join } from 'path';
+import { dirname, join } from 'path';
 
 export function getLastUpdate(name: string, path: string): LastUpdate {
   return new LastUpdate(name, join(process.cwd(), 'data', path, 'updates.json'));
@@ -92,14 +92,17 @@ export class LastUpdate {
       }]);
 
     if (entries.length > 0) {
+      const dir = dirname(this.path);
+      if (!fs.existsSync(dir)) {
+        fs.mkdirSync(dir, { recursive: true });
+      }
+
       const json = Object.fromEntries(entries);
       const text = JSON.stringify(json, null, 2);
       fs.writeFileSync(this.path, text + '\n');
     }
     else {
-      fs.rmSync(this.path, {
-        force: true,
-      });
+      fs.rmSync(this.path, { force: true });
     }
 
     delete this.lastUpdates;

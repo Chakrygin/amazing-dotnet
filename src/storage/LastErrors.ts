@@ -1,6 +1,6 @@
 import fs from 'fs';
 import moment from 'moment';
-import { join } from 'path';
+import { dirname, join } from 'path';
 
 export function getLastError(name: string, path: string): LastError {
   return new LastError(name, join(process.cwd(), 'data', path, 'errors.json'));
@@ -108,14 +108,17 @@ export class LastError {
       }]);
 
     if (entries.length > 0) {
+      const dir = dirname(this.path);
+      if (!fs.existsSync(dir)) {
+        fs.mkdirSync(dir, { recursive: true });
+      }
+
       const json = Object.fromEntries(entries);
       const text = JSON.stringify(json, null, 2);
       fs.writeFileSync(this.path, text + '\n');
     }
     else {
-      fs.rmSync(this.path, {
-        force: true,
-      });
+      fs.rmSync(this.path, { force: true });
     }
 
     delete this.lastErrors;
