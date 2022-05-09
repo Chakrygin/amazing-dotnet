@@ -10,6 +10,7 @@ import CodeOpinionScraper from './scrapers/CodeOpinionScraper';
 import DevBlogsScraper from './scrapers/DevBlogsScraper';
 import DotNetCoreTutorialsScraper from './scrapers/DotNetCoreTutorialsScraper';
 import HabrScraper from './scrapers/HabrScraper';
+import JetBrainsScraper from './scrapers/JetBrainsScraper';
 import KhalidAbuhakmehScraper from './scrapers/KhalidAbuhakmehScraper';
 
 import { createTelegramSender } from './senders';
@@ -39,6 +40,9 @@ async function main() {
       new DevBlogsScraper('commandline'),
       new DotNetCoreTutorialsScraper(),
       new HabrScraper(),
+      new JetBrainsScraper('how-tos'),
+      new JetBrainsScraper('releases'),
+      new JetBrainsScraper('net-annotated'),
       new KhalidAbuhakmehScraper(),
     ];
 
