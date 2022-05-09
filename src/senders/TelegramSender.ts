@@ -43,25 +43,25 @@ function getMessageHtml(message: Message): string {
   const line = [];
 
   if (message.source) {
-    lines.push(
+    line.push(
       link(bold(encode(message.source.title)), message.source.href));
   }
 
   if (message.author) {
-    lines.push(
+    line.push(
       link(bold(encode(message.author.title)), message.author.href));
   }
 
   if (message.categories != undefined) {
     if (Array.isArray(message.categories)) {
       for (const category of message.categories) {
-        lines.push(
+        line.push(
           link(bold(encode(category.title)), category.href));
       }
     }
     else {
       const category = message.categories;
-      lines.push(
+      line.push(
         link(bold(encode(category.title)), category.href));
     }
   }

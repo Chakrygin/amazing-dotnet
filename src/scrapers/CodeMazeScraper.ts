@@ -2,40 +2,42 @@ import * as core from '@actions/core';
 
 import axios from 'axios';
 import * as cheerio from 'cheerio';
+import moment from 'moment';
 
-import { Scraper } from "../scrapers";
-import { Sender } from "../bak";
-import { Storage } from "../storage";
-import { Author, Blog, Post } from "../models";
+import Scraper from './Scraper';
+import Storage from '../Storage';
+import Sender from '../senders/Sender';
 
-export class CodeMazeScraper implements Scraper {
+import { Author, Message, Source } from '../models';
+
+export default class CodeMazeScraper implements Scraper {
   readonly name = 'CodeMaze';
   readonly path = 'code-maze.com';
 
-  private readonly blog: Blog = {
+  private readonly source: Source = {
     title: 'Code Maze',
-    link: 'https://code-maze.com/'
-  }
+    href: 'https://code-maze.com/',
+  };
 
   async scrape(storage: Storage, sender: Sender): Promise<void> {
     for await (const post of this.readPosts()) {
-      if (storage.has(post.link, post.date)) {
+      if (storage.has(post.href)) {
         core.info('Post already exists in storage. Break scraping.');
         break;
       }
 
       core.info('Sending post...');
-      await sender.sendPost(post);
+      await sender.send(post);
 
       core.info('Storing post...');
-      storage.add(post.link, post.date);
+      storage.add(post.href);
     }
   }
 
-  private async *readPosts(): AsyncGenerator<Post, void> {
-    core.info(`Parsing html page by url '${this.blog.link}'...`);
+  private async *readPosts(): AsyncGenerator<Message, void> {
+    core.info(`Parsing html page by url '${this.source.href}'...`);
 
-    const response = await axios.get(this.blog.link);
+    const response = await axios.get(this.source.href);
     const $ = cheerio.load(response.data);
     const articles = $('.homePage_LatestPost article').toArray();
 
@@ -55,18 +57,18 @@ export class CodeMazeScraper implements Scraper {
       const date = this.getDate(article);
       const description = article.find('.post-content-inner').text().trim();
 
-      const post: Post = {
+      const post: Message = {
         image: image,
         title: title.text().trim(),
-        link: title.attr('href') ?? '',
-        blog: this.blog,
+        href: title.attr('href') ?? '',
+        source: this.source,
         author: author,
-        date: new Date(date),
+        date: moment(date, 'LL'),
         description: description,
       };
 
       core.info(`Post title is '${post.title}'.`);
-      core.info(`Post link is '${post.link}'.`);
+      core.info(`Post href is '${post.href}'.`);
 
       yield post;
     }
@@ -75,7 +77,7 @@ export class CodeMazeScraper implements Scraper {
   private getImage(article: cheerio.Cheerio<cheerio.Element>): string | undefined {
     let src = article.find('.et_pb_image_container img').attr('src');
     if (src) {
-      src = src.replace(/\-\d+x\d+(\.\w+)$/, '$1');
+      src = src.replace(/-\d+x\d+(\.\w+)$/, '$1');
     }
 
     return src;
@@ -93,10 +95,10 @@ export class CodeMazeScraper implements Scraper {
   private getAuthor(article: cheerio.Cheerio<cheerio.Element>): Author | undefined {
     const author = article.find('.post-meta .author a');
     const title = author.text().trim();
-    const link = author.attr('href') ?? '';
+    const href = author.attr('href') ?? '';
 
     if (title !== 'Code Maze') {
-      return { title, link };
+      return { title, href };
     }
   }
 }

@@ -2,45 +2,47 @@ import * as core from '@actions/core';
 
 import axios from 'axios';
 import * as cheerio from 'cheerio';
+import moment from 'moment';
 
-import { Scraper } from "../scrapers";
-import { Sender } from "../bak";
-import { Storage } from "../storage";
-import { Author, Blog, Post, Tag } from "../models";
+import Scraper from './Scraper';
+import Storage from '../Storage';
+import Sender from '../senders/Sender';
 
-export class DotNetCoreTutorialsScraper implements Scraper {
+import { Author, Message, Source } from '../models';
+
+export default class DotNetCoreTutorialsScraper implements Scraper {
   readonly name = 'DotNetCoreTutorials';
   readonly path = 'dotnetcoretutorials.com';
 
-  private readonly blog: Blog = {
+  private readonly source: Source = {
     title: '.NET Core Tutorials',
-    link: 'https://dotnetcoretutorials.com/'
-  }
+    href: 'https://dotnetcoretutorials.com/',
+  };
 
   private readonly author: Author = {
     title: 'Wade Gausden',
-    link: 'https://dotnetcoretutorials.com/about/'
-  }
+    href: 'https://dotnetcoretutorials.com/about/',
+  };
 
   async scrape(storage: Storage, sender: Sender): Promise<void> {
     for await (const post of this.readPosts()) {
-      if (storage.has(post.link, post.date)) {
+      if (storage.has(post.href, post.date)) {
         core.info('Post already exists in storage. Break scraping.');
         break;
       }
 
       core.info('Sending post...');
-      await sender.sendPost(post);
+      await sender.send(post);
 
       core.info('Storing post...');
-      storage.add(post.link, post.date);
+      storage.add(post.href, post.date);
     }
   }
 
-  private async *readPosts(): AsyncGenerator<Post, void> {
-    core.info(`Parsing html page by url '${this.blog.link}'...`);
+  private async *readPosts(): AsyncGenerator<Message & Required<Pick<Message, 'date'>>, void> {
+    core.info(`Parsing html page by url '${this.source.href}'...`);
 
-    const response = await axios.get(this.blog.link);
+    const response = await axios.get(this.source.href);
     const $ = cheerio.load(response.data);
     const articles = $('#content article').toArray();
 
@@ -59,18 +61,18 @@ export class DotNetCoreTutorialsScraper implements Scraper {
       const date = article.find('time.entry-date').text();
       const description = this.getDescription(article, $);
 
-      const post: Post = {
+      const post: Message & Required<Pick<Message, 'date'>> = {
         image: image,
         title: title.text().trim(),
-        link: title.attr('href') ?? '',
-        blog: this.blog,
+        href: title.attr('href') ?? '',
+        source: this.source,
         author: this.author,
-        date: new Date(date),
+        date: moment(date, 'LL'),
         description: description,
       };
 
       core.info(`Post title is '${post.title}'.`);
-      core.info(`Post link is '${post.link}'.`);
+      core.info(`Post href is '${post.href}'.`);
 
       yield post;
     }
@@ -95,7 +97,7 @@ export class DotNetCoreTutorialsScraper implements Scraper {
       .find('div.entry-content')
       .children();
 
-    var length = 0;
+    let length = 0;
     for (const element of elements) {
       if (element.type != 'tag') {
         continue;

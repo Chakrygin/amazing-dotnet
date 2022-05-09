@@ -2,45 +2,47 @@ import * as core from '@actions/core';
 
 import axios from 'axios';
 import * as cheerio from 'cheerio';
+import moment from 'moment';
 
-import { Scraper } from ".";
-import { Sender } from "../bak";
-import { Storage } from "../storage";
-import { Author, Blog, Post } from "../models";
+import Scraper from './Scraper';
+import Storage from '../Storage';
+import Sender from '../senders/Sender';
 
-export class CodeOpinionScraper implements Scraper {
+import { Author, Message, Source } from '../models';
+
+export default class CodeOpinionScraper implements Scraper {
   readonly name = 'CodeOpinion';
   readonly path = 'codeopinion.com';
 
-  private readonly blog: Blog = {
+  private readonly source: Source = {
     title: 'CodeOpinion',
-    link: 'https://codeopinion.com/'
-  }
+    href: 'https://codeopinion.com/'
+  };
 
   private readonly author: Author = {
     title: 'Derek Comartin',
-    link: 'https://mvp.microsoft.com/en-us/PublicProfile/5002380'
-  }
+    href: 'https://mvp.microsoft.com/en-us/PublicProfile/5002380'
+  };
 
   async scrape(storage: Storage, sender: Sender): Promise<void> {
     for await (const post of this.readPosts()) {
-      if (storage.has(post.link, post.date)) {
+      if (storage.has(post.href, post.date)) {
         core.info('Post already exists in storage. Break scraping.');
         break;
       }
 
       core.info('Sending post...');
-      await sender.sendPost(post);
+      await sender.send(post);
 
       core.info('Storing post...');
-      storage.add(post.link, post.date);
+      storage.add(post.href, post.date);
     }
   }
 
-  private async *readPosts(): AsyncGenerator<Post, void> {
-    core.info(`Parsing html page by url '${this.blog.link}'...`);
+  private async *readPosts(): AsyncGenerator<Message & Required<Pick<Message, 'date'>>, void> {
+    core.info(`Parsing html page by url '${this.source.href}'...`);
 
-    const response = await axios.get(this.blog.link);
+    const response = await axios.get(this.source.href);
     const $ = cheerio.load(response.data);
     const articles = $('#main article').toArray();
 
@@ -59,36 +61,36 @@ export class CodeOpinionScraper implements Scraper {
       const date = article.find('time.entry-date').text();
       const description = this.getDescription(article, $);
 
-      const post: Post = {
+      const post: Message & Required<Pick<Message, 'date'>> = {
         image: image,
         title: title.text().trim(),
-        link: title.attr('href') ?? '',
-        blog: this.blog,
+        href: title.attr('href') ?? '',
+        source: this.source,
         author: this.author,
-        date: new Date(date),
+        date: moment(date, 'LL'),
         description: description,
       };
 
       core.info(`Post title is '${post.title}'.`);
-      core.info(`Post link is '${post.link}'.`);
+      core.info(`Post href is '${post.href}'.`);
 
       yield post;
     }
   }
 
   private getImage(article: cheerio.Cheerio<cheerio.Element>): string | undefined {
-    let href = article.find('.container-youtube a[href^=https://www.youtube.com/]').attr('href');
+    const href = article.find('.container-youtube a[href^=https://www.youtube.com/]').attr('href');
     if (href) {
       const index = href.indexOf('?');
       if (index > 0) {
-        const query = href.substring(index + 1)
+        const query = href.substring(index + 1);
         const pairs = query.split('&');
 
         for (const pair of pairs) {
           const [name, value] = pair.split('=');
 
           if (name == 'v') {
-            return `https://img.youtube.com/vi/${value}/maxresdefault.jpg`
+            return `https://img.youtube.com/vi/${value}/maxresdefault.jpg`;
           }
         }
       }

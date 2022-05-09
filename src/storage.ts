@@ -73,12 +73,17 @@ export default class Storage {
 
   private getFileNames(): string[] {
     if (!this.names) {
-      const regexp = /^\d{4}-\d{2}-\d{2}.txt$/;
+      if (fs.existsSync(this.path)) {
+        const regexp = /^\d{4}-\d{2}-\d{2}.txt$/;
 
-      this.names = fs.readdirSync(this.path)
-        .filter(file => regexp.test(file))
-        .sort()
-        .reverse();
+        this.names = fs.readdirSync(this.path)
+          .filter(file => regexp.test(file))
+          .sort()
+          .reverse();
+      }
+      else {
+        this.names = [];
+      }
     }
 
     return this.names;

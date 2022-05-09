@@ -24,21 +24,21 @@ export default class AndrewLockScraper implements Scraper {
   };
 
   async scrape(storage: Storage, sender: Sender): Promise<void> {
-    for await (const message of this.getMessages()) {
-      if (storage.has(message.href, message.date)) {
+    for await (const post of this.readPosts()) {
+      if (storage.has(post.href, post.date)) {
         core.info('Post already exists in storage. Break scraping.');
         break;
       }
 
       core.info('Sending post...');
-      await sender.send(message);
+      await sender.send(post);
 
       core.info('Storing post...');
-      storage.add(message.href, message.date);
+      storage.add(post.href, post.date);
     }
   }
 
-  private async *getMessages(): AsyncGenerator<Message & Required<Pick<Message, 'date'>>, void> {
+  private async *readPosts(): AsyncGenerator<Message & Required<Pick<Message, 'date'>>, void> {
     core.info(`Parsing rss feed by url '${this.source.href}rss.xml'...`);
 
     const parser = new RssParser({
@@ -63,7 +63,7 @@ export default class AndrewLockScraper implements Scraper {
       const description = this.getDescription(item);
       const tags = this.getTags(item);
 
-      const message: Message & Required<Pick<Message, 'date'>> = {
+      const post: Message & Required<Pick<Message, 'date'>> = {
         image: image,
         title: item.title ?? '',
         href: item.link ?? '',
@@ -74,10 +74,10 @@ export default class AndrewLockScraper implements Scraper {
         tags: tags,
       };
 
-      core.info(`Post title is '${message.title}'.`);
-      core.info(`Post href is '${message.href}'.`);
+      core.info(`Post title is '${post.title}'.`);
+      core.info(`Post href is '${post.href}'.`);
 
-      yield message;
+      yield post;
     }
   }
 

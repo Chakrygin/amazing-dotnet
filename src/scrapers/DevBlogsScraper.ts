@@ -32,21 +32,21 @@ export default class DevBlogsScraper implements Scraper {
   };
 
   async scrape(storage: Storage, sender: Sender): Promise<void> {
-    for await (const message of this.getMessages()) {
-      if (storage.has(message.href, message.date)) {
+    for await (const post of this.readPosts()) {
+      if (storage.has(post.href, post.date)) {
         core.info('Post already exists in storage. Break scraping.');
         break;
       }
 
       core.info('Sending post...');
-      await sender.send(message);
+      await sender.send(post);
 
       core.info('Storing post...');
-      storage.add(message.href, message.date);
+      storage.add(post.href, post.date);
     }
   }
 
-  private async *getMessages(): AsyncGenerator<Message & Required<Pick<Message, 'date'>>, void> {
+  private async *readPosts(): AsyncGenerator<Message & Required<Pick<Message, 'date'>>, void> {
     core.info(`Parsing html page by url '${this.source.href}'...`);
 
     const response = await axios.get(this.source.href);
@@ -83,7 +83,7 @@ export default class DevBlogsScraper implements Scraper {
           title: author.text().trim(),
           href: author.attr('href') ?? '',
         },
-        date: moment(date),
+        date: moment(date, 'LL'),
         description: description,
         tags: tags.map(tag => {
           return {

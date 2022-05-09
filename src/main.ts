@@ -5,7 +5,12 @@ import moment from 'moment';
 
 import Scraper from './scrapers/Scraper';
 import AndrewLockScraper from './scrapers/AndrewLockScraper';
+import CodeMazeScraper from './scrapers/CodeMazeScraper';
+import CodeOpinionScraper from './scrapers/CodeOpinionScraper';
 import DevBlogsScraper from './scrapers/DevBlogsScraper';
+import DotNetCoreTutorialsScraper from './scrapers/DotNetCoreTutorialsScraper';
+import HabrScraper from './scrapers/HabrScraper';
+import KhalidAbuhakmehScraper from './scrapers/KhalidAbuhakmehScraper';
 
 import { createTelegramSender } from './senders';
 
@@ -23,18 +28,18 @@ async function main() {
     const TELEGRAM_PRIVATE_CHAT_ID = getInput('TELEGRAM_PRIVATE_CHAT_ID');
 
     const scrapers: Scraper[] = [
-      // new AndrewLockScraper(),
-      // new CodeMazeScraper(),
-      // new CodeOpinionScraper(),
-      // new DevBlogsScraper('dotnet'),
-      // new DevBlogsScraper('odata'),
-      // new DevBlogsScraper('nuget'),
-      // new DevBlogsScraper('typescript'),
-      // new DevBlogsScraper('visualstudio'),
-      // new DevBlogsScraper('commandline'),
-      // new DotNetCoreTutorialsScraper(),
-      // new HabrScraper(),
-      // new KhalidAbuhakmehScraper(),
+      new AndrewLockScraper(),
+      new CodeMazeScraper(),
+      new CodeOpinionScraper(),
+      new DevBlogsScraper('dotnet'),
+      new DevBlogsScraper('odata'),
+      new DevBlogsScraper('nuget'),
+      new DevBlogsScraper('typescript'),
+      new DevBlogsScraper('visualstudio'),
+      new DevBlogsScraper('commandline'),
+      new DotNetCoreTutorialsScraper(),
+      new HabrScraper(),
+      new KhalidAbuhakmehScraper(),
     ];
 
     const publicSender = createTelegramSender(TELEGRAM_TOKEN, TELEGRAM_PUBLIC_CHAT_ID);
