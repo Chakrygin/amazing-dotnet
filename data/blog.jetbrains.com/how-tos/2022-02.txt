@@ -1,0 +1,1 @@
+https://blog.jetbrains.com/dotnet/2022/02/07/improvements-and-optimizations-for-interpolated-strings-a-look-at-new-language-features-in-csharp-10/

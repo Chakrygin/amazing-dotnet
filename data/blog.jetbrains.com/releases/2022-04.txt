@@ -1,0 +1,4 @@
+https://blog.jetbrains.com/dotnet/2022/04/19/dottrace-dotmemory-dotcover-dotpeek-2022-1/
+https://blog.jetbrains.com/dotnet/2022/04/19/introducing-riderflow-a-free-unity-editor-plugin-for-scene-management/
+https://blog.jetbrains.com/dotnet/2022/04/19/resharper-2022-1/
+https://blog.jetbrains.com/dotnet/2022/04/19/rider-2022-1/
