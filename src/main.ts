@@ -28,18 +28,18 @@ async function main() {
     const TELEGRAM_PRIVATE_CHAT_ID = getInput('TELEGRAM_PRIVATE_CHAT_ID');
 
     const scrapers: Scraper[] = [
-      // new AndrewLockScraper(),
+      new AndrewLockScraper(),
       new CodeMazeScraper(),
-      // new CodeOpinionScraper(),
-      // new DevBlogsScraper('dotnet'),
-      // new DevBlogsScraper('odata'),
-      // new DevBlogsScraper('nuget'),
-      // new DevBlogsScraper('typescript'),
-      // new DevBlogsScraper('visualstudio'),
-      // new DevBlogsScraper('commandline'),
-      // new DotNetCoreTutorialsScraper(),
-      // new HabrScraper(),
-      // new KhalidAbuhakmehScraper(),
+      new CodeOpinionScraper(),
+      new DevBlogsScraper('dotnet'),
+      new DevBlogsScraper('odata'),
+      new DevBlogsScraper('nuget'),
+      new DevBlogsScraper('typescript'),
+      new DevBlogsScraper('visualstudio'),
+      new DevBlogsScraper('commandline'),
+      new DotNetCoreTutorialsScraper(),
+      new HabrScraper(),
+      new KhalidAbuhakmehScraper(),
     ];
 
     const publicSender = createTelegramSender(TELEGRAM_TOKEN, TELEGRAM_PUBLIC_CHAT_ID);
