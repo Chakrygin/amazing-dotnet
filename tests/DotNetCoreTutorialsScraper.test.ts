@@ -2,7 +2,7 @@ import DotNetCoreTutorialsScraper from '../src/scrapers/DotNetCoreTutorialsScrap
 
 import { testScraper } from './helpers';
 
-test('DotNetCoreTutorialsScraper', async () => {
+test('DotNetCoreTutorials', async () => {
   const scraper = new DotNetCoreTutorialsScraper();
   await testScraper(scraper);
 });

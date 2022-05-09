@@ -11,8 +11,8 @@ export interface Message {
   readonly title: string;
   readonly href: string;
   readonly source?: Source;
-  readonly author?: Author;
   readonly categories?: Category | Category[];
+  readonly author?: Author;
   readonly date?: moment.Moment;
   readonly description?: string | string[];
   readonly links?: Link[];

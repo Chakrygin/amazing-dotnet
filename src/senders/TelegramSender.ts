@@ -47,11 +47,6 @@ function getMessageHtml(message: Message): string {
       link(bold(encode(message.source.title)), message.source.href));
   }
 
-  if (message.author) {
-    line.push(
-      link(bold(encode(message.author.title)), message.author.href));
-  }
-
   if (message.categories != undefined) {
     if (Array.isArray(message.categories)) {
       for (const category of message.categories) {
@@ -64,6 +59,11 @@ function getMessageHtml(message: Message): string {
       line.push(
         link(bold(encode(category.title)), category.href));
     }
+  }
+
+  if (message.author) {
+    line.push(
+      link(bold(encode(message.author.title)), message.author.href));
   }
 
   if (message.date) {

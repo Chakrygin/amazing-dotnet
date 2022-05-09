@@ -45,19 +45,6 @@ export default class ValidateSender implements Sender {
       }
     }
 
-    if (message.author) {
-      if (!message.author.title) {
-        errors.push('author title is empty');
-      }
-
-      if (!message.author.href) {
-        errors.push('author href is empty');
-      }
-      else if (!message.author.href.startsWith('https://')) {
-        errors.push('author href is not valid url');
-      }
-    }
-
     if (message.categories !== undefined) {
       if (Array.isArray(message.categories)) {
         for (let index = 0; index < message.categories.length; index++) {
@@ -82,6 +69,19 @@ export default class ValidateSender implements Sender {
         if (!category.href) {
           errors.push('link href is empty');
         }
+      }
+    }
+
+    if (message.author) {
+      if (!message.author.title) {
+        errors.push('author title is empty');
+      }
+
+      if (!message.author.href) {
+        errors.push('author href is empty');
+      }
+      else if (!message.author.href.startsWith('https://')) {
+        errors.push('author href is not valid url');
       }
     }
 
