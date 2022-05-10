@@ -1,1 +1,2 @@
 https://khalidabuhakmeh.com/aspnet-core-javascript-collocated-taghelper
+https://khalidabuhakmeh.com/using-aspnet-core-mvc-value-providers-with-minimal-apis
