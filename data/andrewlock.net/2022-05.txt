@@ -1,1 +1,2 @@
 https://andrewlock.net/generating-sortable-guids-using-newid/
+https://andrewlock.net/testing-aspnetcore-grpc-services-in-jetbrains-rider/
