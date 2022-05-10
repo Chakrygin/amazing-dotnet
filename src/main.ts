@@ -14,6 +14,7 @@ import JetBrainsScraper from './scrapers/JetBrainsScraper';
 import KhalidAbuhakmehScraper from './scrapers/KhalidAbuhakmehScraper';
 
 import { createTelegramSender } from './senders';
+import { createTelegramReporter } from './reporters';
 
 import Storage from './storage';
 import { getLastError } from './storage/LastErrors';
@@ -48,6 +49,7 @@ async function main() {
 
     const publicSender = createTelegramSender(TELEGRAM_TOKEN, TELEGRAM_PUBLIC_CHAT_ID);
     const privateSender = createTelegramSender(TELEGRAM_TOKEN, TELEGRAM_PRIVATE_CHAT_ID);
+    const reporter = createTelegramReporter(TELEGRAM_TOKEN, TELEGRAM_PRIVATE_CHAT_ID);
 
     for (const scraper of scrapers) {
       await core.group(scraper.name, async () => {
@@ -55,12 +57,12 @@ async function main() {
         const lastError = getLastError(scraper.name, scraper.path);
         if (lastError.exists) {
           if (lastError.counter > 10) {
-            core.error('This scraper has failed more than 10 times. Skip scraping.');
+            core.error(`The '${scraper.name}' scraper has failed more than 10 times. Skip scraping.`);
             return;
           }
 
           if (moment().diff(lastError.timestamp, 'days') < 1) {
-            core.warning('This scraper has failed less than a day ago. Temporary skip scraping.');
+            core.warning(`The '${scraper.name}' scraper has failed less than a day ago. Temporary skip scraping.`);
             return;
           }
 
@@ -68,11 +70,15 @@ async function main() {
         }
 
         const lastUpdate = getLastUpdate(scraper.name, scraper.path);
-        if (lastUpdate.exists && !lastUpdate.idle) {
+        if (lastUpdate.exists) {
           if (moment().diff(lastUpdate.timestamp, 'months') >= 6) {
-            // reporter.reportWarning(scraper.name, 'This scraper has no updates more than 6 months.');
+            core.warning(`The '${scraper.name}' scraper has no updates more than 6 months.`);
 
-            lastUpdate.setIdle();
+            if (!lastUpdate.idle) {
+              await reporter.report(`The '${scraper.name}' scraper has no updates more than 6 months.`);
+
+              lastUpdate.setIdle();
+            }
           }
         }
 
@@ -85,6 +91,8 @@ async function main() {
         catch (error: any) {
           core.setFailed(error);
           lastError.set(error);
+
+          await reporter.report(`The '${scraper.name}' scraper has failed.`, error);
         }
         finally {
           if (storage.save() || !lastUpdate.exists) {
