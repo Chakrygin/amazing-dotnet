@@ -89,10 +89,10 @@ async function main() {
           await scraper.scrape(storage, sender);
         }
         catch (error: any) {
-          core.setFailed(error);
+          const title = `The '${scraper.name}' scraper has failed.`;
+          core.error(error, { title });
           lastError.set(error);
-
-          await reporter.report(`The '${scraper.name}' scraper has failed.`, error);
+          await reporter.report(title, error);
         }
         finally {
           if (storage.save() || !lastUpdate.exists) {

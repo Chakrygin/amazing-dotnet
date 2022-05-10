@@ -22,7 +22,7 @@ export default class TelegramReporter implements Reporter {
 function getMessageHtml(message: string, error?: string | Error): string {
   const lines = new Array<string>();
 
-  lines.push(message);
+  lines.push(`<b>${message}</b>`);
 
   if (error) {
     if (error instanceof Error) {
