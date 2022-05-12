@@ -6,5 +6,6 @@ https://devblogs.microsoft.com/dotnet/dotnet-maui-rc-3/
 https://devblogs.microsoft.com/dotnet/framework-may-2022-updates/
 https://devblogs.microsoft.com/dotnet/may-2022-updates/
 https://devblogs.microsoft.com/dotnet/microsoft-graph-dotnet-6-journey/
+https://devblogs.microsoft.com/dotnet/regular-expression-improvements-in-dotnet-7/
 https://devblogs.microsoft.com/dotnet/upgrading-a-wcf-service-to-dotnet-6/
 https://devblogs.microsoft.com/dotnet/yarp-reverse-proxy-1-1-release/
