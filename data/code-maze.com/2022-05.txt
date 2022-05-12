@@ -3,6 +3,7 @@ https://code-maze.com/aspnetcore-webapi-return-html/
 https://code-maze.com/check-if-number-is-power-of-2-csharp/
 https://code-maze.com/code-maze-weekly-122/
 https://code-maze.com/copy-entire-directory-charp/
+https://code-maze.com/csharp-convert-json-to-xml-or-xml-to-json/
 https://code-maze.com/csharp-read-data-from-csv-file/
 https://code-maze.com/csharp-when-keyword-handling-exceptions/
 https://code-maze.com/google-charts-angular-aspnetcore-webapi/
