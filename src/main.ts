@@ -55,7 +55,7 @@ async function main() {
       await core.group(scraper.name, async () => {
 
         const lastError = getLastError(scraper.name, scraper.path);
-        if (IS_PRODUCTION && lastError.exists) {
+        if (lastError.exists) {
           if (lastError.counter > 10) {
             core.error(`The '${scraper.name}' scraper has failed more than 10 times. Skip scraping.`);
             return;
@@ -70,7 +70,7 @@ async function main() {
         }
 
         const lastUpdate = getLastUpdate(scraper.name, scraper.path);
-        if (IS_PRODUCTION && lastUpdate.exists) {
+        if (lastUpdate.exists) {
           if (moment().diff(lastUpdate.timestamp, 'months') >= 6) {
             core.warning(`The '${scraper.name}' scraper has no updates more than 6 months.`);
 
