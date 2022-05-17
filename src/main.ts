@@ -41,9 +41,9 @@ async function main() {
       new DevBlogsScraper('commandline'),
       new DotNetCoreTutorialsScraper(),
       new HabrScraper(),
-      new JetBrainsScraper('category/how-tos'),
-      new JetBrainsScraper('category/releases'),
-      new JetBrainsScraper('tag/net-annotated'),
+      new JetBrainsScraper('how-tos'),
+      new JetBrainsScraper('releases'),
+      new JetBrainsScraper('net-annotated'),
       new KhalidAbuhakmehScraper(),
     ];
 
