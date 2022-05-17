@@ -30,7 +30,9 @@ export default class JetBrainsScraper implements Scraper {
 
   private readonly category: Category = {
     title: categories[this.id],
-    href: `https://blog.jetbrains.com/dotnet/category/${this.id}/`,
+    href: this.id === 'net-annotated'
+      ? `https://blog.jetbrains.com/dotnet/tag/${this.id}/`
+      : `https://blog.jetbrains.com/dotnet/category/${this.id}/`,
   };
 
   async scrape(storage: Storage, sender: Sender): Promise<void> {
