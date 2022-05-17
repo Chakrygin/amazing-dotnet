@@ -1,3 +1,4 @@
+https://devblogs.microsoft.com/visualstudio/all-in-one-search-is-getting-slicker/
 https://devblogs.microsoft.com/visualstudio/case-study-double-performance-in-under-30-minutes/
 https://devblogs.microsoft.com/visualstudio/just-in-time-refactoring-intellicode-suggestions/
 https://devblogs.microsoft.com/visualstudio/update-all-visual-studio-installations-with-a-single-click/
