@@ -12,7 +12,11 @@
         - TypeScript - https://devblogs.microsoft.com/typescript/
         - Visual Studio Blog - https://devblogs.microsoft.com/visualstudio/
         - Windows Command Line - https://devblogs.microsoft.com/commandline/
-    - Хабр - https://habr.com/ru/hub/net/
+    - The JetBrains Blog / The .NET Tools Blog
+        - How-To's - https://blog.jetbrains.com/dotnet/category/how-tos/
+        - Releases - https://blog.jetbrains.com/dotnet/category/releases/
+        - .NET Annotated - https://blog.jetbrains.com/dotnet/tag/net-annotated/
+    - Хабр - https://habr.com/ru/hub/net/ (статьи с рейтингом 10 и выше)
     - Code Maze - https://code-maze.com/
 
 - Персональные блоги:
