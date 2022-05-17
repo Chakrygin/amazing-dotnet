@@ -60,6 +60,12 @@ export default class HabrScraper implements Scraper {
       core.info(`Parsing post at index ${index}...`);
 
       const article = $(articles[index]);
+
+      if (article.find('> .tm-megapost-snippet').length) {
+        // TODO: Implement megapost parsing...
+        continue;
+      }
+
       const image = this.getImage(article);
       const title = article.find('a.tm-article-snippet__title-link');
       const author = article.find('.tm-article-snippet__author a.tm-user-info__username');
