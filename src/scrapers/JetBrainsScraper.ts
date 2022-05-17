@@ -11,9 +11,9 @@ import Sender from '../senders/Sender';
 import { Category, Message, Source } from '../models';
 
 const categories = {
-  'how-tos': 'How-To\'s',
-  'releases': 'Releases',
-  'net-annotated': '.NET Annotated',
+  'category/how-tos': 'How-To\'s',
+  'category/releases': 'Releases',
+  'tag/net-annotated': '.NET Annotated',
 };
 
 export default class JetBrainsScraper implements Scraper {
@@ -30,7 +30,7 @@ export default class JetBrainsScraper implements Scraper {
 
   private readonly category: Category = {
     title: categories[this.id],
-    href: `https://blog.jetbrains.com/dotnet/category/${this.id}/`,
+    href: `https://blog.jetbrains.com/dotnet/${this.id}/`,
   };
 
   async scrape(storage: Storage, sender: Sender): Promise<void> {
