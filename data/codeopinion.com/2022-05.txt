@@ -1,2 +1,3 @@
+https://codeopinion.com/commands-events-whats-the-difference/
 https://codeopinion.com/microservices-gets-it-wrong-defining-service-boundaries/
 https://codeopinion.com/real-world-event-driven-architecture-4-practical-examples/
