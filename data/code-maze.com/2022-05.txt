@@ -16,3 +16,4 @@ https://code-maze.com/csharp-when-keyword-handling-exceptions/
 https://code-maze.com/google-charts-angular-aspnetcore-webapi/
 https://code-maze.com/linq-sorting-and-filtering/
 https://code-maze.com/set-csharp-language-version-all-projects-in-solution/
+https://code-maze.com/validate-input-regular-expressions-blazor-webassembly/
