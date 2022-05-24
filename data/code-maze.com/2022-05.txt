@@ -11,6 +11,7 @@ https://code-maze.com/copy-entire-directory-charp/
 https://code-maze.com/copy-to-clipboard-in-blazor-webassembly/
 https://code-maze.com/csharp-convert-json-to-xml-or-xml-to-json/
 https://code-maze.com/csharp-create-comma-separated-string-from-list-of-strings/
+https://code-maze.com/csharp-mock-httpclient-with-unit-tests/
 https://code-maze.com/csharp-read-data-from-csv-file/
 https://code-maze.com/csharp-when-keyword-handling-exceptions/
 https://code-maze.com/google-charts-angular-aspnetcore-webapi/
