@@ -1,1 +1,2 @@
 https://devblogs.microsoft.com/commandline/case-study-how-many-colors-are-too-many-colors-for-windows-terminal/
+https://devblogs.microsoft.com/commandline/windows-terminal-preview-1-14-release/
