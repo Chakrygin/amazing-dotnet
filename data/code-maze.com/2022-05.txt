@@ -9,6 +9,7 @@ https://code-maze.com/code-maze-weekly-123/
 https://code-maze.com/code-maze-weekly-124/
 https://code-maze.com/copy-entire-directory-charp/
 https://code-maze.com/copy-to-clipboard-in-blazor-webassembly/
+https://code-maze.com/csharp-array-remove-duplicates/
 https://code-maze.com/csharp-convert-json-to-xml-or-xml-to-json/
 https://code-maze.com/csharp-create-comma-separated-string-from-list-of-strings/
 https://code-maze.com/csharp-mock-httpclient-with-unit-tests/
