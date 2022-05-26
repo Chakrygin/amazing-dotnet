@@ -6,4 +6,5 @@ https://devblogs.microsoft.com/visualstudio/update-all-visual-studio-installatio
 https://devblogs.microsoft.com/visualstudio/visual-studio-2022-17-2-is-now-available/
 https://devblogs.microsoft.com/visualstudio/visual-studio-2022-for-mac-is-now-available/
 https://devblogs.microsoft.com/visualstudio/visual-studio-2022-for-mac-release-candidate-2/
+https://devblogs.microsoft.com/visualstudio/visual-studio-at-microsoft-build-2022/
 https://devblogs.microsoft.com/visualstudio/visual-studio-on-an-ultra-wide-monitor/
