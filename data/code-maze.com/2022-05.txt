@@ -1,3 +1,4 @@
+https://code-maze.com/anonymous-types-csharp/
 https://code-maze.com/aspnetcore-api-gateway-with-ocelot/
 https://code-maze.com/aspnetcore-register-services-for-different-environments/
 https://code-maze.com/aspnetcore-response-caching/
