@@ -4,6 +4,7 @@ https://code-maze.com/aspnetcore-register-services-for-different-environments/
 https://code-maze.com/aspnetcore-response-caching/
 https://code-maze.com/aspnetcore-webapi-add-multiple-post-actions/
 https://code-maze.com/aspnetcore-webapi-return-html/
+https://code-maze.com/block-ip-addresses-aspnetcore-webapi/
 https://code-maze.com/central-package-management-dotnet/
 https://code-maze.com/check-if-number-is-power-of-2-csharp/
 https://code-maze.com/code-maze-weekly-122/
