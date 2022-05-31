@@ -1,0 +1,1 @@
+https://dotnetcoretutorials.com/2022/06/01/how-i-get-manual-testers-writing-e2e-automated-tests-in-c-net-using-specflow/
