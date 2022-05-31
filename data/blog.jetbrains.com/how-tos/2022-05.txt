@@ -1,3 +1,4 @@
 https://blog.jetbrains.com/dotnet/2022/05/11/structure-and-organize-net-projects-with-rider/
 https://blog.jetbrains.com/dotnet/2022/05/25/macos-environment-setup-for-maui-development/
+https://blog.jetbrains.com/dotnet/2022/05/31/surprising-ways-to-profile-your-net-applications/
 https://blog.jetbrains.com/space/2022/05/04/rider-support-in-space-dev-environments/
