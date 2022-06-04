@@ -1,5 +1,4 @@
 export default interface Reporter {
-  report(message: string, error?: string | Error): Promise<void>;
+  reportWarning(title: string, warning: string): Promise<void>;
+  reportError(title: string, error: string | Error): Promise<void>;
 }
-
-

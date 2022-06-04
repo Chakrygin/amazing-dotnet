@@ -1,5 +1,6 @@
-import { Message } from '../models';
+import { Post } from '../models';
 
 export default interface Sender {
-  send(message: Message): Promise<void>;
+  send(post: Post): Promise<void>;
 }
+

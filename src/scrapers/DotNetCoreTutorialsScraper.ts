@@ -4,45 +4,28 @@ import axios from 'axios';
 import * as cheerio from 'cheerio';
 import moment from 'moment';
 
-import Scraper from './Scraper';
-import Storage from '../Storage';
-import Sender from '../senders/Sender';
+import ScraperBase from './ScraperBase';
 
-import { Author, Message, Source } from '../models';
+import { Category, Post } from '../models';
 
-export default class DotNetCoreTutorialsScraper implements Scraper {
+export default class DotNetCoreTutorialsScraper extends ScraperBase {
   readonly name = 'DotNetCoreTutorials';
   readonly path = 'dotnetcoretutorials.com';
 
-  private readonly source: Source = {
+  private readonly blog: Category = {
     title: '.NET Core Tutorials',
     href: 'https://dotnetcoretutorials.com/',
   };
 
-  private readonly author: Author = {
+  private readonly author: Category = {
     title: 'Wade Gausden',
     href: 'https://dotnetcoretutorials.com/about/',
   };
 
-  async scrape(storage: Storage, sender: Sender): Promise<void> {
-    for await (const post of this.readPosts()) {
-      if (storage.has(post.href, post.date)) {
-        core.info('Post already exists in storage. Break scraping.');
-        break;
-      }
+  protected override async *readPosts(): AsyncGenerator<Post, void> {
+    core.info(`Parsing html page by url '${this.blog.href}'...`);
 
-      core.info('Sending post...');
-      await sender.send(post);
-
-      core.info('Storing post...');
-      storage.add(post.href, post.date);
-    }
-  }
-
-  private async *readPosts(): AsyncGenerator<Message & Required<Pick<Message, 'date'>>, void> {
-    core.info(`Parsing html page by url '${this.source.href}'...`);
-
-    const response = await axios.get(this.source.href);
+    const response = await axios.get(this.blog.href);
     const $ = cheerio.load(response.data);
     const articles = $('#content article').toArray();
 
@@ -58,17 +41,23 @@ export default class DotNetCoreTutorialsScraper implements Scraper {
       const article = $(articles[index]);
       const image = this.getImage(article);
       const title = article.find('h2.entry-title a');
+      const href = title.attr('href') ?? '';
       const date = article.find('time.entry-date').text();
       const description = this.getDescription(article, $);
 
-      const post: Message & Required<Pick<Message, 'date'>> = {
+      const post: Post = {
         image: image,
-        title: title.text().trim(),
-        href: title.attr('href') ?? '',
-        source: this.source,
-        author: this.author,
+        title: title.text(),
+        href: href,
+        categories: [
+          this.blog,
+          this.author,
+        ],
         date: moment(date, 'LL'),
-        description: description,
+        description: [
+          ...description,
+          `Read: ${href}`,
+        ],
       };
 
       core.info(`Post title is '${post.title}'.`);

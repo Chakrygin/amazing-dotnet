@@ -4,40 +4,23 @@ import axios from 'axios';
 import * as cheerio from 'cheerio';
 import moment from 'moment';
 
-import Scraper from './Scraper';
-import Storage from '../Storage';
-import Sender from '../senders/Sender';
+import ScraperBase from './ScraperBase';
 
-import { Message, Source } from '../models';
+import { Category, Post } from '../models';
 
-export default class KhalidAbuhakmehScraper implements Scraper {
+export default class KhalidAbuhakmehScraper extends ScraperBase {
   readonly name = 'KhalidAbuhakmeh';
   readonly path = 'khalidabuhakmeh.com';
 
-  private readonly source: Source = {
+  private readonly blog: Category = {
     title: 'Khalid Abuhakmeh',
     href: 'https://khalidabuhakmeh.com/'
   };
 
-  async scrape(storage: Storage, sender: Sender): Promise<void> {
-    for await (const message of this.getMessages()) {
-      if (storage.has(message.href, message.date)) {
-        core.info('Post already exists in storage. Break scraping.');
-        break;
-      }
+  protected override async *readPosts(): AsyncGenerator<Post, void> {
+    core.info(`Parsing html page by url '${this.blog.href}'...`);
 
-      core.info('Sending post...');
-      await sender.send(message);
-
-      core.info('Storing post...');
-      storage.add(message.href, message.date);
-    }
-  }
-
-  private async *getMessages(): AsyncGenerator<Message & Required<Pick<Message, 'date'>>, void> {
-    core.info(`Parsing html page by url '${this.source.href}'...`);
-
-    const response = await axios.get(this.source.href);
+    const response = await axios.get(this.blog.href);
     const $ = cheerio.load(response.data);
     const articles = $('#page article').toArray();
 
@@ -53,6 +36,7 @@ export default class KhalidAbuhakmehScraper implements Scraper {
       const article = $(articles[index]);
       const image = this.getImage(article);
       const title = article.find('h2.post-title a');
+      const href = this.getFullHref(title.attr('href')) ?? '';
       const date = article.find('time.published').text();
       const description = this.getDescription(article, $);
 
@@ -61,13 +45,18 @@ export default class KhalidAbuhakmehScraper implements Scraper {
         .map((_, element) => $(element))
         .toArray();
 
-      const post: Message & Required<Pick<Message, 'date'>> = {
+      const post: Post = {
         image: image,
-        title: title.text().trim(),
-        href: this.getFullHref(title.attr('href')) ?? '',
-        source: this.source,
+        title: title.text(),
+        href: href,
+        categories: [
+          this.blog,
+        ],
         date: moment(date, 'LL'),
-        description: description,
+        description: [
+          ...description,
+          `Read: ${href}`,
+        ],
         tags: tags.map(tag => ({
           title: tag.text().replace(/^#/, '') ?? '',
           href: this.getFullHref(tag.attr('href')) ?? '',
@@ -121,7 +110,7 @@ export default class KhalidAbuhakmehScraper implements Scraper {
 
   private getFullHref(href: string | undefined): string | undefined {
     if (href && href.startsWith('/')) {
-      href = this.source.href + href.substring(1);
+      href = this.blog.href + href.substring(1);
     }
 
     return href;

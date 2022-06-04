@@ -2,6 +2,10 @@ import * as core from '@actions/core';
 import * as github from '@actions/github';
 
 import moment from 'moment';
+import 'moment/locale/ru';
+
+import { createReporter } from './reporters';
+import { createSender } from './senders';
 
 import Scraper from './scrapers/Scraper';
 import AndrewLockScraper from './scrapers/AndrewLockScraper';
@@ -13,12 +17,10 @@ import HabrScraper from './scrapers/HabrScraper';
 import JetBrainsScraper from './scrapers/JetBrainsScraper';
 import KhalidAbuhakmehScraper from './scrapers/KhalidAbuhakmehScraper';
 
-import { createTelegramSender } from './senders';
-import { createTelegramReporter } from './reporters';
+import { getLastError } from './LastErrors';
+import { getLastUpdate } from './LastUpdates';
 
-import Storage from './storage';
-import { getLastError } from './storage/LastErrors';
-import { getLastUpdate } from './storage/LastUpdates';
+import Storage from './Storage';
 
 async function main() {
   try {
@@ -28,6 +30,10 @@ async function main() {
     const TELEGRAM_TOKEN = getInput('TELEGRAM_TOKEN');
     const TELEGRAM_PUBLIC_CHAT_ID = getInput('TELEGRAM_PUBLIC_CHAT_ID');
     const TELEGRAM_PRIVATE_CHAT_ID = getInput('TELEGRAM_PRIVATE_CHAT_ID');
+
+    const reporter = createReporter(TELEGRAM_TOKEN, TELEGRAM_PRIVATE_CHAT_ID);
+    const publicSender = createSender(TELEGRAM_TOKEN, TELEGRAM_PUBLIC_CHAT_ID);
+    const privateSender = createSender(TELEGRAM_TOKEN, TELEGRAM_PRIVATE_CHAT_ID);
 
     const scrapers: Scraper[] = [
       new AndrewLockScraper(),
@@ -47,22 +53,24 @@ async function main() {
       new KhalidAbuhakmehScraper(),
     ];
 
-    const publicSender = createTelegramSender(TELEGRAM_TOKEN, TELEGRAM_PUBLIC_CHAT_ID);
-    const privateSender = createTelegramSender(TELEGRAM_TOKEN, TELEGRAM_PRIVATE_CHAT_ID);
-    const reporter = createTelegramReporter(TELEGRAM_TOKEN, TELEGRAM_PRIVATE_CHAT_ID);
-
     for (const scraper of scrapers) {
       await core.group(scraper.name, async () => {
 
         const lastError = getLastError(scraper.name, scraper.path);
         if (lastError.exists) {
           if (lastError.counter > 10) {
-            core.error(`The '${scraper.name}' scraper has failed more than 10 times. Skip scraping.`);
+            core.error('This scraper has failed more than 10 times.', {
+              title: `The '${scraper.name}' scraper is permanently skipped.`,
+            });
+
             return;
           }
 
           if (moment().diff(lastError.timestamp, 'days') < 1) {
-            core.warning(`The '${scraper.name}' scraper has failed less than a day ago. Temporary skip scraping.`);
+            core.warning('This scraper has failed less than a day ago.', {
+              title: `The '${scraper.name}' scraper is temporarily skipped.`,
+            });
+
             return;
           }
 
@@ -72,10 +80,12 @@ async function main() {
         const lastUpdate = getLastUpdate(scraper.name, scraper.path);
         if (lastUpdate.exists) {
           if (moment().diff(lastUpdate.timestamp, 'months') >= 6) {
-            core.warning(`The '${scraper.name}' scraper has no updates more than 6 months.`);
+            core.warning('This scraper has no updates more than 6 months.', {
+              title: `The '${scraper.name}' scraper is idle.`,
+            });
 
             if (!lastUpdate.idle) {
-              await reporter.report(`The '${scraper.name}' scraper has no updates more than 6 months.`);
+              await reporter.reportWarning(`The '${scraper.name}' scraper is idle.`, 'This scraper has no updates more than 6 months.');
 
               lastUpdate.setIdle();
             }
@@ -83,16 +93,23 @@ async function main() {
         }
 
         const storage = new Storage(scraper.path);
-        const sender = IS_PRODUCTION && storage.exists() ? publicSender : privateSender;
+        const sender = IS_PRODUCTION && storage.exists ? publicSender : privateSender;
 
         try {
           await scraper.scrape(storage, sender);
         }
-        catch (error: any) {
-          const title = `The '${scraper.name}' scraper has failed.`;
-          core.error(error, { title });
-          lastError.set(error);
-          await reporter.report(title, error);
+        catch (error) {
+          if (error instanceof Error) {
+            process.exitCode = 1;
+
+            core.error(error, {
+              title: `The '${scraper.name}' scraper has failed.`,
+            });
+
+            lastError.set(error);
+
+            await reporter.reportError(`The '${scraper.name}' scraper has failed.`, error);
+          }
         }
         finally {
           if (storage.save() || !lastUpdate.exists) {
@@ -104,8 +121,10 @@ async function main() {
     }
 
   }
-  catch (error: any) {
-    core.setFailed(error);
+  catch (error) {
+    if (error instanceof Error) {
+      core.setFailed(error);
+    }
   }
 }
 

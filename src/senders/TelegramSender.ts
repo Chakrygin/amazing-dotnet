@@ -2,7 +2,7 @@ import { Telegram } from 'telegraf';
 
 import Sender from './Sender';
 
-import { Message } from '../models';
+import { Post } from '../models';
 
 export default class TelegramSender implements Sender {
   constructor(
@@ -11,64 +11,50 @@ export default class TelegramSender implements Sender {
 
   private readonly telegram = new Telegram(this.token);
 
-  async send(message: Message): Promise<void> {
-    const messageHtml = getMessageHtml(message);
+  async send(post: Post): Promise<void> {
+    const message = getMessage(post);
 
-    if (!message.image || messageHtml.length > 1024) {
-      await this.telegram.sendMessage(this.chatId, messageHtml, {
+    const fs = await import('fs');
+    fs.writeFileSync('C:\\Users\\igor\\Desktop\\message.txt', message);
+
+    if (!post.image || message.length > 1024) {
+      await this.telegram.sendMessage(this.chatId, message, {
         parse_mode: 'HTML',
       });
     }
-    else if (message.image.endsWith('.gif')) {
-      await this.telegram.sendAnimation(this.chatId, message.image, {
-        caption: messageHtml,
+    else if (isAnimation(post.image)) {
+      await this.telegram.sendAnimation(this.chatId, post.image, {
+        caption: message,
         parse_mode: 'HTML',
       });
     }
     else {
-      await this.telegram.sendPhoto(this.chatId, message.image, {
-        caption: messageHtml,
+      await this.telegram.sendPhoto(this.chatId, post.image, {
+        caption: message,
         parse_mode: 'HTML',
       });
     }
   }
 }
 
-function getMessageHtml(message: Message): string {
-  const lines = new Array<string>();
+function getMessage(post: Post): string {
+  const lines = [];
 
   lines.push(
-    link(bold(encode(message.title)), message.href));
+    link(bold(encode(post.title)), post.href));
 
   const line = [];
 
-  if (message.source) {
-    line.push(
-      link(bold(encode(message.source.title)), message.source.href));
-  }
-
-  if (message.categories != undefined) {
-    if (Array.isArray(message.categories)) {
-      for (const category of message.categories) {
-        line.push(
-          link(bold(encode(category.title)), category.href));
-      }
-    }
-    else {
-      const category = message.categories;
+  if (post.categories && post.categories.length > 0) {
+    for (const category of post.categories) {
       line.push(
         link(bold(encode(category.title)), category.href));
     }
   }
 
-  if (message.author) {
+  if (post.date) {
     line.push(
-      link(bold(encode(message.author.title)), message.author.href));
-  }
-
-  if (message.date) {
-    line.push(
-      bold(message.date.format('LL')));
+      bold(post.date.format('LL')));
   }
 
   if (line.length > 0) {
@@ -76,35 +62,14 @@ function getMessageHtml(message: Message): string {
       line.join(' | '));
   }
 
-  if (message.description != undefined) {
-    if (Array.isArray(message.description)) {
-      for (const line of message.description) {
-        lines.push(encode(line));
-      }
-    }
-    else {
-      lines.push(encode(message.description));
+  if (post.description !== undefined) {
+    for (const line of post.description) {
+      lines.push(encode(line));
     }
   }
 
-  if (message.links && message.links.length > 0) {
-    const tags = message.links
-      .map(tag => link(encode(tag.title), tag.href));
-
-    lines.push('🔗 ' + tags.join(', '));
-  }
-
-  if (message.tags && message.tags.length > 0) {
-    const tags = message.tags
-      .sort((a, b) => {
-        if (a.title < b.title) {
-          return -1;
-        }
-        if (a.title > b.title) {
-          return 1;
-        }
-        return 0;
-      })
+  if (post.tags && post.tags.length > 0) {
+    const tags = post.tags
       .map(tag => link(encode(tag.title), tag.href));
 
     lines.push('🏷️ ' + tags.join(', '));
@@ -125,4 +90,15 @@ function encode(html: string) {
   return html
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;');
+}
+
+function isAnimation(image: string, isLowerCase = false): boolean {
+  let success = image.endsWith('.gif');
+
+  if (!success && !isLowerCase) {
+    image = image.toLowerCase();
+    success = isAnimation(image, true);
+  }
+
+  return success;
 }

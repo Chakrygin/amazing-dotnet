@@ -1,6 +1,6 @@
 import Scraper from '../src/scrapers/Scraper';
 
-import { createTelegramSender } from '../src/senders';
+import { createSender } from '../src/senders';
 
 import Storage from '../src/Storage';
 
@@ -9,14 +9,13 @@ export async function testScraper(scraper: Scraper): Promise<void> {
   const TELEGRAM_PRIVATE_CHAT_ID = getInput('TELEGRAM_PRIVATE_CHAT_ID');
 
   const storage = new Storage('tests');
-  const sender = createTelegramSender(TELEGRAM_TOKEN, TELEGRAM_PRIVATE_CHAT_ID);
+  const sender = createSender(TELEGRAM_TOKEN, TELEGRAM_PRIVATE_CHAT_ID);
 
   await scraper.scrape(storage, sender);
 }
 
 function getInput(name: string): string {
   const value = process.env[name];
-
 
   if (!value) {
     throw new Error(`Failed to retrieve '${name}' value from environment variables.`);

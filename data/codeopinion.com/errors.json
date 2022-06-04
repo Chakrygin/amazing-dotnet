@@ -1,7 +1,0 @@
-{
-  "CodeOpinion": {
-    "timestamp": "2022-06-04T08:45:55.875Z",
-    "message": "AxiosError: maxContentLength size of -1 exceeded",
-    "counter": 1
-  }
-}

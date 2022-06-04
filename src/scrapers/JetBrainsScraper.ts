@@ -3,12 +3,9 @@ import * as core from '@actions/core';
 import axios from 'axios';
 import * as cheerio from 'cheerio';
 import moment from 'moment';
+import { Category, Post } from '../models';
 
-import Scraper from './Scraper';
-import Storage from '../Storage';
-import Sender from '../senders/Sender';
-
-import { Category, Message, Source } from '../models';
+import ScraperBase from './ScraperBase';
 
 const categories = {
   'how-tos': 'How-To\'s',
@@ -16,14 +13,16 @@ const categories = {
   'net-annotated': '.NET Annotated',
 };
 
-export default class JetBrainsScraper implements Scraper {
+export default class JetBrainsScraper extends ScraperBase {
   constructor(
-    private readonly id: keyof typeof categories) { }
+    private readonly id: keyof typeof categories) {
+    super();
+  }
 
   readonly name = `JetBrains / ${categories[this.id]}`;
   readonly path = `blog.jetbrains.com/${this.id}`;
 
-  private readonly source: Source = {
+  private readonly blog: Category = {
     title: 'The JetBrains Blog',
     href: 'https://blog.jetbrains.com/dotnet/',
   };
@@ -35,24 +34,7 @@ export default class JetBrainsScraper implements Scraper {
       : `https://blog.jetbrains.com/dotnet/category/${this.id}/`,
   };
 
-  async scrape(storage: Storage, sender: Sender): Promise<void> {
-    for await (const post of this.readPosts()) {
-      if (storage.has(post.href, post.date)) {
-        core.info('Post already exists in storage. Break scraping.');
-        break;
-      }
-
-      const fullPost = await this.readFullPost(post);
-
-      core.info('Sending post...');
-      await sender.send(fullPost);
-
-      core.info('Storing post...');
-      storage.add(post.href, post.date);
-    }
-  }
-
-  private async *readPosts(): AsyncGenerator<Message & Required<Pick<Message, 'date'>>, void> {
+  protected override async *readPosts(): AsyncGenerator<Post, void> {
     core.info(`Parsing html page by url '${this.category.href}'...`);
 
     const response = await axios.get(this.category.href);
@@ -71,17 +53,23 @@ export default class JetBrainsScraper implements Scraper {
       const card = $(cards[index]);
       const image = card.find('> img.wp-post-image').attr('src');
       const title = card.find('.card__header h3');
+      const href = card.attr('href') ?? '';
       const date = card.find('.card__header time.publish-date').attr('datetime');
       const description = this.getDescription(card);
 
-      const post: Message & Required<Pick<Message, 'date'>> = {
+      const post: Post = {
         image: image,
-        title: title.text().trim(),
-        href: card.attr('href') ?? '',
-        source: this.source,
-        categories: this.category,
+        title: title.text(),
+        href: href,
+        categories: [
+          this.blog,
+          this.category,
+        ],
         date: moment(date),
-        description: description,
+        description: [
+          ...description,
+          `Read: ${href}`,
+        ],
       };
 
       core.info(`Post title is '${post.title}'.`);
@@ -96,7 +84,7 @@ export default class JetBrainsScraper implements Scraper {
       .text()
       .split('\n')
       .map(line => line.trim())
-      .filter(line => line);
+      .filter(line => !!line);
 
     if (description.length > 0) {
       const text = description[description.length - 1];
@@ -108,25 +96,22 @@ export default class JetBrainsScraper implements Scraper {
     return description;
   }
 
-  private async readFullPost(post: Message & Required<Pick<Message, 'date'>>): Promise<Message & Required<Pick<Message, 'date'>>> {
+  protected override  async enrichPost(post: Post): Promise<Post> {
     core.info(`Parsing html page by url '${post.href}'...`);
 
     const response = await axios.get(post.href);
     const $ = cheerio.load(response.data);
 
-    const image = post.image ?? $('.article-section .content figure.wp-block-image img').attr('src');
-    const author = $('.post-info__text a');
+    let image = post.image;
+    if (!image) {
+      image = $('.article-section .content figure.wp-block-image img').attr('src');
+    }
 
     post = {
       image: image,
       title: post.title,
       href: post.href,
-      source: post.source,
       categories: post.categories,
-      author: {
-        title: author.text().trim(),
-        href: author.attr('href') ?? '',
-      },
       date: post.date,
       description: post.description,
     };
