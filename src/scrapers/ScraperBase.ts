@@ -1,7 +1,7 @@
 import * as core from '@actions/core';
 
 import Scraper from './Scraper';
-import Storage from '../Storage';
+import Storage from '../storage_tmp';
 import Sender from '../senders/Sender';
 
 import { Post } from '../models';

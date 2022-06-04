@@ -22,7 +22,7 @@ import RadioDotNetScraper from './scrapers/RadioDotNetScraper';
 import { getLastError } from './LastErrors';
 import { getLastUpdate } from './LastUpdates';
 
-import Storage from './Storage';
+import Storage from './storage_tmp';
 
 async function main() {
   try {
