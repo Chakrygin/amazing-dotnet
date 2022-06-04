@@ -9,6 +9,7 @@ import { createSender } from './senders';
 
 import Scraper from './scrapers/Scraper';
 import AndrewLockScraper from './scrapers/AndrewLockScraper';
+import BookClubDotNetScraper from './scrapers/BookClubDotNetScraper';
 import CodeMazeScraper from './scrapers/CodeMazeScraper';
 import CodeOpinionScraper from './scrapers/CodeOpinionScraper';
 import DevBlogsScraper from './scrapers/DevBlogsScraper';
@@ -16,6 +17,7 @@ import DotNetCoreTutorialsScraper from './scrapers/DotNetCoreTutorialsScraper';
 import HabrScraper from './scrapers/HabrScraper';
 import JetBrainsScraper from './scrapers/JetBrainsScraper';
 import KhalidAbuhakmehScraper from './scrapers/KhalidAbuhakmehScraper';
+import RadioDotNetScraper from './scrapers/RadioDotNetScraper';
 
 import { getLastError } from './LastErrors';
 import { getLastUpdate } from './LastUpdates';
@@ -37,6 +39,7 @@ async function main() {
 
     const scrapers: Scraper[] = [
       new AndrewLockScraper(),
+      new BookClubDotNetScraper(),
       new CodeMazeScraper(),
       new CodeOpinionScraper(),
       new DevBlogsScraper('dotnet'),
@@ -51,6 +54,7 @@ async function main() {
       new JetBrainsScraper('releases'),
       new JetBrainsScraper('net-annotated'),
       new KhalidAbuhakmehScraper(),
+      new RadioDotNetScraper(),
     ];
 
     for (const scraper of scrapers) {
