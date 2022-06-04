@@ -24,3 +24,7 @@
     - Derek Comartin - CodeOpinion - https://codeopinion.com/
     - Wade Gausden - .NET Core Tutorials - https://dotnetcoretutorials.com/
     - Khalid Abuhakmeh - https://khalidabuhakmeh.com/
+
+- Подкасты:
+    - RadioDotNet - https://radiodotnet.mave.digital/
+    - BookClub DotNet - https://bookclub-dotnet.mave.digital/
