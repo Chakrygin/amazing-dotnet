@@ -3,43 +3,26 @@ import * as core from '@actions/core';
 import moment from 'moment';
 import RssParser from 'rss-parser';
 
-import Scraper from './Scraper';
-import Storage from '../Storage';
-import Sender from '../senders/Sender';
+import ScraperBase from './ScraperBase';
 
-import { Author, Message, Source, Tag } from '../models';
+import { Category, Post, Tag } from '../models';
 
-export default class AndrewLockScraper implements Scraper {
+export default class AndrewLockScraper extends ScraperBase {
   readonly name = 'AndrewLock';
   readonly path = 'andrewlock.net';
 
-  private readonly source: Source = {
+  private readonly blog: Category = {
     title: '.NET Escapades',
     href: 'https://andrewlock.net/',
   };
 
-  private readonly author: Author = {
+  private readonly author: Category = {
     title: 'Andrew Lock',
     href: 'https://andrewlock.net/about/',
   };
 
-  async scrape(storage: Storage, sender: Sender): Promise<void> {
-    for await (const post of this.readPosts()) {
-      if (storage.has(post.href, post.date)) {
-        core.info('Post already exists in storage. Break scraping.');
-        break;
-      }
-
-      core.info('Sending post...');
-      await sender.send(post);
-
-      core.info('Storing post...');
-      storage.add(post.href, post.date);
-    }
-  }
-
-  private async *readPosts(): AsyncGenerator<Message & Required<Pick<Message, 'date'>>, void> {
-    core.info(`Parsing rss feed by url '${this.source.href}rss.xml'...`);
+  protected override async *readPosts(): AsyncGenerator<Post, void> {
+    core.info(`Parsing rss feed by url '${this.blog.href}rss.xml'...`);
 
     const parser = new RssParser({
       customFields: {
@@ -47,7 +30,7 @@ export default class AndrewLockScraper implements Scraper {
       },
     });
 
-    const feed = await parser.parseURL(this.source.href + 'rss.xml');
+    const feed = await parser.parseURL(this.blog.href + 'rss.xml');
 
     if (feed.items.length == 0) {
       throw new Error('Failed to parse rss feed. No posts found.');
@@ -63,14 +46,19 @@ export default class AndrewLockScraper implements Scraper {
       const description = this.getDescription(item);
       const tags = this.getTags(item);
 
-      const post: Message & Required<Pick<Message, 'date'>> = {
+      const post: Post = {
         image: image,
         title: item.title ?? '',
         href: item.link ?? '',
-        source: this.source,
-        author: this.author,
+        categories: [
+          this.blog,
+          this.author,
+        ],
         date: moment(item.isoDate),
-        description: description,
+        description: [
+          description,
+          `Read: ${item.link}`,
+        ],
         tags: tags,
       };
 
@@ -81,7 +69,7 @@ export default class AndrewLockScraper implements Scraper {
     }
   }
 
-  private getImage(item: { 'media:content': any }): string | undefined {
+  private getImage(item: { 'media:content': unknown }): string | undefined {
     interface MediaContent {
       readonly $: {
         readonly medium: string;
@@ -95,9 +83,9 @@ export default class AndrewLockScraper implements Scraper {
     }
   }
 
-  private getDescription(item: RssParser.Item): string | undefined {
-    let description = item.contentSnippet?.trim();
-    if (description && !description.endsWith('.')) {
+  private getDescription(item: RssParser.Item): string {
+    let description = item.contentSnippet?.trim() ?? '';
+    if (!description.endsWith('.')) {
       description += '.';
     }
 
@@ -106,7 +94,7 @@ export default class AndrewLockScraper implements Scraper {
 
   private getTags(item: RssParser.Item): Tag[] | undefined {
     if (item.categories && item.categories.length > 0) {
-      const tags = new Array<Tag>();
+      const tags = [];
 
       for (const category of item.categories) {
         const slug = category
@@ -117,7 +105,7 @@ export default class AndrewLockScraper implements Scraper {
 
         const tag: Tag = {
           title: category,
-          href: `${this.source.href}tag/${slug}/`,
+          href: `${this.blog.href}tag/${slug}/`,
         };
 
         tags.push(tag);

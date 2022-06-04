@@ -1,5 +1,6 @@
-import fs from 'fs';
 import moment from 'moment';
+
+import fs from 'fs';
 import { dirname, join } from 'path';
 
 export function getLastError(name: string, path: string): LastError {

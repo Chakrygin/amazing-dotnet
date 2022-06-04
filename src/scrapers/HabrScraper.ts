@@ -8,9 +8,9 @@ import Scraper from './Scraper';
 import Storage from '../Storage';
 import Sender from '../senders/Sender';
 
-import { Category, Message, Source, Tag } from '../models';
+import { Category, Post, Tag } from '../models';
 
-type HabrMessage = Message & Required<Pick<Message, 'date'>> & {
+type HabrPost = Post & {
   readonly rating: number;
 };
 
@@ -18,7 +18,7 @@ export default class HabrScraper implements Scraper {
   readonly name = 'Habr';
   readonly path = 'habr.com';
 
-  private readonly source: Source = {
+  private readonly blog: Category = {
     title: 'Хабр',
     href: 'https://habr.com/ru/hub/net/',
   };
@@ -30,7 +30,7 @@ export default class HabrScraper implements Scraper {
         continue;
       }
 
-      if (storage.has(post.href, post.date)) {
+      if (storage.has(post.href)) {
         core.info('Post already exists in storage. Continue scraping.');
         continue;
       }
@@ -39,14 +39,14 @@ export default class HabrScraper implements Scraper {
       await sender.send(post);
 
       core.info('Storing post...');
-      storage.add(post.href, post.date);
+      storage.add(post.href);
     }
   }
 
-  private async *readPosts(): AsyncGenerator<HabrMessage, void> {
-    core.info(`Parsing html page by url '${this.source.href}'...`);
+  private async *readPosts(): AsyncGenerator<HabrPost, void> {
+    core.info(`Parsing html page by url '${this.blog.href}'...`);
 
-    const response = await axios.get(this.source.href);
+    const response = await axios.get(this.blog.href);
     const $ = cheerio.load(response.data);
     const articles = $('.tm-articles-list article.tm-articles-list__item').toArray();
 
@@ -68,24 +68,29 @@ export default class HabrScraper implements Scraper {
 
       const image = this.getImage(article);
       const title = article.find('a.tm-article-snippet__title-link');
-      const author = article.find('.tm-article-snippet__author a.tm-user-info__username');
+      const titleText = title.text();
+      const href = this.getFullHref(title.attr('href')) ?? '';
       const date = article.find('.tm-article-snippet__datetime-published time').attr('datetime') ?? '';
-      const description = this.getDescription(article, $);
       const [categories, tags] = this.getCategoriesAndTags(article, $);
+      const maxDescriptionLength = image
+        ? this.getMaxDescriptionLength(titleText, href, categories, tags)
+        : undefined;
+      const description = this.getDescription(article, $, maxDescriptionLength);
       const rating = article.find('.tm-votes-meter__value').text();
 
-      const post: HabrMessage = {
+      const post: HabrPost = {
         image: image,
-        title: title.text().trim(),
-        href: this.getFullHref(title.attr('href')) ?? '',
-        source: this.source,
-        author: {
-          title: author.text().trim(),
-          href: this.getFullHref(author.attr('href')) ?? '',
-        },
-        categories: categories,
+        title: titleText,
+        href: href,
+        categories: [
+          this.blog,
+          ...categories,
+        ],
         date: moment(date).locale('ru'),
-        description: description,
+        description: [
+          ...description,
+          `Читать: ${href}`,
+        ],
         tags: tags,
         rating: parseInt(rating),
       };
@@ -109,60 +114,100 @@ export default class HabrScraper implements Scraper {
     return src;
   }
 
-  private getDescription(article: cheerio.Cheerio<cheerio.Element>, $: cheerio.CheerioAPI): string | string[] | undefined {
-    const body = article.find('.article-formatted-body');
-    if (body.hasClass('article-formatted-body_version-1')) {
-      return body.text();
-    }
-    else if (body.hasClass('article-formatted-body_version-2')) {
-      const description = new Array<string>();
-
-      const elements = body.children();
-      for (const element of elements) {
-        if (element.name == 'p') {
-          const text = $(element).text().trim();
-          if (text) {
-            description.push(text);
-          }
-        }
-        else {
-          break;
-        }
-      }
-
-      return description;
-    }
-  }
-
-  private getCategoriesAndTags(article: cheerio.Cheerio<cheerio.Element>, $: cheerio.CheerioAPI): [Category[] | undefined, Tag[] | undefined] {
+  private getCategoriesAndTags(article: cheerio.Cheerio<cheerio.Element>, $: cheerio.CheerioAPI): [Category[], Tag[]] {
     const hubs = article
       .find('.tm-article-snippet__hubs .tm-article-snippet__hubs-item a')
       .map((_, element) => $(element));
 
-    let categories: Category[] | undefined;
-    let tags: Tag[] | undefined;
+    const categories = [];
+    const tags = [];
 
     for (const hub of hubs) {
       const title = hub.text().replace('*', '').trim();
       const href = this.getFullHref(hub.attr('href')) ?? '';
 
       if (title.startsWith('Блог компании')) {
-        if (!categories) {
-          categories = [];
-        }
-
         categories.push({ title, href });
       }
       else if (title !== '.NET') {
-        if (!tags) {
-          tags = [];
-        }
-
         tags.push({ title, href });
       }
     }
 
     return [categories, tags];
+  }
+
+  private getMaxDescriptionLength(title: string, href: string, categories: Category[], tags: Tag[]): number | undefined {
+    let result = 1024;
+
+    result -= title.length;
+    result -= href.length * 2; // + the "read" link,
+    result -= 25; // html tags
+
+    result -= this.blog.title.length;
+    result -= this.blog.href.length;
+    result -= 25; // html tags
+
+    for (const category of categories) {
+      result -= category.title.length;
+      result -= category.href.length;
+      result -= 25; // html tags
+    }
+
+    result -= 40; // date
+
+    for (const tag of tags) {
+      result -= tag.title.length;
+      result -= tag.href.length;
+      result -= 20; // html tags
+    }
+
+    if (result > 200) {
+      return result;
+    }
+  }
+
+  private getDescription(article: cheerio.Cheerio<cheerio.Element>, $: cheerio.CheerioAPI, maxLength?: number): string[] {
+    const description = [];
+    let length = 0;
+
+    const body = article.find('.article-formatted-body');
+    if (body.hasClass('article-formatted-body_version-1')) {
+      const lines = body.text().split('\n')
+        .map(line => line.trim())
+        .filter(line => !!line);
+
+      for (const line of lines) {
+        if (description.length > 0 && maxLength && length + line.length > maxLength && length < maxLength) {
+          break;
+        }
+
+        length += line.length;
+        description.push(line);
+      }
+    }
+    else if (body.hasClass('article-formatted-body_version-2')) {
+
+      const elements = body.children();
+      for (const element of elements) {
+        if (element.name == 'p') {
+          const line = $(element).text().trim();
+          if (line) {
+            if (description.length > 0 && maxLength && length + line.length > maxLength && length < maxLength) {
+              break;
+            }
+
+            length += line.length;
+            description.push(line);
+          }
+        }
+        else {
+          break;
+        }
+      }
+    }
+
+    return description;
   }
 
   private getFullHref(href: string | undefined): string | undefined {

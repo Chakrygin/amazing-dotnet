@@ -1,6 +1,8 @@
-import { join } from 'path';
 import fs from 'fs';
-import moment from 'moment';
+import { join } from 'path';
+
+const MAX_FILE_COUNT = 20;
+const MAX_VALUE_COUNT = 100;
 
 export default class Storage {
   constructor(path: string) {
@@ -9,110 +11,99 @@ export default class Storage {
 
   private readonly path: string;
 
-  private files?: Map<string, StorageFile>;
-  private names?: string[];
+  private files?: StorageFile[];
+  private dirty?: true;
 
-  exists(): boolean {
+  get exists(): boolean {
     const path = join(this.path, 'timestamp');
     return fs.existsSync(path);
   }
 
-  has(value: string): boolean;
-  has(value: string, date: moment.Moment): boolean;
-  has(value: string, date?: moment.Moment): boolean {
-    if (date) {
-      const name = this.getFileName(date);
-      const file = this.getFile(name);
+  has(value: string): boolean {
+    const files = this.getFiles();
 
-      return file.has(value);
-    }
-    else {
-      const names = this.getFileNames();
-      for (const name of names) {
-        const file = this.getFile(name);
-
-        if (file.has(value)) {
-          return true;
-        }
+    for (const file of files) {
+      if (file.has(value)) {
+        return true;
       }
-
-      return false;
     }
+
+    return false;
   }
 
-  add(value: string): void;
-  add(value: string, date: moment.Moment): void;
-  add(value: string, date?: moment.Moment): void {
-    const name = this.getFileName(date ?? moment());
-    const file = this.getFile(name);
+  add(value: string): void {
+    const files = this.getFiles();
+    const file = files.at(0);
+
+    if (!file) {
+      throw new Error('Cannot to add file to storage. File not found.');
+    }
 
     file.add(value);
+    this.dirty = true;
   }
 
-  private getFileName(date: moment.Moment): string {
-    if (!date.isValid()) {
-      throw new Error('Invalid date.');
-    }
-
-    return date.toISOString().substring(0, 7) + '.txt';
-  }
-
-  private getFile(name: string) {
+  private getFiles(): NonNullable<typeof this.files> {
     if (!this.files) {
-      this.files = new Map();
-    }
+      this.files = [];
 
-    let file = this.files.get(name);
-    if (!file) {
-      file = new StorageFile(this.path, name);
-      this.files.set(name, file);
-    }
+      const currentFileName = new Date().toISOString().substring(0, 7) + '.txt';
+      const currentFilePath = join(this.path, currentFileName);
+      const currentFile = new StorageFile(currentFilePath);
 
-    return file;
-  }
+      this.files.push(currentFile);
 
-  private getFileNames(): string[] {
-    if (!this.names) {
       if (fs.existsSync(this.path)) {
         const regexp = /^\d{4}-\d{2}.txt$/;
 
-        this.names = fs.readdirSync(this.path)
-          .filter(file => regexp.test(file))
+        const fileNames = fs.readdirSync(this.path)
+          .filter(fileName => regexp.test(fileName))
+          .filter(fileName => fileName !== currentFileName)
           .sort()
           .reverse();
-      }
-      else {
-        this.names = [];
+
+        for (const fileName of fileNames) {
+          const filePath = join(this.path, fileName);
+          const file = new StorageFile(filePath);
+
+          this.files.push(file);
+        }
       }
     }
 
-    return this.names;
+    return this.files;
   }
 
   save(): boolean {
     let dirty = false;
 
-    if (!fs.existsSync(this.path)) {
-      fs.mkdirSync(this.path, {
-        recursive: true
-      });
-    }
+    if (this.files && this.dirty) {
+      if (!fs.existsSync(this.path)) {
+        fs.mkdirSync(this.path, { recursive: true });
+      }
 
-    if (this.files) {
-      for (const file of this.files.values()) {
+      let fileCount = 0;
+      let valueCount = 0;
+
+      for (const file of this.files) {
+        if (fileCount > MAX_FILE_COUNT || valueCount > MAX_VALUE_COUNT) {
+          file.delete();
+          continue;
+        }
+
+        fileCount += 1;
+        valueCount += file.size;
+
         if (file.save()) {
           dirty = true;
         }
       }
-
-      delete this.files;
-      delete this.names;
     }
 
     if (dirty) {
       const path = join(this.path, 'timestamp');
-      const data = moment().toISOString();
-      fs.writeFileSync(path, data + '\n');
+      const timestamp = new Date().toISOString();
+      fs.writeFileSync(path, timestamp + '\n');
     }
 
     return dirty;
@@ -120,14 +111,16 @@ export default class Storage {
 }
 
 class StorageFile {
-  constructor(path: string, name: string) {
-    this.path = join(path, name);
-  }
-
-  private readonly path: string;
+  constructor(
+    private readonly path: string) { }
 
   private values?: Set<string>;
   private dirty?: true;
+
+  get size() {
+    const values = this.getValues();
+    return values.size;
+  }
 
   has(value: string): boolean {
     const values = this.getValues();
@@ -137,13 +130,12 @@ class StorageFile {
   add(value: string): void {
     const values = this.getValues();
     values.add(value);
-
     this.dirty = true;
   }
 
-  private getValues(): Set<string> {
+  private getValues(): NonNullable<typeof this.values> {
     if (!this.values) {
-      this.values = new Set<string>();
+      this.values = new Set();
 
       if (fs.existsSync(this.path)) {
         const data = fs.readFileSync(this.path).toString();
@@ -174,5 +166,9 @@ class StorageFile {
     }
 
     return dirty;
+  }
+
+  delete() {
+    fs.rmSync(this.path, { force: true });
   }
 }

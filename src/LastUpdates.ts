@@ -1,5 +1,6 @@
-import fs from 'fs';
 import moment from 'moment';
+
+import fs from 'fs';
 import { dirname, join } from 'path';
 
 export function getLastUpdate(name: string, path: string): LastUpdate {

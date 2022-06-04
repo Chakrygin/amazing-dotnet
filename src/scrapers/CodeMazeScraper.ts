@@ -4,40 +4,23 @@ import axios from 'axios';
 import * as cheerio from 'cheerio';
 import moment from 'moment';
 
-import Scraper from './Scraper';
-import Storage from '../Storage';
-import Sender from '../senders/Sender';
+import ScraperBase from './ScraperBase';
 
-import { Author, Message, Source } from '../models';
+import { Category, Post, } from '../models';
 
-export default class CodeMazeScraper implements Scraper {
+export default class CodeMazeScraper extends ScraperBase {
   readonly name = 'CodeMaze';
   readonly path = 'code-maze.com';
 
-  private readonly source: Source = {
+  private readonly blog: Category = {
     title: 'Code Maze',
     href: 'https://code-maze.com/',
   };
 
-  async scrape(storage: Storage, sender: Sender): Promise<void> {
-    for await (const post of this.readPosts()) {
-      if (storage.has(post.href)) {
-        core.info('Post already exists in storage. Break scraping.');
-        break;
-      }
+  protected override async *readPosts(): AsyncGenerator<Post, void> {
+    core.info(`Parsing html page by url '${this.blog.href}'...`);
 
-      core.info('Sending post...');
-      await sender.send(post);
-
-      core.info('Storing post...');
-      storage.add(post.href);
-    }
-  }
-
-  private async *readPosts(): AsyncGenerator<Message, void> {
-    core.info(`Parsing html page by url '${this.source.href}'...`);
-
-    const response = await axios.get(this.source.href);
+    const response = await axios.get(this.blog.href);
     const $ = cheerio.load(response.data);
     const articles = $('.homePage_LatestPost article').toArray();
 
@@ -51,20 +34,18 @@ export default class CodeMazeScraper implements Scraper {
       core.info(`Parsing post at index ${index}...`);
 
       const article = $(articles[index]);
-      const image = this.getImage(article);
+      const image = this.getDefaultImage(article);
       const title = article.find('h2.entry-title a');
-      const author = this.getAuthor(article);
       const date = this.getDate(article);
-      const description = article.find('.post-content-inner').text().trim();
 
-      const post: Message = {
+      const post: Post = {
         image: image,
-        title: title.text().trim(),
+        title: title.text(),
         href: title.attr('href') ?? '',
-        source: this.source,
-        author: author,
+        categories: [
+          this.blog,
+        ],
         date: moment(date, 'LL'),
-        description: description,
       };
 
       core.info(`Post title is '${post.title}'.`);
@@ -74,7 +55,7 @@ export default class CodeMazeScraper implements Scraper {
     }
   }
 
-  private getImage(article: cheerio.Cheerio<cheerio.Element>): string | undefined {
+  private getDefaultImage(article: cheerio.Cheerio<cheerio.Element>): string | undefined {
     let src = article.find('.et_pb_image_container img').attr('src');
     if (src) {
       src = src.replace(/-\d+x\d+(\.\w+)$/, '$1');
@@ -92,13 +73,74 @@ export default class CodeMazeScraper implements Scraper {
     return date.trim();
   }
 
-  private getAuthor(article: cheerio.Cheerio<cheerio.Element>): Author | undefined {
-    const author = article.find('.post-meta .author a');
-    const title = author.text().trim();
-    const href = author.attr('href') ?? '';
+  protected override async enrichPost(post: Post): Promise<Post> {
+    core.info(`Parsing html page by url '${post.href}'...`);
 
-    if (title !== 'Code Maze') {
-      return { title, href };
+    const response = await axios.get(post.href);
+    const $ = cheerio.load(response.data);
+
+    const image = this.getContentImage($);
+    const description = this.getDescription($);
+
+    post = {
+      image: image ?? post.image,
+      title: post.title,
+      href: post.href,
+      categories: post.categories,
+      date: post.date,
+      description: [
+        ...description,
+        `Read: ${post.href}`,
+      ]
+    };
+
+    return post;
+  }
+
+  private getDescription($: cheerio.CheerioAPI): string[] {
+    const description = [];
+    const elements = $('#content-area .post-content').children();
+
+    for (const element of elements) {
+      if (element.name == 'p') {
+        const p = $(element);
+
+        const text = p.text().trim();
+        description.push(text);
+
+        if (description.length >= 3) {
+          break;
+        }
+
+        if (text.includes('In this article')) {
+          break;
+        }
+      }
+      else if (description.length == 0) {
+        continue;
+      }
+      else {
+        break;
+      }
+    }
+
+    return description;
+  }
+
+  private getContentImage($: cheerio.CheerioAPI): string | undefined {
+    const images = $('#content-area .post-content img');
+
+    for (let index = 0; index < images.length; index++) {
+      const image = $(images[index]);
+
+      const width = image.attr('width');
+      const height = image.attr('height');
+
+      if (width && height) {
+        if (parseInt(width) >= 320 && parseInt(height) >= 240) {
+          return image.attr('src');
+        }
+      }
     }
   }
 }

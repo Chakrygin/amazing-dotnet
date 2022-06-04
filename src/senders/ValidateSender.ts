@@ -1,99 +1,65 @@
+import { Post } from '../models';
 import Sender from './Sender';
-
-import { Message } from '../models';
 
 export default class ValidateSender implements Sender {
   constructor(
     private readonly sender: Sender) { }
 
-  async send(message: Message): Promise<void> {
-    const errors = new Array<string>();
+  async send(post: Post): Promise<void> {
+    const errors = [];
 
-    if (message.image != undefined) {
-      if (!message.image) {
-        errors.push('image is empty');
+    if (post.image != undefined) {
+      if (!post.image) {
+        errors.push('post image is empty');
       }
-      else if (!message.image.startsWith('https://')) {
-        errors.push('image is not valid url');
+      else if (!isValidUrl(post.image)) {
+        errors.push('post image is not valid url');
       }
-      else if (!isValidImageExtension(message.image)) {
-        errors.push('image has not valid extension');
-      }
-    }
-
-    if (!message.title) {
-      errors.push('title is empty');
-    }
-
-    if (!message.href) {
-      errors.push('href is empty');
-    }
-    else if (!message.href.startsWith('https://')) {
-      errors.push('href is not valid url');
-    }
-
-    if (message.source) {
-      if (!message.source.title) {
-        errors.push('source title is empty');
-      }
-
-      if (!message.source.href) {
-        errors.push('source href is empty');
-      }
-      else if (!message.source.href.startsWith('https://')) {
-        errors.push('source href is not valid url');
+      else if (!isValidImageExtension(post.image)) {
+        errors.push('post image has invalid extension');
       }
     }
 
-    if (message.categories !== undefined) {
-      if (Array.isArray(message.categories)) {
-        for (let index = 0; index < message.categories.length; index++) {
-          const category = message.categories[index];
+    if (!post.title) {
+      errors.push('post title is empty');
+    }
 
-          if (!category.title) {
-            errors.push(`link title at index ${index} is empty`);
-          }
+    if (!post.href) {
+      errors.push('post href is empty');
+    }
+    else if (!isValidUrl(post.href)) {
+      errors.push('post href is not valid url');
+    }
 
-          if (!category.href) {
-            errors.push(`link href at index ${index} is empty`);
-          }
-        }
-      }
-      else {
-        const category = message.categories;
+    if (post.categories && post.categories.length > 0) {
+      for (let index = 0; index < post.categories.length; index++) {
+        const category = post.categories[index];
 
         if (!category.title) {
-          errors.push('link title is empty');
+          errors.push(`category title at index ${index} is empty`);
         }
 
         if (!category.href) {
-          errors.push('link href is empty');
+          errors.push(`category href at index ${index} is empty`);
+        }
+        else if (!isValidUrl(category.href)) {
+          errors.push(`category href at index ${index} is not valid url`);
         }
       }
     }
+    else {
+      errors.push('post categories is empty');
+    }
 
-    if (message.author) {
-      if (!message.author.title) {
-        errors.push('author title is empty');
-      }
-
-      if (!message.author.href) {
-        errors.push('author href is empty');
-      }
-      else if (!message.author.href.startsWith('https://')) {
-        errors.push('author href is not valid url');
+    if (post.date) {
+      if (!post.date.isValid()) {
+        errors.push('post date is not valid');
       }
     }
 
-    if (message.date) {
-      if (!message.date.isValid()) {
-        errors.push('date is not valid');
-      }
-    }
-
-    if (message.description != undefined) {
-      if (Array.isArray(message.description)) {
-        for (const description of message.description) {
+    if (post.description !== undefined) {
+      if (post.description.length > 0) {
+        for (const description of post.description) {
           if (!description) {
             errors.push('description is empty');
             break;
@@ -101,29 +67,13 @@ export default class ValidateSender implements Sender {
         }
       }
       else {
-        if (!message.description) {
-          errors.push('description is empty');
-        }
+        errors.push('description is empty');
       }
     }
 
-    if (message.links && message.links.length > 0) {
-      for (let index = 0; index < message.links.length; index++) {
-        const link = message.links[index];
-
-        if (!link.title) {
-          errors.push(`link title at index ${index} is empty`);
-        }
-
-        if (!link.href) {
-          errors.push(`link href at index ${index} is empty`);
-        }
-      }
-    }
-
-    if (message.tags && message.tags.length > 0) {
-      for (let index = 0; index < message.tags.length; index++) {
-        const tag = message.tags[index];
+    if (post.tags && post.tags.length > 0) {
+      for (let index = 0; index < post.tags.length; index++) {
+        const tag = post.tags[index];
 
         if (!tag.title) {
           errors.push(`tag title at index ${index} is empty`);
@@ -132,23 +82,44 @@ export default class ValidateSender implements Sender {
         if (!tag.href) {
           errors.push(`tag href at index ${index} is empty`);
         }
+        else if (!isValidUrl(tag.href)) {
+          errors.push(`tag href at index ${index} is not valid url`);
+        }
       }
     }
 
     if (errors.length > 0) {
-      throw new Error('Message is not valid: ' + errors.join(', ') + '.');
+      throw new Error('Post is not valid: ' + errors.join(', ') + '.');
     }
 
-    await this.sender.send(message);
+    await this.sender.send(post);
   }
 }
 
-function isValidImageExtension(image: string): boolean {
-  const result =
+function isValidUrl(link: string, isLowerCase = false): boolean {
+  let success =
+    link.startsWith('https://') ||
+    link.startsWith('http://');
+
+  if (!success && !isLowerCase) {
+    link = link.toLowerCase();
+    success = isValidUrl(link, true);
+  }
+
+  return success;
+}
+
+function isValidImageExtension(image: string, isLowerCase = false): boolean {
+  let success =
     image.endsWith('.png') ||
     image.endsWith('.jpg') ||
     image.endsWith('.jpeg') ||
     image.endsWith('.gif');
 
-  return result;
+  if (!success && !isLowerCase) {
+    image = image.toLowerCase();
+    success = isValidImageExtension(image, true);
+  }
+
+  return success;
 }
