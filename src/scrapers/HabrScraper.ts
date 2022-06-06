@@ -108,8 +108,8 @@ export default class HabrScraper implements Scraper {
 
   private getImage(article: cheerio.Cheerio<cheerio.Element>): string | undefined {
     const src =
-      article.find('.tm-article-snippet__cover img').attr('src') ??
-      article.find('.article-formatted-body img').attr('src');
+      article.find('img.tm-article-snippet__lead-image').attr('src') ??
+      article.find('.article-formatted-body p:first-child img:first-child').attr('src');
 
     return src;
   }
