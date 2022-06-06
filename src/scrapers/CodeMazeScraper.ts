@@ -45,7 +45,7 @@ export default class CodeMazeScraper extends ScraperBase {
         categories: [
           this.blog,
         ],
-        date: moment(date, 'LL'),
+        date: moment(date, 'LL', 'en'),
       };
 
       core.info(`Post title is '${post.title}'.`);
