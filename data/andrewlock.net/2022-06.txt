@@ -1,0 +1,1 @@
+https://andrewlock.net/using-pathbase-with-dotnet-6-webapplicationbuilder/
