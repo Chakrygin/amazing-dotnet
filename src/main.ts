@@ -27,6 +27,8 @@ import Storage from './storage_tmp';
 async function main() {
   try {
 
+    moment.locale('en');
+
     const IS_PRODUCTION = github.context.ref === 'refs/heads/main';
 
     const TELEGRAM_TOKEN = getInput('TELEGRAM_TOKEN');

@@ -14,9 +14,6 @@ export default class TelegramSender implements Sender {
   async send(post: Post): Promise<void> {
     const message = getMessage(post);
 
-    const fs = await import('fs');
-    fs.writeFileSync('C:\\Users\\igor\\Desktop\\message.txt', message);
-
     if (!post.image || message.length > 1024) {
       await this.telegram.sendMessage(this.chatId, message, {
         parse_mode: 'HTML',
