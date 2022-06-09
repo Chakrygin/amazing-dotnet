@@ -1,1 +1,2 @@
 https://devblogs.microsoft.com/visualstudio/doc-management-personalization/
+https://devblogs.microsoft.com/visualstudio/new-profiler-feature-in-visual-studio/
