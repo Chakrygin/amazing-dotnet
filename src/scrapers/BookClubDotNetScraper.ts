@@ -71,7 +71,7 @@ export default class BookClubDotNetScraper extends ScraperBase {
     const response = await axios.get(post.href);
     const $ = cheerio.load(response.data);
 
-    const description = $('.episodes-info__body .description>p').first().text().trim();
+    const description = this.getDescription($);
 
     post = {
       image: post.image,
@@ -86,5 +86,27 @@ export default class BookClubDotNetScraper extends ScraperBase {
     };
 
     return post;
+  }
+
+
+  private getDescription($: cheerio.CheerioAPI): string {
+    const elements = $('.episodes-info__body .description').contents().first();
+
+    for (const element of elements) {
+      const success =
+        (element.type == 'text') ||
+        (element.type == 'tag' && element.name == 'p');
+
+      if (!success) {
+        break;
+      }
+
+      const description = $(element).text().trim();
+      if (description) {
+        return description;
+      }
+    }
+
+    return $('.sidebar__body p.description').text().trim();
   }
 }
