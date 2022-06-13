@@ -7,5 +7,6 @@ https://code-maze.com/csharp-reflection/
 https://code-maze.com/dictionary-csharp/
 https://code-maze.com/dotnet-unit-testing-mock-file-system/
 https://code-maze.com/long-running-tasks-microservices/
+https://code-maze.com/regular-expressions-csharp/
 https://code-maze.com/stack-csharp/
 https://code-maze.com/vertical-slice-architecture-aspnet-core/
