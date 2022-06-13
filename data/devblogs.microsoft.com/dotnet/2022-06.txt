@@ -1,3 +1,4 @@
 https://devblogs.microsoft.com/dotnet/dotnet-7-generic-math/
 https://devblogs.microsoft.com/dotnet/exchange-online-journey-to-net-core/
+https://devblogs.microsoft.com/dotnet/one-service-journey-to-dotnet-6/
 https://devblogs.microsoft.com/dotnet/performance-improvements-in-dotnet-maui/
