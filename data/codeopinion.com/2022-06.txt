@@ -1,2 +1,3 @@
 https://codeopinion.com/avoiding-a-queue-backlog-disaster-with-backpressure-flow-control/
+https://codeopinion.com/event-sourcing-tips-dos-and-donts/
 https://codeopinion.com/is-an-anemic-domain-model-really-that-bad/
