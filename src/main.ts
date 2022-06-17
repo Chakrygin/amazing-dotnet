@@ -72,7 +72,7 @@ async function main() {
             return;
           }
 
-          if (moment().diff(lastError.timestamp, 'days') < 1) {
+          if (lastError.counter > 1 && moment().diff(lastError.timestamp, 'days') < 1) {
             core.warning('This scraper has failed less than a day ago.', {
               title: `The '${scraper.name}' scraper is temporarily skipped.`,
             });
