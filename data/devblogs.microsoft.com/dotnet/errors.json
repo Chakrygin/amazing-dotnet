@@ -1,7 +1,7 @@
 {
   "DevBlogs / .NET Blog": {
-    "timestamp": "2022-06-16T17:00:28.696Z",
-    "message": "Error: 400: Bad Request: failed to get HTTP URL content",
-    "counter": 1
+    "timestamp": "2022-06-17T05:48:17.268Z",
+    "message": "Error: 400: Bad Request: wrong file identifier/HTTP URL specified",
+    "counter": 2
   }
 }
