@@ -1,7 +1,7 @@
 {
   "RadioDotNet": {
-    "timestamp": "2022-06-18T13:02:43.528Z",
+    "timestamp": "2022-06-18T14:43:02.475Z",
     "message": "AxiosError: maxContentLength size of -1 exceeded",
-    "counter": 1
+    "counter": 2
   }
 }
