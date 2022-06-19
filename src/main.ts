@@ -1,6 +1,7 @@
 import * as core from '@actions/core';
 import * as github from '@actions/github';
 
+import axios from 'axios';
 import moment from 'moment';
 import 'moment/locale/ru';
 
@@ -24,10 +25,14 @@ import { getLastUpdate } from './LastUpdates';
 
 import Storage from './storage_tmp';
 
+// Set default dates locale
+moment.locale('en');
+
+// Disable forced json parsing
+axios.defaults.transitional = undefined;
+
 async function main() {
   try {
-
-    moment.locale('en');
 
     const IS_PRODUCTION = github.context.ref === 'refs/heads/main';
 

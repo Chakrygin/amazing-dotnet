@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - dist/index.js
+      - data/**/errors.json
   schedule:
     # At minute 42 past every 2nd hour.
     - cron: 42 */2 * * *
