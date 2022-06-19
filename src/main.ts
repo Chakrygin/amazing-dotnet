@@ -2,6 +2,8 @@ import * as core from '@actions/core';
 import * as github from '@actions/github';
 
 import axios from 'axios';
+import axiosRetry from 'axios-retry';
+
 import moment from 'moment';
 import 'moment/locale/ru';
 
@@ -25,11 +27,13 @@ import { getLastUpdate } from './LastUpdates';
 
 import Storage from './storage_tmp';
 
-// Set default dates locale
+// Setup default moment locale.
 moment.locale('en');
 
-// Disable forced json parsing
-axios.defaults.transitional = undefined;
+// Setup default axios retries.
+axiosRetry(axios, {
+  retryDelay: axiosRetry.exponentialDelay,
+});
 
 async function main() {
   try {
