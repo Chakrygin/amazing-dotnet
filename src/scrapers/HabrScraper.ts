@@ -5,7 +5,7 @@ import * as cheerio from 'cheerio';
 import moment from 'moment';
 
 import Scraper from './Scraper';
-import Storage from '../storage_tmp';
+import Storage from '../Storage';
 import Sender from '../senders/Sender';
 
 import { Category, Post, Tag } from '../models';

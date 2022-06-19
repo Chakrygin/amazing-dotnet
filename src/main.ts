@@ -25,7 +25,7 @@ import RadioDotNetScraper from './scrapers/RadioDotNetScraper';
 import { getLastError } from './LastErrors';
 import { getLastUpdate } from './LastUpdates';
 
-import Storage from './storage_tmp';
+import Storage from './Storage';
 
 // Setup default moment locale.
 moment.locale('en');

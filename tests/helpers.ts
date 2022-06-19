@@ -2,7 +2,7 @@ import Scraper from '../src/scrapers/Scraper';
 
 import { createSender } from '../src/senders';
 
-import Storage from '../src/storage_tmp';
+import Storage from '../src/Storage';
 
 export async function testScraper(scraper: Scraper): Promise<void> {
   const TELEGRAM_TOKEN = getInput('TELEGRAM_TOKEN');
