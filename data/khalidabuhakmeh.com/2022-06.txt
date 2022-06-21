@@ -1,2 +1,3 @@
+https://khalidabuhakmeh.com/five-of-the-most-common-kinds-of-nuget-packages
 https://khalidabuhakmeh.com/fun-leaderboard-output-using-csharp-pattern-matching
 https://khalidabuhakmeh.com/storing-dynamic-user-data-with-ef-core
