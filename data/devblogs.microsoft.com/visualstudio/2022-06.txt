@@ -2,5 +2,6 @@ https://devblogs.microsoft.com/visualstudio/arm64-visual-studio/
 https://devblogs.microsoft.com/visualstudio/audio-cues-in-visual-studio-2022-17-3-preview-2/
 https://devblogs.microsoft.com/visualstudio/doc-management-personalization/
 https://devblogs.microsoft.com/visualstudio/new-profiler-feature-in-visual-studio/
+https://devblogs.microsoft.com/visualstudio/sneak-peek-and-edit-your-code-while-you-search/
 https://devblogs.microsoft.com/visualstudio/visual-studio-for-mac-17-3-preview-2-is-now-available/
 https://devblogs.microsoft.com/visualstudio/whats-new-vs/
