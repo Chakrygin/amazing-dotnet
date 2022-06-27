@@ -10,6 +10,7 @@ https://code-maze.com/csharp-method-overloading/
 https://code-maze.com/csharp-pattern-matching/
 https://code-maze.com/csharp-radix-sort/
 https://code-maze.com/csharp-reflection/
+https://code-maze.com/csharp-span-to-improve-application-performance/
 https://code-maze.com/csharp-ternary-operator/
 https://code-maze.com/dictionary-csharp/
 https://code-maze.com/dotnet-multiple-authentication-schemes/
