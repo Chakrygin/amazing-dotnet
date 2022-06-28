@@ -20,4 +20,5 @@ https://code-maze.com/regular-expressions-csharp/
 https://code-maze.com/remove-duplicates-from-a-list-csharp/
 https://code-maze.com/remove-duplicates-from-a-list-in-c/
 https://code-maze.com/stack-csharp/
+https://code-maze.com/using-refit-to-consume-apis-in-csharp/
 https://code-maze.com/vertical-slice-architecture-aspnet-core/
