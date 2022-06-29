@@ -15,6 +15,7 @@ https://code-maze.com/csharp-ternary-operator/
 https://code-maze.com/dictionary-csharp/
 https://code-maze.com/dotnet-multiple-authentication-schemes/
 https://code-maze.com/dotnet-unit-testing-mock-file-system/
+https://code-maze.com/lambda-expressions-in-csharp/
 https://code-maze.com/long-running-tasks-microservices/
 https://code-maze.com/regular-expressions-csharp/
 https://code-maze.com/remove-duplicates-from-a-list-csharp/
