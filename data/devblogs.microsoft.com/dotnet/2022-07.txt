@@ -1,0 +1,1 @@
+https://devblogs.microsoft.com/dotnet/corewcf-1-1-0-and-project-templates/
