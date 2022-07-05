@@ -1,0 +1,1 @@
+https://andrewlock.net/returning-xml-from-minimal-apis-in-dotnet-6/
