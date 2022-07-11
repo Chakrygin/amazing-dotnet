@@ -5,4 +5,5 @@ https://code-maze.com/csharp-ranges-and-indices/
 https://code-maze.com/httpclient-vs-restsharp/
 https://code-maze.com/shell-sort-csharp/
 https://code-maze.com/testing-repository-pattern-entity-framework/
+https://code-maze.com/unsafe-code-csharp/
 https://code-maze.com/using-moq-to-determine-if-method-is-called/
