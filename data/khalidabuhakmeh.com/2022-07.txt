@@ -1,1 +1,2 @@
+https://khalidabuhakmeh.com/dotnet-debugger-launch-for-macos-and-linux
 https://khalidabuhakmeh.com/minimal-api-validation-with-fluentvalidation

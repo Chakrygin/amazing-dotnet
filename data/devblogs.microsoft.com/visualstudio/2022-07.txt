@@ -1,1 +1,2 @@
+https://devblogs.microsoft.com/visualstudio/analysis-services-and-reporting-services-extensions-for-visual-studio-2022-are-here/
 https://devblogs.microsoft.com/visualstudio/vs2022-performance-enhancements-git-branch-switching/
