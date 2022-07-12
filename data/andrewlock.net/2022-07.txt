@@ -1,1 +1,2 @@
+https://andrewlock.net/adding-content-negotiation-to-minimal-apis-with-carter/
 https://andrewlock.net/returning-xml-from-minimal-apis-in-dotnet-6/
