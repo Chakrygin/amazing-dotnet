@@ -1,1 +1,2 @@
 https://codeopinion.com/blocking-or-non-blocking-api-calls/
+https://codeopinion.com/solid-nope-just-coupling-and-cohesion/
