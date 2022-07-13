@@ -2,6 +2,7 @@ https://code-maze.com/aspnetcore-resolve-instances-with-dependency-injection/
 https://code-maze.com/code-maze-weekly-128/
 https://code-maze.com/code-maze-weekly-129/
 https://code-maze.com/csharp-constructors/
+https://code-maze.com/csharp-object-into-json-string-dotnet/
 https://code-maze.com/csharp-ranges-and-indices/
 https://code-maze.com/httpclient-vs-restsharp/
 https://code-maze.com/shell-sort-csharp/
