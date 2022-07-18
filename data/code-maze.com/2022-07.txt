@@ -2,6 +2,7 @@ https://code-maze.com/aspnetcore-resolve-instances-with-dependency-injection/
 https://code-maze.com/code-maze-weekly-128/
 https://code-maze.com/code-maze-weekly-129/
 https://code-maze.com/code-maze-weekly-130/
+https://code-maze.com/cookie-authentication-aspnetcore-angular/
 https://code-maze.com/csharp-constructors/
 https://code-maze.com/csharp-covariance-and-contravariance/
 https://code-maze.com/csharp-object-into-json-string-dotnet/
