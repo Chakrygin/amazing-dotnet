@@ -1,4 +1,5 @@
 https://code-maze.com/aspnetcore-resolve-instances-with-dependency-injection/
+https://code-maze.com/base64-encode-decode-csharp/
 https://code-maze.com/code-maze-weekly-128/
 https://code-maze.com/code-maze-weekly-129/
 https://code-maze.com/code-maze-weekly-130/
