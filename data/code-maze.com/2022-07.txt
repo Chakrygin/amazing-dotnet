@@ -6,6 +6,7 @@ https://code-maze.com/code-maze-weekly-130/
 https://code-maze.com/cookie-authentication-aspnetcore-angular/
 https://code-maze.com/csharp-constructors/
 https://code-maze.com/csharp-covariance-and-contravariance/
+https://code-maze.com/csharp-merge-arrays/
 https://code-maze.com/csharp-object-into-json-string-dotnet/
 https://code-maze.com/csharp-ranges-and-indices/
 https://code-maze.com/httpclient-vs-restsharp/
