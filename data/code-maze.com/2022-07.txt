@@ -10,6 +10,7 @@ https://code-maze.com/csharp-convert-string-array-to-string/
 https://code-maze.com/csharp-covariance-and-contravariance/
 https://code-maze.com/csharp-merge-arrays/
 https://code-maze.com/csharp-object-into-json-string-dotnet/
+https://code-maze.com/csharp-polymorphic-serialization-and-deserialization/
 https://code-maze.com/csharp-ranges-and-indices/
 https://code-maze.com/httpclient-vs-restsharp/
 https://code-maze.com/shell-sort-csharp/
