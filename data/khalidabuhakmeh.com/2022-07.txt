@@ -1,3 +1,4 @@
 https://khalidabuhakmeh.com/dotnet-debugger-launch-for-macos-and-linux
+https://khalidabuhakmeh.com/installing-and-uninstalling-dotnet-templates
 https://khalidabuhakmeh.com/minimal-api-validation-with-fluentvalidation
 https://khalidabuhakmeh.com/taming-your-dotnet-twitter-bots-with-rules
