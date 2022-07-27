@@ -1,3 +1,4 @@
 https://codeopinion.com/blocking-or-non-blocking-api-calls/
 https://codeopinion.com/event-carried-state-transfer-keep-a-local-cache/
+https://codeopinion.com/fintech-mindset-to-software-design/
 https://codeopinion.com/solid-nope-just-coupling-and-cohesion/

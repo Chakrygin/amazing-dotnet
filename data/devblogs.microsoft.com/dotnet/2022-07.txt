@@ -1,9 +1,11 @@
 https://devblogs.microsoft.com/dotnet/announcing-dotnet-7-preview-6/
+https://devblogs.microsoft.com/dotnet/announcing-dotnet-maui-focus-reactor-community-events/
 https://devblogs.microsoft.com/dotnet/announcing-ef7-preview6/
 https://devblogs.microsoft.com/dotnet/announcing-rate-limiting-for-dotnet/
 https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-7-preview-6/
 https://devblogs.microsoft.com/dotnet/corewcf-1-1-0-and-project-templates/
 https://devblogs.microsoft.com/dotnet/customizing-dotnet-maui-controls/
+https://devblogs.microsoft.com/dotnet/dotnet-framework-july-2022-cumulative-update-preview/
 https://devblogs.microsoft.com/dotnet/dotnet-framework-july-2022-security-and-quality-rollup-updates/
 https://devblogs.microsoft.com/dotnet/july-2022-updates/
 https://devblogs.microsoft.com/dotnet/net-core-3-1-will-reach-end-of-support-on-december-13-2022/
