@@ -1,2 +1,3 @@
+https://code-maze.com/blazor-webassembly-exception-handling-error-boundaries/
 https://code-maze.com/csharp-concatenate-lists/
 https://code-maze.com/dotnet-linq-improvements/
