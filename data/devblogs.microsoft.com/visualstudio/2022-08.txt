@@ -1,0 +1,1 @@
+https://devblogs.microsoft.com/visualstudio/differentiating-visual-studio-instances/
