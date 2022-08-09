@@ -1,1 +1,2 @@
 https://khalidabuhakmeh.com/csharp-converting-bytes-to-kb-mb-gb-and-tb
+https://khalidabuhakmeh.com/fun-with-custom-interpolated-string-handlers
