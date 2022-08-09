@@ -1,0 +1,3 @@
+https://devblogs.microsoft.com/nuget/announcing-nuget-6-3-transitive-dependencies-floating-versions-and-re-enabling-signed-package-verification/
+https://devblogs.microsoft.com/nuget/https-everywhere/
+https://devblogs.microsoft.com/nuget/introducing-transitive-dependencies-in-visual-studio/
