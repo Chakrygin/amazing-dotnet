@@ -1,1 +1,2 @@
 https://devblogs.microsoft.com/visualstudio/differentiating-visual-studio-instances/
+https://devblogs.microsoft.com/visualstudio/visual-studio-2022-17-3-is-now-available/
