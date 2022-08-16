@@ -1,3 +1,4 @@
+https://code-maze.com/aspnetcore-multitenant-application/
 https://code-maze.com/blazor-webassembly-exception-handling-error-boundaries/
 https://code-maze.com/code-maze-weekly-133/
 https://code-maze.com/code-maze-weekly-134/
