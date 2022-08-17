@@ -1,2 +1,3 @@
 https://codeopinion.com/distributed-tracing-to-discover-a-distributed-big-ball-of-mud/
+https://codeopinion.com/shared-database-between-services-maybe/
 https://codeopinion.com/workflow-orchestration-for-resilient-systems/
