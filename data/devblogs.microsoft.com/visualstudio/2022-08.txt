@@ -1,6 +1,7 @@
 https://devblogs.microsoft.com/visualstudio/choosing-a-net-memory-profiler-in-visual-studio-part-1/
 https://devblogs.microsoft.com/visualstudio/differentiating-visual-studio-instances/
 https://devblogs.microsoft.com/visualstudio/git-line-staging-released/
+https://devblogs.microsoft.com/visualstudio/ls-policies/
 https://devblogs.microsoft.com/visualstudio/visual-studio-2022-17-3-is-now-available/
 https://devblogs.microsoft.com/visualstudio/visual-studio-2022-17-4-preview-1/
 https://devblogs.microsoft.com/visualstudio/visual-studio-for-mac-17-3-is-now-available/
