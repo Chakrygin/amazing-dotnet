@@ -3,6 +3,7 @@ https://code-maze.com/aspnetcore-two-factor-authentication-sms/
 https://code-maze.com/blazor-webassembly-exception-handling-error-boundaries/
 https://code-maze.com/code-maze-weekly-133/
 https://code-maze.com/code-maze-weekly-134/
+https://code-maze.com/code-maze-weekly-135/
 https://code-maze.com/csarp-execute-multiple-tasks-asynchronously/
 https://code-maze.com/csharp-concatenate-lists/
 https://code-maze.com/csharp-execute-multiple-tasks-asynchronously/
