@@ -20,6 +20,7 @@ import DotNetCoreTutorialsScraper from './scrapers/DotNetCoreTutorialsScraper';
 import HabrScraper from './scrapers/HabrScraper';
 import JetBrainsScraper from './scrapers/JetBrainsScraper';
 import KhalidAbuhakmehScraper from './scrapers/KhalidAbuhakmehScraper';
+import MeziantouScraper from './scrapers/MeziantouScraper';
 import RadioDotNetScraper from './scrapers/RadioDotNetScraper';
 
 import { getLastError } from './LastErrors';
@@ -65,6 +66,7 @@ async function main() {
       new JetBrainsScraper('releases'),
       new JetBrainsScraper('net-annotated'),
       new KhalidAbuhakmehScraper(),
+      new MeziantouScraper(),
       new RadioDotNetScraper(),
     ];
 
