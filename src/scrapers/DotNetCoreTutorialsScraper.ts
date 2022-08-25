@@ -8,8 +8,6 @@ import ScraperBase from './ScraperBase';
 
 import { Category, Post } from '../models';
 
-const DEFAULT_IMAGE = 'https://dotnetcoretutorials.com/wp-content/uploads/2017/07/DotNetCoreTutorialsLogoNew.png';
-
 export default class DotNetCoreTutorialsScraper extends ScraperBase {
   readonly name = 'DotNetCoreTutorials';
   readonly path = 'dotnetcoretutorials.com';
@@ -48,7 +46,7 @@ export default class DotNetCoreTutorialsScraper extends ScraperBase {
       const description = this.getDescription(article, $);
 
       const post: Post = {
-        image: image ?? DEFAULT_IMAGE,
+        image: image,
         title: title.text(),
         href: href,
         categories: [
@@ -120,14 +118,6 @@ export default class DotNetCoreTutorialsScraper extends ScraperBase {
 
       if (length >= 500 || description.length >= 10) {
         break;
-      }
-    }
-
-    if (description.length > 0) {
-      const text = description[description.length - 1];
-
-      if (text.endsWith(':')) {
-        description.push('…');
       }
     }
 

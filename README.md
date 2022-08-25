@@ -17,14 +17,15 @@
         - Releases - https://blog.jetbrains.com/dotnet/category/releases/
         - .NET Annotated - https://blog.jetbrains.com/dotnet/tag/net-annotated/
     - Хабр - https://habr.com/ru/hub/net/ (статьи с рейтингом 10 и выше)
-    - Code Maze - https://code-maze.com/
+    - Code Maze - https://code-maze.com
 
 - Персональные блоги:
-    - Andrew Lock - .NET Escapades - https://andrewlock.net/
-    - Derek Comartin - CodeOpinion - https://codeopinion.com/
-    - Wade Gausden - .NET Core Tutorials - https://dotnetcoretutorials.com/
-    - Khalid Abuhakmeh - https://khalidabuhakmeh.com/
+    - Andrew Lock - .NET Escapades - https://andrewlock.net
+    - Derek Comartin - CodeOpinion - https://codeopinion.com
+    - Gérald Barré - Meziantou's blog - https://www.meziantou.net
+    - Khalid Abuhakmeh - https://khalidabuhakmeh.com
+    - Wade Gausden - .NET Core Tutorials - https://dotnetcoretutorials.com
 
 - Подкасты:
-    - RadioDotNet - https://radiodotnet.mave.digital/
-    - BookClub DotNet - https://bookclub-dotnet.mave.digital/
+    - RadioDotNet - https://radiodotnet.mave.digital
+    - BookClub DotNet - https://bookclub-dotnet.mave.digital
