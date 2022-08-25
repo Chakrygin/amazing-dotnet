@@ -3,5 +3,6 @@ https://www.meziantou.net/faster-guid-comparisons-using-vectors-simd-in-dotnet.h
 https://www.meziantou.net/finding-maximum-value-in-an-array-using-vectorization.htm
 https://www.meziantou.net/generate-pinvoke-code-for-win32-apis-using-a-source-generator.htm
 https://www.meziantou.net/observing-all-http-requests-in-a-dotnet-application.htm
+https://www.meziantou.net/regex-with-ignorecase-option-may-match-more-characters-than-expected.htm
 https://www.meziantou.net/replace-characters-in-a-string-using-vectorization.htm
 https://www.meziantou.net/using-iasyncenumerable-in-a-razor-component.htm
