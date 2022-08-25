@@ -72,10 +72,7 @@ export default class HabrScraper implements Scraper {
       const href = this.getFullHref(title.attr('href')) ?? '';
       const date = article.find('.tm-article-snippet__datetime-published time').attr('datetime') ?? '';
       const [categories, tags] = this.getCategoriesAndTags(article, $);
-      const maxDescriptionLength = image
-        ? this.getMaxDescriptionLength(titleText, href, categories, tags)
-        : undefined;
-      const description = this.getDescription(article, $, maxDescriptionLength);
+      const description = this.getDescription(article, $);
       const rating = article.find('.tm-votes-meter__value').text();
 
       const post: HabrPost = {
@@ -140,39 +137,8 @@ export default class HabrScraper implements Scraper {
     return [categories, tags];
   }
 
-  private getMaxDescriptionLength(title: string, href: string, categories: Category[], tags: Tag[]): number | undefined {
-    let result = 1024;
-
-    result -= title.length;
-    result -= href.length * 2; // + the "read" link,
-    result -= 25; // html tags
-
-    result -= this.blog.title.length;
-    result -= this.blog.href.length;
-    result -= 25; // html tags
-
-    for (const category of categories) {
-      result -= category.title.length;
-      result -= category.href.length;
-      result -= 25; // html tags
-    }
-
-    result -= 40; // date
-
-    for (const tag of tags) {
-      result -= tag.title.length;
-      result -= tag.href.length;
-      result -= 20; // html tags
-    }
-
-    if (result > 200) {
-      return result;
-    }
-  }
-
-  private getDescription(article: cheerio.Cheerio<cheerio.Element>, $: cheerio.CheerioAPI, maxLength?: number): string[] {
+  private getDescription(article: cheerio.Cheerio<cheerio.Element>, $: cheerio.CheerioAPI): string[] {
     const description = [];
-    let length = 0;
 
     const body = article.find('.article-formatted-body');
     if (body.hasClass('article-formatted-body_version-1')) {
@@ -181,11 +147,6 @@ export default class HabrScraper implements Scraper {
         .filter(line => !!line);
 
       for (const line of lines) {
-        if (description.length > 0 && maxLength && length + line.length > maxLength && length < maxLength) {
-          break;
-        }
-
-        length += line.length;
         description.push(line);
       }
     }
@@ -196,11 +157,6 @@ export default class HabrScraper implements Scraper {
         if (element.name == 'p') {
           const line = $(element).text().trim();
           if (line) {
-            if (description.length > 0 && maxLength && length + line.length > maxLength && length < maxLength) {
-              break;
-            }
-
-            length += line.length;
             description.push(line);
           }
         }

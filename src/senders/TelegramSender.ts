@@ -4,6 +4,8 @@ import Sender from './Sender';
 
 import { Post } from '../models';
 
+const MAX_CAPTION_LENGTH = 1024;
+
 export default class TelegramSender implements Sender {
   constructor(
     private readonly token: string,
@@ -14,7 +16,7 @@ export default class TelegramSender implements Sender {
   async send(post: Post): Promise<void> {
     const message = getMessage(post);
 
-    if (!post.image || message.length > 1024) {
+    if (!post.image || message.length > MAX_CAPTION_LENGTH) {
       await this.telegram.sendMessage(this.chatId, message, {
         parse_mode: 'HTML',
       });
@@ -35,6 +37,36 @@ export default class TelegramSender implements Sender {
 }
 
 function getMessage(post: Post): string {
+  if (!post.image || !post.description) {
+    return getMessageInternal(post);
+  }
+
+  if (!Array.isArray(post.description) || post.description.length == 1) {
+    return getMessageInternal(post);
+  }
+
+  const message = getMessageInternal(post);
+  if (message.length > MAX_CAPTION_LENGTH) {
+    const description = post.description;
+    while (description.length > 1) {
+      description.pop();
+
+      post = {
+        ...post,
+        description: description
+      };
+
+      const trimmedMessage = getMessageInternal(post);
+      if (trimmedMessage.length <= MAX_CAPTION_LENGTH) {
+        return trimmedMessage;
+      }
+    }
+  }
+
+  return message;
+}
+
+function getMessageInternal(post: Post): string {
   const lines = [];
 
   lines.push(
