@@ -31,7 +31,6 @@ export default class RadioDotNetScraper extends ScraperBase {
     core.info(`Html page parsed. ${episodes.length} post found.`);
 
     const image = $('.sidebar__header .img-wrapper img').attr('src');
-    const description = $('.sidebar__body p.description').text().trim();
 
     for (let index = 0; index < episodes.length; index++) {
       core.info(`Parsing post at index ${index}...`);
@@ -50,9 +49,12 @@ export default class RadioDotNetScraper extends ScraperBase {
           this.source,
         ],
         date: moment(date, 'LL', 'ru'),
-        description: [
-          description,
-        ]
+        links: [
+          {
+            title: 'Слушать',
+            href: href,
+          },
+        ],
       };
 
       core.info(`Post title is '${post.title}'.`);
@@ -76,25 +78,21 @@ export default class RadioDotNetScraper extends ScraperBase {
     const response = await axios.get(post.href);
     const $ = cheerio.load(response.data);
 
-    const description = this.getDescription($);
+    const description = $('.sidebar__body p.description').text().trim();
+    const descriptionThemes = this.getDescriptionThemes($);
 
     post = {
-      image: post.image,
-      title: post.title,
-      href: post.href,
-      categories: post.categories,
-      date: post.date,
+      ...post,
       description: [
-        ...post.description ?? [],
         description,
-        `Слушать: ${post.href}`
-      ]
+        descriptionThemes,
+      ],
     };
 
     return post;
   }
 
-  private getDescription($: cheerio.CheerioAPI): string {
+  private getDescriptionThemes($: cheerio.CheerioAPI): string {
     const description = [];
 
     const regexp = /^\[\d{2}:\d{2}:\d{2}\]/;

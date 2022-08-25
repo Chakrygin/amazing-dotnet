@@ -53,9 +53,12 @@ export default class KhalidAbuhakmehScraper extends ScraperBase {
           this.blog,
         ],
         date: moment(date, 'LL'),
-        description: [
-          ...description,
-          `Read: ${href}`,
+        description: description,
+        links: [
+          {
+            title: 'Read',
+            href: href,
+          },
         ],
         tags: tags.map(tag => ({
           title: tag.text().replace(/^#/, '') ?? '',

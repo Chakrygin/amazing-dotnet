@@ -48,6 +48,12 @@ export default class BookClubDotNetScraper extends ScraperBase {
           this.source,
         ],
         date: moment(date, 'LL', 'ru'),
+        links: [
+          {
+            title: 'Слушать',
+            href: href,
+          }
+        ],
       };
 
       core.info(`Post title is '${post.title}'.`);
@@ -74,15 +80,8 @@ export default class BookClubDotNetScraper extends ScraperBase {
     const description = this.getDescription($);
 
     post = {
-      image: post.image,
-      title: post.title,
-      href: post.href,
-      categories: post.categories,
-      date: post.date,
-      description: [
-        description,
-        `Слушать: ${post.href}`
-      ]
+      ...post,
+      description: description,
     };
 
     return post;
@@ -90,7 +89,7 @@ export default class BookClubDotNetScraper extends ScraperBase {
 
 
   private getDescription($: cheerio.CheerioAPI): string {
-    const elements = $('.episodes-info__body .description').contents().first();
+    const elements = $('.episodes-info__body .description').contents();
 
     for (const element of elements) {
       const success =

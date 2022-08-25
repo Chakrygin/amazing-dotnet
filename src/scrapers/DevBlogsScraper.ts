@@ -67,9 +67,12 @@ export default class DevBlogsScraper extends ScraperBase {
           this.blog,
         ],
         date: moment(date, 'LL'),
-        description: [
-          ...description,
-          `Read: ${href}`,
+        description: description,
+        links: [
+          {
+            title: 'Read',
+            href: href,
+          },
         ],
         tags: tags.map(tag => {
           return {

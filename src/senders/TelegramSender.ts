@@ -60,9 +60,21 @@ function getMessage(post: Post): string {
   }
 
   if (post.description !== undefined) {
-    for (const line of post.description) {
-      lines.push(encode(line));
+    if (Array.isArray(post.description)) {
+      for (const description of post.description) {
+        lines.push(encode(description));
+      }
     }
+    else {
+      lines.push(encode(post.description));
+    }
+  }
+
+  if (post.links && post.links.length > 0) {
+    const links = post.links
+      .map(link => `${link.title}: ${link.href}`);
+
+    lines.push(links);
   }
 
   if (post.tags && post.tags.length > 0) {

@@ -54,9 +54,12 @@ export default class CodeOpinionScraper extends ScraperBase {
           this.author,
         ],
         date: moment(date, 'LL'),
-        description: [
-          ...description,
-          `Read: ${href}`,
+        description: description,
+        links: [
+          {
+            title: 'Read',
+            href: href,
+          }
         ]
       };
 
