@@ -55,9 +55,12 @@ export default class AndrewLockScraper extends ScraperBase {
           this.author,
         ],
         date: moment(item.isoDate),
-        description: [
-          description,
-          `Read: ${item.link}`,
+        description: description,
+        links: [
+          {
+            title: 'Read',
+            href: item.link ?? '',
+          }
         ],
         tags: tags,
       };

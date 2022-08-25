@@ -1,7 +1,7 @@
 
 import Sender from './Sender';
 
-import { Category, Post, Tag } from '../models';
+import { Category, Link, Post, Tag } from '../models';
 
 export default class NormalizeSender implements Sender {
   constructor(
@@ -15,6 +15,7 @@ export default class NormalizeSender implements Sender {
       categories: normalizeCategories(post.categories),
       date: post.date,
       description: post.description,
+      links: normalizeLinks(post.links),
       tags: normalizeTags(post.tags),
     };
 
@@ -32,6 +33,19 @@ function normalizeCategories(categories: Category[]): Category[] {
   }
 
   return categories;
+}
+
+
+function normalizeLinks(links?: Link[]): Link[] | undefined {
+  if (links && links.length > 0) {
+    links = links
+      .map(link => ({
+        title: link.title.trim(),
+        href: link.href.trim(),
+      }));
+  }
+
+  return links;
 }
 
 function normalizeTags(tags?: Tag[]): Tag[] | undefined {

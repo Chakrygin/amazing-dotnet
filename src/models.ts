@@ -6,7 +6,8 @@ export interface Post {
   readonly href: string;
   readonly categories: Category[];
   readonly date: moment.Moment;
-  readonly description?: string[];
+  readonly description?: string | string[];
+  readonly links?: Link[];
   readonly tags?: Tag[];
 }
 
@@ -16,6 +17,11 @@ export interface Category {
 }
 
 export interface Tag {
+  readonly title: string;
+  readonly href: string;
+}
+
+export interface Link {
   readonly title: string;
   readonly href: string;
 }

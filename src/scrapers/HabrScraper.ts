@@ -87,9 +87,12 @@ export default class HabrScraper implements Scraper {
           ...categories,
         ],
         date: moment(date).locale('ru'),
-        description: [
-          ...description,
-          `Читать: ${href}`,
+        description: description,
+        links: [
+          {
+            title: 'Читать',
+            href: href,
+          }
         ],
         tags: tags,
         rating: parseInt(rating),

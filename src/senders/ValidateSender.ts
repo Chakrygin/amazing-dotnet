@@ -58,16 +58,40 @@ export default class ValidateSender implements Sender {
     }
 
     if (post.description !== undefined) {
-      if (post.description.length > 0) {
-        for (const description of post.description) {
-          if (!description) {
-            errors.push('description is empty');
-            break;
+      if (Array.isArray(post.description)) {
+        if (post.description.length > 0) {
+          for (const description of post.description) {
+            if (!description) {
+              errors.push('description is empty');
+              break;
+            }
           }
+        }
+        else {
+          errors.push('description is empty');
         }
       }
       else {
-        errors.push('description is empty');
+        if (!post.description) {
+          errors.push('description is empty');
+        }
+      }
+    }
+
+    if (post.links && post.links.length > 0) {
+      for (let index = 0; index < post.links.length; index++) {
+        const link = post.links[index];
+
+        if (!link.title) {
+          errors.push(`link title at index ${index} is empty`);
+        }
+
+        if (!link.href) {
+          errors.push(`link href at index ${index} is empty`);
+        }
+        else if (!isValidUrl(link.href)) {
+          errors.push(`link href at index ${index} is not valid url`);
+        }
       }
     }
 

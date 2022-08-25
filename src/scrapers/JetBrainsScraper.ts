@@ -66,10 +66,13 @@ export default class JetBrainsScraper extends ScraperBase {
           this.category,
         ],
         date: moment(date),
-        description: [
-          ...description,
-          `Read: ${href}`,
-        ],
+        description: description,
+        links: [
+          {
+            title: 'Read',
+            href: href,
+          }
+        ]
       };
 
       core.info(`Post title is '${post.title}'.`);
@@ -108,12 +111,8 @@ export default class JetBrainsScraper extends ScraperBase {
     }
 
     post = {
+      ...post,
       image: image,
-      title: post.title,
-      href: post.href,
-      categories: post.categories,
-      date: post.date,
-      description: post.description,
     };
 
     return post;

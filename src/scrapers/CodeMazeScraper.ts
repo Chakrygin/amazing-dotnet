@@ -36,16 +36,23 @@ export default class CodeMazeScraper extends ScraperBase {
       const article = $(articles[index]);
       const image = this.getDefaultImage(article);
       const title = article.find('h2.entry-title a');
+      const href = title.attr('href') ?? '';
       const date = this.getDate(article);
 
       const post: Post = {
         image: image,
         title: title.text(),
-        href: title.attr('href') ?? '',
+        href: href,
         categories: [
           this.blog,
         ],
         date: moment(date, 'LL', 'en'),
+        links: [
+          {
+            title: 'Read',
+            href: href,
+          }
+        ]
       };
 
       core.info(`Post title is '${post.title}'.`);
@@ -83,15 +90,9 @@ export default class CodeMazeScraper extends ScraperBase {
     const description = this.getDescription($);
 
     post = {
+      ...post,
       image: image ?? post.image,
-      title: post.title,
-      href: post.href,
-      categories: post.categories,
-      date: post.date,
-      description: [
-        ...description,
-        `Read: ${post.href}`,
-      ]
+      description: description,
     };
 
     return post;
