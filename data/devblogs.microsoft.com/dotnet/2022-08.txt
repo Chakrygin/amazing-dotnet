@@ -13,6 +13,7 @@ https://devblogs.microsoft.com/dotnet/dotnet-6-is-now-in-ubuntu-2204/
 https://devblogs.microsoft.com/dotnet/dotnet-conf-focus-on-maui-recap/
 https://devblogs.microsoft.com/dotnet/dotnet-framework-august-2022-cumulative-update-preview-updates/
 https://devblogs.microsoft.com/dotnet/dotnet-framework-august-2022-security-and-quality-rollup-updates/
+https://devblogs.microsoft.com/dotnet/dotnet-maui-cloud-skills-challenge/
 https://devblogs.microsoft.com/dotnet/dotnet-maui-ebook-released/
 https://devblogs.microsoft.com/dotnet/dotnet-maui-visualstudio-2022-release/
 https://devblogs.microsoft.com/dotnet/introducing-project-migrations-visual-studio-extension/
