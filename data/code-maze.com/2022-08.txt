@@ -17,3 +17,4 @@ https://code-maze.com/dotnet-dependency-injection-simple-injector/
 https://code-maze.com/dotnet-linq-improvements/
 https://code-maze.com/sort-dictionary-by-value-dotnet/
 https://code-maze.com/type-checking-type-casting-csharp/
+https://code-maze.com/using-generics-in-csharp/
