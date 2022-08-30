@@ -2,3 +2,4 @@ https://khalidabuhakmeh.com/csharp-converting-bytes-to-kb-mb-gb-and-tb
 https://khalidabuhakmeh.com/fun-with-custom-interpolated-string-handlers
 https://khalidabuhakmeh.com/getting-chunky-with-dotnet
 https://khalidabuhakmeh.com/sharing-auth-cookies-with-yarp-identityserver-and-aspnet-core
+https://khalidabuhakmeh.com/troubleshooting-dotnet-blazor-wasm-debugging
