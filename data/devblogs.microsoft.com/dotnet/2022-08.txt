@@ -17,3 +17,4 @@ https://devblogs.microsoft.com/dotnet/dotnet-maui-cloud-skills-challenge/
 https://devblogs.microsoft.com/dotnet/dotnet-maui-ebook-released/
 https://devblogs.microsoft.com/dotnet/dotnet-maui-visualstudio-2022-release/
 https://devblogs.microsoft.com/dotnet/introducing-project-migrations-visual-studio-extension/
+https://devblogs.microsoft.com/dotnet/performance_improvements_in_net_7/
