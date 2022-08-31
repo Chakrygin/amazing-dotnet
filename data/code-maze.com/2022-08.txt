@@ -15,6 +15,7 @@ https://code-maze.com/csharp-flags-attribute-for-enum/
 https://code-maze.com/csharp-heap-sort/
 https://code-maze.com/dotnet-dependency-injection-simple-injector/
 https://code-maze.com/dotnet-linq-improvements/
+https://code-maze.com/dotnet-test-rest-api-xunit/
 https://code-maze.com/mapster-aspnetcore-introduction/
 https://code-maze.com/sort-dictionary-by-value-dotnet/
 https://code-maze.com/type-checking-type-casting-csharp/
