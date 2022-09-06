@@ -1,0 +1,1 @@
+https://andrewlock.net/building-a-thread-safe-random-implementation-for-dotnet-framework/
