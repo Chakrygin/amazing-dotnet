@@ -1,3 +1,4 @@
 https://code-maze.com/any-vs-count-dotnet/
 https://code-maze.com/aspnetcore-feature-flags/
 https://code-maze.com/code-maze-weekly-137/
+https://code-maze.com/ef-core-filtered-include/
