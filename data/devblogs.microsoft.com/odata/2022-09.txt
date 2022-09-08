@@ -1,0 +1,1 @@
+https://devblogs.microsoft.com/odata/extension-omit-null-value-properties-in-asp-net-core-odata/
