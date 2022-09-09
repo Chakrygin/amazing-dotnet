@@ -1,0 +1,1 @@
+https://devblogs.microsoft.com/dotnet/dotnet-7-comes-to-azure-functions/
