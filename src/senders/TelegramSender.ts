@@ -1,3 +1,5 @@
+import * as core from '@actions/core';
+
 import { Telegram } from 'telegraf';
 
 import Sender from './Sender';
@@ -46,25 +48,26 @@ function getMessage(post: Post): string {
     return getMessageInternal(post);
   }
 
-  const message = getMessageInternal(post);
-  if (message.length > MAX_CAPTION_LENGTH) {
-    const description = post.description;
-    while (description.length > 1) {
-      description.pop();
+  const originalMessage = getMessageInternal(post);
+  if (originalMessage.length > MAX_CAPTION_LENGTH) {
+    core.info(`Trim the post description. Message length: ${originalMessage.length}.`);
 
-      post = {
-        ...post,
-        description: description
-      };
+    while (post.description.length > 1) {
+      post.description.pop();
 
-      const trimmedMessage = getMessageInternal(post);
-      if (trimmedMessage.length <= MAX_CAPTION_LENGTH) {
-        return trimmedMessage;
+      const message = getMessageInternal(post);
+      if (message.length <= MAX_CAPTION_LENGTH) {
+        core.info(`The post description has been trimmed. Message length: ${message.length}.`);
+        return message;
       }
+
+      core.info(`Trim the post description. Message length: ${message.length}.`);
     }
+
+    core.info(`The post description has not been trimmed. Message length: ${originalMessage.length}.`);
   }
 
-  return message;
+  return originalMessage;
 }
 
 function getMessageInternal(post: Post): string {
