@@ -1,1 +1,2 @@
 https://khalidabuhakmeh.com/customize-the-authorization-pipeline-in-aspnet-core
+https://khalidabuhakmeh.com/dotnet-one-line-scoped-initializers-with-dependency-injection
