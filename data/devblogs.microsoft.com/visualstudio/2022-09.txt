@@ -1,2 +1,3 @@
 https://devblogs.microsoft.com/visualstudio/adding-color-to-bracket-pairs/
 https://devblogs.microsoft.com/visualstudio/bicepforvs/
+https://devblogs.microsoft.com/visualstudio/visual-studio-2022-17-4-preview-2/
