@@ -1,4 +1,5 @@
 https://devblogs.microsoft.com/dotnet/arm64-performance-improvements-in-dotnet-7/
 https://devblogs.microsoft.com/dotnet/dotnet-7-comes-to-azure-functions/
+https://devblogs.microsoft.com/dotnet/dotnet-framework-september-2022-security-and-quality-rollup/
 https://devblogs.microsoft.com/dotnet/dotnet-now-on-windows-package-manager/
 https://devblogs.microsoft.com/dotnet/september-2022-updates/
