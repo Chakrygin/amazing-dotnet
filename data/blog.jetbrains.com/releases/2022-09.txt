@@ -1,1 +1,13 @@
+https://blog.jetbrains.com/dotnet/2022/04/19/introducing-riderflow-a-free-unity-editor-plugin-for-scene-management
+https://blog.jetbrains.com/dotnet/2022/04/19/rider-2022-1
+https://blog.jetbrains.com/dotnet/2022/04/19/riderflow-un-plugin-gratuit-pour-la-gestion-des-scenes-dans-l-editeur-unity
+https://blog.jetbrains.com/dotnet/2022/04/25/introducing-riderflow-a-free-unity-editor-plugin-for-scene-management
+https://blog.jetbrains.com/dotnet/2022/05/19/resharper-2022-2-eap
+https://blog.jetbrains.com/dotnet/2022/05/19/rider-2022-2-eap
+https://blog.jetbrains.com/dotnet/2022/06/06/riderflow-2022-1-2-bug-fix-update
+https://blog.jetbrains.com/dotnet/2022/08/02/dottools-2022-2-released
+https://blog.jetbrains.com/dotnet/2022/08/02/resharper-2022-2-released
+https://blog.jetbrains.com/dotnet/2022/08/02/rider-2022-2-released
+https://blog.jetbrains.com/dotnet/2022/08/22/riderflow-2022-1-3-bug-fix-update
+https://blog.jetbrains.com/dotnet/2022/09/13/resharper-and-rider-2022-2-3
 https://blog.jetbrains.com/dotnet/2022/09/13/resharper-and-rider-2022-2-3/
