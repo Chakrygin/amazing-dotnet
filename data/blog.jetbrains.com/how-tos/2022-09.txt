@@ -11,3 +11,4 @@ https://blog.jetbrains.com/dotnet/2022/08/30/refactor-code-to-use-new-c-language
 https://blog.jetbrains.com/dotnet/2022/09/12/jetbrains-rider-net-watch-run-configuration-plugin
 https://blog.jetbrains.com/dotnet/2022/09/12/jetbrains-rider-net-watch-run-configuration-plugin/
 https://blog.jetbrains.com/dotnet/2022/09/16/refactor-code-to-use-new-c-language-features
+https://blog.jetbrains.com/dotnet/2022/09/19/oss-power-ups-serilog-webinar-recording/
