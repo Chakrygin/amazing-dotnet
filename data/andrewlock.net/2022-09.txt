@@ -1,1 +1,2 @@
 https://andrewlock.net/building-a-thread-safe-random-implementation-for-dotnet-framework/
+https://andrewlock.net/counting-the-leading-zeroes-in-a-binary-number/
