@@ -3,6 +3,7 @@ https://devblogs.microsoft.com/dotnet/announcing-ef7-rc1/
 https://devblogs.microsoft.com/dotnet/arm64-performance-improvements-in-dotnet-7/
 https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-7-rc-1/
 https://devblogs.microsoft.com/dotnet/dotnet-7-comes-to-azure-functions/
+https://devblogs.microsoft.com/dotnet/dotnet-framework-september-2022-cumulative-update-preview/
 https://devblogs.microsoft.com/dotnet/dotnet-framework-september-2022-security-and-quality-rollup/
 https://devblogs.microsoft.com/dotnet/dotnet-maui-in-dotnet-7-rc1/
 https://devblogs.microsoft.com/dotnet/dotnet-now-on-windows-package-manager/
