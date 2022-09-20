@@ -6,5 +6,6 @@ https://code-maze.com/code-maze-weekly-138/
 https://code-maze.com/code-maze-weekly-139/
 https://code-maze.com/csharp-filesystemwatcher/
 https://code-maze.com/csharp-indexers/
+https://code-maze.com/csharp-nullreferenceexception/
 https://code-maze.com/ef-core-filtered-include/
 https://code-maze.com/unit-tests-with-fluent-assertions/
