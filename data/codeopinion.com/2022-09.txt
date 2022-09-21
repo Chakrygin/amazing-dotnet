@@ -1,2 +1,3 @@
+https://codeopinion.com/should-you-soft-delete/
 https://codeopinion.com/the-world-is-full-of-asynchronous-workflow/
 https://codeopinion.com/where-should-you-use-grpc-and-where-not/
