@@ -1,3 +1,4 @@
 https://www.meziantou.net/detecting-double-writes-in-msbuild-using-the-binlog.htm
 https://www.meziantou.net/getting-user-consent-before-executing-sensitive-code.htm
+https://www.meziantou.net/how-to-generate-a-dump-file-of-a-dotnet-application.htm
 https://www.meziantou.net/writing-unsafe-dotnet-code-without-the-unsafe-keyword.htm
