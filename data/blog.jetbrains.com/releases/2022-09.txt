@@ -11,3 +11,5 @@ https://blog.jetbrains.com/dotnet/2022/08/02/rider-2022-2-released
 https://blog.jetbrains.com/dotnet/2022/08/22/riderflow-2022-1-3-bug-fix-update
 https://blog.jetbrains.com/dotnet/2022/09/13/resharper-and-rider-2022-2-3
 https://blog.jetbrains.com/dotnet/2022/09/13/resharper-and-rider-2022-2-3/
+https://blog.jetbrains.com/dotnet/2022/09/26/resharper-2022-3-early-access-program/
+https://blog.jetbrains.com/dotnet/2022/09/26/rider-2022-3-early-access-program/
