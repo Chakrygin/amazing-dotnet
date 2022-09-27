@@ -3,3 +3,4 @@ https://devblogs.microsoft.com/visualstudio/bicepforvs/
 https://devblogs.microsoft.com/visualstudio/datatable-visualizer-improvements/
 https://devblogs.microsoft.com/visualstudio/now-introducing-arm64-support-for-vs-extensions/
 https://devblogs.microsoft.com/visualstudio/visual-studio-2022-17-4-preview-2/
+https://devblogs.microsoft.com/visualstudio/visual-studio-for-mac-17-4-preview-2-1-is-now-available/
