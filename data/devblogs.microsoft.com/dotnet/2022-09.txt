@@ -12,5 +12,6 @@ https://devblogs.microsoft.com/dotnet/experimental-webtransport-over-http-3-supp
 https://devblogs.microsoft.com/dotnet/microsoft-commerce-dotnet-6-migration-journey/
 https://devblogs.microsoft.com/dotnet/microsoft-teams-assignments-service-dotnet-6-journey/
 https://devblogs.microsoft.com/dotnet/microsoft-teams-infrastructure-and-azure-communication-services-journey-to-dotnet-6/
+https://devblogs.microsoft.com/dotnet/migrating-from-asp-net-to-asp-net-core-part-4/
 https://devblogs.microsoft.com/dotnet/september-2022-updates/
 https://devblogs.microsoft.com/dotnet/use-net-7-from-any-javascript-app-in-net-7/
