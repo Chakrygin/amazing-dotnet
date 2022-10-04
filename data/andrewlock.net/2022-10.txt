@@ -1,0 +1,1 @@
+https://andrewlock.net/adding-validation-to-strongly-typed-configuration-objects-in-dotnet-6/
