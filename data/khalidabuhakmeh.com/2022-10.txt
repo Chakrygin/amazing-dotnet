@@ -1,0 +1,1 @@
+https://khalidabuhakmeh.com/dotnet-class-diagrams-in-jetbrains-rider-with-plantuml
