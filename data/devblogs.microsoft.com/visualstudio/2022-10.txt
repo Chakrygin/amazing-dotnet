@@ -1,1 +1,2 @@
 https://devblogs.microsoft.com/visualstudio/comparing-files-in-visual-studio/
+https://devblogs.microsoft.com/visualstudio/visual-studios-azure-marketplace-images-now-support-microsoft-dev-box/
