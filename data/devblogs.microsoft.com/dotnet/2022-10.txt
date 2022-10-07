@@ -1,2 +1,3 @@
 https://devblogs.microsoft.com/dotnet/announcing-the-dotnet-maui-community-toolkit-v13/
 https://devblogs.microsoft.com/dotnet/authentication-in-dotnet-maui-apps-msal/
+https://devblogs.microsoft.com/dotnet/bing-ads-campaign-platform-journey-to-dotnet-6/
