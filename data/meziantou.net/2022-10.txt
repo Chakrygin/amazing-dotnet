@@ -1,1 +1,2 @@
 https://www.meziantou.net/ensuring-best-practices-for-nuget-packages.htm
+https://www.meziantou.net/publishing-a-nuget-package-following-best-practices-using-github.htm
