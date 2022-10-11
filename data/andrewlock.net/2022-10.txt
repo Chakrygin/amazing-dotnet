@@ -1,1 +1,2 @@
 https://andrewlock.net/adding-validation-to-strongly-typed-configuration-objects-in-dotnet-6/
+https://andrewlock.net/adding-validation-to-strongly-typed-configuration-objects-using-flentvalidation/
