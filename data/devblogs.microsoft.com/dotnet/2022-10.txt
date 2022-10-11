@@ -1,4 +1,9 @@
+https://devblogs.microsoft.com/dotnet/announcing-dotnet-7-rc-2/
+https://devblogs.microsoft.com/dotnet/announcing-ef7-release-candidate-2/
 https://devblogs.microsoft.com/dotnet/announcing-the-dotnet-maui-community-toolkit-v13/
+https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-7-rc-2/
 https://devblogs.microsoft.com/dotnet/authentication-in-dotnet-maui-apps-msal/
 https://devblogs.microsoft.com/dotnet/bing-ads-campaign-platform-journey-to-dotnet-6/
 https://devblogs.microsoft.com/dotnet/console-readkey-improvements-in-net-7/
+https://devblogs.microsoft.com/dotnet/dotnet-framework-october-2022-security-and-quality-rollup/
+https://devblogs.microsoft.com/dotnet/october-2022-updates/

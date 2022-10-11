@@ -1,2 +1,0 @@
-https://devblogs.microsoft.com/dotnet/dotnet-loves-github-actions/
-https://devblogs.microsoft.com/dotnet/training-a-ml-dotnet-model-with-azure-ml/
