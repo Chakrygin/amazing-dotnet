@@ -4,3 +4,4 @@ https://code-maze.com/csharp-path-class/
 https://code-maze.com/difference-dto-poco/
 https://code-maze.com/dotnet-what-is-it-why-should-we-use-it/
 https://code-maze.com/improve-performance-sealed-classes-dotnet/
+https://code-maze.com/what-is-indexoutofrangeexception-in-c/
