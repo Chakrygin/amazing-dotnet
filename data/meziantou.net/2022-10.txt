@@ -1,2 +1,3 @@
+https://www.meziantou.net/configuring-visual-studio-to-handle-using-directives-automatically.htm
 https://www.meziantou.net/ensuring-best-practices-for-nuget-packages.htm
 https://www.meziantou.net/publishing-a-nuget-package-following-best-practices-using-github.htm
