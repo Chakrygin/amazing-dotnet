@@ -6,6 +6,7 @@ https://devblogs.microsoft.com/dotnet/authentication-in-dotnet-maui-apps-msal/
 https://devblogs.microsoft.com/dotnet/bing-ads-campaign-platform-journey-to-dotnet-6/
 https://devblogs.microsoft.com/dotnet/console-readkey-improvements-in-net-7/
 https://devblogs.microsoft.com/dotnet/dotnet-framework-october-2022-security-and-quality-rollup/
+https://devblogs.microsoft.com/dotnet/dotnet-maui-rc2/
 https://devblogs.microsoft.com/dotnet/dotnet-maui-xcode14/
 https://devblogs.microsoft.com/dotnet/october-2022-updates/
 https://devblogs.microsoft.com/dotnet/system-text-json-in-dotnet-7/
