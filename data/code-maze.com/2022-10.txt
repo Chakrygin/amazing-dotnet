@@ -2,6 +2,7 @@ https://code-maze.com/aspnetcore-localization/
 https://code-maze.com/aspnetcore-performance-testing-with-k6/
 https://code-maze.com/code-maze-weekly-142/
 https://code-maze.com/code-maze-weekly-143/
+https://code-maze.com/code-maze-weekly-144/
 https://code-maze.com/csharp-first-letter-upper-case/
 https://code-maze.com/csharp-path-class/
 https://code-maze.com/csharp-programming-mistakes/
