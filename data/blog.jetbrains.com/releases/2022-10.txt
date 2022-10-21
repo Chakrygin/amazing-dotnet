@@ -1,1 +1,2 @@
 https://blog.jetbrains.com/dotnet/2022/10/07/rider-2022-3-eap-2/
+https://blog.jetbrains.com/dotnet/2022/10/20/riderflow-2022-1-4-bug-fix-update/
