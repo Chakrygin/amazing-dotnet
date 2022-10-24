@@ -1,5 +1,6 @@
 https://code-maze.com/aspnetcore-localization/
 https://code-maze.com/aspnetcore-performance-testing-with-k6/
+https://code-maze.com/aspnetcore-webapi-using-odata/
 https://code-maze.com/code-maze-weekly-142/
 https://code-maze.com/code-maze-weekly-143/
 https://code-maze.com/code-maze-weekly-144/
