@@ -1,3 +1,4 @@
+https://code-maze.com/advanced-linq/
 https://code-maze.com/aspnetcore-localization/
 https://code-maze.com/aspnetcore-performance-testing-with-k6/
 https://code-maze.com/aspnetcore-webapi-using-odata/
