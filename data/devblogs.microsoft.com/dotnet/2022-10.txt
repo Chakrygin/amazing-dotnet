@@ -10,4 +10,5 @@ https://devblogs.microsoft.com/dotnet/dotnet-framework-october-2022-security-and
 https://devblogs.microsoft.com/dotnet/dotnet-maui-rc2/
 https://devblogs.microsoft.com/dotnet/dotnet-maui-xcode14/
 https://devblogs.microsoft.com/dotnet/october-2022-updates/
+https://devblogs.microsoft.com/dotnet/slaying-zombie-no-repo-crashes-with-infersharp/
 https://devblogs.microsoft.com/dotnet/system-text-json-in-dotnet-7/
