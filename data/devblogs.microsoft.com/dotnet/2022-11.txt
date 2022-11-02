@@ -1,1 +1,2 @@
+https://devblogs.microsoft.com/dotnet/dotnet-conf-2022-student-zone/
 https://devblogs.microsoft.com/dotnet/performance-improvements-in-aspnet-core-7/
