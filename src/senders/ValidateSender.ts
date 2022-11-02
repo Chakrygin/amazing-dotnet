@@ -138,7 +138,8 @@ function isValidImageExtension(image: string, isLowerCase = false): boolean {
     image.endsWith('.png') ||
     image.endsWith('.jpg') ||
     image.endsWith('.jpeg') ||
-    image.endsWith('.gif');
+    image.endsWith('.gif') ||
+    image.endsWith('.webp');
 
   if (!success && !isLowerCase) {
     image = image.toLowerCase();
