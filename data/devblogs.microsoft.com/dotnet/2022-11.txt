@@ -5,6 +5,7 @@ https://devblogs.microsoft.com/dotnet/announcing-ef7/
 https://devblogs.microsoft.com/dotnet/announcing-fsharp-7/
 https://devblogs.microsoft.com/dotnet/dotnet-7-performance-improvements-in-dotnet-maui/
 https://devblogs.microsoft.com/dotnet/dotnet-conf-2022-student-zone/
+https://devblogs.microsoft.com/dotnet/dotnet-framework-november-2022-security-and-quality-rollup-updates/
 https://devblogs.microsoft.com/dotnet/dotnet-interactive-notebooks-is-now-polyglot-notebooks/
 https://devblogs.microsoft.com/dotnet/dotnet-maui-dotnet-7/
 https://devblogs.microsoft.com/dotnet/migration-wcf-to-corewcf-upgrade-assistant/
