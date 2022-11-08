@@ -1,6 +1,15 @@
+https://devblogs.microsoft.com/dotnet/announcing-asp-net-core-in-dotnet-7/
+https://devblogs.microsoft.com/dotnet/announcing-dotnet-7/
 https://devblogs.microsoft.com/dotnet/announcing-dotnet-community-toolkit-v810-preview-1/
+https://devblogs.microsoft.com/dotnet/announcing-ef7/
+https://devblogs.microsoft.com/dotnet/announcing-fsharp-7/
 https://devblogs.microsoft.com/dotnet/dotnet-7-performance-improvements-in-dotnet-maui/
 https://devblogs.microsoft.com/dotnet/dotnet-conf-2022-student-zone/
 https://devblogs.microsoft.com/dotnet/dotnet-interactive-notebooks-is-now-polyglot-notebooks/
+https://devblogs.microsoft.com/dotnet/dotnet-maui-dotnet-7/
 https://devblogs.microsoft.com/dotnet/migration-wcf-to-corewcf-upgrade-assistant/
 https://devblogs.microsoft.com/dotnet/performance-improvements-in-aspnet-core-7/
+https://devblogs.microsoft.com/dotnet/welcome-to-csharp-11/
+https://devblogs.microsoft.com/dotnet/whats-new-in-orleans-7/
+https://devblogs.microsoft.com/dotnet/winforms-enhancements-in-dotnet-7/
+https://devblogs.microsoft.com/dotnet/wpf-on-dotnet-7/

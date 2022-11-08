@@ -1,1 +1,2 @@
 https://khalidabuhakmeh.com/more-efficient-deletes-with-entity-framework-core
+https://khalidabuhakmeh.com/stop-entity-framework-core-performance-issues-with-interceptors
