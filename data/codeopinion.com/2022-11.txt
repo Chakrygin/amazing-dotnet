@@ -1,1 +1,2 @@
+https://codeopinion.com/do-you-want-to-use-kafka-or-do-you-need-a-queue/
 https://codeopinion.com/just-store-utc-not-so-fast-handling-time-zones-is-complicated/
