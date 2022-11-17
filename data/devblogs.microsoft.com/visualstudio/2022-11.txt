@@ -1,5 +1,6 @@
 https://devblogs.microsoft.com/visualstudio/arm64-visual-studio-is-officially-here/
 https://devblogs.microsoft.com/visualstudio/deploy-visual-studio-updates-to-devices-enrolled-in-windows-update-for-business/
+https://devblogs.microsoft.com/visualstudio/enable-group-policy-settings-with-visual-studio-administrative-templates-admx/
 https://devblogs.microsoft.com/visualstudio/introducing-visual-studio-rollback/
 https://devblogs.microsoft.com/visualstudio/multi-repository-support-released/
 https://devblogs.microsoft.com/visualstudio/php-in-visual-studio/
