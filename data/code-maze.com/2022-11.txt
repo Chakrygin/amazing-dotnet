@@ -10,4 +10,5 @@ https://code-maze.com/html-agility-pack-csharp/
 https://code-maze.com/null-coalescing-operator-null-coalescing-assignment-operator-csharp/
 https://code-maze.com/return-null-from-generic-method-csharp/
 https://code-maze.com/tasks-vs-threads-in-c/
+https://code-maze.com/using-dynamic-linq/
 https://code-maze.com/using-static-feature-csharp/
