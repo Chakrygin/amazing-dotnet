@@ -7,3 +7,4 @@ https://devblogs.microsoft.com/visualstudio/php-in-visual-studio/
 https://devblogs.microsoft.com/visualstudio/public-preview-of-dev-tunnels-in-visual-studio-for-asp-net-core-projects/
 https://devblogs.microsoft.com/visualstudio/visual-studio-17-4-is-now-available/
 https://devblogs.microsoft.com/visualstudio/visual-studio-2022-17-4/
+https://devblogs.microsoft.com/visualstudio/visual-studio-2022-performance-enhancements-17-4/
