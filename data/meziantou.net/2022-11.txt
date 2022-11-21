@@ -1,1 +1,2 @@
 https://www.meziantou.net/debugging-tips-and-tools.htm
+https://www.meziantou.net/killing-all-child-processes-when-the-parent-exits-job-object.htm
