@@ -8,6 +8,7 @@ https://code-maze.com/csharp-hashset/
 https://code-maze.com/csharp-manage-idisposable-objects/
 https://code-maze.com/csharp-sortedset/
 https://code-maze.com/csharp-tasks-vs-threads/
+https://code-maze.com/efcore-execute-stored-procedures/
 https://code-maze.com/html-agility-pack-csharp/
 https://code-maze.com/null-coalescing-operator-null-coalescing-assignment-operator-csharp/
 https://code-maze.com/return-null-from-generic-method-csharp/
