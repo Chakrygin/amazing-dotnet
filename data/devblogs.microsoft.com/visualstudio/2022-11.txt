@@ -3,6 +3,7 @@ https://devblogs.microsoft.com/visualstudio/deploy-visual-studio-updates-to-devi
 https://devblogs.microsoft.com/visualstudio/enable-group-policy-settings-with-visual-studio-administrative-templates-admx/
 https://devblogs.microsoft.com/visualstudio/introducing-visual-studio-rollback/
 https://devblogs.microsoft.com/visualstudio/multi-repository-support-released/
+https://devblogs.microsoft.com/visualstudio/net-maui-is-now-available-in-visual-studio-for-mac-17-4/
 https://devblogs.microsoft.com/visualstudio/php-in-visual-studio/
 https://devblogs.microsoft.com/visualstudio/public-preview-of-dev-tunnels-in-visual-studio-for-asp-net-core-projects/
 https://devblogs.microsoft.com/visualstudio/visual-studio-17-4-is-now-available/
