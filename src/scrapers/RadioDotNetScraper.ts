@@ -2,11 +2,18 @@ import * as core from '@actions/core';
 
 import axios from 'axios';
 import * as cheerio from 'cheerio';
+import https from 'https';
 import moment from 'moment';
 
 import ScraperBase from './ScraperBase';
 
 import { Category, Post } from '../models';
+
+const axios2 = axios.create({
+  httpsAgent: new https.Agent({
+    rejectUnauthorized: false
+  }),
+});
 
 export default class RadioDotNetScraper extends ScraperBase {
   readonly name = 'RadioDotNet';
@@ -20,7 +27,7 @@ export default class RadioDotNetScraper extends ScraperBase {
   protected override async *readPosts(): AsyncGenerator<Post, void> {
     core.info(`Parsing html page by url '${this.source.href}'...`);
 
-    const response = await axios.get(this.source.href);
+    const response = await axios2.get(this.source.href);
     const $ = cheerio.load(response.data);
     const episodes = $('.episodes-season__body a.episode').toArray();
 
@@ -75,7 +82,7 @@ export default class RadioDotNetScraper extends ScraperBase {
   protected override async enrichPost(post: Post): Promise<Post> {
     core.info(`Parsing html page by url '${post.href}'...`);
 
-    const response = await axios.get(post.href);
+    const response = await axios2.get(post.href);
     const $ = cheerio.load(response.data);
 
     const description = $('.sidebar__body p.description').text().trim();
