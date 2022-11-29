@@ -5,6 +5,7 @@ https://code-maze.com/code-maze-weekly-149/
 https://code-maze.com/concurrent-collections-in-c/
 https://code-maze.com/convert-datatable-json-csharp/
 https://code-maze.com/csharp-check-if-string-ends-with-a-number/
+https://code-maze.com/csharp-floating-point-types/
 https://code-maze.com/csharp-hashing-salting-passwords-best-practices/
 https://code-maze.com/csharp-hashset-vs-sortedset/
 https://code-maze.com/csharp-hashset/
