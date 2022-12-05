@@ -1,2 +1,3 @@
 https://code-maze.com/code-maze-weekly-150/
 https://code-maze.com/dotnet-producer-consumer-channels/
+https://code-maze.com/enumerate-enum-csharp/
