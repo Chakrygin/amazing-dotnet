@@ -1,1 +1,2 @@
 https://devblogs.microsoft.com/visualstudio/building-a-new-javascript-linting-experience-in-visual-studio/
+https://devblogs.microsoft.com/visualstudio/get-your-developer-news/
