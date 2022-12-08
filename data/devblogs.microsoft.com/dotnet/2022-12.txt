@@ -1,2 +1,3 @@
 https://devblogs.microsoft.com/dotnet/custom-controls-for-winforms-out-of-process-designer/
+https://devblogs.microsoft.com/dotnet/migrating-from-asp-net-to-asp-net-core-part-5/
 https://devblogs.microsoft.com/dotnet/whats-new-in-the-dotnet-maui-community-toolkit/
