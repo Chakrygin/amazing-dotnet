@@ -139,7 +139,8 @@ function isValidImageExtension(image: string, isLowerCase = false): boolean {
     image.endsWith('.jpg') ||
     image.endsWith('.jpeg') ||
     image.endsWith('.gif') ||
-    image.endsWith('.webp');
+    image.endsWith('.webp') ||
+    image.startsWith('https://lh3.googleusercontent.com/');
 
   if (!success && !isLowerCase) {
     image = image.toLowerCase();

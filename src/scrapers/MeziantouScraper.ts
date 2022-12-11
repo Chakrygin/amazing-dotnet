@@ -131,6 +131,9 @@ export default class MeziantouScraper extends ScraperBase {
           description.push(text);
         }
       }
+      else if (element.name == 'aside') {
+        continue;
+      }
       else {
         break;
       }
