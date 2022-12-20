@@ -9,5 +9,6 @@ https://code-maze.com/dotnet-producer-consumer-channels/
 https://code-maze.com/dotnet-secure-passwords-bcrypt/
 https://code-maze.com/enumerate-enum-csharp/
 https://code-maze.com/how-to-extract-custom-header-in-asp-net-core-web-api/
+https://code-maze.com/linq-performance-dotnet7/
 https://code-maze.com/schedule-jobs-with-quartz-net/
 https://code-maze.com/web-api-analyzers-aspnetcore/
