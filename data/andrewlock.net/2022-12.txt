@@ -1,1 +1,2 @@
 https://andrewlock.net/5-new-mvc-features-in-dotnet-7/
+https://andrewlock.net/aspnetcore-in-action-version-3-update/
