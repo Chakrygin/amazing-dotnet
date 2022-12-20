@@ -1,3 +1,4 @@
+https://khalidabuhakmeh.com/aspnet-core-display-description-tag-helper
 https://khalidabuhakmeh.com/aspnet-core-placeholder-images-with-imagesharp
 https://khalidabuhakmeh.com/consuming-dotnet-webassembly-from-javascript-in-the-browser
 https://khalidabuhakmeh.com/entity-framework-core-conversions-for-logical-domain-types
