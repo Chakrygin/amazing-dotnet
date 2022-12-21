@@ -1,3 +1,4 @@
 https://codeopinion.com/design-patterns-who-gives-a/
+https://codeopinion.com/do-you-need-a-distributed-transaction-maybe-not/
 https://codeopinion.com/how-your-sr-devs-incurred-technical-debt/
 https://codeopinion.com/wix-com-5-event-driven-architecture-pitfalls/
