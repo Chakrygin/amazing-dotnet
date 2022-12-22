@@ -1,3 +1,4 @@
+https://devblogs.microsoft.com/dotnet/accelerate-ml-net-training-with-intel-onedal/
 https://devblogs.microsoft.com/dotnet/build-your-own-podcast-app-with-dotnet-blazor-and-dotnet-maui/
 https://devblogs.microsoft.com/dotnet/custom-controls-for-winforms-out-of-process-designer/
 https://devblogs.microsoft.com/dotnet/december-2022-updates/
