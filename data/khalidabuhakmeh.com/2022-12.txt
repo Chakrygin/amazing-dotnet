@@ -3,4 +3,5 @@ https://khalidabuhakmeh.com/aspnet-core-placeholder-images-with-imagesharp
 https://khalidabuhakmeh.com/consuming-dotnet-webassembly-from-javascript-in-the-browser
 https://khalidabuhakmeh.com/entity-framework-core-conversions-for-logical-domain-types
 https://khalidabuhakmeh.com/fibonacci-sequences-with-kotlin-csharp-and-fsharp
+https://khalidabuhakmeh.com/generate-youtube-timestamp-links-with-csharp-11
 https://khalidabuhakmeh.com/how-many-threads-does-my-dotnet-app-have
