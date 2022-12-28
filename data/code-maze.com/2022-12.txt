@@ -7,6 +7,7 @@ https://code-maze.com/csharp-default-interface-method/
 https://code-maze.com/csharp-ienumerable/
 https://code-maze.com/csharp-linkedlist/
 https://code-maze.com/csharp-nullable-types/
+https://code-maze.com/csharp-update-the-value-stored-in-a-dictionary/
 https://code-maze.com/docfx-generating-source-code-documentation/
 https://code-maze.com/dotnet-collections-overview/
 https://code-maze.com/dotnet-producer-consumer-channels/
