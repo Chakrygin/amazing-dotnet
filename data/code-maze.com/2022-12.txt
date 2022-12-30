@@ -2,6 +2,7 @@ https://code-maze.com/code-maze-weekly-150/
 https://code-maze.com/code-maze-weekly-151/
 https://code-maze.com/code-maze-weekly-152/
 https://code-maze.com/code-maze-weekly-153/
+https://code-maze.com/code-maze-weekly-154/
 https://code-maze.com/csharp-bitarray/
 https://code-maze.com/csharp-default-interface-method/
 https://code-maze.com/csharp-ienumerable/
