@@ -1,7 +1,0 @@
-{
-  "Habr": {
-    "timestamp": "2022-12-30T14:44:00.757Z",
-    "message": "AxiosError: Request failed with status code 504",
-    "counter": 1
-  }
-}
