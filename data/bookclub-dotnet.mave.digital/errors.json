@@ -1,0 +1,7 @@
+{
+  "BookClubDotNet": {
+    "timestamp": "2023-01-12T18:46:48.040Z",
+    "message": "AxiosError: Request failed with status code 504",
+    "counter": 1
+  }
+}
