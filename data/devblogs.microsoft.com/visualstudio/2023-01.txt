@@ -1,2 +1,3 @@
 https://devblogs.microsoft.com/visualstudio/debugging-encoded-text/
+https://devblogs.microsoft.com/visualstudio/new-better-search-in-visual-studio/
 https://devblogs.microsoft.com/visualstudio/the-visual-studio-editor-can-do-that/
