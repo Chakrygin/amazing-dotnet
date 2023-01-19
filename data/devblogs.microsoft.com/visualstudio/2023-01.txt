@@ -2,3 +2,4 @@ https://devblogs.microsoft.com/visualstudio/debugging-encoded-text/
 https://devblogs.microsoft.com/visualstudio/new-better-search-in-visual-studio/
 https://devblogs.microsoft.com/visualstudio/the-visual-studio-editor-can-do-that/
 https://devblogs.microsoft.com/visualstudio/visual-studio-2022-17-5-preview-3-is-here/
+https://devblogs.microsoft.com/visualstudio/visual-studio-spell-checker-preview-now-available/
