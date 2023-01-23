@@ -13,6 +13,7 @@ https://code-maze.com/csharp-required-members/
 https://code-maze.com/csharp-resolve-non-nullable-property-must-contain-a-non-null-value-warning/
 https://code-maze.com/csharp-string-encryption-decryption/
 https://code-maze.com/csharp-task-and-valuetask/
+https://code-maze.com/data-generation-bogus-dotnet/
 https://code-maze.com/dotnet-cryptography-implementations/
 https://code-maze.com/dotnet-understanding-plinq/
 https://code-maze.com/opentelemetry-in-dotnet/
