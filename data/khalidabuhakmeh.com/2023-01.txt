@@ -1,3 +1,4 @@
 https://khalidabuhakmeh.com/deserialize-mastodon-user-xml-rss-feed
 https://khalidabuhakmeh.com/multiple-file-drag-and-drop-upload-with-aspnet-core
+https://khalidabuhakmeh.com/programming-svgs-with-csharp-dotnet
 https://khalidabuhakmeh.com/testing-aspnet-core-fastendpoints
