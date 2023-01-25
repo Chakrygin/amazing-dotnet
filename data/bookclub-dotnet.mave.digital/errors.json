@@ -1,7 +1,0 @@
-{
-  "BookClubDotNet": {
-    "timestamp": "2023-01-25T08:45:04.032Z",
-    "message": "Error: connect ETIMEDOUT 89.208.218.168:443",
-    "counter": 1
-  }
-}
