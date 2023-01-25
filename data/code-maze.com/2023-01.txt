@@ -18,3 +18,4 @@ https://code-maze.com/dotnet-cryptography-implementations/
 https://code-maze.com/dotnet-understanding-plinq/
 https://code-maze.com/opentelemetry-in-dotnet/
 https://code-maze.com/rebus-dotnet/
+https://code-maze.com/tracing-dotnet-applications-opentelemetry/
