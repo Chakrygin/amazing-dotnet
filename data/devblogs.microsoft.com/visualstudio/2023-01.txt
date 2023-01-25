@@ -1,5 +1,6 @@
 https://devblogs.microsoft.com/visualstudio/debugging-encoded-text/
 https://devblogs.microsoft.com/visualstudio/documents-and-tool-windows-unleashed/
+https://devblogs.microsoft.com/visualstudio/introducing-the-git-status-bar-and-testing-improvements-in-visual-studio-for-mac-17-5/
 https://devblogs.microsoft.com/visualstudio/keyboard-shortcuts-to-master-your-git-flow-in-visual-studio/
 https://devblogs.microsoft.com/visualstudio/new-better-search-in-visual-studio/
 https://devblogs.microsoft.com/visualstudio/the-visual-studio-editor-can-do-that/
