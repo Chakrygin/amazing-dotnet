@@ -1,1 +1,2 @@
 https://codeopinion.com/mcdonalds-journey-to-event-driven-architecture/
+https://codeopinion.com/thats-not-an-aggregate-in-domain-driven-design/
