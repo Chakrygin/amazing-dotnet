@@ -6,6 +6,7 @@ https://code-maze.com/concurrentdictionary-csharp/
 https://code-maze.com/csharp-boxing-and-unboxing/
 https://code-maze.com/csharp-concurrentbag/
 https://code-maze.com/csharp-convert-string-and-int-to-enum/
+https://code-maze.com/csharp-find-index-of-value-in-string-array/
 https://code-maze.com/csharp-generic-attributes/
 https://code-maze.com/csharp-get-list-of-properties/
 https://code-maze.com/csharp-how-to-iterate-over-json-objects/
