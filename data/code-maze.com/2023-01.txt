@@ -19,6 +19,7 @@ https://code-maze.com/csharp-task-and-valuetask/
 https://code-maze.com/data-generation-bogus-dotnet/
 https://code-maze.com/dotnet-cryptography-implementations/
 https://code-maze.com/dotnet-understanding-plinq/
+https://code-maze.com/enum-member-as-string-csharp/
 https://code-maze.com/opentelemetry-in-dotnet/
 https://code-maze.com/rebus-dotnet/
 https://code-maze.com/tracing-dotnet-applications-opentelemetry/
