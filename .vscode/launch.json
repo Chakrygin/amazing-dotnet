@@ -2,38 +2,35 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "type": "pwa-node",
+      "name": "Launch",
+      "type": "node",
       "request": "launch",
-      "name": "Launch Scrape",
       "console": "integratedTerminal",
+      "program": "${workspaceFolder}/src/main.ts",
       "cwd": "${workspaceFolder}",
-      "program": "src/main.ts",
-      "envFile": "${env:USERPROFILE}/${workspaceFolderBasename}.env",
       "runtimeArgs": [
         "--nolazy",
-        "-r",
+        "--require",
         "./node_modules/ts-node/register"
       ],
-      "sourceMaps": true,
-      "protocol": "inspector",
-      "resolveSourceMapLocations": [
-        "${workspaceFolder}/**",
-        "!**/node_modules/**"
+      "envFile": "${env:USERPROFILE}/amazing.env",
+      "outFiles": [
+        "${workspaceFolder}/src/*.ts",
+        "${workspaceFolder}/src/**/*.ts",
+        "${workspaceFolder}/../amazing-core/lib/*.js",
+        "${workspaceFolder}/../amazing-core/lib/**/*.js",
       ],
       "skipFiles": [
         "<node_internals>/**"
-      ]
+      ],
     },
     {
-      "type": "node",
       "name": "vscode-jest-tests.v2",
+      "type": "node",
       "request": "launch",
       "console": "integratedTerminal",
-      "internalConsoleOptions": "neverOpen",
-      "disableOptimisticBPs": true,
       "program": "${workspaceFolder}/node_modules/jest/bin/jest.js",
       "cwd": "${workspaceFolder}",
-      "envFile": "${env:USERPROFILE}/${workspaceFolderBasename}.env",
       "args": [
         "--runInBand",
         "--watchAll=false",
@@ -41,7 +38,19 @@
         "${jest.testNamePattern}",
         "--runTestsByPath",
         "${jest.testFile}"
-      ]
-    }
+      ],
+      "envFile": "${env:USERPROFILE}/amazing.env",
+      "outFiles": [
+        "${workspaceFolder}/src/*.ts",
+        "${workspaceFolder}/src/**/*.ts",
+        "${workspaceFolder}/tests/*.ts",
+        "${workspaceFolder}/tests/**/*.ts",
+        "${workspaceFolder}/../amazing-core/lib/*.js",
+        "${workspaceFolder}/../amazing-core/lib/**/*.js",
+      ],
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+    },
   ]
 }

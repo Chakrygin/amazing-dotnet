@@ -1,2 +1,0 @@
-https://devblogs.microsoft.com/odata/compute-and-search-in-asp-net-core-odata-8/
-https://devblogs.microsoft.com/odata/the-future-of-odata-odata-nxt/

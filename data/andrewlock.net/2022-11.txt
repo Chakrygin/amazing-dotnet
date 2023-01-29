@@ -1,2 +1,0 @@
-https://andrewlock.net/the-dangers-and-gotchas-of-using-scoped-services-when-configuring-options-with-options-builder/
-https://andrewlock.net/working-with-stacked-branches-in-git-is-easier-with-update-refs/

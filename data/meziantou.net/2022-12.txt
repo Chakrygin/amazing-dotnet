@@ -1,2 +1,0 @@
-https://www.meziantou.net/generating-a-dump-file-when-tests-hang-on-a-ci-machine.htm
-https://www.meziantou.net/prevent-http-requests-to-external-services-in-unit-tests.htm

@@ -1,1 +1,0 @@
-https://blog.jetbrains.com/dotnet/2022/03/30/resharper-2021-3-4/

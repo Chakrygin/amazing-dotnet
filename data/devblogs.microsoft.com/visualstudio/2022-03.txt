@@ -1,6 +1,0 @@
-https://devblogs.microsoft.com/visualstudio/edge-developer-tools-for-visual-studio-preview/
-https://devblogs.microsoft.com/visualstudio/happy-25th-birthday-visual-studio/
-https://devblogs.microsoft.com/visualstudio/live-unit-testing-preview-better-and-faster/
-https://devblogs.microsoft.com/visualstudio/suffer-from-ctrls-fatigue-we-have-a-feature-for-you/
-https://devblogs.microsoft.com/visualstudio/visual-studio-2022-for-mac-preview-7/
-https://devblogs.microsoft.com/visualstudio/visual-studio-2022-for-mac-preview-8/

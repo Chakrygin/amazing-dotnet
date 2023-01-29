@@ -1,18 +1,15 @@
+import { testScraper } from 'core/testing';
+
 import JetBrainsScraper from '../src/scrapers/JetBrainsScraper';
 
-import { testScraper } from './helpers';
-
 test('JetBrains / How-To\'s', async () => {
-  const scraper = new JetBrainsScraper('how-tos');
-  await testScraper(scraper);
+  await testScraper(() => new JetBrainsScraper('how-tos'));
 });
 
 test('JetBrains / Releases', async () => {
-  const scraper = new JetBrainsScraper('releases');
-  await testScraper(scraper);
+  await testScraper(() => new JetBrainsScraper('releases'));
 });
 
 test('JetBrains / .NET Annotated', async () => {
-  const scraper = new JetBrainsScraper('net-annotated');
-  await testScraper(scraper);
+  await testScraper(knownHosts => new JetBrainsScraper('net-annotated', knownHosts));
 });

@@ -4,106 +4,97 @@ import axios from 'axios';
 import * as cheerio from 'cheerio';
 import moment from 'moment';
 
-import Scraper from './Scraper';
-import Storage from '../Storage';
-import Sender from '../senders/Sender';
+import { Scraper, ScraperBehaviour } from 'core/scrapers';
+import { Post, Link } from 'core/posts';
 
-import { Category, Post, Tag } from '../models';
+const MIN_RATING = 10;
 
-type HabrPost = Post & {
-  readonly rating: number;
+const Hubs = {
+  'csharp': 'C#',
+  'fsharp': 'F#',
+  'net': '.NET',
 };
 
 export default class HabrScraper implements Scraper {
-  readonly name = 'Habr';
-  readonly path = 'habr.com';
+  constructor(
+    private readonly id: keyof typeof Hubs) { }
 
-  private readonly blog: Category = {
+  readonly name = `Habr / ${Hubs[this.id]}`;
+  readonly path = 'habr.com';
+  readonly behaviour = ScraperBehaviour.ContinueIfPostExists;
+
+  private readonly habr: Link = {
     title: 'Хабр',
-    href: 'https://habr.com/ru/hub/net/',
+    href: 'https://habr.com',
   };
 
-  async scrape(storage: Storage, sender: Sender): Promise<void> {
-    for await (const post of this.readPosts()) {
-      if (post.rating < 10) {
-        core.info('Post rating is too low. Continue scraping.');
-        continue;
-      }
+  async *scrape(): AsyncGenerator<Post> {
+    const href = `https://habr.com/ru/hub/${this.id}/`;
 
-      if (storage.has(post.href)) {
-        core.info('Post already exists in storage. Continue scraping.');
-        continue;
-      }
+    core.info(`Parsing html page by url '${href}'...`);
 
-      core.info('Sending post...');
-      await sender.send(post);
-
-      core.info('Storing post...');
-      storage.add(post.href);
-    }
-  }
-
-  private async *readPosts(): AsyncGenerator<HabrPost, void> {
-    core.info(`Parsing html page by url '${this.blog.href}'...`);
-
-    const response = await axios.get(this.blog.href);
-    const $ = cheerio.load(response.data);
+    const response = await axios.get(href);
+    const $ = cheerio.load(response.data as string);
     const articles = $('.tm-articles-list article.tm-articles-list__item').toArray();
 
     if (articles.length == 0) {
       throw new Error('Failed to parse html page. No posts found.');
     }
 
-    core.info(`Html page parsed. ${articles.length} posts found.`);
+    core.info(`Html page parsed. Number of posts found is ${articles.length}.`);
 
     for (let index = 0; index < articles.length; index++) {
       core.info(`Parsing post at index ${index}...`);
 
       const article = $(articles[index]);
+      const rating = parseInt(article.find('.tm-votes-meter__value').text());
 
-      if (article.find('> .tm-megapost-snippet').length) {
-        // TODO: Implement megapost parsing...
+      if (isNaN(rating)) {
+        throw new Error('Failed to parse post. Rating is NaN.');
+      }
+
+      if (rating < MIN_RATING) {
+        core.info('Post rating is too low. Continue scraping.');
         continue;
       }
 
       const image = this.getImage(article);
-      const title = article.find('a.tm-article-snippet__title-link');
-      const titleText = title.text();
-      const href = this.getFullHref(title.attr('href')) ?? '';
+      const link = article.find('a.tm-article-snippet__title-link');
+      const title = link.text();
+      const href = this.getFullHref(link.attr('href')) ?? '';
       const date = article.find('.tm-article-snippet__datetime-published time').attr('datetime') ?? '';
       const [categories, tags] = this.getCategoriesAndTags(article, $);
       const description = this.getDescription(article, $);
-      const rating = article.find('.tm-votes-meter__value').text();
 
-      const post: HabrPost = {
-        image: image,
-        title: titleText,
-        href: href,
+      const post: Post = {
+        image,
+        title,
+        href,
         categories: [
-          this.blog,
+          this.habr,
           ...categories,
         ],
         date: moment(date).locale('ru'),
-        description: description,
+        description,
         links: [
           {
-            title: 'Читать',
+            title: 'Читать дальше',
             href: href,
           }
         ],
-        tags: tags,
-        rating: parseInt(rating),
+        tags,
       };
-
-      if (isNaN(post.rating)) {
-        throw new Error('Failed to parse post. Rating is invalid.');
-      }
-
-      core.info(`Post title is '${post.title}'.`);
-      core.info(`Post href is '${post.href}'.`);
 
       yield post;
     }
+  }
+
+  private getFullHref(href: string | undefined): string | undefined {
+    if (href?.startsWith('/')) {
+      href = this.habr.href + href;
+    }
+
+    return href;
   }
 
   private getImage(article: cheerio.Cheerio<cheerio.Element>): string | undefined {
@@ -114,23 +105,23 @@ export default class HabrScraper implements Scraper {
     return src;
   }
 
-  private getCategoriesAndTags(article: cheerio.Cheerio<cheerio.Element>, $: cheerio.CheerioAPI): [Category[], Tag[]] {
-    const hubs = article
+  private getCategoriesAndTags(article: cheerio.Cheerio<cheerio.Element>, $: cheerio.CheerioAPI): [Link[], string[]] {
+    const categories: Link[] = [];
+    const tags: string[] = [];
+
+    const elements = article
       .find('.tm-article-snippet__hubs .tm-article-snippet__hubs-item a')
       .map((_, element) => $(element));
 
-    const categories = [];
-    const tags = [];
-
-    for (const hub of hubs) {
-      const title = hub.text().replace('*', '').trim();
-      const href = this.getFullHref(hub.attr('href')) ?? '';
+    for (const element of elements) {
+      const title = element.text().replace('*', '');
+      const href = this.getFullHref(element.attr('href')) ?? '';
 
       if (title.startsWith('Блог компании')) {
         categories.push({ title, href });
       }
-      else if (title !== '.NET') {
-        tags.push({ title, href });
+      else {
+        tags.push(title);
       }
     }
 
@@ -151,7 +142,6 @@ export default class HabrScraper implements Scraper {
       }
     }
     else if (body.hasClass('article-formatted-body_version-2')) {
-
       const elements = body.children();
       for (const element of elements) {
         if (element.name == 'p') {
@@ -167,13 +157,5 @@ export default class HabrScraper implements Scraper {
     }
 
     return description;
-  }
-
-  private getFullHref(href: string | undefined): string | undefined {
-    if (href && href.startsWith('/')) {
-      href = 'https://habr.com' + href;
-    }
-
-    return href;
   }
 }

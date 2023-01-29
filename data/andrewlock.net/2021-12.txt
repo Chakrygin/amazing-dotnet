@@ -1,3 +1,0 @@
-https://andrewlock.net/creating-a-source-generator-part-1-creating-an-incremental-source-generator/
-https://andrewlock.net/creating-a-source-generator-part-2-testing-an-incremental-generator-with-snapshot-testing/
-https://andrewlock.net/creating-a-source-generator-part-3-integration-testing-and-packaging/

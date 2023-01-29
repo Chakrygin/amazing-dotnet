@@ -1,4 +1,0 @@
-https://blog.jetbrains.com/dotnet/2022/07/11/keyboard-navigation-mode-in-dottrace-2022-1/
-https://blog.jetbrains.com/dotnet/2022/07/18/how-to-profile-net-code-using-the-dotmemory-plugin-in-rider/
-https://blog.jetbrains.com/dotnet/2022/07/25/ways-to-navigate-and-explore-codebases/
-https://blog.jetbrains.com/dotnet/2022/07/27/profiling-questpdf-in-pursuit-of-performance/

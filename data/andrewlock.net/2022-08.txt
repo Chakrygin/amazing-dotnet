@@ -1,3 +1,0 @@
-https://andrewlock.net/handling-concurrent-merges-to-master-in-multi-stage-azure-devops-pipelines/
-https://andrewlock.net/replacing-disqus-with-github-discussions-using-giscus/
-https://andrewlock.net/using-cancellationtokens-in-asp-net-core-minimal-apis/

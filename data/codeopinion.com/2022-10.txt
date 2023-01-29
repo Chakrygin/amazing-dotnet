@@ -1,4 +1,0 @@
-https://codeopinion.com/data-partitioning-dont-let-growth-slow-you-down/
-https://codeopinion.com/event-choreography-for-loosely-coupled-workflow/
-https://codeopinion.com/stop-over-engineering-software/
-https://codeopinion.com/what-is-software-architecture/

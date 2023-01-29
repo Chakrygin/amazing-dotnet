@@ -17,3 +17,7 @@ inputs:
   TELEGRAM_PRIVATE_CHAT_ID:
     description: TELEGRAM_PRIVATE_CHAT_ID
     required: true
+
+outputs:
+  COMMIT_MESSAGE:
+    description: COMMIT_MESSAGE

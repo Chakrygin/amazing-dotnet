@@ -1,6 +1,0 @@
-https://devblogs.microsoft.com/visualstudio/comparing-files-in-visual-studio/
-https://devblogs.microsoft.com/visualstudio/cool-features-in-visual-studio-2022/
-https://devblogs.microsoft.com/visualstudio/copy-with-proper-indentation/
-https://devblogs.microsoft.com/visualstudio/learn-github-in-visual-studio-learning-series/
-https://devblogs.microsoft.com/visualstudio/support-reminder-for-older-versions-of-visual-studio/
-https://devblogs.microsoft.com/visualstudio/visual-studios-azure-marketplace-images-now-support-microsoft-dev-box/

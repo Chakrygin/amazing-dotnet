@@ -1,8 +1,7 @@
+import { testScraper } from 'core/testing';
+
 import KhalidAbuhakmehScraper from '../src/scrapers/KhalidAbuhakmehScraper';
 
-import { testScraper } from './helpers';
-
 test('KhalidAbuhakmeh', async () => {
-  const scraper = new KhalidAbuhakmehScraper();
-  await testScraper(scraper);
+  await testScraper(() => new KhalidAbuhakmehScraper());
 });

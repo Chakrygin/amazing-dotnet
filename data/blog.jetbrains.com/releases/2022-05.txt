@@ -1,2 +1,0 @@
-https://blog.jetbrains.com/dotnet/2022/05/19/resharper-2022-2-eap/
-https://blog.jetbrains.com/dotnet/2022/05/19/rider-2022-2-eap/

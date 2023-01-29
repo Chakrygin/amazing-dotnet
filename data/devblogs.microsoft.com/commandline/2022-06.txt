@@ -1,1 +1,0 @@
-https://devblogs.microsoft.com/commandline/wsl-2-distros-are-now-supported-on-windows-server/

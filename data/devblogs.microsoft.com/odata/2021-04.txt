@@ -1,1 +1,0 @@
-https://devblogs.microsoft.com/odata/attribute-routing-in-asp-net-core-odata-8-0-rc/

@@ -1,1 +1,0 @@
-https://dotnetcoretutorials.com/2022/04/28/using-user-secrets-configuration-in-net/

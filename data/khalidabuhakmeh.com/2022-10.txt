@@ -1,4 +1,0 @@
-https://khalidabuhakmeh.com/add-ms-sql-server-json-support-to-entity-framework-core
-https://khalidabuhakmeh.com/adding-experimental-http-methods-to-aspnet-core
-https://khalidabuhakmeh.com/dotnet-class-diagrams-in-jetbrains-rider-with-plantuml
-https://khalidabuhakmeh.com/real-time-charts-with-aspnet-core-signalr-and-chartjs

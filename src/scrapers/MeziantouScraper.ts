@@ -4,86 +4,85 @@ import axios from 'axios';
 import * as cheerio from 'cheerio';
 import moment from 'moment';
 
-import ScraperBase from './ScraperBase';
+import { Scraper } from 'core/scrapers';
+import { Post, Link } from 'core/posts';
 
-import { Category, Post, Tag } from '../models';
-
-export default class MeziantouScraper extends ScraperBase {
+export default class MeziantouScraper implements Scraper {
   readonly name = 'Meziantou';
   readonly path = 'meziantou.net';
 
-  private readonly blog: Category = {
+  private readonly blog: Link & Required<Pick<Post, 'author'>> = {
     title: 'Meziantou\'s blog',
-    href: 'https://www.meziantou.net'
+    href: 'https://www.meziantou.net',
+    author: 'Gérald Barré',
   };
 
-  private readonly author: Category = {
-    title: 'Gérald Barré',
-    href: 'https://github.com/meziantou',
-  };
-
-  protected override async *readPosts(): AsyncGenerator<Post, void> {
+  async *scrape(): AsyncGenerator<Post> {
     core.info(`Parsing html page by url '${this.blog.href}'...`);
 
     const response = await axios.get(this.blog.href);
-    const $ = cheerio.load(response.data);
+    const $ = cheerio.load(response.data as string);
     const articles = $('main article').toArray();
 
     if (articles.length == 0) {
       throw new Error('Failed to parse html page. No posts found.');
     }
 
-    core.info(`Html page parsed. ${articles.length} posts found.`);
+    core.info(`Html page parsed. Number of posts found is ${articles.length}.`);
 
     for (let index = 0; index < articles.length; index++) {
       core.info(`Parsing post at index ${index}...`);
 
       const article = $(articles[index]);
-      const title = article.find('header>a');
-      const href = this.getFullHref(title.attr('href')) ?? '';
+      const link = article.find('header>a');
+      const title = link.text();
+      const href = this.getFullHref(link.attr('href')) ?? '';
       const date = article.find('header>div>div>time').text();
-
       const tags = article
         .find('header>div>div>ul a')
         .map((_, element) => $(element))
-        .map((_, tag) => ({
-          title: tag.text() ?? '',
-          href: this.getFullHref(tag.attr('href')) ?? '',
-        }))
+        .map((_, tag) => tag.text())
         .toArray();
 
       if (!this.isDotNetPost(tags)) {
-        core.info('It is not .NET post. Skipping...');
+        core.info('Post does not have .NET tag. Continue scraping.');
         continue;
       }
 
-      const post: Post = {
-        title: title.text(),
-        href: href,
+      let post: Post = {
+        title,
+        href,
         categories: [
           this.blog,
-          this.author,
         ],
+        author: this.blog.author,
         date: moment(date, 'MM/DD/YY'),
         links: [
           {
-            title: 'Read',
+            title: 'Read more',
             href: href,
           },
         ],
-        tags: tags,
+        tags,
       };
 
-      core.info(`Post title is '${post.title}'.`);
-      core.info(`Post href is '${post.href}'.`);
+      post = await this.enrichPost(post);
 
       yield post;
     }
   }
 
-  private isDotNetPost(tags: Tag[]): boolean {
+  private getFullHref(href: string | undefined): string | undefined {
+    if (href?.startsWith('/')) {
+      href = this.blog.href + href;
+    }
+
+    return href;
+  }
+
+  private isDotNetPost(tags: string[]): boolean {
     for (const tag of tags) {
-      if (tag.title === '.NET') {
+      if (tag === '.NET') {
         return true;
       }
     }
@@ -91,19 +90,11 @@ export default class MeziantouScraper extends ScraperBase {
     return false;
   }
 
-  private getFullHref(href: string | undefined): string | undefined {
-    if (href && href.startsWith('/')) {
-      href = this.blog.href + href;
-    }
-
-    return href;
-  }
-
-  protected override async enrichPost(post: Post): Promise<Post> {
+  protected async enrichPost(post: Post): Promise<Post> {
     core.info(`Parsing html page by url '${post.href}'...`);
 
     const response = await axios.get(post.href);
-    const $ = cheerio.load(response.data);
+    const $ = cheerio.load(response.data as string);
 
     const description = this.getDescription($);
 
@@ -124,14 +115,14 @@ export default class MeziantouScraper extends ScraperBase {
       .children();
 
     for (const element of elements) {
-      if (element.name == 'p') {
+      if (element.name === 'p') {
         const p = $(element);
         const text = p.text().trim();
         if (text) {
           description.push(text);
         }
       }
-      else if (element.name == 'aside') {
+      else if (element.name === 'aside') {
         continue;
       }
       else {

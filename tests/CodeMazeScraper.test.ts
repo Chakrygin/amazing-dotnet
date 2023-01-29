@@ -1,8 +1,7 @@
+import { testScraper } from 'core/testing';
+
 import CodeMazeScraper from '../src/scrapers/CodeMazeScraper';
 
-import { testScraper } from './helpers';
-
 test('CodeMaze', async () => {
-  const scraper = new CodeMazeScraper();
-  await testScraper(scraper);
+  await testScraper(knownHosts => new CodeMazeScraper(knownHosts));
 });
