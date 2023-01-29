@@ -7,7 +7,6 @@ import { Scraper } from 'core/scrapers';
 import { Post, Link } from 'core/posts';
 
 export default class AndrewLockScraper implements Scraper {
-
   readonly name = 'AndrewLock';
   readonly path = 'andrewlock.net';
 

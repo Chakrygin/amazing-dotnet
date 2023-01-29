@@ -8,6 +8,7 @@ import DotNetCoreTutorialsScraper from './scrapers/DotNetCoreTutorialsScraper';
 import HabrScraper from './scrapers/HabrScraper';
 import JetBrainsScraper from './scrapers/JetBrainsScraper';
 import KhalidAbuhakmehScraper from './scrapers/KhalidAbuhakmehScraper';
+import MaoniScraper from './scrapers/MaoniScraper';
 import MeziantouScraper from './scrapers/MeziantouScraper';
 import RadioDotNetScraper from './scrapers/RadioDotNetScraper';
 
@@ -27,6 +28,7 @@ const app = new App(knownHosts => [
   new JetBrainsScraper('releases'),
   new JetBrainsScraper('net-annotated'),
   new KhalidAbuhakmehScraper(),
+  new MaoniScraper(),
   new MeziantouScraper(),
   new RadioDotNetScraper(),
 ]);
