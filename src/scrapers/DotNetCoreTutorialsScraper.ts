@@ -48,7 +48,7 @@ export default class DotNetCoreTutorialsScraper implements Scraper {
           this.blog,
         ],
         author: this.blog.author,
-        date: date,
+        date: moment(date, 'YYYY/MM/DD'),
         links: [
           {
             title: 'Read more',
@@ -63,18 +63,15 @@ export default class DotNetCoreTutorialsScraper implements Scraper {
     }
   }
 
-  private getDate(href: string): moment.Moment {
-    const regex = /\/(?<date>\d{4}\/\d{2}\/\d{2})\//;
+  private getDate(href: string): string {
+    const regex = /\/(\d{4}\/\d{2}\/\d{2})\//;
     const match = href.match(regex);
 
     if (!match) {
       throw new Error('Failed to parse post. Can not get post date from href: ' + href);
     }
 
-    const value = match[1];
-    const date = moment(value, 'YYYY/MM/DD');
-
-    return date;
+    return match[1];
   }
 
   protected async enrichPost(post: Post): Promise<Post> {

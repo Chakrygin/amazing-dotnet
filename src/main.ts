@@ -11,6 +11,7 @@ import KhalidAbuhakmehScraper from './scrapers/KhalidAbuhakmehScraper';
 import MaoniScraper from './scrapers/MaoniScraper';
 import MeziantouScraper from './scrapers/MeziantouScraper';
 import RadioDotNetScraper from './scrapers/RadioDotNetScraper';
+import TheMorningBrewScraper from './scrapers/TheMorningBrewScraper';
 
 const app = new App(knownHosts => [
   new AndrewLockScraper(),
@@ -26,11 +27,12 @@ const app = new App(knownHosts => [
   new HabrScraper('net'),
   new JetBrainsScraper('how-tos'),
   new JetBrainsScraper('releases'),
-  new JetBrainsScraper('net-annotated'),
+  new JetBrainsScraper('net-annotated', knownHosts),
   new KhalidAbuhakmehScraper(),
   new MaoniScraper(),
   new MeziantouScraper(),
   new RadioDotNetScraper(),
+  new TheMorningBrewScraper(knownHosts),
 ]);
 
 void app.run();
