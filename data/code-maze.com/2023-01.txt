@@ -14,6 +14,7 @@ https://code-maze.com/csharp-how-to-iterate-over-json-objects/
 https://code-maze.com/csharp-randomize-list/
 https://code-maze.com/csharp-required-members/
 https://code-maze.com/csharp-resolve-non-nullable-property-must-contain-a-non-null-value-warning/
+https://code-maze.com/csharp-sql-like-operator-with-linq/
 https://code-maze.com/csharp-string-encryption-decryption/
 https://code-maze.com/csharp-task-and-valuetask/
 https://code-maze.com/data-generation-bogus-dotnet/
