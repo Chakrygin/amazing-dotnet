@@ -3,26 +3,22 @@ import * as core from '@actions/core';
 import moment from 'moment';
 import RssParser from 'rss-parser';
 
-import ScraperBase from './ScraperBase';
+import { Scraper } from 'core/scrapers';
+import { Post, Link } from 'core/posts';
 
-import { Category, Post, Tag } from '../models';
+export default class AndrewLockScraper implements Scraper {
 
-export default class AndrewLockScraper extends ScraperBase {
   readonly name = 'AndrewLock';
   readonly path = 'andrewlock.net';
 
-  private readonly blog: Category = {
+  private readonly blog: Link & Required<Pick<Post, 'author'>> = {
     title: '.NET Escapades',
-    href: 'https://andrewlock.net/',
+    href: 'https://andrewlock.net',
+    author: 'Andrew Lock',
   };
 
-  private readonly author: Category = {
-    title: 'Andrew Lock',
-    href: 'https://andrewlock.net/about/',
-  };
-
-  protected override async *readPosts(): AsyncGenerator<Post, void> {
-    core.info(`Parsing rss feed by url '${this.blog.href}rss.xml'...`);
+  async *scrape(): AsyncGenerator<Post> {
+    core.info(`Parsing rss feed by url '${this.blog.href}/rss.xml'...`);
 
     const parser = new RssParser({
       customFields: {
@@ -30,13 +26,13 @@ export default class AndrewLockScraper extends ScraperBase {
       },
     });
 
-    const feed = await parser.parseURL(this.blog.href + 'rss.xml');
+    const feed = await parser.parseURL(this.blog.href + '/rss.xml');
 
     if (feed.items.length == 0) {
       throw new Error('Failed to parse rss feed. No posts found.');
     }
 
-    core.info(`Rss feed parsed. ${feed.items.length} posts found.`);
+    core.info(`Rss feed parsed. Number of posts found is ${feed.items.length}.`);
 
     for (let index = 0; index < feed.items.length; index++) {
       core.info(`Parsing post at index ${index}...`);
@@ -44,43 +40,40 @@ export default class AndrewLockScraper extends ScraperBase {
       const item = feed.items[index];
       const image = this.getImage(item);
       const description = this.getDescription(item);
-      const tags = this.getTags(item);
 
       const post: Post = {
-        image: image,
+        image,
         title: item.title ?? '',
         href: item.link ?? '',
         categories: [
           this.blog,
-          this.author,
         ],
+        author: this.blog.author,
         date: moment(item.isoDate),
-        description: description,
+        description: [
+          description,
+        ],
         links: [
           {
-            title: 'Read',
+            title: 'Read more',
             href: item.link ?? '',
           }
         ],
-        tags: tags,
+        tags: item.categories,
       };
-
-      core.info(`Post title is '${post.title}'.`);
-      core.info(`Post href is '${post.href}'.`);
 
       yield post;
     }
   }
 
   private getImage(item: { 'media:content': unknown }): string | undefined {
-    interface MediaContent {
+    const content = item['media:content'] as {
       readonly $: {
         readonly medium: string;
         readonly url: string;
       }
-    }
+    };
 
-    const content = item['media:content'] as MediaContent;
     if (content.$.medium === 'image') {
       return content.$.url;
     }
@@ -93,28 +86,5 @@ export default class AndrewLockScraper extends ScraperBase {
     }
 
     return description;
-  }
-
-  private getTags(item: RssParser.Item): Tag[] | undefined {
-    if (item.categories && item.categories.length > 0) {
-      const tags = [];
-
-      for (const category of item.categories) {
-        const slug = category
-          .toLocaleLowerCase()
-          .replace(/^[^a-z0-9]+/g, '')
-          .replace(/[^a-z0-9]+$/g, '')
-          .replace(/[^a-z0-9]+/g, '-');
-
-        const tag: Tag = {
-          title: category,
-          href: `${this.blog.href}tag/${slug}/`,
-        };
-
-        tags.push(tag);
-      }
-
-      return tags;
-    }
   }
 }

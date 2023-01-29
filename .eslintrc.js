@@ -1,28 +1,23 @@
 module.exports = {
-  'env': {
-    'node': true
+  root: true,
+  env: {
+    node: true,
   },
-  'extends': [
-    'eslint:recommended',
-    'plugin:@typescript-eslint/recommended'
-  ],
-  'parser': '@typescript-eslint/parser',
-  'parserOptions': {
-    'ecmaVersion': 'latest',
-    'sourceType': 'module'
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    project: './tsconfig.eslint.json',
   },
-  'plugins': [
-    '@typescript-eslint'
+  plugins: ['@typescript-eslint'],
+  extends: [
+    'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/recommended-requiring-type-checking',
+    'plugin:@typescript-eslint/strict',
   ],
-  'rules': {
-    'indent': ['error', 2],
-    'linebreak-style': ['error', 'windows'],
-    'quotes': ['error', 'single'],
-    'semi': ['off'],
-    '@typescript-eslint/no-unused-vars': ['warn', {
-      'argsIgnorePattern': '^_',
-      'destructuredArrayIgnorePattern': '^_',
-    }],
-    '@typescript-eslint/semi': ['error']
+  // https://typescript-eslint.io/rules/
+  rules: {
+    'quotes': 'off',
+    '@typescript-eslint/quotes': ['error', 'single'],
   }
 };

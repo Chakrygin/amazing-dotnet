@@ -4,108 +4,115 @@ import axios from 'axios';
 import * as cheerio from 'cheerio';
 import moment from 'moment';
 
-import ScraperBase from './ScraperBase';
+import { Scraper } from 'core/scrapers';
+import { Post, Link } from 'core/posts';
 
-import { Category, Post } from '../models';
-
-const blogs = {
+const Blogs = {
   'dotnet': '.NET Blog',
   'odata': 'OData',
   'nuget': 'The NuGet Blog',
-  'typescript': 'TypeScript',
   'visualstudio': 'Visual Studio Blog',
-  'commandline': 'Windows Command Line',
 };
 
-export default class DevBlogsScraper extends ScraperBase {
+export default class DevBlogsScraper implements Scraper {
   constructor(
-    private readonly id: keyof typeof blogs) {
-    super();
-  }
+    private readonly id: keyof typeof Blogs) { }
 
-  readonly name = `DevBlogs / ${blogs[this.id]}`;
+  readonly name = `DevBlogs / ${Blogs[this.id]}`;
   readonly path = `devblogs.microsoft.com/${this.id}`;
 
-  private readonly blog: Category = {
-    title: blogs[this.id],
+  private readonly blogs: Link = {
+    title: 'DevBlogs',
+    href: 'https://devblogs.microsoft.com',
+  };
+
+  private readonly blog: Link = {
+    title: Blogs[this.id],
     href: `https://devblogs.microsoft.com/${this.id}/`,
   };
 
-  protected override async *readPosts(): AsyncGenerator<Post, void> {
+  async *scrape(): AsyncGenerator<Post> {
     core.info(`Parsing html page by url '${this.blog.href}'...`);
 
     const response = await axios.get(this.blog.href);
-    const $ = cheerio.load(response.data);
-    const entries = $('#content .entry-box').toArray();
+    const $ = cheerio.load(response.data as string);
+    const entries = $('#main .entry-box').toArray();
 
     if (entries.length == 0) {
       throw new Error('Failed to parse html page. No posts found.');
     }
 
-    core.info(`Html page parsed. ${entries.length} posts found.`);
+    core.info(`Html page parsed. Number of posts found is ${entries.length}.`);
 
     for (let index = 0; index < entries.length; index++) {
       core.info(`Parsing post at index ${index}...`);
 
       const entry = $(entries[index]);
       const image = entry.find('.entry-image img').attr('data-src');
-      const title = entry.find('.entry-title a');
-      const href = title.attr('href') ?? '';
+      const link = entry.find('.entry-title a');
+      const title = link.text();
+      const href = link.attr('href') ?? '';
       const date = entry.find('.entry-post-date').text();
-      const description = this.getDescription(entry, $);
-
       const tags = entry
-        .find('.card-tags-links .card-tags-linkbox a')
-        .map((_, element) => $(element))
+        .find('.post-categories-tags a')
+        .map((_, element) => $(element).text())
         .toArray();
 
-      const post: Post = {
-        image: image,
-        title: title.text(),
-        href: href,
+      let post: Post = {
+        image,
+        title,
+        href,
         categories: [
+          this.blogs,
           this.blog,
         ],
         date: moment(date, 'LL'),
-        description: description,
         links: [
           {
-            title: 'Read',
+            title: 'Read more',
             href: href,
           },
         ],
-        tags: tags.map(tag => {
-          return {
-            title: tag.text(),
-            href: tag.attr('href') ?? '',
-          };
-        }),
+        tags,
       };
 
-      core.info(`Post title is '${post.title}'.`);
-      core.info(`Post href is '${post.href}'.`);
+      post = await this.enrichPost(post);
 
       yield post;
     }
   }
 
+  protected async enrichPost(post: Post): Promise<Post> {
+    core.info(`Parsing html page by url '${post.href}'...`);
+
+    const response = await axios.get(post.href);
+    const $ = cheerio.load(response.data as string);
+    const entry = $('#main .entry-content');
+    const description = this.getDescription(entry, $);
+
+    post = {
+      ...post,
+      description,
+    };
+
+    return post;
+  }
+
   private getDescription(entry: cheerio.Cheerio<cheerio.Element>, $: cheerio.CheerioAPI): string[] {
     const description = [];
-
-    const elements = entry
-      .find('.entry-content')
-      .contents();
+    const elements = $(entry).children();
 
     for (const element of elements) {
-      if (element.type == 'text') {
-        const text = $(element).text();
-        const lines = text.split('\n')
-          .map(line => line.trim())
-          .filter(line => line);
+      if (element.name == 'p') {
+        const p = $(element);
+        const text = p.text().trim();
 
-        for (const line of lines) {
-          description.push(line);
+        if (text) {
+          description.push(text);
         }
+      }
+      else if (description.length > 0) {
+        break
       }
     }
 

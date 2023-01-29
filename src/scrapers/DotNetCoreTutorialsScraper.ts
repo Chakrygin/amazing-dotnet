@@ -4,119 +4,112 @@ import axios from 'axios';
 import * as cheerio from 'cheerio';
 import moment from 'moment';
 
-import ScraperBase from './ScraperBase';
+import { Scraper } from 'core/scrapers';
+import { Post, Link } from 'core/posts';
 
-import { Category, Post } from '../models';
-
-export default class DotNetCoreTutorialsScraper extends ScraperBase {
+export default class DotNetCoreTutorialsScraper implements Scraper {
   readonly name = 'DotNetCoreTutorials';
   readonly path = 'dotnetcoretutorials.com';
 
-  private readonly blog: Category = {
+  private readonly blog: Link & Required<Pick<Post, 'author'>> = {
     title: '.NET Core Tutorials',
     href: 'https://dotnetcoretutorials.com/',
+    author: 'Wade Gausden',
   };
 
-  private readonly author: Category = {
-    title: 'Wade Gausden',
-    href: 'https://dotnetcoretutorials.com/about/',
-  };
-
-  protected override async *readPosts(): AsyncGenerator<Post, void> {
+  async *scrape(): AsyncGenerator<Post> {
     core.info(`Parsing html page by url '${this.blog.href}'...`);
 
     const response = await axios.get(this.blog.href);
-    const $ = cheerio.load(response.data);
-    const articles = $('#content article').toArray();
+    const $ = cheerio.load(response.data as string);
+    const articles = $('#main article.post').toArray();
 
     if (articles.length == 0) {
       throw new Error('Failed to parse html page. No posts found.');
     }
 
-    core.info(`Html page parsed. ${articles.length} posts found.`);
+    core.info(`Html page parsed. Number of posts found is ${articles.length}.`);
 
     for (let index = 0; index < articles.length; index++) {
       core.info(`Parsing post at index ${index}...`);
 
       const article = $(articles[index]);
-      const image = this.getImage(article);
-      const title = article.find('h2.entry-title a');
-      const href = title.attr('href') ?? '';
-      const date = article.find('time.entry-date').text();
-      const description = this.getDescription(article, $);
+      const image = article.find('.post-image img').attr('data-lazy-src') ?? '';
+      const link = article.find('.entry-title a');
+      const title = link.text();
+      const href = link.attr('href') ?? '';
+      const date = this.getDate(href);
 
-      const post: Post = {
+      let post: Post = {
         image: image,
-        title: title.text(),
+        title: title,
         href: href,
         categories: [
           this.blog,
-          this.author,
         ],
-        date: moment(date, 'LL'),
-        description: description,
+        author: this.blog.author,
+        date: date,
         links: [
           {
-            title: 'Read',
+            title: 'Read more',
             href: href,
           }
         ]
       };
 
-      core.info(`Post title is '${post.title}'.`);
-      core.info(`Post href is '${post.href}'.`);
+      post = await this.enrichPost(post);
 
       yield post;
     }
   }
 
-  private getImage(article: cheerio.Cheerio<cheerio.Element>): string | undefined {
-    const img = article.find('img');
-    const width = img.attr('width');
-    const height = img.attr('height');
+  private getDate(href: string): moment.Moment {
+    const regex = /\/(?<date>\d{4}\/\d{2}\/\d{2})\//;
+    const match = href.match(regex);
 
-    if (width && height) {
-      if (parseInt(width) >= 320 && parseInt(height) >= 240) {
-        return img.attr('data-lazy-src') ?? img.attr('src');
-      }
+    if (!match) {
+      throw new Error('Failed to parse post. Can not get post date from href: ' + href);
     }
+
+    const value = match[1];
+    const date = moment(value, 'YYYY/MM/DD');
+
+    return date;
   }
 
-  private getDescription(article: cheerio.Cheerio<cheerio.Element>, $: cheerio.CheerioAPI): string[] {
+  protected async enrichPost(post: Post): Promise<Post> {
+    core.info(`Parsing html page by url '${post.href}'...`);
+
+    const response = await axios.get(post.href);
+    const $ = cheerio.load(response.data as string);
+    const description = this.getDescription($);
+
+    post = {
+      ...post,
+      description,
+    };
+
+    return post;
+  }
+
+  private getDescription($: cheerio.CheerioAPI): string[] {
     const description = [];
 
-    const elements = article
-      .find('div.entry-content')
-      .children();
-
-    let length = 0;
+    const elements = $('#main .entry-content').children();
     for (const element of elements) {
-      if (element.type != 'tag') {
-        continue;
-      }
-
-      let text = '';
-
       if (element.name == 'p') {
-        if ($('br', element).length == 0) {
-          text = $(element).text().trim();
+        const p = $(element);
+
+        const text = p.text().trim();
+        if (text) {
+          description.push(text);
+
+          if (description.length >= 3) {
+            break;
+          }
         }
       }
-      else if (element.name == 'ul') {
-        text = $(element).children()
-          .filter((_, e) => e.type == 'tag' && e.name == 'li')
-          .map((_, e) => '- ' + $(e).text().trim())
-          .toArray().join('\n');
-      }
-
-      if (!text) {
-        break;
-      }
-
-      length += text.length;
-      description.push(text);
-
-      if (length >= 500 || description.length >= 10) {
+      else if (description.length > 0) {
         break;
       }
     }
