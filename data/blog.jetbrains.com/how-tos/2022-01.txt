@@ -1,3 +1,0 @@
-https://blog.jetbrains.com/dotnet/2022/01/24/why-your-ticket-may-end-up-in-a-different-tracker/
-https://blog.jetbrains.com/dotnet/2022/01/25/unreal-engine-support-lands-in-rider/
-https://blog.jetbrains.com/dotnet/2022/01/31/entity-framework-core-inside-rider-ui-way/

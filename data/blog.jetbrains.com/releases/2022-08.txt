@@ -1,5 +1,0 @@
-https://blog.jetbrains.com/dotnet/2022/08/02/dottools-2022-2-released/
-https://blog.jetbrains.com/dotnet/2022/08/02/resharper-2022-2-released/
-https://blog.jetbrains.com/dotnet/2022/08/02/rider-2022-2-released/
-https://blog.jetbrains.com/dotnet/2022/08/10/resharper-and-rider-2022-2-1/
-https://blog.jetbrains.com/dotnet/2022/08/22/riderflow-2022-1-3-bug-fix-update/

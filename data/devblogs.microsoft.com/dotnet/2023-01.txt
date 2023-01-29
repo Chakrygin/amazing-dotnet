@@ -1,5 +1,1 @@
-https://devblogs.microsoft.com/dotnet/5-dotnet-maui-desktop-features/
-https://devblogs.microsoft.com/dotnet/announcing-the-dotnet-community-toolkit-810/
-https://devblogs.microsoft.com/dotnet/dotnet-framework-january-2023-update/
-https://devblogs.microsoft.com/dotnet/january-2023-updates/
-https://devblogs.microsoft.com/dotnet/winforms-cross-platform-dotnet-maui-command-binding/
+https://devblogs.microsoft.com/dotnet/winforms-cross-platform-dotnet-maui-command-binding

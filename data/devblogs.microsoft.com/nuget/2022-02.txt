@@ -1,2 +1,0 @@
-https://devblogs.microsoft.com/nuget/introducing-compatible-frameworks-on-nuget-org/
-https://devblogs.microsoft.com/nuget/requiring-two-factor-authentication-on-nuget-org/

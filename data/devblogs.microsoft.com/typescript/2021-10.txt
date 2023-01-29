@@ -1,4 +1,0 @@
-https://devblogs.microsoft.com/typescript/type-treat-2021-day-3/
-https://devblogs.microsoft.com/typescript/type-treat-2021-day-4/
-https://devblogs.microsoft.com/typescript/type-treat-day-5/
-https://devblogs.microsoft.com/typescript/type-treat-wrap-up/

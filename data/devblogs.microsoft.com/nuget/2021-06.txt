@@ -1,1 +1,0 @@
-https://devblogs.microsoft.com/nuget/intellicode-package-suggestions-for-nuget-in-visual-studio/

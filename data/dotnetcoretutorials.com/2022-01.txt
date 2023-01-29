@@ -1,4 +1,0 @@
-https://dotnetcoretutorials.com/2022/01/13/protobuf-in-c-net-part-2-serializing-deserializing/
-https://dotnetcoretutorials.com/2022/01/14/protobuf-in-c-net-part-3-using-length-prefixes/
-https://dotnetcoretutorials.com/2022/01/18/protobuf-in-c-net-part-4-performance-comparisons/
-https://dotnetcoretutorials.com/2022/01/29/better-exception-handling-with-entityframeworkcore-exceptions/

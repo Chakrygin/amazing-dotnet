@@ -1,1 +1,0 @@
-https://devblogs.microsoft.com/nuget/add-a-readme-to-your-nuget-package/

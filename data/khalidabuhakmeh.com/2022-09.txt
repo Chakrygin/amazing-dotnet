@@ -1,4 +1,0 @@
-https://khalidabuhakmeh.com/customize-the-authorization-pipeline-in-aspnet-core
-https://khalidabuhakmeh.com/dotnet-one-line-scoped-initializers-with-dependency-injection
-https://khalidabuhakmeh.com/getting-started-with-ef-core-postgresql-and-timescaledb
-https://khalidabuhakmeh.com/using-xml-documentation-with-aspnetcore-minimal-api-apps-and-openapi

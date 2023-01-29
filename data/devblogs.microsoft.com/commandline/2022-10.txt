@@ -1,1 +1,0 @@
-https://devblogs.microsoft.com/commandline/windows-terminal-is-now-the-default-in-windows-11/

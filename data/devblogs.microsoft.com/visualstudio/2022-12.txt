@@ -1,8 +1,0 @@
-https://devblogs.microsoft.com/visualstudio/adding-new-files-just-got-a-lot-faster/
-https://devblogs.microsoft.com/visualstudio/building-a-new-javascript-linting-experience-in-visual-studio/
-https://devblogs.microsoft.com/visualstudio/dev-tunnels-in-visual-studio-for-asp-net-core-projects/
-https://devblogs.microsoft.com/visualstudio/get-your-developer-news/
-https://devblogs.microsoft.com/visualstudio/sticky-scroll-now-in-preview/
-https://devblogs.microsoft.com/visualstudio/try-out-visual-studio-2022-17-5-preview-2/
-https://devblogs.microsoft.com/visualstudio/whats-new-in-visual-studio-productivity/
-https://devblogs.microsoft.com/visualstudio/write-markdown-without-leaving-visual-studio/

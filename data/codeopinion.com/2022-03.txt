@@ -1,3 +1,0 @@
-https://codeopinion.com/avoiding-distributed-transactions-with-the-reservation-pattern/
-https://codeopinion.com/building-a-webhooks-system-with-event-driven-architecture/
-https://codeopinion.com/gotchas-in-event-driven-architecture/

@@ -1,8 +1,0 @@
-https://blog.jetbrains.com/dotnet/2022/09/26/resharper-2022-3-early-access-program
-https://blog.jetbrains.com/dotnet/2022/09/26/rider-2022-3-early-access-program
-https://blog.jetbrains.com/dotnet/2022/10/07/rider-2022-3-eap-2
-https://blog.jetbrains.com/dotnet/2022/10/20/riderflow-2022-1-4-bug-fix-update
-https://blog.jetbrains.com/dotnet/2022/10/31/riderflow-2022-1-4
-https://blog.jetbrains.com/dotnet/2022/11/07/riderflow-2022-1-4-bug-fix-update
-https://blog.jetbrains.com/dotnet/2022/11/08/resharper-and-rider-2022-2-4-bug-fix
-https://blog.jetbrains.com/dotnet/2022/11/08/resharper-and-rider-2022-2-4-bug-fix/

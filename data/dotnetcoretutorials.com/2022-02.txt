@@ -1,3 +1,0 @@
-https://dotnetcoretutorials.com/2022/02/06/using-openapi-generator-to-scaffold-apis-and-api-clients/
-https://dotnetcoretutorials.com/2022/02/18/c11-parameter-null-checking/
-https://dotnetcoretutorials.com/2022/02/26/net-7-preview-1-has-been-released/

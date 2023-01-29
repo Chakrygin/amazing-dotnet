@@ -1,3 +1,0 @@
-https://codeopinion.com/advice-to-my-younger-self-as-a-software-developer/
-https://codeopinion.com/anti-corruption-layer-for-mapping-between-boundaries/
-https://codeopinion.com/asynchronous-request-response-pattern-for-non-blocking-workflows/
