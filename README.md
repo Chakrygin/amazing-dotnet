@@ -22,9 +22,11 @@
 
 - Персональные блоги:
     - Andrew Lock - .NET Escapades - https://andrewlock.net
+    - Chris Alcock - The Morning Brew - https://blog.cwa.me.uk
     - Derek Comartin - CodeOpinion - https://codeopinion.com
     - Gérald Barré - Meziantou's blog - https://www.meziantou.net
     - Khalid Abuhakmeh - https://khalidabuhakmeh.com
+    - Maoni Stephens - https://maoni0.medium.com
     - Wade Gausden - .NET Core Tutorials - https://dotnetcoretutorials.com
 
 - Подкасты:
