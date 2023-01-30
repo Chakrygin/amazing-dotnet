@@ -1,1 +1,2 @@
+https://www.meziantou.net/mocking-an-httpclient-using-asp-net-core-testserver.htm
 https://www.meziantou.net/using-dotnet-code-from-javascript-using-webassembly.htm
