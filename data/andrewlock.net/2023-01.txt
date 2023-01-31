@@ -1,1 +1,2 @@
 https://andrewlock.net/behind-the-scenes-of-minimal-apis-4-generating-argument-expressions-for-minimal-apis
+https://andrewlock.net/behind-the-scenes-of-minimal-apis-5-generating-argument-expressions-for-minimal-apis-continuted
