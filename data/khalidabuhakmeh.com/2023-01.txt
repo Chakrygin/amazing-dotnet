@@ -1,1 +1,2 @@
 https://khalidabuhakmeh.com/programming-svgs-with-csharp-dotnet
+https://khalidabuhakmeh.com/register-maui-views-and-viewmodels-with-scrutor
