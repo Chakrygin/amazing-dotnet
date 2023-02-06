@@ -1,0 +1,1 @@
+https://devblogs.microsoft.com/dotnet/update-to-the-dotnet-language-strategy

@@ -1,0 +1,1 @@
+https://www.meziantou.net/using-source-generated-regex-in-asp-net-core-routing.htm
