@@ -1,1 +1,2 @@
+https://codeopinion.com/which-software-architecture-patterns-do-you-use
 https://codeopinion.com/why-is-clean-architecture-so-popular
