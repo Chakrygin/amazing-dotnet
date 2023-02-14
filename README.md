@@ -9,7 +9,9 @@
         - .NET Blog - https://devblogs.microsoft.com/dotnet/
         - OData - https://devblogs.microsoft.com/odata/
         - The NuGet Blog - https://devblogs.microsoft.com/nuget/
+        - TypeScript - https://devblogs.microsoft.com/typescript/
         - Visual Studio Blog - https://devblogs.microsoft.com/visualstudio/
+        - Windows Command Line - https://devblogs.microsoft.com/commandline/
     - The JetBrains Blog / The .NET Tools Blog:
         - How-To's - https://blog.jetbrains.com/dotnet/category/how-tos/
         - Releases - https://blog.jetbrains.com/dotnet/category/releases/

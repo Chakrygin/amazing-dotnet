@@ -11,7 +11,9 @@ const Blogs = {
   'dotnet': '.NET Blog',
   'odata': 'OData',
   'nuget': 'The NuGet Blog',
+  'typescript': 'TypeScript',
   'visualstudio': 'Visual Studio Blog',
+  'commandline': 'Windows Command Line',
 };
 
 export default class DevBlogsScraper implements Scraper {
