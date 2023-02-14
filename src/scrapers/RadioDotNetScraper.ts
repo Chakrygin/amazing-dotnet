@@ -33,11 +33,17 @@ export default class RadioDotNetScraper implements Scraper {
       core.info(`Parsing post at index ${index}...`);
 
       const episode = $(episodes[index]);
-      const image = $('.sidebar__header .img-wrapper img').attr('src');
+      const image = $('.sidebar__header .img-wrapper img').attr('src') ?? '';
       const release = episode.find('.episode-body__content .release').text().trim();
       const title = episode.find('.episode-body__content .description').text().trim();
       const href = this.getFullHref(episode.attr('href')) ?? '';
       const date = episode.find('.episode-body__content .date').text();
+
+      core.info(`image: ${image}`);
+      core.info(`release: ${release}`);
+      core.info(`title: ${title}`);
+      core.info(`href: ${href}`);
+      core.info(`date: ${date}`);
 
       let post: Post = {
         image,
