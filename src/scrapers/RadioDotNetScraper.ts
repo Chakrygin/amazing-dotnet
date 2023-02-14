@@ -61,7 +61,11 @@ export default class RadioDotNetScraper implements Scraper {
         ],
       };
 
+      console.log('post.date 1', post.date);
+
       post = await this.enrichPost(post);
+
+      console.log('post.date 2', post.date);
 
       yield post;
     }
