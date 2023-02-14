@@ -5,6 +5,7 @@ import CodeMazeScraper from './scrapers/CodeMazeScraper';
 import CodeOpinionScraper from './scrapers/CodeOpinionScraper';
 import DevBlogsScraper from './scrapers/DevBlogsScraper';
 import DotNetCoreTutorialsScraper from './scrapers/DotNetCoreTutorialsScraper';
+import EnterpriseCraftsmanshipScraper from './scrapers/EnterpriseCraftsmanshipScraper';
 import HabrScraper from './scrapers/HabrScraper';
 import JetBrainsScraper from './scrapers/JetBrainsScraper';
 import KhalidAbuhakmehScraper from './scrapers/KhalidAbuhakmehScraper';
@@ -24,6 +25,7 @@ const app = new App(knownHosts => [
   new DevBlogsScraper('visualstudio'),
   new DevBlogsScraper('commandline'),
   new DotNetCoreTutorialsScraper(),
+  new EnterpriseCraftsmanshipScraper(),
   new HabrScraper('csharp'),
   new HabrScraper('fsharp'),
   new HabrScraper('net'),
