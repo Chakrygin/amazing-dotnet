@@ -40,12 +40,6 @@ export default class RadioDotNetScraper implements Scraper {
       const href = this.getFullHref(episode.attr('href')) ?? '';
       const date = episode.find('.episode-body__content .date').text();
 
-      core.info(`image: ${image}`);
-      core.info(`release: ${release}`);
-      core.info(`title: ${title}`);
-      core.info(`href: ${href}`);
-      core.info(`date: ${date}`);
-
       let post: Post = {
         image,
         title: `${release}. ${title}`,
@@ -62,11 +56,7 @@ export default class RadioDotNetScraper implements Scraper {
         ],
       };
 
-      console.log('post.date 1', post.date);
-
       post = await this.enrichPost(post);
-
-      console.log('post.date 2', post.date);
 
       yield post;
     }
