@@ -1,3 +1,5 @@
+https://devblogs.microsoft.com/dotnet/dotnet-framework-february-2023-security-and-quality-rollup-updates
 https://devblogs.microsoft.com/dotnet/february-2023-updates
+https://devblogs.microsoft.com/dotnet/improvements-to-net-framework-updates-for-windows-11-22h2
 https://devblogs.microsoft.com/dotnet/update-to-the-dotnet-language-strategy
 https://devblogs.microsoft.com/dotnet/why-dotnet
