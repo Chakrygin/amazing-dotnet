@@ -3,6 +3,7 @@ import * as core from '@actions/core';
 import axios from 'axios';
 import * as cheerio from 'cheerio';
 import moment from 'moment';
+import 'moment/locale/ru';
 
 import { Scraper } from 'core/scrapers';
 import { Post, Link } from 'core/posts';
