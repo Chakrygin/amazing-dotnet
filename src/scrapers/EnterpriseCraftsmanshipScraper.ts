@@ -13,7 +13,7 @@ export default class EnterpriseCraftsmanshipScraper implements Scraper {
 
   private readonly blog: Link & Required<Pick<Post, 'author'>> = {
     title: 'Enterprise Craftsmanship',
-    href: 'https://enterprisecraftsmanship.com',
+    href: 'https://enterprisecraftsmanship.com/posts',
     author: 'Vladimir Khorikov',
   };
 
@@ -37,8 +37,9 @@ export default class EnterpriseCraftsmanshipScraper implements Scraper {
       const title = article.find('h1.catalogue-title').text();
       const href = article.attr('href') ?? '';
       const date = article.find('time.catalogue-time').text();
-      const description = article.find('div.paragraph p')
-        .map((_, p) => $(p).text())
+      const description = article.find('p')
+        .map((_, p) => $(p).text().trim())
+        .filter((_, text) => !!text)
         .toArray();
 
       const post: Post = {
