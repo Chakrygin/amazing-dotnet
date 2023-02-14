@@ -5,6 +5,7 @@ https://code-maze.com/code-maze-weekly-160
 https://code-maze.com/csharp-convert-json-to-datatable
 https://code-maze.com/csharp-execute-cli-applications
 https://code-maze.com/csharp-how-to-clone-a-list
+https://code-maze.com/csharp-how-to-get-formatted-json
 https://code-maze.com/csharp-insert-a-key-value-pair-into-an-existing-json
 https://code-maze.com/csharp-method-overriding
 https://code-maze.com/csharp-refactoring-bloated-code
