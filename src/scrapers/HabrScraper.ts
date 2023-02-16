@@ -62,7 +62,7 @@ export default class HabrScraper implements Scraper {
       const link = article.find('a.tm-article-snippet__title-link');
       const title = link.text();
       const href = this.getFullHref(link.attr('href')) ?? '';
-      const date = article.find('.tm-article-snippet__datetime-published time').attr('datetime') ?? '';
+      const date = article.find('.tm-article-datetime-published time').attr('datetime') ?? '';
       const [categories, tags] = this.getCategoriesAndTags(article, $);
       const description = this.getDescription(article, $);
 
