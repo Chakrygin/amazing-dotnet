@@ -1,3 +1,4 @@
+https://code-maze.com/aspnetcore-modify-a-base-uri-of-swagger
 https://code-maze.com/aspnetcore-multipart-form-data-in-httpclient
 https://code-maze.com/asynchronous-programming-patterns-dotnet
 https://code-maze.com/behavior-driven-development-bdd-csharp
