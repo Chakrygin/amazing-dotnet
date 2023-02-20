@@ -1,2 +1,3 @@
+https://www.meziantou.net/creating-a-custom-main-method-in-a-wpf-application.htm
 https://www.meziantou.net/prevent-accidental-disclosure-of-configuration-secrets.htm
 https://www.meziantou.net/using-source-generated-regex-in-asp-net-core-routing.htm
