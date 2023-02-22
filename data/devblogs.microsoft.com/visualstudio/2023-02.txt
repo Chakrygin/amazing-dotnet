@@ -1,3 +1,4 @@
+https://devblogs.microsoft.com/visualstudio/intellicode-api-usage-examples
 https://devblogs.microsoft.com/visualstudio/visual-studio-2022-17-5-released
 https://devblogs.microsoft.com/visualstudio/visual-studio-ai-assistance-a-developers-best-friend
 https://devblogs.microsoft.com/visualstudio/visual-studio-for-mac-17-5-is-now-available
