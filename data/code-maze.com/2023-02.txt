@@ -20,3 +20,4 @@ https://code-maze.com/csharp-return-default-value-from-dictionary
 https://code-maze.com/dotnet-angular-two-factor-authentication-with-using-google-authenticator
 https://code-maze.com/dotnet-using-constructor-injection
 https://code-maze.com/ef-core-mock-dbcontext
+https://code-maze.com/linq-resolving-call-is-ambiguous-error
