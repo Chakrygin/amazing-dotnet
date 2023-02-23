@@ -7,3 +7,4 @@ https://devblogs.microsoft.com/dotnet/improvements-to-net-framework-updates-for-
 https://devblogs.microsoft.com/dotnet/update-to-the-dotnet-language-strategy
 https://devblogs.microsoft.com/dotnet/upgrade-assistant-now-in-visual-studio
 https://devblogs.microsoft.com/dotnet/why-dotnet
+https://devblogs.microsoft.com/dotnet/winforms-codegen-update
