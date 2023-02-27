@@ -122,10 +122,7 @@ export default class MeziantouScraper implements Scraper {
           description.push(text);
         }
       }
-      else if (element.name === 'aside') {
-        continue;
-      }
-      else {
+      else if (description.length > 0) {
         break;
       }
     }
