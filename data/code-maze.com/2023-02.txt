@@ -16,6 +16,7 @@ https://code-maze.com/csharp-file-vs-fileinfo
 https://code-maze.com/csharp-guard-clauses
 https://code-maze.com/csharp-how-to-clone-a-list
 https://code-maze.com/csharp-how-to-get-formatted-json
+https://code-maze.com/csharp-improve-enums-with-the-smartenum-library
 https://code-maze.com/csharp-insert-a-key-value-pair-into-an-existing-json
 https://code-maze.com/csharp-method-overriding
 https://code-maze.com/csharp-pass-output-parameters-to-stored-procedures-dapper
