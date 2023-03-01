@@ -1,0 +1,1 @@
+https://devblogs.microsoft.com/visualstudio/github-copilot-in-visual-studio-2022
