@@ -1,1 +1,2 @@
 https://devblogs.microsoft.com/visualstudio/github-copilot-in-visual-studio-2022
+https://devblogs.microsoft.com/visualstudio/visualstudio-extensibility-preview-3
