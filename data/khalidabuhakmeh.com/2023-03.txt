@@ -1,0 +1,1 @@
+https://khalidabuhakmeh.com/validating-connection-strings-on-dotnet-startup
