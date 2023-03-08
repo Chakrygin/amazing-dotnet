@@ -7,3 +7,4 @@ https://code-maze.com/csharp-testing-exceptions-in-mstest-nunit-and-xunit
 https://code-maze.com/csharp-timespan
 https://code-maze.com/csharp-yield-break
 https://code-maze.com/dotnet-read-connection-strings
+https://code-maze.com/serialize-list-to-json-csharp
