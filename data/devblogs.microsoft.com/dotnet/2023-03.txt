@@ -1,3 +1,4 @@
 https://devblogs.microsoft.com/dotnet/generate-ai-images-stable-diffusion-csharp-onnx-runtime
 https://devblogs.microsoft.com/dotnet/introducing-the-reliable-web-app-pattern
 https://devblogs.microsoft.com/dotnet/microsoft-teams-permission-service-migration-to-dotnet-6
+https://devblogs.microsoft.com/dotnet/update-to-winforms-vb-appframework
