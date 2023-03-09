@@ -7,5 +7,6 @@ https://code-maze.com/csharp-return-multiple-values-to-a-method-caller
 https://code-maze.com/csharp-testing-exceptions-in-mstest-nunit-and-xunit
 https://code-maze.com/csharp-timespan
 https://code-maze.com/csharp-yield-break
+https://code-maze.com/dotnet-opentelemetry-logging
 https://code-maze.com/dotnet-read-connection-strings
 https://code-maze.com/serialize-list-to-json-csharp
