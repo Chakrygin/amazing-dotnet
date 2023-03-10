@@ -1,0 +1,1 @@
+https://devblogs.microsoft.com/odata/customize-odata-payload-serialization-format-within-asp-net-core-odata
