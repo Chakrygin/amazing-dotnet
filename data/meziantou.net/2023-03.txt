@@ -1,1 +1,2 @@
+https://www.meziantou.net/measuring-performance-of-roslyn-source-generators.htm
 https://www.meziantou.net/testing-roslyn-incremental-source-generators.htm
