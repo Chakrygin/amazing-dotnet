@@ -1,1 +1,2 @@
 https://andrewlock.net/drawing-graphs-in-github-comments-with-mermaid-diagrams
+https://andrewlock.net/working-with-git-in-jetbrains-rider
