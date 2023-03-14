@@ -1,4 +1,5 @@
 https://devblogs.microsoft.com/visualstudio/developing-accessible-apps-with-visual-studio
 https://devblogs.microsoft.com/visualstudio/github-copilot-in-visual-studio-2022
 https://devblogs.microsoft.com/visualstudio/visual-studio-2022-17-5-performance-enhancements
+https://devblogs.microsoft.com/visualstudio/visual-studio-2022-v17-6-preview-2-is-now-available
 https://devblogs.microsoft.com/visualstudio/visualstudio-extensibility-preview-3
