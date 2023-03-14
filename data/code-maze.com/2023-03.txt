@@ -5,6 +5,7 @@ https://code-maze.com/code-maze-weekly-164
 https://code-maze.com/csharp-exclude-properties-from-json-serialization
 https://code-maze.com/csharp-how-to-find-caller-method
 https://code-maze.com/csharp-ienumerable-icollection-ilist-list
+https://code-maze.com/csharp-partial-classes-and-how-to-use-them
 https://code-maze.com/csharp-read-and-process-json-file
 https://code-maze.com/csharp-return-multiple-values-to-a-method-caller
 https://code-maze.com/csharp-testing-exceptions-in-mstest-nunit-and-xunit
