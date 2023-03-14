@@ -1,1 +1,2 @@
 https://devblogs.microsoft.com/odata/customize-odata-payload-serialization-format-within-asp-net-core-odata
+https://devblogs.microsoft.com/odata/enable-cbor-within-asp-net-core-odata
