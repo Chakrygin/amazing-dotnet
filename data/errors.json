@@ -1,4 +1,9 @@
 {
+  "DevBlogs / .NET Blog": {
+    "timestamp": "2023-03-15T20:43:05.436Z",
+    "message": "Request failed with status code 503",
+    "counter": 1
+  },
   "Habr / .NET": {
     "timestamp": "2023-03-15T02:53:35.296Z",
     "message": "400: Bad Request: can't parse entities: Unsupported start tag \"int,\" at byte offset 56",
