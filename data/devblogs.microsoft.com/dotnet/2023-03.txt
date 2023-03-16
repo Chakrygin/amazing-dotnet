@@ -4,6 +4,7 @@ https://devblogs.microsoft.com/dotnet/announcing-polyglot-notebooks-harness-the-
 https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-preview-2
 https://devblogs.microsoft.com/dotnet/generate-ai-images-stable-diffusion-csharp-onnx-runtime
 https://devblogs.microsoft.com/dotnet/hack-together-microsoft-graph-dotnet-final-week
+https://devblogs.microsoft.com/dotnet/how-async-await-really-works
 https://devblogs.microsoft.com/dotnet/introducing-the-reliable-web-app-pattern
 https://devblogs.microsoft.com/dotnet/march-2023-updates
 https://devblogs.microsoft.com/dotnet/microsoft-teams-permission-service-migration-to-dotnet-6
