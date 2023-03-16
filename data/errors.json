@@ -1,12 +1,12 @@
 {
   "Habr / .NET": {
-    "timestamp": "2023-03-15T02:53:35.296Z",
+    "timestamp": "2023-03-16T02:54:22.536Z",
     "message": "400: Bad Request: can't parse entities: Unsupported start tag \"int,\" at byte offset 56",
-    "counter": 2
+    "counter": 3
   },
   "Habr / C#": {
-    "timestamp": "2023-03-15T02:53:32.427Z",
+    "timestamp": "2023-03-16T02:54:20.010Z",
     "message": "400: Bad Request: can't parse entities: Unsupported start tag \"int,\" at byte offset 56",
-    "counter": 2
+    "counter": 3
   }
 }
