@@ -4,3 +4,4 @@ https://devblogs.microsoft.com/visualstudio/improving-the-spell-checker
 https://devblogs.microsoft.com/visualstudio/visual-studio-2022-17-5-performance-enhancements
 https://devblogs.microsoft.com/visualstudio/visual-studio-2022-v17-6-preview-2-is-now-available
 https://devblogs.microsoft.com/visualstudio/visualstudio-extensibility-preview-3
+https://devblogs.microsoft.com/visualstudio/welcome-experience
