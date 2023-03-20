@@ -14,6 +14,12 @@ import MeziantouScraper from './scrapers/MeziantouScraper';
 import RadioDotNetScraper from './scrapers/RadioDotNetScraper';
 import TheMorningBrewScraper from './scrapers/TheMorningBrewScraper';
 
+import moment from 'moment';
+import 'moment/locale/ru';
+
+// Setup default moment locale.
+moment.locale('en');
+
 const app = new App(knownHosts => [
   new AndrewLockScraper(),
   new CodeMazeScraper(knownHosts),
