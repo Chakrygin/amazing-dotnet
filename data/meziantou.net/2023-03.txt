@@ -1,2 +1,3 @@
 https://www.meziantou.net/measuring-performance-of-roslyn-source-generators.htm
 https://www.meziantou.net/testing-roslyn-incremental-source-generators.htm
+https://www.meziantou.net/too-many-timers-in-dotnet.htm
