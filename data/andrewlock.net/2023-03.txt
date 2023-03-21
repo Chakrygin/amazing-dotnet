@@ -1,2 +1,3 @@
 https://andrewlock.net/drawing-graphs-in-github-comments-with-mermaid-diagrams
+https://andrewlock.net/understanding-the-dotnet-ecosystem-the-evolution-of-dotnet-into-dotnet-7
 https://andrewlock.net/working-with-git-in-jetbrains-rider
