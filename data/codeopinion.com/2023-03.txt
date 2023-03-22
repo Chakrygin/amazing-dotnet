@@ -1,2 +1,3 @@
 https://codeopinion.com/domain-events-in-event-sourcing-not-exactly
+https://codeopinion.com/dont-fail-publishing-events
 https://codeopinion.com/testing-without-mocks-or-interfaces
