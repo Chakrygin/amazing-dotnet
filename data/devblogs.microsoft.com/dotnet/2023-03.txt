@@ -3,6 +3,7 @@ https://devblogs.microsoft.com/dotnet/announcing-dotnet-8-preview-2
 https://devblogs.microsoft.com/dotnet/announcing-ef8-preview-2
 https://devblogs.microsoft.com/dotnet/announcing-polyglot-notebooks-harness-the-power-of-multilanguage-notebooks-in-visual-studio-code
 https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-preview-2
+https://devblogs.microsoft.com/dotnet/codespaces-template-blazor-portfolio-website
 https://devblogs.microsoft.com/dotnet/dotnet-performance-delivers-again-for-bing-from-dotnet-5-to-dotnet-7
 https://devblogs.microsoft.com/dotnet/file-and-folder-dialogs-communitytoolkit
 https://devblogs.microsoft.com/dotnet/generate-ai-images-stable-diffusion-csharp-onnx-runtime
