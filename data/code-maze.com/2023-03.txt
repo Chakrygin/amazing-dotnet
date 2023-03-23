@@ -1,3 +1,4 @@
+https://code-maze.com/apsnetcore-webapi-addendpointsapiexplorer-method
 https://code-maze.com/aspnet-core-output-caching
 https://code-maze.com/aspnetcore-get-current-user-claims
 https://code-maze.com/charp-difference-between-returning-and-awaiting-a-task
