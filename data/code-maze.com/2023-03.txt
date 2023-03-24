@@ -21,4 +21,5 @@ https://code-maze.com/csharp-yield-break
 https://code-maze.com/csharp-zip-files
 https://code-maze.com/dotnet-opentelemetry-logging
 https://code-maze.com/dotnet-read-connection-strings
+https://code-maze.com/json-dotnet-create-custom-jsonconverter
 https://code-maze.com/serialize-list-to-json-csharp
