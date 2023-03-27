@@ -8,6 +8,7 @@ https://code-maze.com/code-maze-weekly-164
 https://code-maze.com/code-maze-weekly-165
 https://code-maze.com/code-maze-weekly-166
 https://code-maze.com/csharp-datatable-class
+https://code-maze.com/csharp-deep-copy-of-object
 https://code-maze.com/csharp-exclude-properties-from-json-serialization
 https://code-maze.com/csharp-how-to-find-caller-method
 https://code-maze.com/csharp-ienumerable-icollection-ilist-list
