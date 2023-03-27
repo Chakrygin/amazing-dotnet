@@ -1,3 +1,4 @@
+https://www.meziantou.net/handling-cancelkeypress-using-a-cancellationtoken.htm
 https://www.meziantou.net/measuring-performance-of-roslyn-source-generators.htm
 https://www.meziantou.net/testing-roslyn-incremental-source-generators.htm
 https://www.meziantou.net/too-many-timers-in-dotnet.htm
