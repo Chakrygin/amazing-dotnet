@@ -9,6 +9,7 @@ https://devblogs.microsoft.com/dotnet/file-and-folder-dialogs-communitytoolkit
 https://devblogs.microsoft.com/dotnet/generate-ai-images-stable-diffusion-csharp-onnx-runtime
 https://devblogs.microsoft.com/dotnet/hack-together-microsoft-graph-dotnet-final-week
 https://devblogs.microsoft.com/dotnet/how-async-await-really-works
+https://devblogs.microsoft.com/dotnet/improving-multiplatform-container-support
 https://devblogs.microsoft.com/dotnet/introducing-the-reliable-web-app-pattern
 https://devblogs.microsoft.com/dotnet/march-2023-updates
 https://devblogs.microsoft.com/dotnet/microsoft-teams-permission-service-migration-to-dotnet-6
