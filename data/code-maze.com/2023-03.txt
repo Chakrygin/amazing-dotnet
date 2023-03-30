@@ -28,3 +28,4 @@ https://code-maze.com/dotnet-opentelemetry-logging
 https://code-maze.com/dotnet-read-connection-strings
 https://code-maze.com/json-dotnet-create-custom-jsonconverter
 https://code-maze.com/serialize-list-to-json-csharp
+https://code-maze.com/vendor-agnostic-telemetry-opentelemetry-collector-dotnet
