@@ -2,3 +2,5 @@ https://blog.jetbrains.com/dotnet/2023/03/03/riderflow-2023-1-release-is-here
 https://blog.jetbrains.com/dotnet/2023/03/06/rider-2023-1-eap-7
 https://blog.jetbrains.com/dotnet/2023/03/10/resharper-2023-1-eap-8
 https://blog.jetbrains.com/dotnet/2023/03/10/rider-2023-1-eap-8
+https://blog.jetbrains.com/dotnet/2023/03/30/resharper-2023-1-beta
+https://blog.jetbrains.com/dotnet/2023/03/30/rider-2023-1-beta-is-out
