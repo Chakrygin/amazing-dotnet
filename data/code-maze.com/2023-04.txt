@@ -1,1 +1,2 @@
 https://code-maze.com/csharp-null-conditional-operators
+https://code-maze.com/csharp-refactoring-object-orientation-abusers
