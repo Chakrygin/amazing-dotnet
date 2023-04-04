@@ -1,8 +1,12 @@
+https://habr.com/ru/articles/545190
+https://habr.com/ru/articles/567126
 https://habr.com/ru/articles/597437
 https://habr.com/ru/articles/669682
 https://habr.com/ru/articles/682340
 https://habr.com/ru/articles/684104
 https://habr.com/ru/articles/707294
+https://habr.com/ru/articles/721874
+https://habr.com/ru/articles/722368
 https://habr.com/ru/articles/722370
 https://habr.com/ru/articles/722374
 https://habr.com/ru/articles/723078
@@ -14,7 +18,9 @@ https://habr.com/ru/companies/ozontech/articles/722578
 https://habr.com/ru/companies/piter/articles/725338
 https://habr.com/ru/companies/pvs-studio/articles/723776
 https://habr.com/ru/companies/pvs-studio/articles/724218
+https://habr.com/ru/companies/ruvds/articles/545740
 https://habr.com/ru/companies/ruvds/articles/695808
+https://habr.com/ru/companies/skbkontur/articles/721822
 https://habr.com/ru/companies/skbkontur/articles/723010
 https://habr.com/ru/company/otus/blog/725762
 https://habr.com/ru/post/726356
