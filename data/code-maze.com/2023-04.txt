@@ -1,2 +1,3 @@
 https://code-maze.com/csharp-null-conditional-operators
 https://code-maze.com/csharp-refactoring-object-orientation-abusers
+https://code-maze.com/replace-whitespaces-string-csharp
