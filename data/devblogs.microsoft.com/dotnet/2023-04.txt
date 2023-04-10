@@ -1,2 +1,3 @@
 https://devblogs.microsoft.com/dotnet/aspnet-core-route-tooling-dotnet-8
 https://devblogs.microsoft.com/dotnet/improvements-auth-identity-aspnetcore-8
+https://devblogs.microsoft.com/dotnet/learn-how-to-modernize-your-dotnet-apps
