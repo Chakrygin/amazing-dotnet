@@ -1,2 +1,0 @@
-https://blog.jetbrains.com/dotnet/2023/02/20/list-and-span-pattern-matching-using-csharp-11-in-rider-and-resharper
-https://blog.jetbrains.com/dotnet/2023/02/27/raw-strings-utf-8-strings-multiline-interpolations-using-csharp-11-in-rider-and-resharper

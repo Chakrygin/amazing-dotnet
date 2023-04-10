@@ -1,1 +1,0 @@
-https://codeopinion.com/thats-not-an-aggregate-in-domain-driven-design

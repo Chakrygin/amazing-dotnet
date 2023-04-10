@@ -1,4 +1,0 @@
-https://andrewlock.net/behind-the-scenes-of-minimal-apis-6-generating-the-response-writing-expression
-https://andrewlock.net/behind-the-scenes-of-minimal-apis-7-building-the-final-requestdelegate
-https://andrewlock.net/behind-the-scenes-of-minimal-apis-8-customising-the-request-delegate-with-filters
-https://andrewlock.net/thoughts-on-what-is-dotnet-and-why-should-you-choose-it

@@ -1,1 +1,0 @@
-https://devblogs.microsoft.com/nuget/write-a-high-quality-readme-for-nuget-packages

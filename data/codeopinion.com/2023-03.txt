@@ -1,4 +1,0 @@
-https://codeopinion.com/domain-events-in-event-sourcing-not-exactly
-https://codeopinion.com/dont-fail-publishing-events
-https://codeopinion.com/i-need-data-from-another-service-do-you-really
-https://codeopinion.com/testing-without-mocks-or-interfaces

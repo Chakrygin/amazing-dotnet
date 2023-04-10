@@ -1,4 +1,0 @@
-https://khalidabuhakmeh.com/combining-11ty-static-site-generator-with-aspnet-core
-https://khalidabuhakmeh.com/generating-bogus-http-endpoints-with-aspnet-core-minimal-apis
-https://khalidabuhakmeh.com/how-to-use-entity-framework-core-in-aspnet-core
-https://khalidabuhakmeh.com/speed-up-aspnet-core-json-apis-with-source-generators

@@ -1,9 +1,7 @@
 {
   "extends": "./tsconfig.json",
-  "compilerOptions": {
-    "rootDir": "./",
-  },
   "include": [
+    "core",
     "src",
     "tests",
     ".eslintrc.js",

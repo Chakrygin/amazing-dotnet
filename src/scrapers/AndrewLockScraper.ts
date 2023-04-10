@@ -1,42 +1,27 @@
-import * as core from '@actions/core';
-
 import moment from 'moment';
 import RssParser from 'rss-parser';
 
-import { Scraper } from 'core/scrapers';
-import { Post, Link } from 'core/posts';
+import { Link, Post } from '../../core/models';
+import { RssFeedScraper } from '../../core/scrapers';
 
-export default class AndrewLockScraper implements Scraper {
+export class AndrewLockScraper extends RssFeedScraper {
   readonly name = 'AndrewLock';
   readonly path = 'andrewlock.net';
+  readonly author = 'Andrew Lock';
 
-  private readonly blog: Link & Required<Pick<Post, 'author'>> = {
+  private readonly blog: Link = {
     title: '.NET Escapades',
     href: 'https://andrewlock.net',
-    author: 'Andrew Lock',
   };
 
-  async *scrape(): AsyncGenerator<Post> {
-    core.info(`Parsing rss feed by url '${this.blog.href}/rss.xml'...`);
-
+  protected readPosts(): AsyncGenerator<Post> {
     const parser = new RssParser({
       customFields: {
         item: ['media:content', 'media:content', { keepArray: true }],
       },
     });
 
-    const feed = await parser.parseURL(this.blog.href + '/rss.xml');
-
-    if (feed.items.length == 0) {
-      throw new Error('Failed to parse rss feed. No posts found.');
-    }
-
-    core.info(`Rss feed parsed. Number of posts found is ${feed.items.length}.`);
-
-    for (let index = 0; index < feed.items.length; index++) {
-      core.info(`Parsing post at index ${index}...`);
-
-      const item = feed.items[index];
+    return this.readPostsFromRssFeed(parser, this.blog.href + '/rss.xml', (feed, item) => {
       const image = this.getImage(item);
       const description = this.getDescription(item);
 
@@ -47,22 +32,20 @@ export default class AndrewLockScraper implements Scraper {
         categories: [
           this.blog,
         ],
-        author: this.blog.author,
+        author: this.author,
         date: moment(item.isoDate),
-        description: [
-          description,
-        ],
+        description: description,
         links: [
           {
             title: 'Read more',
             href: item.link ?? '',
-          }
+          },
         ],
         tags: item.categories,
       };
 
-      yield post;
-    }
+      return post;
+    });
   }
 
   private getImage(item: { 'media:content': unknown }): string | undefined {
@@ -70,7 +53,7 @@ export default class AndrewLockScraper implements Scraper {
       readonly $: {
         readonly medium: string;
         readonly url: string;
-      }
+      };
     };
 
     if (content.$.medium === 'image') {
@@ -78,12 +61,12 @@ export default class AndrewLockScraper implements Scraper {
     }
   }
 
-  private getDescription(item: RssParser.Item): string {
+  private getDescription(item: RssParser.Item): string[] {
     let description = item.contentSnippet?.trim() ?? '';
     if (!description.endsWith('.')) {
       description += '.';
     }
 
-    return description;
+    return [description];
   }
 }

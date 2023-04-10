@@ -1,15 +1,14 @@
-import * as core from '@actions/core';
-
-import axios from 'axios';
 import * as cheerio from 'cheerio';
 import moment from 'moment';
 
-import { Scraper } from 'core/scrapers';
-import { Post, Link } from 'core/posts';
+import { Link, Post } from '../../core/models';
+import { HtmlPageScraper } from '../../core/scrapers';
 
-export default class CodeMazeScraper implements Scraper {
+export class CodeMazeScraper extends HtmlPageScraper {
   constructor(
-    private readonly knownHosts: readonly string[]) { }
+    private readonly knownHosts: readonly string[]) {
+    super();
+  }
 
   readonly name = 'CodeMaze';
   readonly path = 'code-maze.com';
@@ -19,33 +18,19 @@ export default class CodeMazeScraper implements Scraper {
     href: 'https://code-maze.com',
   };
 
-  async *scrape(): AsyncGenerator<Post> {
-    core.info(`Parsing html page by url '${this.blog.href}'...`);
-
-    const response = await axios.get(this.blog.href);
-    const $ = cheerio.load(response.data as string);
-    const articles = $('.homePage_LatestPost article').toArray();
-
-    if (articles.length == 0) {
-      throw new Error('Failed to parse html page. No posts found.');
-    }
-
-    core.info(`Html page parsed. Number of posts found is ${articles.length}.`);
-
-    for (let index = 0; index < articles.length; index++) {
-      core.info(`Parsing post at index ${index}...`);
-
-      const article = $(articles[index]);
+  protected readPosts(): AsyncGenerator<Post> {
+    return this.readPostsFromHtmlPage(this.blog.href, '#et-boc .homePage_LatestPost article', ($, article) => {
       const image = this.getDefaultImage(article);
       const link = article.find('h2.entry-title a');
       const title = link.text();
       const href = link.attr('href') ?? '';
       const date = this.getDate(article);
 
-      let post: Post = {
+      const post: Post = {
         image,
         title,
         href,
+
         categories: [
           this.blog,
         ],
@@ -54,14 +39,12 @@ export default class CodeMazeScraper implements Scraper {
           {
             title: 'Read more',
             href: href,
-          }
-        ]
+          },
+        ],
       };
 
-      post = await this.enrichPost(post);
-
-      yield post;
-    }
+      return post;
+    });
   }
 
   private getDefaultImage(article: cheerio.Cheerio<cheerio.Element>): string | undefined {
@@ -82,36 +65,35 @@ export default class CodeMazeScraper implements Scraper {
     return date.trim();
   }
 
-  protected async enrichPost(post: Post): Promise<Post> {
-    core.info(`Parsing html page by url '${post.href}'...`);
+  protected override enrichPost(post: Post): Promise<Post> {
+    return this.readPostFromHtmlPage(post.href, '#content-area article', ($, article) => {
 
-    const response = await axios.get(post.href);
-    const $ = cheerio.load(response.data as string);
+      if (post.title.startsWith('Code Maze Weekly')) {
+        const description = this.getWeeklyDescription($, article);
 
-    if (post.title.startsWith('Code Maze Weekly')) {
-      const description = this.getWeeklyDescription($);
+        post = {
+          ...post,
+          description,
+        };
+      }
+      else {
+        const image = this.getImage($, article);
+        const description = this.getDescription($, article);
 
-      post = {
-        ...post,
-        description,
-      };
-    }
-    else {
-      const image = this.getImage($);
-      const description = this.getDescription($);
+        post = {
+          ...post,
+          image: image ?? post.image,
+          description,
+        };
+      }
 
-      post = {
-        ...post,
-        image: image ?? post.image,
-        description,
-      };
-    }
-
-    return post;
+      return post;
+    });
   }
 
-  private getImage($: cheerio.CheerioAPI): string | undefined {
-    const elements = $('#content-area .post-content img');
+  private getImage($: cheerio.CheerioAPI, article: cheerio.Cheerio<cheerio.Element>): string | undefined {
+    const elements = article.find('.post-content img');
+
     for (const element of elements) {
       const image = $(element);
       const width = image.attr('width');
@@ -125,23 +107,25 @@ export default class CodeMazeScraper implements Scraper {
     }
   }
 
-  private getDescription($: cheerio.CheerioAPI): string[] {
-    const description = [];
+  private getDescription($: cheerio.CheerioAPI, article: cheerio.Cheerio<cheerio.Element>): string[] {
+    const description: string[] = [];
 
-    const elements = $('#content-area .post-content').children();
+    const elements = article.find('.post-content').children();
     for (const element of elements) {
       if (element.name == 'p') {
         const p = $(element);
-
         const text = p.text().trim();
-        description.push(text);
 
-        if (description.length >= 3) {
-          break;
-        }
+        if (text) {
+          description.push(text);
 
-        if (text.includes('In this article')) {
-          break;
+          if (description.length >= 3) {
+            break;
+          }
+
+          if (text.includes('In this article')) {
+            break;
+          }
         }
       }
       else if (description.length > 0) {
@@ -152,13 +136,13 @@ export default class CodeMazeScraper implements Scraper {
     return description;
   }
 
-  private getWeeklyDescription($: cheerio.CheerioAPI): string[] | undefined {
+  private getWeeklyDescription($: cheerio.CheerioAPI, article: cheerio.Cheerio<cheerio.Element>): string[] | undefined {
     const description: string[] = [];
 
-    const elements = $('#content-area .post-content a.entryTitle');
+    const elements = article.find('.post-content a.entryTitle');
     for (const element of elements) {
       const link = $(element);
-      const title = link.text();
+      const title = link.text().trim();
       const href = link.attr('href');
 
       if (title && href && !this.isKnownHost(href)) {

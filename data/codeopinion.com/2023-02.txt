@@ -1,4 +1,0 @@
-https://codeopinion.com/the-challenge-of-microservices-ui-composition
-https://codeopinion.com/whats-enough-complexity-for-a-domain-model
-https://codeopinion.com/which-software-architecture-patterns-do-you-use
-https://codeopinion.com/why-is-clean-architecture-so-popular

@@ -1,3 +1,0 @@
-https://devblogs.microsoft.com/commandline/d3d12-gpu-video-acceleration-in-the-windows-subsystem-for-linux-now-available
-https://devblogs.microsoft.com/commandline/windows-package-manager-1-4
-https://devblogs.microsoft.com/commandline/windows-terminal-preview-1-17-release

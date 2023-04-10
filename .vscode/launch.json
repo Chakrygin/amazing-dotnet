@@ -15,10 +15,10 @@
       ],
       "envFile": "${env:USERPROFILE}/amazing.env",
       "outFiles": [
+        "${workspaceFolder}/core/*.ts",
+        "${workspaceFolder}/core/**/*.ts",
         "${workspaceFolder}/src/*.ts",
         "${workspaceFolder}/src/**/*.ts",
-        "${workspaceFolder}/../amazing-core/lib/*.js",
-        "${workspaceFolder}/../amazing-core/lib/**/*.js",
       ],
       "skipFiles": [
         "<node_internals>/**"
@@ -41,12 +41,12 @@
       ],
       "envFile": "${env:USERPROFILE}/amazing.env",
       "outFiles": [
+        "${workspaceFolder}/core/*.ts",
+        "${workspaceFolder}/core/**/*.ts",
         "${workspaceFolder}/src/*.ts",
         "${workspaceFolder}/src/**/*.ts",
         "${workspaceFolder}/tests/*.ts",
         "${workspaceFolder}/tests/**/*.ts",
-        "${workspaceFolder}/../amazing-core/lib/*.js",
-        "${workspaceFolder}/../amazing-core/lib/**/*.js",
       ],
       "skipFiles": [
         "<node_internals>/**"

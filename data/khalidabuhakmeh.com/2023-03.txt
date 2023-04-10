@@ -1,4 +1,0 @@
-https://khalidabuhakmeh.com/dotnet-maui-app-stopped-working-help
-https://khalidabuhakmeh.com/dotnet-maui-development-environment-set-up-walkthrough
-https://khalidabuhakmeh.com/solving-dotnet-json-deserialization-issues
-https://khalidabuhakmeh.com/validating-connection-strings-on-dotnet-startup

@@ -1,2 +1,0 @@
-https://devblogs.microsoft.com/nuget/announcing-nuget-6-5-the-sweetest-way-to-manage-your-packages
-https://devblogs.microsoft.com/nuget/introducing-search-by-target-framework-on-nuget-org
