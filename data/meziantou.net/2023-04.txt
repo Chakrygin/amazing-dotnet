@@ -1,1 +1,2 @@
+https://www.meziantou.net/investigating-a-crash-in-enumerable-lastordefault.htm
 https://www.meziantou.net/listing-all-available-etw-events-in-a-dotnet-application.htm
