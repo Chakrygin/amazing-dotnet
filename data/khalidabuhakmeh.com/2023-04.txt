@@ -1,1 +1,2 @@
+https://khalidabuhakmeh.com/dependency-injection-with-avalonia-ui-apps
 https://khalidabuhakmeh.com/load-youtube-embed-videos-with-javascript
