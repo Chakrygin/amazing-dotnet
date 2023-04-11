@@ -3,6 +3,7 @@ https://code-maze.com/csharp-how-to-declare-an-empty-array
 https://code-maze.com/csharp-inner-join-linq
 https://code-maze.com/csharp-null-conditional-operators
 https://code-maze.com/csharp-refactoring-object-orientation-abusers
+https://code-maze.com/csharp-round-down-a-number-to-a-nearest-integer
 https://code-maze.com/dotnet-handling-commandtimeout-with-dapper
 https://code-maze.com/dotnet-how-to-write-logs-from-startup-program-classes
 https://code-maze.com/replace-whitespaces-string-csharp
