@@ -30,7 +30,6 @@ export class CodeMazeScraper extends HtmlPageScraper {
         image,
         title,
         href,
-
         categories: [
           this.blog,
         ],
@@ -65,7 +64,7 @@ export class CodeMazeScraper extends HtmlPageScraper {
     return date.trim();
   }
 
-  protected override enrichPost(post: Post): Promise<Post> {
+  protected override enrichPost(post: Post): Promise<Post | undefined> {
     return this.readPostFromHtmlPage(post.href, '#content-area article', ($, article) => {
 
       if (post.title.startsWith('Code Maze Weekly')) {
@@ -110,7 +109,10 @@ export class CodeMazeScraper extends HtmlPageScraper {
   private getDescription($: cheerio.CheerioAPI, article: cheerio.Cheerio<cheerio.Element>): string[] {
     const description: string[] = [];
 
-    const elements = article.find('.post-content').children();
+    const elements = article
+      .find('.post-content')
+      .children();
+
     for (const element of elements) {
       if (element.name == 'p') {
         const p = $(element);
@@ -119,11 +121,7 @@ export class CodeMazeScraper extends HtmlPageScraper {
         if (text) {
           description.push(text);
 
-          if (description.length >= 3) {
-            break;
-          }
-
-          if (text.includes('In this article')) {
+          if (description.length >= 5) {
             break;
           }
         }
@@ -139,7 +137,9 @@ export class CodeMazeScraper extends HtmlPageScraper {
   private getWeeklyDescription($: cheerio.CheerioAPI, article: cheerio.Cheerio<cheerio.Element>): string[] | undefined {
     const description: string[] = [];
 
-    const elements = article.find('.post-content a.entryTitle');
+    const elements = article
+      .find('.post-content a.entryTitle');
+
     for (const element of elements) {
       const link = $(element);
       const title = link.text().trim();

@@ -10,7 +10,7 @@ export abstract class HtmlPageScraper extends ScraperBase {
   protected async *readPostsFromHtmlPage(
     url: string,
     selector: string,
-    readPost: ($: cheerio.CheerioAPI, element: cheerio.Cheerio<cheerio.Element>) => Post,
+    readPost: ($: cheerio.CheerioAPI, element: cheerio.Cheerio<cheerio.Element>) => Post | undefined,
   ): AsyncGenerator<Post> {
     core.info(`Parsing html page by url ${url}...`);
 
@@ -30,15 +30,17 @@ export abstract class HtmlPageScraper extends ScraperBase {
       const element = $(elements[index]);
       const post = readPost($, element);
 
-      yield post;
+      if (post) {
+        yield post;
+      }
     }
   }
 
   protected async readPostFromHtmlPage(
     url: string,
     selector: string,
-    readPost: ($: cheerio.CheerioAPI, element: cheerio.Cheerio<cheerio.Element>) => Post,
-  ): Promise<Post> {
+    readPost: ($: cheerio.CheerioAPI, element: cheerio.Cheerio<cheerio.Element>) => Post | undefined,
+  ): Promise<Post | undefined> {
     core.info(`Parsing html page by url ${url}...`);
 
     const response = await axios.get(url);
@@ -56,6 +58,8 @@ export abstract class HtmlPageScraper extends ScraperBase {
     const element = $(elements[0]);
     const post = readPost($, element);
 
-    return post;
+    if (post) {
+      return post;
+    }
   }
 }

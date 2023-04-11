@@ -14,9 +14,8 @@ export abstract class ScraperBase implements Scraper {
   async scrape(sender: Sender, storage: Storage): Promise<void> {
     let firstPostDate: moment.Moment | undefined;
 
-    for await (let post of this.readPosts()) {
-      core.info(`Post title is '${post.title}'`);
-      core.info(`Post href is '${post.href}'`);
+    for await (const post of this.readPosts()) {
+      this.printPost(post);
 
       if (storage.has(post.href)) {
         core.info('The post already exists in the storage. Break scraping.');
@@ -31,19 +30,37 @@ export abstract class ScraperBase implements Scraper {
         break;
       }
 
-      post = await this.enrichPost(post);
+      const enrichedPost = await this.enrichPost(post);
 
-      core.info('Sending the post...');
-      await sender.send(post);
+      if (enrichedPost) {
+        this.printPostJson(enrichedPost);
 
-      core.info('Storing the post...');
-      storage.add(post.href);
+        core.info('Sending the post...');
+        await sender.send(enrichedPost);
+
+        core.info('Storing the post...');
+        storage.add(enrichedPost.href);
+      }
     }
   }
 
   protected abstract readPosts(): AsyncGenerator<Post>;
 
-  protected enrichPost(post: Post): Promise<Post> {
+  protected enrichPost(post: Post): Promise<Post | undefined> {
     return Promise.resolve(post);
+  }
+
+  protected printPost(post: Post): void {
+    core.info(`Post title is '${post.title}'.`);
+    core.info(`Post href is '${post.href}'.`);
+  }
+
+  protected printPostJson(post: Post): void {
+    const json = JSON.stringify(post, null, 2)
+      .split('\n')
+      .map(line => '  ' + line)
+      .join('\n');
+
+    core.info('Post is \n' + json + '\n');
   }
 }
