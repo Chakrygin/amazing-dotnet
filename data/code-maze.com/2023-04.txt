@@ -1,1 +1,2 @@
 https://code-maze.com/csharp-round-down-a-number-to-a-nearest-integer/
+https://code-maze.com/csharp-validate-email-address/
