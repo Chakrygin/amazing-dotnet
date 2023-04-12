@@ -25,7 +25,7 @@ export abstract class DevBlogsScraperBase extends HtmlPageScraper {
   };
 
   protected readPosts(): AsyncGenerator<Post> {
-    return this.readPostsFromHtmlPage('', '#main .entry-box', ($, article) => {
+    return this.readPostsFromHtmlPage(this.DevBlog.href, '#main .entry-box', ($, article) => {
       const image = article.find('.entry-image img').attr('data-src');
       const link = article.find('.entry-title a');
       const title = link.text();

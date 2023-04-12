@@ -14,7 +14,7 @@ export class KhalidAbuhakmehScraper extends HtmlPageScraper {
   };
 
   protected readPosts(): AsyncGenerator<Post> {
-    return this.readPostsFromHtmlPage(this.blog.href, '#main article.post', ($, article) => {
+    return this.readPostsFromHtmlPage(this.blog.href, '#page article', ($, article) => {
       const image = this.getImage(article);
       const link = article.find('h2.post-title a');
       const title = link.text();

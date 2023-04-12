@@ -28,7 +28,7 @@ export class MeziantouScraper extends HtmlPageScraper {
         .map((_, tag) => tag.text().trim())
         .toArray();
 
-      if (!('.NET' in tags)) {
+      if (!tags.includes('.NET')) {
         core.info('Post does not have .NET tag. Continue scraping.');
         return;
       }

@@ -14,7 +14,7 @@ export class EnterpriseCraftsmanshipScraper extends HtmlPageScraper {
   };
 
   protected readPosts(): AsyncGenerator<Post> {
-    return this.readPostsFromHtmlPage(this.blog.href, '#main article.post', ($, article) => {
+    return this.readPostsFromHtmlPage(this.blog.href, 'main .catalogue a.catalogue-item', ($, article) => {
       const title = article.find('h1.catalogue-title').text();
       const href = article.attr('href') ?? '';
       const date = article.find('time.catalogue-time').text();

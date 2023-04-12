@@ -37,7 +37,7 @@ export class JetBrainsScraper extends HtmlPageScraper {
   };
 
   protected readPosts(): AsyncGenerator<Post> {
-    return this.readPostsFromHtmlPage(this.blog.href, '.card_container a.card', ($, article) => {
+    return this.readPostsFromHtmlPage(this.category.href, '.card_container a.card', ($, article) => {
       const image = article.find('img.wp-post-image').attr('src');
       const title = article.find('.card__header h3').text();
       const href = article.attr('href') ?? '';
@@ -65,7 +65,7 @@ export class JetBrainsScraper extends HtmlPageScraper {
   }
 
   protected override enrichPost(post: Post): Promise<Post | undefined> {
-    return this.readPostFromHtmlPage(post.href, '.article-section .content', ($, article) => {
+    return this.readPostFromHtmlPage(post.href, '#main>.article-section>.content', ($, article) => {
       const description = this.id !== 'net-annotated'
         ? this.getDescription($, article)
         : this.getAnnotatedDescription($, article);
@@ -89,7 +89,7 @@ export class JetBrainsScraper extends HtmlPageScraper {
   private getDescription($: cheerio.CheerioAPI, article: cheerio.Cheerio<cheerio.Element>): string[] {
     const description: string[] = [];
 
-    const elements = $(article).children();
+    const elements = article.children();
     for (const element of elements) {
       if (element.name == 'p') {
         const p = $(element);
@@ -114,7 +114,7 @@ export class JetBrainsScraper extends HtmlPageScraper {
   private getAnnotatedDescription($: cheerio.CheerioAPI, article: cheerio.Cheerio<cheerio.Element>): string[] {
     const description = [];
 
-    const elements = $(article).find('>ul>li>a:first-child');
+    const elements = article.find('>ul>li>a:first-child');
     for (const element of elements) {
       const link = $(element);
       const title = link.text();
