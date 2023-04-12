@@ -1,0 +1,1 @@
+https://maoni0.medium.com/how-the-heap-verification-mode-helps-with-debugging-heap-corruption-58b3d08f5e8c
