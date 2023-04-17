@@ -1,3 +1,4 @@
+https://code-maze.com/aspnetcore-resource-based-authorization/
 https://code-maze.com/code-maze-weekly-169/
 https://code-maze.com/csharp-design-pattern-aggregate/
 https://code-maze.com/csharp-different-ways-to-split-a-string/
