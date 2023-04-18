@@ -1,106 +1,121 @@
-import * as cheerio from 'cheerio';
-import moment from 'moment';
+// import * as cheerio from 'cheerio';
+// import moment from 'moment';
 
-import { Link, Post } from '../../core/models';
-import { HtmlPageScraper } from '../../core/scrapers';
+// import { Link, Post } from '../../core/models';
+// import { HtmlPageScraper } from '../../core/scrapers';
 
-export class MaoniScraper extends HtmlPageScraper {
-  readonly name = 'Maoni';
-  readonly path = 'maoni0.medium.com';
+// export class MaoniScraper extends HtmlPageScraper {
+//   readonly name = 'Maoni';
+//   readonly path = 'maoni0.medium.com';
 
-  private readonly blog: Link = {
-    title: 'Maoni Stephens',
-    href: 'https://maoni0.medium.com',
-  };
+//   private readonly Maoni: Link = {
+//     title: 'Maoni Stephens',
+//     href: 'https://maoni0.medium.com',
+//   };
 
-  protected readPosts(): AsyncGenerator<Post> {
-    return this.readPostsFromHtmlPage(this.blog.href, 'main article', ($, article) => {
-      const header = article.find('h2');
-      const title = header.text();
-      const link = header.parents('a').first();
-      const href = this.getFullHref(link.attr('href')) ?? '';
-      const date = article.find('a>p>span').first().text();
+//   protected override fetchPosts(): AsyncGenerator<Post> {
+//     return this
+//       .fromHtmlPage(this.Maoni.href)
+//       .fetchPosts(MaoniFetchReader, reader => {
+//         const post: Post = {
+//           title: reader.title,
+//           href: this.getFullHref(reader.href),
+//           categories: [
+//             this.Maoni,
+//           ],
+//           date: moment(reader.date, 'LL'),
+//           links: [
+//             {
+//               title: 'Read more',
+//               href: this.getFullHref(reader.href),
+//             },
+//           ],
+//         };
 
-      const post: Post = {
-        title,
-        href,
-        categories: [
-          this.blog,
-        ],
-        date: moment(date, 'LL'),
-        links: [
-          {
-            title: 'Read more',
-            href: href,
-          },
-        ],
-      };
+//         return post;
+//       });
+//   }
 
-      return post;
-    });
-  }
+//   protected override enrichPost(post: Post): Promise<Post | undefined> {
+//     return this
+//       .fromHtmlPage(post.href)
+//       .enrichPost(MaoniEnrichReader, reader => {
+//         post = {
+//           ...post,
+//           description: reader.getDescription(),
+//         };
 
-  private getFullHref(href: string | undefined): string | undefined {
-    if (href) {
-      if (href.startsWith('/')) {
-        href = this.blog.href + href;
-      }
+//         return post;
+//       });
+//   }
 
-      const index = href.indexOf('?');
-      if (index > 0) {
-        href = href.substring(0, index);
-      }
-    }
+//   private getFullHref(href: string): string {
+//     const index = href.indexOf('?');
+//     if (index > 0) {
+//       href = href.substring(0, index);
+//     }
 
-    return href;
-  }
+//     if (href.startsWith('/')) {
+//       href = this.Maoni.href + href;
+//     }
 
-  protected override enrichPost(post: Post): Promise<Post | undefined> {
-    return this.readPostFromHtmlPage(post.href, 'main article', ($, article) => {
-      const description = this.getDescription($, article);
+//     return href;
+//   }
+// }
 
-      post = {
-        ...post,
-        description,
-      };
+// class MaoniFetchReader {
+//   constructor(
+//     private readonly $: cheerio.CheerioAPI,
+//     private readonly article: cheerio.Cheerio<cheerio.Element>) { }
 
-      return post;
-    });
-  }
+//   static readonly selector = 'main article';
 
-  private getDescription($: cheerio.CheerioAPI, article: cheerio.Cheerio<cheerio.Element>): string[] {
-    const description: string[] = [];
+//   readonly header = this.article.find('h2');
+//   readonly title = this.header.text();
+//   readonly link = this.header.parents('a').first();
+//   readonly href = this.link.attr('href') ?? '';
+//   readonly date = this.article.find('a>p>span').text();
+// }
 
-    const elements = $(article)
-      .find('section p.pw-post-body-paragraph')
-      .first()
-      .parent()
-      .children()
-      .toArray();
+// class MaoniEnrichReader {
+//   constructor(
+//     private readonly $: cheerio.CheerioAPI,
+//     private readonly article: cheerio.Cheerio<cheerio.Element>) { }
 
-    for (const element of elements) {
-      if (element.name == 'p') {
-        const p = $(element);
+//   static readonly selector = 'main article';
 
-        if (p.hasClass('pw-post-body-paragraph')) {
-          const text = p.text().trim();
-          if (text) {
-            description.push(text);
+//   getDescription(): string[] {
+//     const description: string[] = [];
+//     const elements = this.article
+//       .find('section p.pw-post-body-paragraph')
+//       .first()
+//       .parent()
+//       .children();
 
-            if (description.length >= 5) {
-              break;
-            }
-          }
-        }
-        else if (description.length > 0) {
-          break;
-        }
-      }
-      else if (description.length > 0) {
-        break;
-      }
-    }
+//     for (const element of elements) {
+//       if (element.name == 'p') {
+//         const p = this.$(element);
 
-    return description;
-  }
-}
+//         if (p.hasClass('pw-post-body-paragraph')) {
+//           const text = p.text().trim();
+
+//           if (text) {
+//             description.push(text);
+
+//             if (description.length >= 5) {
+//               break;
+//             }
+//           }
+//         }
+//         else if (description.length > 0) {
+//           break;
+//         }
+//       }
+//       else if (description.length > 0) {
+//         break;
+//       }
+//     }
+
+//     return description;
+//   }
+// }

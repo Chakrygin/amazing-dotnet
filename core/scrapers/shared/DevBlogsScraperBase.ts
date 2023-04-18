@@ -1,10 +1,10 @@
 import * as cheerio from 'cheerio';
 import moment from 'moment';
 
-import { Link, Post } from '../../models';
+import { Post, Link } from '../../models';
 import { HtmlPageScraper } from '../HtmlPageScraper';
 
-export abstract class DevBlogsScraperBase extends HtmlPageScraper {
+export class DevBlogsScraperBase extends HtmlPageScraper {
   constructor(
     private readonly blogId: string,
     private readonly blogName: string) {
@@ -19,65 +19,83 @@ export abstract class DevBlogsScraperBase extends HtmlPageScraper {
     href: 'https://devblogs.microsoft.com',
   };
 
-  private readonly DevBlog: Link = {
+  private readonly blog: Link = {
     title: this.blogName,
     href: `https://devblogs.microsoft.com/${this.blogId}/`,
   };
 
-  protected readPosts(): AsyncGenerator<Post> {
-    return this.readPostsFromHtmlPage(this.DevBlog.href, '#main .entry-box', ($, article) => {
-      const image = article.find('.entry-image img').attr('data-src');
-      const link = article.find('.entry-title a');
-      const title = link.text();
-      const href = link.attr('href') ?? '';
-      const date = article.find('.entry-post-date').text();
-      const tags = article
-        .find('.post-categories-tags a')
-        .map((_, element) => $(element).text())
-        .toArray();
+  protected override fetchPosts(): AsyncGenerator<Post> {
+    return this
+      .fromHtmlPage(this.blog.href)
+      .fetchPosts(DevBlogsFetchReader, reader => {
+        const post: Post = {
+          image: reader.image,
+          title: reader.title,
+          href: reader.href,
+          categories: [
+            this.DevBlogs,
+            this.blog,
+          ],
+          date: moment(reader.date, 'LL'),
+          links: [
+            {
+              title: 'Read more',
+              href: reader.href,
+            },
+          ],
+          tags: reader.tags,
+        };
 
-      const post: Post = {
-        image,
-        title,
-        href,
-        categories: [
-          this.DevBlogs,
-          this.DevBlog,
-        ],
-        date: moment(date, 'LL'),
-        links: [
-          {
-            title: 'Read more',
-            href: href,
-          },
-        ],
-        tags,
-      };
-
-      return post;
-    });
+        return post;
+      });
   }
 
-  protected async enrichPost(post: Post): Promise<Post | undefined> {
-    return this.readPostFromHtmlPage(post.href, '#main .entry-content', ($, article) => {
-      const description = this.getDescription($, article);
+  protected override enrichPost(post: Post): Promise<Post | undefined> {
+    return this
+      .fromHtmlPage(post.href)
+      .enrichPost(DevBlogsEnrichReader, reader => {
+        post = {
+          ...post,
+          description: reader.getDescription(),
+        };
 
-      post = {
-        ...post,
-        description,
-      };
-
-      return post;
-    });
+        return post;
+      });
   }
+}
 
-  private getDescription($: cheerio.CheerioAPI, article: cheerio.Cheerio<cheerio.Element>): string[] {
-    const description: string[] = [];
+class DevBlogsFetchReader {
+  constructor(
+    private readonly $: cheerio.CheerioAPI,
+    private readonly article: cheerio.Cheerio<cheerio.Element>) { }
 
-    const elements = article.children();
+  static readonly selector = '#main .entry-box';
+
+  readonly image = this.article.find('.entry-image img').attr('data-src');
+  readonly link = this.article.find('.entry-title a');
+  readonly title = this.link.text();
+  readonly href = this.link.attr('href') ?? '';
+  readonly date = this.article.find('.entry-post-date').text();
+  readonly tags = this.article
+    .find('.post-categories-tags a')
+    .map((_, element) => this.$(element).text())
+    .toArray();
+}
+
+class DevBlogsEnrichReader {
+  constructor(
+    private readonly $: cheerio.CheerioAPI,
+    private readonly article: cheerio.Cheerio<cheerio.Element>) { }
+
+  static readonly selector = '#main .entry-content';
+
+  getDescription(): string[] {
+    const description = [];
+    const elements = this.article.children();
+
     for (const element of elements) {
       if (element.name == 'p') {
-        const p = $(element);
+        const p = this.$(element);
         const text = p.text().trim();
 
         if (text) {

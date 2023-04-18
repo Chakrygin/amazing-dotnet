@@ -30,7 +30,7 @@ export class HabrScraperBase extends HtmlPageScraper {
   };
 
   override async scrape(sender: Sender, storage: Storage): Promise<void> {
-    for await (const post of this.readPosts()) {
+    for await (const post of this.fetchPosts()) {
       this.printPost(post);
 
       if (storage.has(post.href)) {
@@ -48,83 +48,88 @@ export class HabrScraperBase extends HtmlPageScraper {
     }
   }
 
-  protected readPosts(): AsyncGenerator<Post> {
-    return this.readPostsFromHtmlPage(this.href, '.tm-articles-list article.tm-articles-list__item', ($, article) => {
-      const image = this.getImage(article);
-      const link = article.find('a.tm-title__link');
-      const title = link.text();
-      const href = this.getFullHref(link.attr('href')) ?? '';
-      const date = article.find('.tm-article-datetime-published time').attr('datetime') ?? '';
-      const [categories, tags] = this.getCategoriesAndTags(article, $);
-      const description = this.getDescription(article, $);
-      const rating = this.getRaring(article);
+  protected override fetchPosts(): AsyncGenerator<Post> {
+    return this
+      .fromHtmlPage(this.href)
+      .fetchPosts(HabrFetchReader, reader => {
+        if (isNaN(reader.rating)) {
+          throw new Error('Failed to parse post. Rating is NaN.');
+        }
 
-      if (rating < this.options.minRating) {
-        core.info('Post rating is too low. Continue scraping.');
-        return;
-      }
+        if (reader.rating < this.options.minRating) {
+          core.info('Post rating is too low. Continue scraping.');
+          return;
+        }
 
-      const post: Post = {
-        image,
-        title,
-        href,
-        categories: [
-          this.Habr,
-          ...categories,
-        ],
-        date: moment(date).locale('ru'),
-        description,
-        links: [
-          {
-            title: 'Читать дальше',
-            href: href,
-          },
-        ],
-        tags,
-      };
+        const [categories, tags] = reader.getCategoriesAndTags();
 
-      return post;
-    });
+        const post: Post = {
+          image: reader.getImage(),
+          title: reader.title,
+          href: this.getFullHref(reader.href),
+          categories: [
+            this.Habr,
+            ...categories
+              .map(category => ({
+                title: category.title,
+                href: this.getFullHref(category.href),
+              })),
+          ],
+          date: moment(reader.date).locale('ru'),
+          description: reader.getDescription(),
+          links: [
+            {
+              title: 'Читать дальше',
+              href: this.getFullHref(reader.href),
+            },
+          ],
+          tags,
+        };
+
+        return post;
+      });
   }
 
-  private getRaring(article: cheerio.Cheerio<cheerio.Element>): number {
-    const text = article.find('.tm-votes-meter__value').text();
-    const rating = parseInt(text);
-
-    if (isNaN(rating)) {
-      throw new Error('Failed to parse post. Rating is NaN.');
-    }
-
-    return rating;
-  }
-
-  private getImage(article: cheerio.Cheerio<cheerio.Element>): string | undefined {
-    const src =
-      article.find('img.tm-article-snippet__lead-image').attr('src') ??
-      article.find('.article-formatted-body p:first-child img:first-child').attr('src');
-
-    return src;
-  }
-
-  private getFullHref(href: string | undefined): string | undefined {
-    if (href?.startsWith('/')) {
+  private getFullHref(href: string): string {
+    if (href.startsWith('/')) {
       href = this.Habr.href + href;
     }
 
     return href;
   }
+}
 
-  private getCategoriesAndTags(article: cheerio.Cheerio<cheerio.Element>, $: cheerio.CheerioAPI): [Link[], string[]] {
+class HabrFetchReader {
+  constructor(
+    private readonly $: cheerio.CheerioAPI,
+    private readonly article: cheerio.Cheerio<cheerio.Element>) { }
+
+  static readonly selector = '.tm-articles-list article.tm-articles-list__item';
+
+  readonly rating = parseInt(this.article.find('.tm-votes-meter__value').text());
+  readonly link = this.article.find('a.tm-title__link');
+  readonly title = this.link.text();
+  readonly href = this.link.attr('href') ?? '';
+  readonly date = this.article.find('.tm-article-datetime-published time').attr('datetime') ?? '';
+
+  getImage(): string | undefined {
+    const src =
+      this.article.find('img.tm-article-snippet__lead-image').attr('src') ??
+      this.article.find('.article-formatted-body p:first-child img:first-child').attr('src');
+
+    return src;
+  }
+
+  getCategoriesAndTags(): [Link[], string[]] {
     const categories: Link[] = [];
     const tags: string[] = [];
-
-    const elements = article
-      .find('.tm-article-snippet__hubs .tm-article-snippet__hubs-item a')
-      .map((_, element) => $(element));
+    const elements = this.article
+      .find('.tm-article-snippet__hubs .tm-article-snippet__hubs-item a');
 
     for (const element of elements) {
-      const title = element.text().replace('*', '');
-      const href = this.getFullHref(element.attr('href')) ?? '';
+      const link = this.$(element);
+      const title = link.text().replace('*', '');
+      const href = link.attr('href') ?? '';
 
       if (title.startsWith('Блог компании')) {
         categories.push({ title, href });
@@ -137,10 +142,9 @@ export class HabrScraperBase extends HtmlPageScraper {
     return [categories, tags];
   }
 
-  private getDescription(article: cheerio.Cheerio<cheerio.Element>, $: cheerio.CheerioAPI): string[] {
+  getDescription(): string[] {
     const description = [];
-
-    const body = article
+    const body = this.article
       .find('.article-formatted-body');
 
     if (body.hasClass('article-formatted-body_version-1')) {
@@ -150,18 +154,29 @@ export class HabrScraperBase extends HtmlPageScraper {
 
       for (const line of lines) {
         description.push(line);
+
+        if (description.length >= 5) {
+          break;
+        }
       }
     }
     else if (body.hasClass('article-formatted-body_version-2')) {
       const elements = body.children();
+
       for (const element of elements) {
         if (element.name == 'p') {
-          const line = $(element).text().trim();
-          if (line) {
-            description.push(line);
+          const p = this.$(element);
+          const text = p.text().trim();
+
+          if (text) {
+            description.push(text);
+
+            if (description.length >= 5) {
+              break;
+            }
           }
         }
-        else {
+        else if (description.length > 0) {
           break;
         }
       }

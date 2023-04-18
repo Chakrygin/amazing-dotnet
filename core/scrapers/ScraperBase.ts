@@ -1,8 +1,7 @@
 import * as core from '@actions/core';
 
-import moment from 'moment';
-
 import { Scraper } from './Scraper';
+
 import { Post } from '../models';
 import { Sender } from '../senders';
 import { Storage } from '../storages';
@@ -14,7 +13,7 @@ export abstract class ScraperBase implements Scraper {
   async scrape(sender: Sender, storage: Storage): Promise<void> {
     let firstPostDate: moment.Moment | undefined;
 
-    for await (const post of this.readPosts()) {
+    for await (const post of this.fetchPosts()) {
       this.printPost(post);
 
       if (storage.has(post.href)) {
@@ -32,30 +31,33 @@ export abstract class ScraperBase implements Scraper {
 
       const enrichedPost = await this.enrichPost(post);
 
-      if (enrichedPost) {
-        this.printPostJson(enrichedPost);
-
-        core.info('Sending the post...');
-        await sender.send(enrichedPost);
-
-        core.info('Storing the post...');
-        storage.add(enrichedPost.href);
+      if (!enrichedPost) {
+        core.info('The post is not interesting. Continue scraping.');
+        continue;
       }
+
+      this.printPostJson(post);
+
+      core.info('Sending the post...');
+      await sender.send(enrichedPost);
+
+      core.info('Storing the post...');
+      storage.add(enrichedPost.href);
     }
   }
 
-  protected abstract readPosts(): AsyncGenerator<Post>;
+  protected abstract fetchPosts(): AsyncGenerator<Post>;
 
   protected enrichPost(post: Post): Promise<Post | undefined> {
     return Promise.resolve(post);
   }
 
-  protected printPost(post: Post): void {
+  protected printPost(post: Post) {
     core.info(`Post title is '${post.title}'.`);
     core.info(`Post href is '${post.href}'.`);
   }
 
-  protected printPostJson(post: Post): void {
+  protected printPostJson(post: Post) {
     const json = JSON.stringify(post, null, 2)
       .split('\n')
       .map(line => '  ' + line)

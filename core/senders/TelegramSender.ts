@@ -79,7 +79,10 @@ export class TelegramSender implements Sender {
       line.push(encode(post.author));
     }
 
-    line.push(post.date.format('LL'));
+    if (post.date) {
+      line.push(post.date.format('LL'));
+    }
+
     lines.push(bold(line.join(' | ')));
 
     if (post.description && post.description.length > 0) {

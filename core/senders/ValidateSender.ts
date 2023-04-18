@@ -54,8 +54,10 @@ export class ValidateSender implements Sender {
       }
     }
 
-    if (!post.date.isValid()) {
-      errors.push('date is not valid');
+    if (post.date) {
+      if (!post.date.isValid()) {
+        errors.push('date is not valid');
+      }
     }
 
     if (post.description) {

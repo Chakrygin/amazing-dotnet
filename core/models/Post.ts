@@ -8,7 +8,7 @@ export interface Post {
   readonly href: string;
   readonly categories: Link[];
   readonly author?: string;
-  readonly date: moment.Moment;
+  readonly date?: moment.Moment;
   readonly description?: string[];
   readonly links: Link[];
   readonly tags?: string[];

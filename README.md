@@ -17,9 +17,9 @@
         - Releases - https://blog.jetbrains.com/dotnet/category/releases/
         - .NET Annotated - https://blog.jetbrains.com/dotnet/tag/net-annotated/
     - Хабр (статьи с рейтингом 10 и выше):
+        - .NET - https://habr.com/ru/hub/net/
         - C# - https://habr.com/ru/hub/csharp/
         - F# - https://habr.com/ru/hub/fsharp/
-        - .NET - https://habr.com/ru/hub/net/
     - Code Maze - https://code-maze.com
 
 - Персональные блоги:
@@ -28,7 +28,7 @@
     - Derek Comartin - CodeOpinion - https://codeopinion.com
     - Gérald Barré - Meziantou's blog - https://www.meziantou.net
     - Khalid Abuhakmeh - https://khalidabuhakmeh.com
-    - Maoni Stephens - https://maoni0.medium.com
+    - ~~Maoni Stephens - https://maoni0.medium.com~~ (Временно не работает)
     - Vladimir Khorikov - Enterprise Craftsmanship - https://enterprisecraftsmanship.com/posts
     - Wade Gausden - .NET Core Tutorials - https://dotnetcoretutorials.com
 

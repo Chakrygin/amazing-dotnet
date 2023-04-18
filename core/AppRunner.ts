@@ -23,11 +23,10 @@ export class AppRunner {
     path.join(this.config.path, 'updates.json'));
 
   async run(): Promise<string[]> {
-    const successScraperNames: string[] = [];
+    const updatedScraperNames: string[] = [];
 
     for (const scraper of this.scrapers) {
       await core.group(scraper.name, async () => {
-
         const lastError = this.lastErrors.get(scraper.name);
         const lastUpdate = this.lastUpdates.get(scraper.name);
 
@@ -82,30 +81,25 @@ export class AppRunner {
               core.error(error, {
                 title: `The '${scraper.name}' scraper failed.`,
               });
-
-              this.lastErrors.set(scraper.name, error);
-
-              throw error;
             }
             else {
               core.warning(error, {
                 title: `The '${scraper.name}' scraper failed.`,
               });
-
-              this.lastErrors.set(scraper.name, error);
             }
+
+            this.lastErrors.set(scraper.name, error);
           }
         }
         finally {
           if (storage.save()) {
             this.lastUpdates.set(scraper.name);
-            successScraperNames.push(scraper.name);
+            updatedScraperNames.push(scraper.name);
           }
         }
-
       });
     }
 
-    return successScraperNames;
+    return updatedScraperNames;
   }
 }

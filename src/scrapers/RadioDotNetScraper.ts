@@ -8,77 +8,93 @@ export class RadioDotNetScraper extends HtmlPageScraper {
   readonly name = 'RadioDotNet';
   readonly path = 'radiodotnet.mave.digital';
 
-  private readonly podcast: Link = {
+  private readonly RadioDotNet: Link = {
     title: 'RadioDotNet',
     href: 'https://radiodotnet.mave.digital',
   };
 
-  protected readPosts(): AsyncGenerator<Post> {
-    return this.readPostsFromHtmlPage(this.podcast.href, '.episodes-season__body a.episode', ($, episode) => {
-      const image = $('.sidebar__header .img-wrapper img').attr('src') ?? '';
-      const release = episode.find('.episode-body__content .release').text().trim();
-      const title = episode.find('.episode-body__content .description').text().trim();
-      const href = this.getFullHref(episode.attr('href')) ?? '';
-      const date = episode.find('.episode-body__content .date').text();
+  protected override fetchPosts(): AsyncGenerator<Post> {
+    return this
+      .fromHtmlPage(this.RadioDotNet.href)
+      .fetchPosts(RadioDotNetFetchReader, reader => {
+        const post: Post = {
+          image: reader.image,
+          title: `${reader.release}. ${reader.title}`,
+          href: this.getFullHref(reader.href),
+          categories: [
+            this.RadioDotNet,
+          ],
+          date: moment(reader.date, 'LL', 'ru'),
+          links: [
+            {
+              title: 'Слушать',
+              href: this.getFullHref(reader.href),
+            },
+          ],
+        };
 
-      const post: Post = {
-        image,
-        title: `${release}. ${title}`,
-        href: href,
-        categories: [
-          this.podcast,
-        ],
-        date: moment(date, 'LL', 'ru'),
-        links: [
-          {
-            title: 'Слушать',
-            href: href,
-          },
-        ],
-      };
-
-      return post;
-    });
+        return post;
+      });
   }
 
-  private getFullHref(href: string | undefined): string | undefined {
-    if (href?.startsWith('/')) {
-      href = this.podcast.href + href;
+  protected override enrichPost(post: Post): Promise<Post | undefined> {
+    return this
+      .fromHtmlPage(post.href)
+      .enrichPost(RadioDotNetEnrichReader, reader => {
+        post = {
+          ...post,
+          description: [
+            reader.getDescription(),
+          ],
+          links: [
+            ...post.links,
+            ...reader.getLinks(),
+          ],
+        };
+
+        return post;
+      });
+  }
+
+  private getFullHref(href: string): string {
+    if (href.startsWith('/')) {
+      href = this.RadioDotNet.href + href;
     }
 
     return href;
   }
+}
 
-  protected override enrichPost(post: Post): Promise<Post | undefined> {
-    return this.readPostFromHtmlPage(post.href, 'main>div.single-page-wrapper', ($, episode) => {
-      const description = this.getDescription($, episode) ?? this.getDefaultDescription($);
-      const links = this.getLinks($, episode);
+class RadioDotNetFetchReader {
+  constructor(
+    private readonly $: cheerio.CheerioAPI,
+    private readonly episode: cheerio.Cheerio<cheerio.Element>) { }
 
-      post = {
-        ...post,
-        description: [
-          description,
-        ],
-        links: [
-          ...post.links,
-          ...links,
-        ],
-      };
+  static readonly selector = '.episodes-season__body a.episode';
 
-      return post;
-    });
-  }
+  readonly image = this.$('.sidebar__header .img-wrapper img').attr('src') ?? '';
+  readonly release = this.episode.find('.episode-body__content .release').text().trim();
+  readonly title = this.episode.find('.episode-body__content .description').text().trim();
+  readonly href = this.episode.attr('href') ?? '';
+  readonly date = this.episode.find('.episode-body__content .date').text();
+}
 
-  private getDescription($: cheerio.CheerioAPI, episode: cheerio.Cheerio<cheerio.Element>): string | undefined {
+class RadioDotNetEnrichReader {
+  constructor(
+    private readonly $: cheerio.CheerioAPI,
+    private readonly episode: cheerio.Cheerio<cheerio.Element>) { }
+
+  static readonly selector = 'main>div.single-page-wrapper';
+
+  getDescription(): string {
     const description = [];
-
     const regexp = /^\[\d{2}:\d{2}:\d{2}\]/;
-    const elements = episode
+    const elements = this.episode
       .find('div.episodes-info__body>div.description>p')
       .toArray();
 
     for (const element of elements) {
-      const p = $(element);
+      const p = this.$(element);
       const line = p.text().trim();
 
       if (regexp.test(line)) {
@@ -89,32 +105,25 @@ export class RadioDotNetScraper extends HtmlPageScraper {
     if (description.length > 0) {
       return description.join('\n');
     }
+
+    return this.$('.sidebar__body p.description').text().trim();
   }
 
-  private getDefaultDescription($: cheerio.CheerioAPI): string {
-    const description = $('.sidebar__body p.description').text().trim();
-
-    return description;
-  }
-
-  private getLinks($: cheerio.CheerioAPI, episode: cheerio.Cheerio<cheerio.Element>): Link[] {
+  getLinks(): Link[] {
     const links: Link[] = [];
-
-    const elements = episode
-      .find('.platforms a.platform');
+    const elements = this.episode
+      .find('.listen a.listen-platform-wrapper')
+      .filter('.yandex-music, .youtube');
 
     for (const element of elements) {
-      const link = $(element);
+      const link = this.$(element);
+      const title = link.text();
+      const href = link.hasClass('yandex-music')
+        ? link.attr('href')?.replace('music.yandex.com', 'music.yandex.ru')
+        : link.attr('href');
 
-      if (link.hasClass('yandex-music') || link.hasClass('youtube')) {
-        const title = link.text();
-        const href = link.hasClass('yandex-music')
-          ? link.attr('href')?.replace('music.yandex.com', 'music.yandex.ru')
-          : link.attr('href');
-
-        if (title && href) {
-          links.push({ title, href });
-        }
+      if (title && href) {
+        links.push({ title, href });
       }
     }
 

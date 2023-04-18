@@ -8,50 +8,68 @@ export class KhalidAbuhakmehScraper extends HtmlPageScraper {
   readonly name = 'KhalidAbuhakmeh';
   readonly path = 'khalidabuhakmeh.com';
 
-  private readonly blog: Link = {
+  private readonly KhalidAbuhakmeh: Link = {
     title: 'Khalid Abuhakmeh',
     href: 'https://khalidabuhakmeh.com',
   };
 
-  protected readPosts(): AsyncGenerator<Post> {
-    return this.readPostsFromHtmlPage(this.blog.href, '#page article', ($, article) => {
-      const image = this.getImage(article);
-      const link = article.find('h2.post-title a');
-      const title = link.text();
-      const href = this.getFullHref(link.attr('href')) ?? '';
-      const date = article.find('time.published').text();
-      const description = this.getDescription($, article);
-      const tags = article
-        .find('.post-content .post-tags a')
-        .map((_, element) => $(element).text().replace(/^#/, ''))
-        .toArray();
+  protected override fetchPosts(): AsyncGenerator<Post> {
+    return this
+      .fromHtmlPage(this.KhalidAbuhakmeh.href)
+      .fetchPosts(KhalidAbuhakmehFetchReader, reader => {
+        const post: Post = {
+          image: reader.getImage(),
+          title: reader.title,
+          href: this.getFullHref(reader.href),
+          categories: [
+            this.KhalidAbuhakmeh,
+          ],
+          date: moment(reader.date, 'LL'),
+          description: reader.getDescription(),
+          links: [
+            {
+              title: 'Read more',
+              href: this.getFullHref(reader.href),
+            },
+          ],
+          tags: reader.tags,
+        };
 
-      const post: Post = {
-        image: image,
-        title: title,
-        href: href,
-        categories: [
-          this.blog,
-        ],
-        date: moment(date, 'LL'),
-        description: description,
-        links: [
-          {
-            title: 'Read more',
-            href: href,
-          },
-        ],
-        tags,
-      };
-
-      return post;
-    });
+        return post;
+      });
   }
 
-  private getImage(article: cheerio.Cheerio<cheerio.Element>): string | undefined {
-    let src = article.find('.post-thumbnail img').attr('src');
+  private getFullHref(href: string): string {
+    if (href.startsWith('/')) {
+      href = this.KhalidAbuhakmeh.href + href;
+    }
+
+    return href;
+  }
+}
+
+class KhalidAbuhakmehFetchReader {
+  constructor(
+    private readonly $: cheerio.CheerioAPI,
+    private readonly article: cheerio.Cheerio<cheerio.Element>) { }
+
+  static readonly selector = '#page article';
+
+  readonly link = this.article.find('h2.post-title a');
+  readonly title = this.link.text();
+  readonly href = this.link.attr('href') ?? '';
+  readonly date = this.article.find('time.published').text();
+  readonly tags = this.article
+    .find('.post-content .post-tags a')
+    .map((_, element) => this.$(element).text().replace(/^#/, ''))
+    .toArray();
+
+  getImage(): string | undefined {
+    let src = this.article.find('.post-thumbnail img').attr('src');
+
     if (src) {
       const index = src.lastIndexOf('https://');
+
       if (index > 0) {
         src = src.substring(index);
       }
@@ -60,22 +78,22 @@ export class KhalidAbuhakmehScraper extends HtmlPageScraper {
     return src;
   }
 
-  private getDescription($: cheerio.CheerioAPI, article: cheerio.Cheerio<cheerio.Element>): string[] {
+  getDescription(): string[] {
     const description = [];
-
-    const elements = article
+    const elements = this.article
       .find('.post-content')
       .children();
 
     for (const element of elements) {
       if (element.name == 'p') {
-        const p = $(element);
+        const p = this.$(element);
 
         if (p.hasClass('post-tags') || p.hasClass('read-more')) {
           break;
         }
 
         const text = p.text().trim();
+
         if (text) {
           description.push(text);
 
@@ -90,13 +108,5 @@ export class KhalidAbuhakmehScraper extends HtmlPageScraper {
     }
 
     return description;
-  }
-
-  private getFullHref(href: string | undefined): string | undefined {
-    if (href?.startsWith('/')) {
-      href = this.blog.href + href;
-    }
-
-    return href;
   }
 }

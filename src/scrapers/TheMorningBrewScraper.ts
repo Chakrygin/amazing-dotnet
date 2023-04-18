@@ -16,56 +16,76 @@ export class TheMorningBrewScraper extends HtmlPageScraper {
   readonly path = 'blog.cwa.me.uk';
   readonly author = 'Chris Alcock';
 
-  private readonly blog: Link = {
+  private readonly TheMorningBrew: Link = {
     title: 'The Morning Brew',
     href: 'https://blog.cwa.me.uk',
   };
 
-  protected readPosts(): AsyncGenerator<Post> {
-    return this.readPostsFromHtmlPage(this.blog.href, '#content .post', ($, article) => {
-      const image = this.getImage();
-      const link = article.find('h2.post-title a');
-      const title = link.text();
-      const href = link.attr('href') ?? '';
-      const date = this.getDate($, article);
-      const description = this.getDescription($, article);
+  protected override fetchPosts(): AsyncGenerator<Post> {
+    return this
+      .fromHtmlPage(this.TheMorningBrew.href)
+      .fetchPosts(TheMorningBrewFetchReader, reader => {
+        const post: Post = {
+          image: this.getImage(),
+          title: reader.title,
+          href: reader.href,
+          categories: [
+            this.TheMorningBrew,
+          ],
+          author: this.author,
+          date: moment(reader.getDate(), 'LL'),
+          description: reader.getDescription(href => this.isKnownHost(href)),
+          links: [
+            {
+              title: 'Read more',
+              href: reader.href,
+            },
+          ],
+        };
 
-      if (!description) {
-        core.info('Post is not interesting. Continue scraping.');
-        return;
-      }
+        if (!post.description) {
+          return;
+        }
 
-      const post: Post = {
-        image,
-        title,
-        href,
-        categories: [
-          this.blog,
-        ],
-        author: this.author,
-        date: moment(date, 'LL'),
-        description,
-        links: [
-          {
-            title: 'Read more',
-            href: href,
-          },
-        ],
-      };
-
-      return post;
-    });
+        return post;
+      });
   }
 
-  private getImage(): string {
-    const value1 = Math.floor(4 * Math.random());
+  getImage(): string {
+    const now = new Date();
+    const date1 = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
+    const date2 = Date.UTC(now.getFullYear(), 0, 0);
+    const dayOfYear = (date1 - date2) / 24 / 60 / 60 / 1000;
+    const value1 = dayOfYear % 4;
     const value2 = value1 > 0 ? value1.toString() : '';
 
     return `https://blog.cwa.me.uk/wp-content/themes/Hackedcoffeespot2/img/header${value2}.jpg`;
   }
 
-  private getDate($: cheerio.CheerioAPI, article: cheerio.Cheerio<cheerio.Element>): string {
-    const date = $(article)
+  private isKnownHost(href: string): boolean {
+    for (const knownHost of this.knownHosts) {
+      if (href.indexOf(knownHost) > 0) {
+        return true;
+      }
+    }
+
+    return false;
+  }
+}
+
+class TheMorningBrewFetchReader {
+  constructor(
+    private readonly $: cheerio.CheerioAPI,
+    private readonly article: cheerio.Cheerio<cheerio.Element>) { }
+
+  static selector = '#content .post';
+
+  readonly link = this.article.find('h2.post-title a');
+  readonly title = this.link.text();
+  readonly href = this.link.attr('href') ?? '';
+
+  getDate(): string {
+    const date = this.article
       .find('.day-date em:nth-of-type(2)')
       .text()
       .replace(/^\w+\s/, '')
@@ -75,19 +95,18 @@ export class TheMorningBrewScraper extends HtmlPageScraper {
     return date;
   }
 
-  private getDescription($: cheerio.CheerioAPI, article: cheerio.Cheerio<cheerio.Element>): string[] | undefined {
-    const description: string[] = [];
-
-    const elements = $(article)
+  getDescription(isKnownHost: (href: string) => boolean): string[] | undefined {
+    const description = [];
+    const elements = this.article
       .find('.post-content>ul>li>a:first-child')
       .toArray();
 
     for (const element of elements) {
-      const link = $(element);
+      const link = this.$(element);
       const title = link.text();
       const href = link.attr('href');
 
-      if (title && href && !this.isKnownHost(href)) {
+      if (title && href && !isKnownHost(href)) {
         description.push(`${title}: ${href}`);
 
         if (description.length >= 10) {
@@ -99,15 +118,5 @@ export class TheMorningBrewScraper extends HtmlPageScraper {
     if (description.length > 0) {
       return description;
     }
-  }
-
-  private isKnownHost(href: string): boolean {
-    for (const knownHost of this.knownHosts) {
-      if (href.indexOf(knownHost) > 0) {
-        return true;
-      }
-    }
-
-    return false;
   }
 }

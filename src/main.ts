@@ -7,9 +7,9 @@ import { DevBlogsScraper } from './scrapers/DevBlogsScraper';
 import { DotNetCoreTutorialsScraper } from './scrapers/DotNetCoreTutorialsScraper';
 import { EnterpriseCraftsmanshipScraper } from './scrapers/EnterpriseCraftsmanshipScraper';
 import { HabrScraper } from './scrapers/HabrScraper';
-import { JetBrainsScraper } from './scrapers/JetBrainsScraper';
+import { JetBrainsBlogScraper } from './scrapers/JetBrainsBlogScraper';
 import { KhalidAbuhakmehScraper } from './scrapers/KhalidAbuhakmehScraper';
-import { MaoniScraper } from './scrapers/MaoniScraper';
+// import { MaoniScraper } from './scrapers/MaoniScraper';
 import { MeziantouScraper } from './scrapers/MeziantouScraper';
 import { RadioDotNetScraper } from './scrapers/RadioDotNetScraper';
 import { TheMorningBrewScraper } from './scrapers/TheMorningBrewScraper';
@@ -29,11 +29,11 @@ const app = new App(knownHosts => [
   new HabrScraper('net'),
   new HabrScraper('csharp'),
   new HabrScraper('fsharp'),
-  new JetBrainsScraper('how-tos'),
-  new JetBrainsScraper('releases'),
-  new JetBrainsScraper('net-annotated', knownHosts),
+  new JetBrainsBlogScraper('how-tos'),
+  new JetBrainsBlogScraper('releases'),
+  new JetBrainsBlogScraper('net-annotated', knownHosts),
   new KhalidAbuhakmehScraper(),
-  new MaoniScraper(),
+  // new MaoniScraper(),
   new MeziantouScraper(),
   new RadioDotNetScraper(),
   new TheMorningBrewScraper(knownHosts),

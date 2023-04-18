@@ -40,9 +40,9 @@ export class App {
       const privateSender = createSender(TELEGRAM_TOKEN, TELEGRAM_PRIVATE_CHAT_ID);
 
       const runner = new AppRunner(config, scrapers, publicSender, privateSender);
-      const successScraperNames = await runner.run();
+      const updatedScraperNames = await runner.run();
 
-      this.setCommitMessage(successScraperNames);
+      this.setCommitMessage(updatedScraperNames);
     }
     catch (error: unknown) {
       core.setFailed(error as Error);

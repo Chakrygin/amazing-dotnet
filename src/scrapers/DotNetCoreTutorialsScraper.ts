@@ -9,74 +9,78 @@ export class DotNetCoreTutorialsScraper extends HtmlPageScraper {
   readonly path = 'dotnetcoretutorials.com';
   readonly author = 'Wade Gausden';
 
-  private readonly blog: Link = {
+  private readonly DotNetCoreTutorials: Link = {
     title: '.NET Core Tutorials',
     href: 'https://dotnetcoretutorials.com/',
   };
 
-  protected readPosts(): AsyncGenerator<Post> {
-    return this.readPostsFromHtmlPage(this.blog.href, '#main article.post', ($, article) => {
-      const image = article.find('.post-image img').attr('data-lazy-src') ?? '';
-      const link = article.find('.entry-title a');
-      const title = link.text();
-      const href = link.attr('href') ?? '';
-      const date = this.getDate(href);
+  protected override fetchPosts(): AsyncGenerator<Post> {
+    return this
+      .fromHtmlPage(this.DotNetCoreTutorials.href)
+      .fetchPosts(DotNetCoreTutorialsFetchReader, reader => {
+        const post: Post = {
+          image: reader.image,
+          title: reader.title,
+          href: reader.href,
+          categories: [
+            this.DotNetCoreTutorials,
+          ],
+          author: this.author,
+          links: [
+            {
+              title: 'Read more',
+              href: reader.href,
+            },
+          ],
+        };
 
-      const post: Post = {
-        image: image,
-        title: title,
-        href: href,
-        categories: [
-          this.blog,
-        ],
-        author: this.author,
-        date: moment(date, 'YYYY/MM/DD'),
-        links: [
-          {
-            title: 'Read more',
-            href: href,
-          },
-        ],
-      };
-
-      return post;
-    });
-  }
-
-  private getDate(href: string): string {
-    const regex = /\/(\d{4}\/\d{2}\/\d{2})\//;
-    const match = href.match(regex);
-
-    if (!match) {
-      throw new Error('Failed to parse post. Can not get post date from href: ' + href);
-    }
-
-    return match[1];
+        return post;
+      });
   }
 
   protected override enrichPost(post: Post): Promise<Post | undefined> {
-    return this.readPostFromHtmlPage(post.href, '#main article.post', ($, article) => {
-      const description = this.getDescription($, article);
+    return this
+      .fromHtmlPage(post.href)
+      .enrichPost(DotNetCoreTutorialsEnrichReader, reader => {
+        post = {
+          ...post,
+          description: reader.getDescription(),
+        };
 
-      post = {
-        ...post,
-        description,
-      };
-
-      return post;
-    });
+        return post;
+      });
   }
+}
 
-  private getDescription($: cheerio.CheerioAPI, article: cheerio.Cheerio<cheerio.Element>): string[] {
-    const description: string[] = [];
+class DotNetCoreTutorialsFetchReader {
+  constructor(
+    private readonly $: cheerio.CheerioAPI,
+    private readonly article: cheerio.Cheerio<cheerio.Element>) { }
 
-    const elements = article
+  static readonly selector = '#main article.post:first-of-type';
+
+  readonly image = this.article.find('.post-image img').attr('data-lazy-src') ?? '';
+  readonly link = this.article.find('.entry-title a');
+  readonly title = this.link.text();
+  readonly href = this.link.attr('href') ?? '';
+}
+
+class DotNetCoreTutorialsEnrichReader {
+  constructor(
+    private readonly $: cheerio.CheerioAPI,
+    private readonly article: cheerio.Cheerio<cheerio.Element>) { }
+
+  static readonly selector = '#main article.post';
+
+  getDescription(): string[] {
+    const description = [];
+    const elements = this.article
       .find('.entry-content')
       .children();
 
     for (const element of elements) {
       if (element.name == 'p') {
-        const p = $(element);
+        const p = this.$(element);
         const text = p.text().trim();
 
         if (text) {

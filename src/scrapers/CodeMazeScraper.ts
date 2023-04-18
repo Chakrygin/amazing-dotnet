@@ -13,41 +13,82 @@ export class CodeMazeScraper extends HtmlPageScraper {
   readonly name = 'CodeMaze';
   readonly path = 'code-maze.com';
 
-  private readonly blog: Link = {
+  readonly CodeMaze: Link = {
     title: 'Code Maze',
     href: 'https://code-maze.com',
   };
 
-  protected readPosts(): AsyncGenerator<Post> {
-    return this.readPostsFromHtmlPage(this.blog.href, '#et-boc .homePage_LatestPost article', ($, article) => {
-      const image = this.getDefaultImage(article);
-      const link = article.find('h2.entry-title a');
-      const title = link.text();
-      const href = link.attr('href') ?? '';
-      const date = this.getDate(article);
+  protected override fetchPosts(): AsyncGenerator<Post> {
+    return this
+      .fromHtmlPage(this.CodeMaze.href)
+      .fetchPosts(CodeMazeScrapeReader, reader => {
+        const post: Post = {
+          image: reader.getDefaultImage(),
+          title: reader.title,
+          href: reader.href,
+          categories: [
+            this.CodeMaze,
+          ],
+          date: moment(reader.getDate(), 'LL', 'en'),
+          links: [
+            {
+              title: 'Read more',
+              href: reader.href,
+            },
+          ],
+        };
 
-      const post: Post = {
-        image,
-        title,
-        href,
-        categories: [
-          this.blog,
-        ],
-        date: moment(date, 'LL', 'en'),
-        links: [
-          {
-            title: 'Read more',
-            href: href,
-          },
-        ],
-      };
-
-      return post;
-    });
+        return post;
+      });
   }
 
-  private getDefaultImage(article: cheerio.Cheerio<cheerio.Element>): string | undefined {
-    let src = article.find('.et_pb_image_container img').attr('src');
+  protected override enrichPost(post: Post): Promise<Post | undefined> {
+    return this
+      .fromHtmlPage(post.href)
+      .enrichPost(CodeMazeEnrichReader, reader => {
+        if (post.title.startsWith('Code Maze Weekly')) {
+          post = {
+            ...post,
+            description: reader.getWeeklyDescription(href => this.isKnownHost(href)),
+          };
+        }
+        else {
+          post = {
+            ...post,
+            image: reader.getImage() ?? post.image,
+            description: reader.getDescription(),
+          };
+        }
+
+        return post;
+      });
+  }
+
+  private isKnownHost(href: string): boolean {
+    for (const knownHost of this.knownHosts) {
+      if (href.indexOf(knownHost) > 0) {
+        return true;
+      }
+    }
+
+    return false;
+  }
+}
+
+class CodeMazeScrapeReader {
+  constructor(
+    private readonly $: cheerio.CheerioAPI,
+    private readonly article: cheerio.Cheerio<cheerio.Element>) { }
+
+  static selector = '#et-boc .homePage_LatestPost article';
+
+  readonly link = this.article.find('h2.entry-title a');
+  readonly title = this.link.text();
+  readonly href = this.link.attr('href') ?? '';
+
+  getDefaultImage(): string | undefined {
+    let src = this.article.find('.et_pb_image_container img').attr('src');
+
     if (src) {
       src = src.replace(/-\d+x\d+(\.\w+)$/, '$1');
     }
@@ -55,46 +96,30 @@ export class CodeMazeScraper extends HtmlPageScraper {
     return src;
   }
 
-  private getDate(article: cheerio.Cheerio<cheerio.Element>): string {
-    let date = article.find('.post-meta .published').text();
+  getDate(): string {
+    let date = this.article.find('.post-meta .published').text();
+
     if (date) {
       date = date.replace('Updated Date', '');
     }
 
     return date.trim();
   }
+}
 
-  protected override enrichPost(post: Post): Promise<Post | undefined> {
-    return this.readPostFromHtmlPage(post.href, '#content-area article', ($, article) => {
+class CodeMazeEnrichReader {
+  constructor(
+    private readonly $: cheerio.CheerioAPI,
+    private readonly article: cheerio.Cheerio<cheerio.Element>) { }
 
-      if (post.title.startsWith('Code Maze Weekly')) {
-        const description = this.getWeeklyDescription($, article);
+  static selector = '#content-area article';
 
-        post = {
-          ...post,
-          description,
-        };
-      }
-      else {
-        const image = this.getImage($, article);
-        const description = this.getDescription($, article);
+  getImage(): string | undefined {
+    const images = this.article
+      .find('.post-content img');
 
-        post = {
-          ...post,
-          image: image ?? post.image,
-          description,
-        };
-      }
-
-      return post;
-    });
-  }
-
-  private getImage($: cheerio.CheerioAPI, article: cheerio.Cheerio<cheerio.Element>): string | undefined {
-    const elements = article.find('.post-content img');
-
-    for (const element of elements) {
-      const image = $(element);
+    for (const element of images) {
+      const image = this.$(element);
       const width = image.attr('width');
       const height = image.attr('height');
 
@@ -106,16 +131,15 @@ export class CodeMazeScraper extends HtmlPageScraper {
     }
   }
 
-  private getDescription($: cheerio.CheerioAPI, article: cheerio.Cheerio<cheerio.Element>): string[] {
-    const description: string[] = [];
-
-    const elements = article
+  getDescription(): string[] {
+    const description = [];
+    const elements = this.article
       .find('.post-content')
       .children();
 
     for (const element of elements) {
       if (element.name == 'p') {
-        const p = $(element);
+        const p = this.$(element);
         const text = p.text().trim();
 
         if (text) {
@@ -134,18 +158,17 @@ export class CodeMazeScraper extends HtmlPageScraper {
     return description;
   }
 
-  private getWeeklyDescription($: cheerio.CheerioAPI, article: cheerio.Cheerio<cheerio.Element>): string[] | undefined {
-    const description: string[] = [];
-
-    const elements = article
+  getWeeklyDescription(isKnownHost: (href: string) => boolean): string[] | undefined {
+    const description = [];
+    const links = this.article
       .find('.post-content a.entryTitle');
 
-    for (const element of elements) {
-      const link = $(element);
+    for (const element of links) {
+      const link = this.$(element);
       const title = link.text().trim();
       const href = link.attr('href');
 
-      if (title && href && !this.isKnownHost(href)) {
+      if (title && href && !isKnownHost(href)) {
         description.push(`${title}: ${href}`);
 
         if (description.length >= 10) {
@@ -157,15 +180,5 @@ export class CodeMazeScraper extends HtmlPageScraper {
     if (description.length > 0) {
       return description;
     }
-  }
-
-  private isKnownHost(href: string): boolean {
-    for (const knownHost of this.knownHosts) {
-      if (href.indexOf(knownHost) > 0) {
-        return true;
-      }
-    }
-
-    return false;
   }
 }
