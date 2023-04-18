@@ -1,9 +1,4 @@
 {
-  "DotNetCoreTutorials": {
-    "timestamp": "2023-04-18T12:56:38.120Z",
-    "message": "Failed to parse post. Can not get post date from href: https://dotnetcoretutorials.com/fixing-cs891-the-type-name-only-contains-lower-cased-ascii-characters/",
-    "counter": 5
-  },
   "Maoni": {
     "timestamp": "2023-04-18T14:46:01.053Z",
     "message": "Failed to parse html page by url https://maoni0.medium.com. No posts found.",

@@ -9,7 +9,8 @@ const MAX_VALUE_COUNT = 100;
 
 export class PostStorage implements Storage {
   constructor(
-    private readonly path: string) { }
+    private readonly path: string,
+    private readonly getValueId: (value: string) => string) { }
 
   private files?: PostStorageFile[];
   private dirty?: true;
@@ -19,11 +20,11 @@ export class PostStorage implements Storage {
     return fs.existsSync(timestampPath);
   }
 
-  has(href: string): boolean {
+  has(value: string): boolean {
     const files = this.getFiles();
 
     for (const file of files) {
-      if (file.has(href)) {
+      if (file.has(value)) {
         return true;
       }
     }
@@ -31,10 +32,10 @@ export class PostStorage implements Storage {
     return false;
   }
 
-  add(href: string): void {
+  add(value: string): void {
     const files = this.getFiles();
     const file = files[0];
-    file.add(href);
+    file.add(value);
     this.dirty = true;
   }
 
@@ -44,7 +45,7 @@ export class PostStorage implements Storage {
 
       const currentFileName = new Date().toISOString().substring(0, 7) + '.txt';
       const currentFilePath = path.join(this.path, currentFileName);
-      const currentFile = new PostStorageFile(currentFilePath);
+      const currentFile = new PostStorageFile(currentFilePath, this.getValueId);
 
       this.files.push(currentFile);
 
@@ -61,7 +62,7 @@ export class PostStorage implements Storage {
 
         for (const fileName of fileNames) {
           const filePath = path.join(this.path, fileName);
-          const file = new PostStorageFile(filePath);
+          const file = new PostStorageFile(filePath, this.getValueId);
 
           this.files.push(file);
         }

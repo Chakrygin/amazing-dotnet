@@ -1,6 +1,6 @@
 import path from 'path';
 
-import { createSender, getInput, getKnownHosts } from '../helpers';
+import { createSender, getInput, getKnownHosts, getPostId } from '../helpers';
 import { Scraper } from '../scrapers';
 import { PostStorage } from '../storages';
 
@@ -13,7 +13,8 @@ export async function testScraper(createScraper: (knownHosts: string[]) => Scrap
   const scraper = createScraper(knownHosts);
   const sender = createSender(TELEGRAM_TOKEN, TELEGRAM_CHAT_ID);
   const storage = new PostStorage(
-    path.join(process.cwd(), 'data', 'tmp'));
+    path.join(process.cwd(), 'data', 'tmp'),
+    getPostId);
 
   await scraper.scrape(sender, storage);
 }

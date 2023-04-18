@@ -2,9 +2,10 @@ import fs from 'fs';
 
 export class PostStorageFile {
   constructor(
-    private readonly path: string) { }
+    private readonly path: string,
+    private readonly getValueId: (value: string) => string) { }
 
-  private values?: Set<string>;
+  private values?: Map<string, string>;
   private dirty?: true;
 
   get size() {
@@ -14,18 +15,20 @@ export class PostStorageFile {
 
   has(value: string): boolean {
     const values = this.getValues();
-    return values.has(value);
+    const valueId = this.getValueId(value);
+    return values.has(valueId);
   }
 
   add(value: string): void {
     const values = this.getValues();
-    values.add(value);
+    const valueId = this.getValueId(value);
+    values.set(valueId, value);
     this.dirty = true;
   }
 
   private getValues(): NonNullable<typeof this.values> {
     if (!this.values) {
-      this.values = new Set();
+      this.values = new Map();
 
       if (fs.existsSync(this.path)) {
         const data = fs.readFileSync(this.path).toString();
@@ -34,7 +37,8 @@ export class PostStorageFile {
           .filter(value => !!value);
 
         for (const value of values) {
-          this.values.add(value);
+          const id = this.getValueId(value);
+          this.values.set(id, value);
         }
       }
     }
@@ -46,7 +50,7 @@ export class PostStorageFile {
     let dirty = false;
 
     if (this.values && this.dirty) {
-      const data = Array.from(this.values).sort().join('\n');
+      const data = Array.from(this.values.values()).sort().join('\n');
       fs.writeFileSync(this.path, data + '\n');
 
       delete this.values;

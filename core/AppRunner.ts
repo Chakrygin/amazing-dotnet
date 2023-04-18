@@ -8,6 +8,7 @@ import { AppConfig } from './AppConfig';
 import { Scraper } from './scrapers';
 import { Sender } from './senders';
 import { LastErrorStorage, LastUpdateStorage, PostStorage } from './storages';
+import { getPostId } from './helpers';
 
 export class AppRunner {
   constructor(
@@ -65,7 +66,8 @@ export class AppRunner {
         }
 
         const storage = new PostStorage(
-          path.join(this.config.path, scraper.path));
+          path.join(this.config.path, scraper.path),
+          getPostId);
 
         try {
           const debug = this.config.debug || !lastUpdate || !storage.exists;
