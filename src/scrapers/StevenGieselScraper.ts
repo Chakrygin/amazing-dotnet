@@ -10,7 +10,7 @@ export class StevenGieselScraper extends HtmlPageScraper {
 
   private readonly StevenGiesel: Link = {
     title: 'Steven Giesel',
-    href: 'https://steven-giesel.com/',
+    href: 'https://steven-giesel.com',
   };
 
   protected override fetchPosts(): AsyncGenerator<Post> {
@@ -63,7 +63,6 @@ class StevenGieselFetchReader {
     .find('.meta .details .tags .goto-tag')
     .map((_, element) => this.$(element).text().trim())
     .toArray();
-
 
   getDescription(): string[] {
     const description = [];
