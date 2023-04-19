@@ -4,7 +4,6 @@ import axios from 'axios';
 import * as cheerio from 'cheerio';
 
 import { Post } from '../models';
-import { writeFileSync } from 'fs';
 
 export class HtmlPageHelper {
   constructor(
@@ -21,8 +20,6 @@ export class HtmlPageHelper {
     const response = await axios.get(this.url);
     const $ = cheerio.load(response.data as string);
     const elements = $<cheerio.Element, string>(readerType.selector);
-
-    writeFileSync('C:\\Users\\igor\\Desktop\\maoni.html', response.data as string);
 
     if (elements.length == 0) {
       throw new Error(`Failed to parse html page by url ${this.url}. No posts found.`);
