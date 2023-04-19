@@ -7,3 +7,4 @@ https://code-maze.com/csharp-property-ordering-json-serialization/
 https://code-maze.com/csharp-round-down-a-number-to-a-nearest-integer/
 https://code-maze.com/csharp-upcasting-downcasting/
 https://code-maze.com/csharp-validate-email-address/
+https://code-maze.com/dotnet-serialize-exceptions-as-json/
