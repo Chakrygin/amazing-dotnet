@@ -29,6 +29,8 @@
     - Gérald Barré - Meziantou's blog - https://www.meziantou.net
     - Khalid Abuhakmeh - https://khalidabuhakmeh.com
     - ~~Maoni Stephens - https://maoni0.medium.com~~ (Временно не работает)
+    - Michael Shpilt - Michael's Coding Spot - https://michaelscodingspot.com
+    - Steven Giesel - https://steven-giesel.com
     - Vladimir Khorikov - Enterprise Craftsmanship - https://enterprisecraftsmanship.com/posts
     - Wade Gausden - .NET Core Tutorials - https://dotnetcoretutorials.com
 
