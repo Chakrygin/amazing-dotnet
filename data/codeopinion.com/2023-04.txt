@@ -1,1 +1,2 @@
 https://codeopinion.com/greenfield-project-start-here/
+https://codeopinion.com/scaling-a-monolith-with-5-different-patterns/
