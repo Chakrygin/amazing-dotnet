@@ -1,2 +1,3 @@
 https://andrewlock.net/adding-client-side-validation-to-aspnet-core-without-jquery-or-unobtrusive-validation/
 https://andrewlock.net/smoother-rebases-with-auto-squashing-git-commits/
+https://andrewlock.net/super-charging-git-rebase-with-git-absorb/
