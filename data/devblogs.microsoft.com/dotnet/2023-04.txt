@@ -5,5 +5,6 @@ https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-preview-3
 https://devblogs.microsoft.com/dotnet/check-out-csharp-12-preview/
 https://devblogs.microsoft.com/dotnet/drawing-on-maps-with-dotnet-maui/
 https://devblogs.microsoft.com/dotnet/getting-started-azure-openai-dotnet/
+https://devblogs.microsoft.com/dotnet/lets-learn-dotnet-anywhere-in-the-world/
 https://devblogs.microsoft.com/dotnet/microsoft-build-2023-and-dotnet/
 https://devblogs.microsoft.com/dotnet/running-nonroot-kubernetes-with-dotnet/
