@@ -1,2 +1,3 @@
 https://blog.jetbrains.com/dotnet/2023/03/14/static-interface-members-generic-attributes-auto-default-structs-using-csharp-11-in-rider-and-resharper/
 https://blog.jetbrains.com/dotnet/2023/04/18/reduce-lookups-in-hashset-dictionary-and-other-collections-with-resharper/
+https://blog.jetbrains.com/dotnet/2023/04/25/introduction-to-asp-net-core-minimal-apis/
