@@ -18,7 +18,9 @@ export class AndrewLockScraper extends RssFeedScraper {
     return this
       .fromRssFeed(this.AndrewLock.href + '/rss.xml', {
         customFields: {
-          item: ['media:content', 'media:content', { keepArray: true }],
+          item: [
+            ['media:content', 'media:content'],
+          ],
         },
       })
       .fetchPosts(AndrewLockFetchReader, reader => {
