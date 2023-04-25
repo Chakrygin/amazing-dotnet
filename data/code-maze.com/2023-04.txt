@@ -12,3 +12,4 @@ https://code-maze.com/csharp-upcasting-downcasting/
 https://code-maze.com/csharp-validate-email-address/
 https://code-maze.com/dotnet-serialize-exceptions-as-json/
 https://code-maze.com/dotnet-sorting-filtering-pagination-sieve-package/
+https://code-maze.com/run-async-method-synchronously-dotnet/
