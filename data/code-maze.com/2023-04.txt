@@ -13,5 +13,6 @@ https://code-maze.com/csharp-validate-email-address/
 https://code-maze.com/dotnet-fast-inserts-entity-framework-ef-core/
 https://code-maze.com/dotnet-serialize-exceptions-as-json/
 https://code-maze.com/dotnet-sorting-filtering-pagination-sieve-package/
+https://code-maze.com/efcore-store-json-in-an-entity-field/
 https://code-maze.com/morelinq-library-linq/
 https://code-maze.com/run-async-method-synchronously-dotnet/
