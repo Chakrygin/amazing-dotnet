@@ -1,0 +1,1 @@
+https://khalidabuhakmeh.com/running-vite-with-aspnet-core-web-applications
