@@ -4,3 +4,4 @@ https://code-maze.com/code-maze-weekly-171/
 https://code-maze.com/csharp-arraylist-vs-list/
 https://code-maze.com/csharp-identify-if-a-string-is-a-number/
 https://code-maze.com/csharp-sizeof-operator/
+https://code-maze.com/dotnetcore-secure-microservices-jwt-ocelot/
