@@ -1,4 +1,5 @@
 https://code-maze.com/aspnetcore-how-to-get-the-remote-host-ip-address/
+https://code-maze.com/aspnetcore-identity-testing-usermanager-rolemanager/
 https://code-maze.com/aspnetcore-upload-large-files/
 https://code-maze.com/code-maze-weekly-171/
 https://code-maze.com/csharp-arraylist-vs-list/
