@@ -1,1 +1,2 @@
+https://khalidabuhakmeh.com/manage-vite-assets-like-a-pro
 https://khalidabuhakmeh.com/running-vite-with-aspnet-core-web-applications
