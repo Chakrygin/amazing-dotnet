@@ -1,1 +1,2 @@
+https://codeopinion.com/abstractions-to-easily-swap-implementations-not-so-fast/
 https://codeopinion.com/untangling-the-many-aspects-of-eda/
