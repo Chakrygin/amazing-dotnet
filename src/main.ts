@@ -6,6 +6,7 @@ import { CodeOpinionScraper } from './scrapers/CodeOpinionScraper';
 import { DevBlogsScraper } from './scrapers/DevBlogsScraper';
 import { DotNetCoreTutorialsScraper } from './scrapers/DotNetCoreTutorialsScraper';
 import { EnterpriseCraftsmanshipScraper } from './scrapers/EnterpriseCraftsmanshipScraper';
+import { HaackedScraper } from './scrapers/HaackedScraper';
 import { HabrScraper } from './scrapers/HabrScraper';
 import { JetBrainsBlogScraper } from './scrapers/JetBrainsBlogScraper';
 import { KhalidAbuhakmehScraper } from './scrapers/KhalidAbuhakmehScraper';
@@ -28,6 +29,7 @@ const app = new App(knownHosts => [
   new DevBlogsScraper('commandline'),
   new DotNetCoreTutorialsScraper(),
   new EnterpriseCraftsmanshipScraper(),
+  new HaackedScraper(),
   new HabrScraper('net'),
   new HabrScraper('csharp'),
   new HabrScraper('fsharp'),
