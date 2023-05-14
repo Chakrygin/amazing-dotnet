@@ -36,6 +36,7 @@ export class HaackedScraper extends HtmlPageScraper {
               href: this.getFullHref(reader.href),
             },
           ],
+          tags: reader.tags,
         };
 
         return post;
