@@ -1,1 +1,2 @@
+https://dotnetcoretutorials.com/c-hashset/
 https://dotnetcoretutorials.com/c-sharp-extension-methods/
