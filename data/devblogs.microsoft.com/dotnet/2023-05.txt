@@ -1,3 +1,6 @@
+https://devblogs.microsoft.com/dotnet/announcing-dotnet-8-preview-4/
+https://devblogs.microsoft.com/dotnet/announcing-ef8-preview-4/
+https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-preview-4/
 https://devblogs.microsoft.com/dotnet/gpt-prompt-engineering-openai-azure-dotnet/
 https://devblogs.microsoft.com/dotnet/hacktogether-microsoft-teams-global-hack/
 https://devblogs.microsoft.com/dotnet/upcoming-availability-of-net-framework-4-8-1-on-windows-update-and-catalog/
