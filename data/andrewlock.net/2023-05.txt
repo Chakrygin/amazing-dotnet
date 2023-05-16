@@ -1,1 +1,2 @@
 https://andrewlock.net/migrating-comments-from-dsqus-to-giscus/
+https://andrewlock.net/using-octokit-graphql-to-interact-with-the-github-discussions-api/

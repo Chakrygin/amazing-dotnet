@@ -1,0 +1,2 @@
+https://blog.jetbrains.com/dotnet/2023/05/15/resharper-2023-2-eap1/
+https://blog.jetbrains.com/dotnet/2023/05/15/rider-2023-2-eap1/
