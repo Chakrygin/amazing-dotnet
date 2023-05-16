@@ -7,6 +7,7 @@ https://code-maze.com/code-maze-weekly-172/
 https://code-maze.com/csharp-arraylist-vs-list/
 https://code-maze.com/csharp-identify-if-a-string-is-a-number/
 https://code-maze.com/csharp-init-only-setter-properties/
+https://code-maze.com/csharp-mlnet-machine-learning-introduction/
 https://code-maze.com/csharp-sizeof-operator/
 https://code-maze.com/dotnet-uri-encode-and-decode/
 https://code-maze.com/dotnetcore-secure-microservices-jwt-ocelot/
