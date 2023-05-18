@@ -1,4 +1,5 @@
 https://devblogs.microsoft.com/visualstudio/get-ready-for-visual-studio-at-build-2023-join-tens-of-thousands-online/
+https://devblogs.microsoft.com/visualstudio/sticky-scroll-stay-in-the-right-context/
 https://devblogs.microsoft.com/visualstudio/surround-selection-experiment/
 https://devblogs.microsoft.com/visualstudio/visual-studio-2022-17-6-now-available/
 https://devblogs.microsoft.com/visualstudio/visual-studio-2022-17-7-preview-1-is-here/
