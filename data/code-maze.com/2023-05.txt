@@ -1,5 +1,6 @@
 https://code-maze.com/aspnetcore-how-to-get-the-remote-host-ip-address/
 https://code-maze.com/aspnetcore-identity-testing-usermanager-rolemanager/
+https://code-maze.com/aspnetcore-structured-logging-log4net/
 https://code-maze.com/aspnetcore-upload-large-files/
 https://code-maze.com/charp-multidimensional-jagged-array/
 https://code-maze.com/code-maze-weekly-171/
