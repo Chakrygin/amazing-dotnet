@@ -11,6 +11,7 @@ https://code-maze.com/csharp-compare-datetime/
 https://code-maze.com/csharp-identify-if-a-string-is-a-number/
 https://code-maze.com/csharp-init-only-setter-properties/
 https://code-maze.com/csharp-mlnet-machine-learning-introduction/
+https://code-maze.com/csharp-object-initializers/
 https://code-maze.com/csharp-reverse-string/
 https://code-maze.com/csharp-sizeof-operator/
 https://code-maze.com/dotnet-uri-encode-and-decode/
