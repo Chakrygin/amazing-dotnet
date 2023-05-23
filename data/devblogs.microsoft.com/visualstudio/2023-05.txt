@@ -3,6 +3,7 @@ https://devblogs.microsoft.com/visualstudio/sticky-scroll-stay-in-the-right-cont
 https://devblogs.microsoft.com/visualstudio/surround-selection-experiment/
 https://devblogs.microsoft.com/visualstudio/turbocharge-your-visual-studio-experience-with-microsoft-dev-box/
 https://devblogs.microsoft.com/visualstudio/visual-studio-2022-17-6-now-available/
+https://devblogs.microsoft.com/visualstudio/visual-studio-2022-17-6-performance-enhancements/
 https://devblogs.microsoft.com/visualstudio/visual-studio-2022-17-7-preview-1-is-here/
 https://devblogs.microsoft.com/visualstudio/visual-studio-ui-refresh/
 https://devblogs.microsoft.com/visualstudio/web-api-development-in-visual-studio-2022/
