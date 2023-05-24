@@ -11,6 +11,7 @@ https://code-maze.com/create-byte-array-from-stream-in-csharp/
 https://code-maze.com/csharp-arraylist-vs-list/
 https://code-maze.com/csharp-compare-datetime/
 https://code-maze.com/csharp-correctly-initialize-a-string/
+https://code-maze.com/csharp-generate-permutations/
 https://code-maze.com/csharp-identify-if-a-string-is-a-number/
 https://code-maze.com/csharp-init-only-setter-properties/
 https://code-maze.com/csharp-mlnet-machine-learning-introduction/
