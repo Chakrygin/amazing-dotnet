@@ -1,3 +1,4 @@
+https://devblogs.microsoft.com/visualstudio/devdrive/
 https://devblogs.microsoft.com/visualstudio/get-ready-for-visual-studio-at-build-2023-join-tens-of-thousands-online/
 https://devblogs.microsoft.com/visualstudio/sticky-scroll-stay-in-the-right-context/
 https://devblogs.microsoft.com/visualstudio/surround-selection-experiment/
