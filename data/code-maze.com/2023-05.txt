@@ -22,6 +22,7 @@ https://code-maze.com/csharp-object-initializers/
 https://code-maze.com/csharp-reverse-string/
 https://code-maze.com/csharp-sizeof-operator/
 https://code-maze.com/csharp-using-system-text-json-for-camel-case-serialization/
+https://code-maze.com/deploy-aspnetcore-linux-nginx/
 https://code-maze.com/dotnet-sftp-secure-file-upload/
 https://code-maze.com/dotnet-uri-encode-and-decode/
 https://code-maze.com/dotnetcore-secure-microservices-jwt-ocelot/
