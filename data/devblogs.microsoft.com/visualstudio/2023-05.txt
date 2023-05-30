@@ -11,3 +11,4 @@ https://devblogs.microsoft.com/visualstudio/visual-studio-2022-17-6-performance-
 https://devblogs.microsoft.com/visualstudio/visual-studio-2022-17-7-preview-1-is-here/
 https://devblogs.microsoft.com/visualstudio/visual-studio-ui-refresh/
 https://devblogs.microsoft.com/visualstudio/web-api-development-in-visual-studio-2022/
+https://devblogs.microsoft.com/visualstudio/welcome-feedback/
