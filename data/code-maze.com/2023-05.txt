@@ -1,3 +1,4 @@
+https://code-maze.com/aspnetcore-content-security-policy/
 https://code-maze.com/aspnetcore-how-to-get-the-remote-host-ip-address/
 https://code-maze.com/aspnetcore-identity-testing-usermanager-rolemanager/
 https://code-maze.com/aspnetcore-structured-logging-log4net/
