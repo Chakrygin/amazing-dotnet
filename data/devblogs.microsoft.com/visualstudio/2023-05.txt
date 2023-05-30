@@ -1,4 +1,5 @@
 https://devblogs.microsoft.com/visualstudio/all-in-one-search-available-in-17-6/
+https://devblogs.microsoft.com/visualstudio/create-a-microsoft-power-app-for-your-asp-net-core-web-api/
 https://devblogs.microsoft.com/visualstudio/devdrive/
 https://devblogs.microsoft.com/visualstudio/get-ready-for-visual-studio-at-build-2023-join-tens-of-thousands-online/
 https://devblogs.microsoft.com/visualstudio/sticky-scroll-stay-in-the-right-context/
