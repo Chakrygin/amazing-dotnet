@@ -1,3 +1,4 @@
 https://codeopinion.com/abstractions-to-easily-swap-implementations-not-so-fast/
 https://codeopinion.com/beware-of-consumer-lag/
+https://codeopinion.com/underrated-skill-as-a-developer/
 https://codeopinion.com/untangling-the-many-aspects-of-eda/
