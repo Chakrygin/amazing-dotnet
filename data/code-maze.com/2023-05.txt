@@ -18,6 +18,7 @@ https://code-maze.com/csharp-how-to-convert-string-to-span/
 https://code-maze.com/csharp-identify-if-a-string-is-a-number/
 https://code-maze.com/csharp-init-only-setter-properties/
 https://code-maze.com/csharp-map-dateonly-timeonly-types-to-sql/
+https://code-maze.com/csharp-memory-allocation-optimization-with-benchmarkdotnet/
 https://code-maze.com/csharp-mlnet-machine-learning-introduction/
 https://code-maze.com/csharp-object-initializers/
 https://code-maze.com/csharp-reverse-string/
