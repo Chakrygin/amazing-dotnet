@@ -1,1 +1,2 @@
 https://code-maze.com/csharp-send-emails-with-sendgrid-api/
+https://code-maze.com/dynamic-queries-expression-trees-csharp/
