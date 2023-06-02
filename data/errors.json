@@ -3,5 +3,10 @@
     "timestamp": "2023-04-18T14:46:01.053Z",
     "message": "Failed to parse html page by url https://maoni0.medium.com. No posts found.",
     "counter": 6
+  },
+  "RadioDotNet": {
+    "timestamp": "2023-06-02T18:55:13.411Z",
+    "message": "connect ETIMEDOUT 185.86.146.55:443",
+    "counter": 1
   }
 }
