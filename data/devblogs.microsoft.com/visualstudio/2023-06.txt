@@ -1,0 +1,1 @@
+https://devblogs.microsoft.com/visualstudio/whats-new-in-ssdt-17-6-ledger-performance-copilot/
