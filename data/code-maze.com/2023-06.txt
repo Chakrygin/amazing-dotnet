@@ -1,4 +1,5 @@
 https://code-maze.com/aspnetcore-pass-parameters-to-http-get-action/
 https://code-maze.com/code-maze-weekly-175/
+https://code-maze.com/csharp-refactoring-change-preventers/
 https://code-maze.com/csharp-send-emails-with-sendgrid-api/
 https://code-maze.com/dynamic-queries-expression-trees-csharp/
