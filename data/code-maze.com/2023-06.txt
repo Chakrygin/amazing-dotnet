@@ -4,3 +4,4 @@ https://code-maze.com/csharp-expression-trees/
 https://code-maze.com/csharp-refactoring-change-preventers/
 https://code-maze.com/csharp-send-emails-with-sendgrid-api/
 https://code-maze.com/dynamic-queries-expression-trees-csharp/
+https://code-maze.com/enable-ssl-certificate-visual-studio-dotnet-cli/
