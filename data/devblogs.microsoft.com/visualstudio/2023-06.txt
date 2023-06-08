@@ -1,2 +1,3 @@
 https://devblogs.microsoft.com/visualstudio/announcing-csharp-dev-kit-for-visual-studio-code/
+https://devblogs.microsoft.com/visualstudio/github-copilot-visual-studio-intellisense/
 https://devblogs.microsoft.com/visualstudio/whats-new-in-ssdt-17-6-ledger-performance-copilot/
