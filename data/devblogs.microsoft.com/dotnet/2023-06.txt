@@ -1,2 +1,3 @@
+https://devblogs.microsoft.com/dotnet/hacktogether-recap-week1/
 https://devblogs.microsoft.com/dotnet/hacktogether-recap-whats-coming/
 https://devblogs.microsoft.com/dotnet/upgrade-assistant-cli/
