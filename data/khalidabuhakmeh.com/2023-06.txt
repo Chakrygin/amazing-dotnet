@@ -1,1 +1,2 @@
 https://khalidabuhakmeh.com/entity-framework-core-7-filtering-on-json-arrays
+https://khalidabuhakmeh.com/the-privilege-of-dotnet-tooling-choices
