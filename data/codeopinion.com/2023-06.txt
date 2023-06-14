@@ -1,1 +1,2 @@
+https://codeopinion.com/change-data-capture-event-driven-architecture/
 https://codeopinion.com/greg-young-answers-your-event-sourcing-questions/
