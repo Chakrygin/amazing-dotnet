@@ -4,6 +4,7 @@ https://code-maze.com/aspnetcore-pass-parameters-to-http-get-action/
 https://code-maze.com/aspnetcore-read-values-from-query-strings/
 https://code-maze.com/code-maze-weekly-175/
 https://code-maze.com/code-maze-weekly-176/
+https://code-maze.com/code-maze-weekly-177/
 https://code-maze.com/csharp-expression-trees/
 https://code-maze.com/csharp-get-class-name-as-string/
 https://code-maze.com/csharp-managed-vs-unmanaged-code-garbage-collection/
