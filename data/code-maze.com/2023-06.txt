@@ -15,4 +15,5 @@ https://code-maze.com/dotnet-efcore-records-as-model-classes/
 https://code-maze.com/dotnet-firebase/
 https://code-maze.com/dynamic-queries-expression-trees-csharp/
 https://code-maze.com/enable-ssl-certificate-visual-studio-dotnet-cli/
+https://code-maze.com/integration-testing-wiremock-dotnet/
 https://code-maze.com/virtual-methods-csharp/
