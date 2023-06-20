@@ -1,2 +1,3 @@
 https://andrewlock.net/supporting-legacy-browsers-and-samesite-cookies-without-useragent-sniffing-in-aspnetcore/
 https://andrewlock.net/understanding-samesite-cookies/
+https://andrewlock.net/validating-nested-dataannotation-options-recursively-with-minivalidation/
