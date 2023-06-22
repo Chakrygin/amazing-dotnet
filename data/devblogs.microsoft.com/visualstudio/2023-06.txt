@@ -4,4 +4,5 @@ https://devblogs.microsoft.com/visualstudio/create-a-pull-request-in-visual-stud
 https://devblogs.microsoft.com/visualstudio/github-copilot-visual-studio-intellisense/
 https://devblogs.microsoft.com/visualstudio/installing-visual-studio-from-an-internal-website/
 https://devblogs.microsoft.com/visualstudio/visual-studio-2022-17-7-preview-2-is-here/
+https://devblogs.microsoft.com/visualstudio/vs-toolbox-accelerate-your-builds-of-sdk-style-net-projects/
 https://devblogs.microsoft.com/visualstudio/whats-new-in-ssdt-17-6-ledger-performance-copilot/
