@@ -3,3 +3,5 @@ https://blog.jetbrains.com/dotnet/2023/06/06/rider-2023-2-eap-3/
 https://blog.jetbrains.com/dotnet/2023/06/09/rider-2023-2-eap-4/
 https://blog.jetbrains.com/dotnet/2023/06/16/resharper-2023-2-eap-5/
 https://blog.jetbrains.com/dotnet/2023/06/16/rider-2023-2-eap-5/
+https://blog.jetbrains.com/dotnet/2023/06/26/resharper-ai-assistant/
+https://blog.jetbrains.com/dotnet/2023/06/26/rider-ai-assistant/
