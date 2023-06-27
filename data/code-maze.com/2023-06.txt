@@ -11,6 +11,7 @@ https://code-maze.com/csharp-differences-between-expandoobject-dynamicobject-and
 https://code-maze.com/csharp-expression-trees/
 https://code-maze.com/csharp-get-class-name-as-string/
 https://code-maze.com/csharp-guid-class/
+https://code-maze.com/csharp-log4net-appenders-introduction/
 https://code-maze.com/csharp-managed-vs-unmanaged-code-garbage-collection/
 https://code-maze.com/csharp-permutations-string/
 https://code-maze.com/csharp-refactoring-change-preventers/
