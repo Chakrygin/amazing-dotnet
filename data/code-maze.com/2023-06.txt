@@ -20,6 +20,7 @@ https://code-maze.com/csharp-send-emails-with-sendgrid-api/
 https://code-maze.com/csharp-value-objects/
 https://code-maze.com/dotnet-datetime-calendars/
 https://code-maze.com/dotnet-efcore-records-as-model-classes/
+https://code-maze.com/dotnet-factory-pattern-dependency-injection/
 https://code-maze.com/dotnet-firebase/
 https://code-maze.com/dynamic-queries-expression-trees-csharp/
 https://code-maze.com/efcore-bulk-updates/
