@@ -17,6 +17,7 @@ https://code-maze.com/csharp-permutations-string/
 https://code-maze.com/csharp-refactoring-change-preventers/
 https://code-maze.com/csharp-run-powershell-script/
 https://code-maze.com/csharp-send-emails-with-sendgrid-api/
+https://code-maze.com/csharp-test-data-generation-with-autofixture/
 https://code-maze.com/csharp-value-objects/
 https://code-maze.com/dotnet-datetime-calendars/
 https://code-maze.com/dotnet-efcore-records-as-model-classes/
