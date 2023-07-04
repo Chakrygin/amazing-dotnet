@@ -1,2 +1,3 @@
 https://code-maze.com/csharp-web-application-caching-redis/
+https://code-maze.com/dotnet-roslyn-compiler-and-analyzers/
 https://code-maze.com/hashtable-csharp/
