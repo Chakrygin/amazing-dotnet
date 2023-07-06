@@ -1,1 +1,3 @@
+https://devblogs.microsoft.com/dotnet/announcing-the-dotnet-community-toolkit-821/
+https://devblogs.microsoft.com/dotnet/caching-abstraction-improvements-in-aspnetcore/
 https://devblogs.microsoft.com/dotnet/improved-fsharp-hints-in-visual-studio/
