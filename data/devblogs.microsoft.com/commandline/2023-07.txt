@@ -1,0 +1,1 @@
+https://devblogs.microsoft.com/commandline/shell-integration-in-the-windows-terminal/
