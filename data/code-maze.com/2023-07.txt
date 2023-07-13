@@ -5,5 +5,6 @@ https://code-maze.com/dotnet-compare-byte-arrays/
 https://code-maze.com/dotnet-firebase-authentication/
 https://code-maze.com/dotnet-roslyn-compiler-and-analyzers/
 https://code-maze.com/dotnet-stylecop-analyzers-implementation/
+https://code-maze.com/entityframeworkcore-vs-dapper/
 https://code-maze.com/hashtable-csharp/
 https://code-maze.com/how-to-integrate-benchmarkdotnet-with-unit-tests/
