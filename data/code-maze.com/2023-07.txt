@@ -1,3 +1,4 @@
+https://code-maze.com/blazor-webassembly-required-parameters/
 https://code-maze.com/csharp-convert-byte-array-to-hexadecimal-string/
 https://code-maze.com/csharp-discriminated-unions-with-oneof/
 https://code-maze.com/csharp-web-application-caching-redis/
