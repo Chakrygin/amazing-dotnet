@@ -1,3 +1,4 @@
 https://blog.jetbrains.com/dotnet/2023/07/03/resharper-2023-2-eap-7/
 https://blog.jetbrains.com/dotnet/2023/07/03/rider-2023-2-eap-7-is-out/
 https://blog.jetbrains.com/dotnet/2023/07/10/resharper-2023-2-eap-8/
+https://blog.jetbrains.com/dotnet/2023/07/14/rsrp-rider-2023-2-eap9/
