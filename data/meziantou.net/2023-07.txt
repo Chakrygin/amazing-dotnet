@@ -1,0 +1,1 @@
+https://www.meziantou.net/micro-optimization-concatenating-a-string-with-a-char-using-string-concat.htm
