@@ -1,2 +1,3 @@
 https://andrewlock.net/exploring-the-dotnet-8-preview-comparing-createbuilder-to-the-new-createslimbuilder-method/
+https://andrewlock.net/exploring-the-dotnet-8-preview-exploring-the-new-minimal-api-source-generator/
 https://andrewlock.net/exploring-the-dotnet-8-preview-the-minimal-api-aot-template/
