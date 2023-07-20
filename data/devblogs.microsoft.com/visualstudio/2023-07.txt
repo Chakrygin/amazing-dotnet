@@ -1,3 +1,4 @@
 https://devblogs.microsoft.com/visualstudio/announcing-the-dotnet-maui-extension-for-visual-studio-code/
 https://devblogs.microsoft.com/visualstudio/get-the-most-from-visual-studio-with-microsoft-dev-box-now-generally-available/
 https://devblogs.microsoft.com/visualstudio/introducing-a-powerful-new-extension-manager/
+https://devblogs.microsoft.com/visualstudio/too-many-tabs-open-no-problem/
