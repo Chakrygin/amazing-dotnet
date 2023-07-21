@@ -1,2 +1,3 @@
+https://codeopinion.com/building-a-system-that-junior-developers-can-be-productive-in/
 https://codeopinion.com/implementing-undo-functionality/
 https://codeopinion.com/speeding-up-queries-with-materialized-views/
