@@ -8,5 +8,10 @@
     "timestamp": "2023-04-18T14:46:01.053Z",
     "message": "Failed to parse html page by url https://maoni0.medium.com. No posts found.",
     "counter": 6
+  },
+  "MichaelsCodingSpot": {
+    "timestamp": "2023-07-24T16:46:29.948Z",
+    "message": "Post is not valid: image is not valid url, href is not valid url, link href at index 0 is not valid url.",
+    "counter": 1
   }
 }
