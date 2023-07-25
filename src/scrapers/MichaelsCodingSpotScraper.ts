@@ -46,6 +46,9 @@ export class MichaelsCodingSpotScraper extends HtmlPageScraper {
     if (href.startsWith('/')) {
       href = this.MichaelsCodingSpot.href + href;
     }
+    else if (href.startsWith('./')) {
+      href = this.MichaelsCodingSpot.href + href.substring(1);
+    }
 
     return href;
   }

@@ -11,15 +11,19 @@ export class DotNetCoreTutorialsScraper extends HtmlPageScraper {
 
   private readonly DotNetCoreTutorials: Link = {
     title: '.NET Core Tutorials',
-    href: 'https://dotnetcoretutorials.com/',
+    href: 'https://dotnetcoretutorials.com',
   };
 
   protected override fetchPosts(): AsyncGenerator<Post> {
     return this
       .fromHtmlPage(this.DotNetCoreTutorials.href)
       .fetchPosts(DotNetCoreTutorialsFetchReader, reader => {
+        if (reader.author != 'Wade') {
+          return;
+        }
+
         const post: Post = {
-          image: reader.image,
+          image: reader.getImage(),
           title: reader.title,
           href: reader.href,
           categories: [
@@ -59,10 +63,25 @@ class DotNetCoreTutorialsFetchReader {
 
   static readonly selector = '#main article.post:first-of-type';
 
-  readonly image = this.article.find('.post-image img').attr('data-lazy-src') ?? '';
   readonly link = this.article.find('.entry-title a');
   readonly title = this.link.text();
   readonly href = this.link.attr('href') ?? '';
+  readonly author = this.article.find('.entry-meta .author-name').text();
+
+  getImage(): string {
+    let image = this.article
+      .find('.post-image img')
+      .attr('data-ezsrc');
+
+    if (image) {
+      const index = image.indexOf('?');
+      if (index > 0) {
+        image = image.substring(0, index);
+      }
+    }
+
+    return image ?? '';
+  }
 }
 
 class DotNetCoreTutorialsEnrichReader {
