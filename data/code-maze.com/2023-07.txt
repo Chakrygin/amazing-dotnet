@@ -7,6 +7,7 @@ https://code-maze.com/csharp-pdf-manipulation-with-itext/
 https://code-maze.com/csharp-saga-pattern-with-nservicebus/
 https://code-maze.com/csharp-should-we-use-records-classes-or-structs/
 https://code-maze.com/csharp-web-application-caching-redis/
+https://code-maze.com/csharp-xml-deserialization/
 https://code-maze.com/dotnet-compare-byte-arrays/
 https://code-maze.com/dotnet-dependency-injection-with-scrutor/
 https://code-maze.com/dotnet-firebase-authentication/
