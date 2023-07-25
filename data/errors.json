@@ -1,17 +1,7 @@
 {
-  "DotNetCoreTutorials": {
-    "timestamp": "2023-07-24T10:46:25.825Z",
-    "message": "Post is not valid: image is empty.",
-    "counter": 2
-  },
   "Maoni": {
     "timestamp": "2023-04-18T14:46:01.053Z",
     "message": "Failed to parse html page by url https://maoni0.medium.com. No posts found.",
     "counter": 6
-  },
-  "MichaelsCodingSpot": {
-    "timestamp": "2023-07-24T18:46:31.441Z",
-    "message": "Post is not valid: image is not valid url, href is not valid url, link href at index 0 is not valid url.",
-    "counter": 2
   }
 }
