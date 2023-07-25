@@ -4,6 +4,8 @@ https://devblogs.microsoft.com/dotnet/announcing-the-dotnet-community-toolkit-82
 https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-preview-6/
 https://devblogs.microsoft.com/dotnet/azure-ad-microsoft-entra/
 https://devblogs.microsoft.com/dotnet/caching-abstraction-improvements-in-aspnetcore/
+https://devblogs.microsoft.com/dotnet/debugging-dotnet-containers-with-visual-studio-code-docker-tools/
+https://devblogs.microsoft.com/dotnet/dotnet-framework-july-2023-cumulative-update-preview/
 https://devblogs.microsoft.com/dotnet/dotnet-framework-july-2023-security-and-quality-rollup-updates/
 https://devblogs.microsoft.com/dotnet/improved-fsharp-hints-in-visual-studio/
 https://devblogs.microsoft.com/dotnet/july-2023-updates/
