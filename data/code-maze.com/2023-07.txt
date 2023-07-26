@@ -13,6 +13,7 @@ https://code-maze.com/dotnet-dependency-injection-with-scrutor/
 https://code-maze.com/dotnet-firebase-authentication/
 https://code-maze.com/dotnet-how-to-solve-unable-to-resolve-service-for-a-type/
 https://code-maze.com/dotnet-roslyn-compiler-and-analyzers/
+https://code-maze.com/dotnet-sending-email-with-fluentemail/
 https://code-maze.com/dotnet-stylecop-analyzers-implementation/
 https://code-maze.com/entityframeworkcore-vs-dapper/
 https://code-maze.com/hashtable-csharp/
