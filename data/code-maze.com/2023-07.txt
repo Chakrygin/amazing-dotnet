@@ -15,6 +15,7 @@ https://code-maze.com/dotnet-how-to-solve-unable-to-resolve-service-for-a-type/
 https://code-maze.com/dotnet-roslyn-compiler-and-analyzers/
 https://code-maze.com/dotnet-sending-email-with-fluentemail/
 https://code-maze.com/dotnet-stylecop-analyzers-implementation/
+https://code-maze.com/efcore-how-to-split-an-entity-into-multiple-tables/
 https://code-maze.com/entityframeworkcore-vs-dapper/
 https://code-maze.com/hashtable-csharp/
 https://code-maze.com/how-to-integrate-benchmarkdotnet-with-unit-tests/
