@@ -1,1 +1,2 @@
 https://blog.jetbrains.com/dotnet/2023/07/25/improvements-to-unity-shader-files-in-rider-2023-2/
+https://blog.jetbrains.com/dotnet/2023/07/27/introducing-predictive-debugging-a-game-changing-look-into-the-future/
