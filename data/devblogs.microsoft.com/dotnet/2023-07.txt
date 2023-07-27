@@ -10,4 +10,5 @@ https://devblogs.microsoft.com/dotnet/dotnet-framework-july-2023-security-and-qu
 https://devblogs.microsoft.com/dotnet/improved-fsharp-hints-in-visual-studio/
 https://devblogs.microsoft.com/dotnet/july-2023-updates/
 https://devblogs.microsoft.com/dotnet/new-csharp-12-preview-features/
+https://devblogs.microsoft.com/dotnet/new-syntax-for-string-interpolation-in-fsharp/
 https://devblogs.microsoft.com/dotnet/systemweb-adapters-1_2/
