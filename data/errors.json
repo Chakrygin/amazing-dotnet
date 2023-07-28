@@ -1,19 +1,4 @@
 {
-  "Habr / .NET": {
-    "timestamp": "2023-07-28T10:46:17.424Z",
-    "message": "Failed to parse html page by url https://habr.com/ru/hub/net/. No posts found.",
-    "counter": 1
-  },
-  "Habr / C#": {
-    "timestamp": "2023-07-28T10:46:18.187Z",
-    "message": "Failed to parse html page by url https://habr.com/ru/hub/csharp/. No posts found.",
-    "counter": 1
-  },
-  "Habr / F#": {
-    "timestamp": "2023-07-28T10:46:19.069Z",
-    "message": "Failed to parse html page by url https://habr.com/ru/hub/fsharp/. No posts found.",
-    "counter": 1
-  },
   "Maoni": {
     "timestamp": "2023-04-18T14:46:01.053Z",
     "message": "Failed to parse html page by url https://maoni0.medium.com. No posts found.",
