@@ -8,6 +8,7 @@ https://code-maze.com/csharp-saga-pattern-with-nservicebus/
 https://code-maze.com/csharp-should-we-use-records-classes-or-structs/
 https://code-maze.com/csharp-web-application-caching-redis/
 https://code-maze.com/csharp-xml-deserialization/
+https://code-maze.com/dotnet-access-configuration-during-applications-startup/
 https://code-maze.com/dotnet-adding-a-user-login-with-auth0/
 https://code-maze.com/dotnet-compare-byte-arrays/
 https://code-maze.com/dotnet-dependency-injection-with-scrutor/
