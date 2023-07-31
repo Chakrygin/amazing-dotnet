@@ -2,6 +2,7 @@ https://code-maze.com/blazor-webassembly-required-parameters/
 https://code-maze.com/csharp-convert-byte-array-to-hexadecimal-string/
 https://code-maze.com/csharp-discriminated-unions-with-oneof/
 https://code-maze.com/csharp-efficiently-randomize-an-array/
+https://code-maze.com/csharp-locking-mechanism/
 https://code-maze.com/csharp-mediatr-publish-and-send-methods/
 https://code-maze.com/csharp-pdf-manipulation-with-itext/
 https://code-maze.com/csharp-saga-pattern-with-nservicebus/
