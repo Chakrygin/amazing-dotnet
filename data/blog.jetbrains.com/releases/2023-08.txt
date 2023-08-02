@@ -1,0 +1,2 @@
+https://blog.jetbrains.com/dotnet/2023/08/02/2023-2-dottools-release/
+https://blog.jetbrains.com/dotnet/2023/08/02/rider-2023-2-release/
