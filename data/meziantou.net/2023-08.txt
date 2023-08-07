@@ -1,1 +1,2 @@
 https://www.meziantou.net/polyfills-in-dotnet-to-ease-multi-targeting
+https://www.meziantou.net/sharing-object-between-dotnet-host-and-webview2
