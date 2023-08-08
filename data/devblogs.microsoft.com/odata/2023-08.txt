@@ -1,0 +1,2 @@
+https://devblogs.microsoft.com/odata/working-with-media-resources-in-odata-part-1/
+https://devblogs.microsoft.com/odata/working-with-media-resources-in-odata-part-2/
