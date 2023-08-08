@@ -1,1 +1,2 @@
 https://devblogs.microsoft.com/visualstudio/announcing-the-unity-extension-for-visual-studio-code/
+https://devblogs.microsoft.com/visualstudio/visual-studio-2022-17-7-now-available/
