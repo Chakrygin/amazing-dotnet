@@ -1,1 +1,2 @@
+https://khalidabuhakmeh.com/dotnet-8-interceptors
 https://khalidabuhakmeh.com/generate-sitemaps-for-all-of-aspnet-core
