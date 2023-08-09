@@ -2,6 +2,7 @@ https://code-maze.com/aspdotnet-extending-identityuser/
 https://code-maze.com/csharp-effective-mocking-with-nsubstitute/
 https://code-maze.com/csharp-how-to-merge-dictionaries/
 https://code-maze.com/csharp-model-builder-ml-net/
+https://code-maze.com/csharp-moduleinitializer-attribute/
 https://code-maze.com/csharp-source-generators/
 https://code-maze.com/csharp-techniques-for-sorting-list/
 https://code-maze.com/csharp-value-vs-reference-types/
