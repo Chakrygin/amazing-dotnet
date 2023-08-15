@@ -1,6 +1,7 @@
 https://code-maze.com/aspdotnet-extending-identityuser/
 https://code-maze.com/code-maze-weekly-180/
 https://code-maze.com/csharp-configure-rolling-file-logging-with-serilog/
+https://code-maze.com/csharp-differences-between-const-and-readonly/
 https://code-maze.com/csharp-dotnet-version-programatically/
 https://code-maze.com/csharp-effective-mocking-with-nsubstitute/
 https://code-maze.com/csharp-equality-operator-and-equals-method/
