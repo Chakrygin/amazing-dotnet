@@ -13,3 +13,4 @@ https://code-maze.com/csharp-refactoring-couplers/
 https://code-maze.com/csharp-source-generators/
 https://code-maze.com/csharp-techniques-for-sorting-list/
 https://code-maze.com/csharp-value-vs-reference-types/
+https://code-maze.com/dotnet-generate-stream-from-string/
