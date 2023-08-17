@@ -1,5 +1,6 @@
 https://devblogs.microsoft.com/visualstudio/announcing-the-unity-extension-for-visual-studio-code/
 https://devblogs.microsoft.com/visualstudio/lets-co-create-your-voice-matters/
+https://devblogs.microsoft.com/visualstudio/multi-branch-graph-available-for-general-audiences/
 https://devblogs.microsoft.com/visualstudio/my-favorite-features-in-visual-studio-17-7/
 https://devblogs.microsoft.com/visualstudio/unleashing-the-power-of-visual-studio-2022-for-c-game-development/
 https://devblogs.microsoft.com/visualstudio/visual-studio-2022-17-7-now-available/
