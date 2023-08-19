@@ -1,9 +1,4 @@
 {
-  "CodeMaze": {
-    "timestamp": "2023-08-18T10:46:31.502Z",
-    "message": "Post is not valid: description is empty.",
-    "counter": 2
-  },
   "Maoni": {
     "timestamp": "2023-04-18T14:46:01.053Z",
     "message": "Failed to parse html page by url https://maoni0.medium.com. No posts found.",
