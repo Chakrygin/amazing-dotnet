@@ -1,3 +1,4 @@
+https://www.meziantou.net/how-to-stay-up-to-date-with-dotnet
 https://www.meziantou.net/polyfills-in-dotnet-to-ease-multi-targeting
 https://www.meziantou.net/sharing-object-between-dotnet-host-and-webview2
 https://www.meziantou.net/supporting-custom-protocols-in-webview2
