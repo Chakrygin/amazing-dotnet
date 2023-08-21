@@ -8,6 +8,7 @@ https://code-maze.com/csharp-dotnet-version-programatically/
 https://code-maze.com/csharp-effective-mocking-with-nsubstitute/
 https://code-maze.com/csharp-equality-operator-and-equals-method/
 https://code-maze.com/csharp-how-to-merge-dictionaries/
+https://code-maze.com/csharp-mock-ioptions/
 https://code-maze.com/csharp-model-builder-ml-net/
 https://code-maze.com/csharp-moduleinitializer-attribute/
 https://code-maze.com/csharp-primary-constructors-for-classes-and-structs/
