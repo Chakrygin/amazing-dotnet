@@ -1,2 +1,3 @@
 https://andrewlock.net/asp-dotnet-core-in-action-third-edition-is-now-in-print/
 https://andrewlock.net/exploring-the-dotnet-8-preview-keyed-services-dependency-injection-support/
+https://andrewlock.net/win-a-ticket-to-apidays-london-with-my-new-book/
