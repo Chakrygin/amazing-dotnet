@@ -1,1 +1,2 @@
 https://codeopinion.com/aggregate-ddd-isnt-hierarchy-relationships/
+https://codeopinion.com/the-pendulum-swings-microservices-to-monoliths/
