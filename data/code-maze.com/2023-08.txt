@@ -7,6 +7,7 @@ https://code-maze.com/csharp-configure-rolling-file-logging-with-serilog/
 https://code-maze.com/csharp-differences-between-const-and-readonly/
 https://code-maze.com/csharp-dotnet-version-programatically/
 https://code-maze.com/csharp-effective-mocking-with-nsubstitute/
+https://code-maze.com/csharp-efficiently-converting-strings-with-utf-8-string-literals/
 https://code-maze.com/csharp-equality-operator-and-equals-method/
 https://code-maze.com/csharp-how-to-merge-dictionaries/
 https://code-maze.com/csharp-mark-methods-as-depricated/
