@@ -11,6 +11,7 @@ https://code-maze.com/csharp-effective-mocking-with-nsubstitute/
 https://code-maze.com/csharp-efficiently-converting-strings-with-utf-8-string-literals/
 https://code-maze.com/csharp-equality-operator-and-equals-method/
 https://code-maze.com/csharp-how-to-merge-dictionaries/
+https://code-maze.com/csharp-how-to-use-mutex-class/
 https://code-maze.com/csharp-mark-methods-as-depricated/
 https://code-maze.com/csharp-mock-ioptions/
 https://code-maze.com/csharp-model-builder-ml-net/
