@@ -17,6 +17,7 @@ https://code-maze.com/csharp-mock-ioptions/
 https://code-maze.com/csharp-model-builder-ml-net/
 https://code-maze.com/csharp-moduleinitializer-attribute/
 https://code-maze.com/csharp-primary-constructors-for-classes-and-structs/
+https://code-maze.com/csharp-readonly-modifier/
 https://code-maze.com/csharp-refactoring-couplers/
 https://code-maze.com/csharp-source-generators/
 https://code-maze.com/csharp-techniques-for-sorting-list/
