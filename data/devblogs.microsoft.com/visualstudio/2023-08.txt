@@ -9,3 +9,4 @@ https://devblogs.microsoft.com/visualstudio/unleashing-the-power-of-visual-studi
 https://devblogs.microsoft.com/visualstudio/visual-studio-2022-17-7-now-available/
 https://devblogs.microsoft.com/visualstudio/visual-studio-2022-17-7-performance-enhancements/
 https://devblogs.microsoft.com/visualstudio/visual-studio-2022-17-8-preview-1-has-arrived/
+https://devblogs.microsoft.com/visualstudio/working-with-images-just-got-easier-in-visual-studio/
