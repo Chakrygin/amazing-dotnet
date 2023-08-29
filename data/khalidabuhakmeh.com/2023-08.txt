@@ -1,4 +1,5 @@
 https://khalidabuhakmeh.com/dotnet-8-interceptors
 https://khalidabuhakmeh.com/generate-sitemaps-for-all-of-aspnet-core
+https://khalidabuhakmeh.com/measuring-unicode-string-lengths-with-csharp
 https://khalidabuhakmeh.com/miniword-microsoft-office-word-templating
 https://khalidabuhakmeh.com/sisk-an-alternative-dotnet-http-server
