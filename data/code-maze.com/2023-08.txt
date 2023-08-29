@@ -1,6 +1,7 @@
 https://code-maze.com/aspdotnet-extending-identityuser/
 https://code-maze.com/aspnetcore-api-key-authentication/
 https://code-maze.com/aspnetcore-deploy-applications-on-linux-with-apache/
+https://code-maze.com/aspnetcore-get-json-array-using-iconfiguration/
 https://code-maze.com/aspnetcore-solve-http-error-500-31-failed-to-load-runtime-error/
 https://code-maze.com/code-maze-weekly-180/
 https://code-maze.com/code-maze-weekly-181/
