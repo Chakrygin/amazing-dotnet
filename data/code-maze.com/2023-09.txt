@@ -1,2 +1,3 @@
 https://code-maze.com/aspnetcore-webapi-optimistic-concurrency/
 https://code-maze.com/code-maze-weekly-183/
+https://code-maze.com/csharp-completedtask-fromresult-return-in-async-methods/
