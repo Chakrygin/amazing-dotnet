@@ -1,0 +1,1 @@
+https://khalidabuhakmeh.com/multi-tenancy-with-aspnet-core-and-finbuckle-multitenant
