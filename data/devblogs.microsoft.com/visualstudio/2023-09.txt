@@ -1,0 +1,1 @@
+https://devblogs.microsoft.com/visualstudio/keep-your-casing-with-case-preserving-find-and-replace/
