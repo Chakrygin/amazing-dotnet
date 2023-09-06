@@ -1,4 +1,9 @@
 {
+  "CodeMaze": {
+    "timestamp": "2023-09-06T22:46:24.451Z",
+    "message": "Request failed with status code 500",
+    "counter": 1
+  },
   "Maoni": {
     "timestamp": "2023-04-18T14:46:01.053Z",
     "message": "Failed to parse html page by url https://maoni0.medium.com. No posts found.",
