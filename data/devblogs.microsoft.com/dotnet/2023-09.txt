@@ -1,0 +1,1 @@
+https://devblogs.microsoft.com/dotnet/demystifying-retrieval-augmented-generation-with-dotnet/
