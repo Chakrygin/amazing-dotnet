@@ -3,3 +3,4 @@ https://code-maze.com/aspnetcore-webapi-optimistic-concurrency/
 https://code-maze.com/code-maze-weekly-183/
 https://code-maze.com/csharp-completedtask-fromresult-return-in-async-methods/
 https://code-maze.com/csharp-difference-between-string-formattablestring-iformattable/
+https://code-maze.com/csharp-differences-between-any-and-exists-methods/
