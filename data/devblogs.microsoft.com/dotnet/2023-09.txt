@@ -1,1 +1,2 @@
 https://devblogs.microsoft.com/dotnet/demystifying-retrieval-augmented-generation-with-dotnet/
+https://devblogs.microsoft.com/dotnet/wpf-file-dialog-improvements-in-dotnet-8/
