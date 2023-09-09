@@ -6,4 +6,5 @@ https://code-maze.com/code-maze-weekly-184/
 https://code-maze.com/csharp-completedtask-fromresult-return-in-async-methods/
 https://code-maze.com/csharp-difference-between-string-formattablestring-iformattable/
 https://code-maze.com/csharp-differences-between-any-and-exists-methods/
+https://code-maze.com/csharp-file-scoped-types/
 https://code-maze.com/csharp-testing-using-testcontainers-for-net-and-docker/
