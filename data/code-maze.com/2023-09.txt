@@ -1,5 +1,6 @@
 https://code-maze.com/aspnetcore-basic-authentication-with-httpclient/
 https://code-maze.com/aspnetcore-how-to-hide-endpoint-in-swagger/
+https://code-maze.com/aspnetcore-httpcontext-items-pass-data/
 https://code-maze.com/aspnetcore-webapi-optimistic-concurrency/
 https://code-maze.com/code-maze-weekly-183/
 https://code-maze.com/code-maze-weekly-184/
