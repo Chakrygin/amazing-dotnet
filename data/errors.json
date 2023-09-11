@@ -5,8 +5,8 @@
     "counter": 6
   },
   "Meziantou": {
-    "timestamp": "2023-09-11T10:46:43.922Z",
+    "timestamp": "2023-09-11T12:56:41.937Z",
     "message": "Request failed with status code 429",
-    "counter": 1
+    "counter": 2
   }
 }
