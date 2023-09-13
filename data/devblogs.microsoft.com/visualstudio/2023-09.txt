@@ -1,2 +1,3 @@
 https://devblogs.microsoft.com/visualstudio/elevating-debugging-with-auto-decompilation-and-external-sources/
 https://devblogs.microsoft.com/visualstudio/keep-your-casing-with-case-preserving-find-and-replace/
+https://devblogs.microsoft.com/visualstudio/standard-user-update/
