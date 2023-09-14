@@ -6,4 +6,5 @@ https://devblogs.microsoft.com/dotnet/demystifying-retrieval-augmented-generatio
 https://devblogs.microsoft.com/dotnet/dotnet-framework-september-2023-security-and-quality-rollup-updates/
 https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-8/
 https://devblogs.microsoft.com/dotnet/september-2023-updates/
+https://devblogs.microsoft.com/dotnet/teams-toolkit-vs177-update/
 https://devblogs.microsoft.com/dotnet/wpf-file-dialog-improvements-in-dotnet-8/
