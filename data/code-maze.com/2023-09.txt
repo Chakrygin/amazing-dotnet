@@ -11,3 +11,4 @@ https://code-maze.com/csharp-file-scoped-types/
 https://code-maze.com/csharp-stopwatch/
 https://code-maze.com/csharp-techniques-for-checking-floating-point-equality/
 https://code-maze.com/csharp-testing-using-testcontainers-for-net-and-docker/
+https://code-maze.com/dotnet-use-moq-return-value-that-was-passed-into-a-method/
