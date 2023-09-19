@@ -1,1 +1,2 @@
 https://andrewlock.net/exploring-the-dotnet-8-preview-introducing-the-identity-api-endpoints/
+https://andrewlock.net/should-you-use-the-dotnet-8-identity-api-endpoints/
