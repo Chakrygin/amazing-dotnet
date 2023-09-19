@@ -1,2 +1,3 @@
 https://khalidabuhakmeh.com/dumb-developer-tricks-fizz-buzz-with-csharp-12-and-polly
 https://khalidabuhakmeh.com/multi-tenancy-with-aspnet-core-and-finbuckle-multitenant
+https://khalidabuhakmeh.com/systemtextjson-jsonconverter-test-helpers
