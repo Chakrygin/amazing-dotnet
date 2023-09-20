@@ -1,1 +1,2 @@
 https://codeopinion.com/have-you-replaced-your-db-because-of-the-repository-pattern/
+https://codeopinion.com/how-i-became-a-software-architect-or-not/
