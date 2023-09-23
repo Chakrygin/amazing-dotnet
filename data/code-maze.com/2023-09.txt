@@ -11,6 +11,7 @@ https://code-maze.com/csharp-datetimeoffset-vs-datetime/
 https://code-maze.com/csharp-difference-between-string-formattablestring-iformattable/
 https://code-maze.com/csharp-differences-between-any-and-exists-methods/
 https://code-maze.com/csharp-different-log-levels-in-serilog/
+https://code-maze.com/csharp-fastest-way-to-read-text-file/
 https://code-maze.com/csharp-file-scoped-types/
 https://code-maze.com/csharp-stopwatch/
 https://code-maze.com/csharp-techniques-for-checking-floating-point-equality/
