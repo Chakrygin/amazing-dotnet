@@ -1,0 +1,2 @@
+https://blog.jetbrains.com/dotnet/2023/09/25/rider-2023-3-eap1/
+https://blog.jetbrains.com/dotnet/2023/09/25/rsrp-2023-3-eap1/
