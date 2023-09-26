@@ -1,3 +1,4 @@
 https://khalidabuhakmeh.com/dumb-developer-tricks-fizz-buzz-with-csharp-12-and-polly
+https://khalidabuhakmeh.com/how-to-fix-feature-folders-view-errors-with-jetbrains-annotations-rider-and-resharper
 https://khalidabuhakmeh.com/multi-tenancy-with-aspnet-core-and-finbuckle-multitenant
 https://khalidabuhakmeh.com/systemtextjson-jsonconverter-test-helpers
