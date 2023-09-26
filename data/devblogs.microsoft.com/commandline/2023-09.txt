@@ -1,2 +1,3 @@
 https://devblogs.microsoft.com/commandline/walkthroughs-in-the-windows-terminal-repository/
 https://devblogs.microsoft.com/commandline/windows-subsystem-for-linux-september-2023-update/
+https://devblogs.microsoft.com/commandline/windows-terminal-preview-1-19-release/
