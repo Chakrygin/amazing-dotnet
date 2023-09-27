@@ -5,3 +5,4 @@ https://devblogs.microsoft.com/visualstudio/keep-your-casing-with-case-preservin
 https://devblogs.microsoft.com/visualstudio/new-react-typescript-spa-templates-and-more/
 https://devblogs.microsoft.com/visualstudio/standard-user-update/
 https://devblogs.microsoft.com/visualstudio/visual-studio-2022-17-8-preview-2-has-arrived/
+https://devblogs.microsoft.com/visualstudio/visual-studio-tea-technology-miniseries/
