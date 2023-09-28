@@ -24,3 +24,4 @@ https://code-maze.com/csharp-volatile-interlocked-lock/
 https://code-maze.com/csharp-when-to-use-readerwriterlockslim-over-lock/
 https://code-maze.com/different-ways-to-overwrite-file-in-csharp/
 https://code-maze.com/dotnet-use-moq-return-value-that-was-passed-into-a-method/
+https://code-maze.com/efcore-database-first-development-with-ef-core-power-tools/
