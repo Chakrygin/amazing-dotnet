@@ -1,9 +1,4 @@
 {
-  "CodeMaze": {
-    "timestamp": "2023-09-28T08:50:24.096Z",
-    "message": "Request failed with status code 522",
-    "counter": 1
-  },
   "Maoni": {
     "timestamp": "2023-04-18T14:46:01.053Z",
     "message": "Failed to parse html page by url https://maoni0.medium.com. No posts found.",
