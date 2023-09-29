@@ -6,6 +6,7 @@ https://code-maze.com/blazor-how-to-use-onchange-event-with-select-dropdown/
 https://code-maze.com/code-maze-weekly-183/
 https://code-maze.com/code-maze-weekly-184/
 https://code-maze.com/code-maze-weekly-186/
+https://code-maze.com/code-maze-weekly-187/
 https://code-maze.com/csharp-22-best-practices/
 https://code-maze.com/csharp-arraypool-memory-optimization/
 https://code-maze.com/csharp-completedtask-fromresult-return-in-async-methods/
