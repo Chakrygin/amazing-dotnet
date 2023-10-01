@@ -3,10 +3,5 @@
     "timestamp": "2023-04-18T14:46:01.053Z",
     "message": "Failed to parse html page by url https://maoni0.medium.com. No posts found.",
     "counter": 6
-  },
-  "RadioDotNet": {
-    "timestamp": "2023-10-01T10:49:54.032Z",
-    "message": "Request failed with status code 504",
-    "counter": 1
   }
 }
