@@ -1,2 +1,3 @@
 https://code-maze.com/csharp-selecting-xml-nodes-with-xpath/
 https://code-maze.com/csharp-testing-time-dependent-code-with-timeprovider/
+https://code-maze.com/refactoring-dispensables-and-code-smells-in-csharp/
