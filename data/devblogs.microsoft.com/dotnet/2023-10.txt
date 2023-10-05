@@ -1,3 +1,4 @@
 https://devblogs.microsoft.com/dotnet/csharp-dev-kit-now-generally-available/
+https://devblogs.microsoft.com/dotnet/the-convenience-of-system-text-json/
 https://devblogs.microsoft.com/dotnet/the-dotnet-conf-student-zone-is-back/
 https://devblogs.microsoft.com/dotnet/this-arm64-performance-in-dotnet-8/
