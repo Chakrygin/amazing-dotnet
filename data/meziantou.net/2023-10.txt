@@ -1,1 +1,2 @@
+https://www.meziantou.net/get-the-default-value-of-a-type-at-runtime
 https://www.meziantou.net/how-to-test-the-logs-from-ilogger-in-dotnet
