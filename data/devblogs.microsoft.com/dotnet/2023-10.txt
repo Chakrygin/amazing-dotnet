@@ -4,6 +4,7 @@ https://devblogs.microsoft.com/dotnet/announcing-ef8-rc2/
 https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-rc-2/
 https://devblogs.microsoft.com/dotnet/csharp-dev-kit-now-generally-available/
 https://devblogs.microsoft.com/dotnet/october-2023-updates/
+https://devblogs.microsoft.com/dotnet/overhauled-fsharp-code-fixes-in-visual-studio/
 https://devblogs.microsoft.com/dotnet/the-convenience-of-system-text-json/
 https://devblogs.microsoft.com/dotnet/the-dotnet-conf-student-zone-is-back/
 https://devblogs.microsoft.com/dotnet/this-arm64-performance-in-dotnet-8/
