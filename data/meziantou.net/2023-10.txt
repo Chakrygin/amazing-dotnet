@@ -1,2 +1,3 @@
+https://www.meziantou.net/customizing-the-embedded-resource-name-in-dotnet
 https://www.meziantou.net/get-the-default-value-of-a-type-at-runtime
 https://www.meziantou.net/how-to-test-the-logs-from-ilogger-in-dotnet
