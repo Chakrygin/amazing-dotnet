@@ -1,2 +1,3 @@
 https://andrewlock.net/can-you-use-the-dotnet-8-identity-api-endpoints-with-identityserver/
 https://andrewlock.net/exploring-the-dotnet-8-preview-rendering-blazor-components-to-a-string/
+https://andrewlock.net/exploring-the-dotnet-8-preview-updates-to-docker-images-in-dotnet-8/
