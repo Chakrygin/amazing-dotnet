@@ -1,2 +1,3 @@
 https://khalidabuhakmeh.com/how-to-display-dotnet-collections-with-the-oxford-comma
 https://khalidabuhakmeh.com/how-to-use-embedded-resources-in-dotnet
+https://khalidabuhakmeh.com/razorslices-razor-views-with-aspnet-core-minimal-apis
