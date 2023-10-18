@@ -1,2 +1,3 @@
+https://codeopinion.com/clean-architecture-and-indirection-no-thanks/
 https://codeopinion.com/help-my-system-is-a-spaghetti-code-mess/
 https://codeopinion.com/how-to-seed-a-new-microservice-with-data/
