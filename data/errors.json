@@ -8,10 +8,5 @@
     "timestamp": "2023-10-18T22:46:41.776Z",
     "message": "Request failed with status code 429",
     "counter": 3
-  },
-  "RadioDotNet": {
-    "timestamp": "2023-10-18T16:46:51.644Z",
-    "message": "Request failed with status code 502",
-    "counter": 2
   }
 }
