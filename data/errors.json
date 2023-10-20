@@ -1,17 +1,12 @@
 {
   "CodeOpinion": {
-    "timestamp": "2023-10-19T22:46:23.864Z",
+    "timestamp": "2023-10-20T01:36:24.380Z",
     "message": "Failed to parse html page by url https://codeopinion.com. No posts found.",
-    "counter": 1
+    "counter": 2
   },
   "Maoni": {
     "timestamp": "2023-04-18T14:46:01.053Z",
     "message": "Failed to parse html page by url https://maoni0.medium.com. No posts found.",
     "counter": 6
-  },
-  "Meziantou": {
-    "timestamp": "2023-10-18T22:46:41.776Z",
-    "message": "Request failed with status code 429",
-    "counter": 3
   }
 }
