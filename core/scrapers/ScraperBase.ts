@@ -25,8 +25,8 @@ export abstract class ScraperBase implements Scraper {
         firstPostDate = post.date;
       }
       else if (firstPostDate.diff(post.date, 'day') >= 1) {
-        core.info('The post is too old. Break scraping.');
-        break;
+        // core.info('The post is too old. Break scraping.');
+        // break;
       }
 
       const enrichedPost = await this.enrichPost(post);
