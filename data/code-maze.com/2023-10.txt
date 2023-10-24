@@ -14,3 +14,4 @@ https://code-maze.com/csharp-using-keyed-services-to-resolve-dependencies/
 https://code-maze.com/efcore-how-and-when-to-use-tpc-inheritance-mapping/
 https://code-maze.com/refactoring-dispensables-and-code-smells-in-csharp/
 https://code-maze.com/substring-in-string-case-insensitive-csharp/
+https://code-maze.com/type-trequest-cannot-be-used-in-mediatr/
