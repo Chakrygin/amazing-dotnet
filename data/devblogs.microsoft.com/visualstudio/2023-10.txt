@@ -1,4 +1,5 @@
 https://devblogs.microsoft.com/visualstudio/celebrating-ndeam-vs-code-visual-studio/
+https://devblogs.microsoft.com/visualstudio/microsoft-ignite-2023-is-around-the-corner-nov-14-17/
 https://devblogs.microsoft.com/visualstudio/updating-the-extension-manager-with-your-feedback/
 https://devblogs.microsoft.com/visualstudio/visual-studio-2022-17-8-preview-3-is-here/
 https://devblogs.microsoft.com/visualstudio/visual-studio-innovations-at-net-conf-2023-save-the-date/
