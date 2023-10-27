@@ -3,6 +3,7 @@ https://code-maze.com/automapper-how-to-ignore-null-values/
 https://code-maze.com/code-maze-weekly-188/
 https://code-maze.com/code-maze-weekly-189/
 https://code-maze.com/code-maze-weekly-190/
+https://code-maze.com/code-maze-weekly-191/
 https://code-maze.com/csharp-concurrentqueue/
 https://code-maze.com/csharp-converting-a-hexadecimal-string-to-a-byte-array/
 https://code-maze.com/csharp-global-exception-handling-for-mediatr-requests/
