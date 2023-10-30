@@ -1,5 +1,6 @@
 https://code-maze.com/aspnetcore-audit-trail/
 https://code-maze.com/automapper-how-to-ignore-null-values/
+https://code-maze.com/c-sharp-managing-directories-with-directory-and-directoryinfo/
 https://code-maze.com/code-maze-weekly-188/
 https://code-maze.com/code-maze-weekly-189/
 https://code-maze.com/code-maze-weekly-190/
