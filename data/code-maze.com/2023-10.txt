@@ -10,6 +10,7 @@ https://code-maze.com/csharp-converting-a-hexadecimal-string-to-a-byte-array/
 https://code-maze.com/csharp-global-exception-handling-for-mediatr-requests/
 https://code-maze.com/csharp-replace-line-breaks-in-a-string/
 https://code-maze.com/csharp-selecting-xml-nodes-with-xpath/
+https://code-maze.com/csharp-strangler-fig-architectural-pattern/
 https://code-maze.com/csharp-string-resource-file/
 https://code-maze.com/csharp-testing-time-dependent-code-with-timeprovider/
 https://code-maze.com/csharp-unit-of-work-pattern/
