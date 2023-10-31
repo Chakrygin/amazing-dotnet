@@ -3,6 +3,7 @@ https://devblogs.microsoft.com/dotnet/announcing-dotnet-maui-in-dotnet-8-rc-2/
 https://devblogs.microsoft.com/dotnet/announcing-ef8-rc2/
 https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-rc-2/
 https://devblogs.microsoft.com/dotnet/csharp-dev-kit-now-generally-available/
+https://devblogs.microsoft.com/dotnet/dotnet-8-performance-improvements-in-dotnet-maui/
 https://devblogs.microsoft.com/dotnet/dotnet-framework-october-2023-security-and-quality-rollup-updates/
 https://devblogs.microsoft.com/dotnet/dotnet-maui-3d-app-with-evergine/
 https://devblogs.microsoft.com/dotnet/net-framework-october-2023-cumulative-update-preview/
