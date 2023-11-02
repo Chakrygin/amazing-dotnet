@@ -1,1 +1,2 @@
+https://devblogs.microsoft.com/dotnet/a-new-fsharp-compiler-feature-graphbased-typechecking/
 https://devblogs.microsoft.com/dotnet/efcore-mongodb/
