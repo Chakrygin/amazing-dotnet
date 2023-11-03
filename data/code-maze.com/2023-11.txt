@@ -1,2 +1,3 @@
+https://code-maze.com/csharp-how-to-force-run-net-application-as-administrator/
 https://code-maze.com/dotnet-handling-dates-with-noda-time/
 https://code-maze.com/how-to-create-a-url-query-string/
