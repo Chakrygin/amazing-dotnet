@@ -1,0 +1,1 @@
+https://www.meziantou.net/reading-a-stream-of-jsondocuments-separated-by-new-lines-ndjson
