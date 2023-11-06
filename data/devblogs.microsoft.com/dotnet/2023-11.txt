@@ -1,3 +1,4 @@
 https://devblogs.microsoft.com/dotnet/a-new-fsharp-compiler-feature-graphbased-typechecking/
 https://devblogs.microsoft.com/dotnet/efcore-mongodb/
+https://devblogs.microsoft.com/dotnet/the-convenience-of-system-io/
 https://devblogs.microsoft.com/dotnet/whats-new-with-identity-in-dotnet-8/
