@@ -5,6 +5,7 @@ https://code-maze.com/csharp-comparing-the-foreach-method-and-foreach-statement/
 https://code-maze.com/csharp-event-driven-architecture/
 https://code-maze.com/csharp-how-to-force-run-net-application-as-administrator/
 https://code-maze.com/csharp-merging-multiple-pdfs-using-the-itext-library/
+https://code-maze.com/csharp-pipes-and-filters-architectural-pattern/
 https://code-maze.com/csharp-read-and-write-windows-registry/
 https://code-maze.com/dotnet-handling-dates-with-noda-time/
 https://code-maze.com/how-to-create-a-url-query-string/
