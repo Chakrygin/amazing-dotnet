@@ -32,7 +32,7 @@ export class MeziantouScraper extends HtmlPageScraper {
             this.Meziantou,
           ],
           author: this.author,
-          date: moment(reader.date, 'MM/DD/YY'),
+          date: moment(reader.date, 'MM/DD/YYYY'),
           links: [
             {
               title: 'Read more',
