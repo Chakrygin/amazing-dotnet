@@ -1,1 +1,2 @@
 https://khalidabuhakmeh.com/moonsharp-running-lua-scripts-in-dotnet
+https://khalidabuhakmeh.com/vestpocket-file-based-data-storage-for-aot-dotnet-applications
