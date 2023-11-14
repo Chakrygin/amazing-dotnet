@@ -1,0 +1,1 @@
+https://blog.jetbrains.com/qodana/2023/11/how-zynex-monitoring-solutions-uses-qodana-to-manage-code-quality-for-their-net-applications-case-study/
