@@ -1,1 +1,2 @@
 https://devblogs.microsoft.com/visualstudio/latest-updates-for-cmake-development-in-visual-studio/
+https://devblogs.microsoft.com/visualstudio/visual-studio-17-8-now-available/
