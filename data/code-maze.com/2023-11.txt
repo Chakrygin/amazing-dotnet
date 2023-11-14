@@ -9,3 +9,4 @@ https://code-maze.com/csharp-pipes-and-filters-architectural-pattern/
 https://code-maze.com/csharp-read-and-write-windows-registry/
 https://code-maze.com/dotnet-handling-dates-with-noda-time/
 https://code-maze.com/how-to-create-a-url-query-string/
+https://code-maze.com/how-to-use-interceptors-in-c-12/
