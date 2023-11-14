@@ -113,7 +113,7 @@ class JetBrainsBlogFetchReader {
   static readonly selector = '.card_container a.card';
 
   readonly image = this.article.find('img.wp-post-image').attr('src');
-  readonly title = this.article.find('.card__header h3').text();
+  readonly title = this.article.find('.card__header h4').text();
   readonly href = this.article.attr('href') ?? '';
   readonly date = this.article.find('.card__header time.publish-date').attr('datetime');
 
