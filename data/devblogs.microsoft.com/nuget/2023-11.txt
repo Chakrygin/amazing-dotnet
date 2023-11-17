@@ -1,0 +1,1 @@
+https://devblogs.microsoft.com/nuget/announcing-nuget-6-8-maintaining-security-with-ease/
