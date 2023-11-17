@@ -8,6 +8,7 @@ https://code-maze.com/csharp-merging-multiple-pdfs-using-the-itext-library/
 https://code-maze.com/csharp-pipes-and-filters-architectural-pattern/
 https://code-maze.com/csharp-read-and-write-windows-registry/
 https://code-maze.com/csharp-standard-and-custom-numeric-format-strings/
+https://code-maze.com/csharp-static-anonymous-functions/
 https://code-maze.com/database-row-as-json-using-dapper/
 https://code-maze.com/dotnet-handling-dates-with-noda-time/
 https://code-maze.com/how-to-create-a-url-query-string/
