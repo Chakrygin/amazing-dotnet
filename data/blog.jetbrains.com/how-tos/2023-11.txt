@@ -1,2 +1,3 @@
 https://blog.jetbrains.com/dotnet/2023/11/14/automatically-analyze-asp-net-core-performance-with-dynamic-program-analysis/
+https://blog.jetbrains.com/dotnet/2023/11/20/visualize-entity-framework-relationships-and-additional-query-analysis-in-resharper-2023-3/
 https://blog.jetbrains.com/qodana/2023/11/how-zynex-monitoring-solutions-uses-qodana-to-manage-code-quality-for-their-net-applications-case-study/
