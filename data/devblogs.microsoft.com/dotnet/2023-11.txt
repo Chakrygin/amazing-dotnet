@@ -1,4 +1,5 @@
 https://devblogs.microsoft.com/dotnet/a-new-fsharp-compiler-feature-graphbased-typechecking/
+https://devblogs.microsoft.com/dotnet/android-resource-designer-dotnet-8/
 https://devblogs.microsoft.com/dotnet/announcing-asp-net-core-in-dotnet-8/
 https://devblogs.microsoft.com/dotnet/announcing-csharp-12/
 https://devblogs.microsoft.com/dotnet/announcing-dotnet-8/
