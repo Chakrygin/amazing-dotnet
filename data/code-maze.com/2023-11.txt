@@ -14,3 +14,4 @@ https://code-maze.com/database-row-as-json-using-dapper/
 https://code-maze.com/dotnet-handling-dates-with-noda-time/
 https://code-maze.com/how-to-create-a-url-query-string/
 https://code-maze.com/how-to-use-interceptors-in-c-12/
+https://code-maze.com/short-introduction-to-net-and-csharp/
