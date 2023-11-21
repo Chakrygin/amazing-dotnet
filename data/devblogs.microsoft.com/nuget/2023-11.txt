@@ -1,1 +1,2 @@
 https://devblogs.microsoft.com/nuget/announcing-nuget-6-8-maintaining-security-with-ease/
+https://devblogs.microsoft.com/nuget/announcing-nuget-exe-and-nuget-client-sdk-packages-support-policy-keeping-you-informed-and-secure/
