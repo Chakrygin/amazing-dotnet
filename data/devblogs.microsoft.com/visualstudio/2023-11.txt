@@ -3,4 +3,5 @@ https://devblogs.microsoft.com/visualstudio/introducing-visual-studio-17-9-previ
 https://devblogs.microsoft.com/visualstudio/latest-updates-for-cmake-development-in-visual-studio/
 https://devblogs.microsoft.com/visualstudio/the-visual-studio-ui-refresh-preview-is-here/
 https://devblogs.microsoft.com/visualstudio/visual-studio-17-8-now-available/
+https://devblogs.microsoft.com/visualstudio/visual-studio-2022-17-8-performance-enhancements/
 https://devblogs.microsoft.com/visualstudio/visual-studio-2022-v17-8-brings-increased-productivity-further-unreal-engine-integration-and-cross-platform-enhancements-to-c/
