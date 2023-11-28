@@ -2,6 +2,7 @@ https://code-maze.com/aspnetcore-hot-reload/
 https://code-maze.com/chsarp-the-differences-between-quartz-net-and-hangfire/
 https://code-maze.com/code-maze-weekly-192/
 https://code-maze.com/code-maze-weekly-193/
+https://code-maze.com/csharp-automated-machine-learning-api-with-ml-net/
 https://code-maze.com/csharp-comparing-the-foreach-method-and-foreach-statement/
 https://code-maze.com/csharp-concurrentstack/
 https://code-maze.com/csharp-event-driven-architecture/
