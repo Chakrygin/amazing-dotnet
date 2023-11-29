@@ -2,6 +2,7 @@ https://devblogs.microsoft.com/visualstudio/community-feedback-building-17-8-17-
 https://devblogs.microsoft.com/visualstudio/create-a-pull-request/
 https://devblogs.microsoft.com/visualstudio/introducing-visual-studio-17-9-preview-1-is-here/
 https://devblogs.microsoft.com/visualstudio/latest-updates-for-cmake-development-in-visual-studio/
+https://devblogs.microsoft.com/visualstudio/my-favorite-features-in-visual-studio-17-8/
 https://devblogs.microsoft.com/visualstudio/the-visual-studio-ui-refresh-preview-is-here/
 https://devblogs.microsoft.com/visualstudio/visual-studio-17-8-now-available/
 https://devblogs.microsoft.com/visualstudio/visual-studio-2022-17-8-performance-enhancements/
