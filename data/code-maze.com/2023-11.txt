@@ -1,4 +1,5 @@
 https://code-maze.com/aspnetcore-hot-reload/
+https://code-maze.com/aspnetcore-request-timeouts-middleware/
 https://code-maze.com/chsarp-the-differences-between-quartz-net-and-hangfire/
 https://code-maze.com/code-maze-weekly-192/
 https://code-maze.com/code-maze-weekly-193/
