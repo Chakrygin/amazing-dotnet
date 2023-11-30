@@ -18,7 +18,7 @@ export class StevenGieselScraper extends HtmlPageScraper {
       .fromHtmlPage(this.StevenGiesel.href)
       .fetchPosts(StevenGieselFetchReader, reader => {
         const post: Post = {
-          image: reader.image,
+          //image: reader.image,
           title: reader.title,
           href: this.getFullHref(reader.href),
           categories: [
