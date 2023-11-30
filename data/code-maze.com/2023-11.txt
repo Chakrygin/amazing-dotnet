@@ -8,6 +8,7 @@ https://code-maze.com/csharp-comparing-the-foreach-method-and-foreach-statement/
 https://code-maze.com/csharp-concurrentstack/
 https://code-maze.com/csharp-event-driven-architecture/
 https://code-maze.com/csharp-how-to-check-if-a-file-is-in-use/
+https://code-maze.com/csharp-how-to-determine-the-operating-system/
 https://code-maze.com/csharp-how-to-force-run-net-application-as-administrator/
 https://code-maze.com/csharp-merging-multiple-pdfs-using-the-itext-library/
 https://code-maze.com/csharp-pipes-and-filters-architectural-pattern/
