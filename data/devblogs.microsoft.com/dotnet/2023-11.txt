@@ -9,6 +9,7 @@ https://devblogs.microsoft.com/dotnet/announcing-ef8/
 https://devblogs.microsoft.com/dotnet/announcing-fsharp-8/
 https://devblogs.microsoft.com/dotnet/announcing-ml-net-3-0/
 https://devblogs.microsoft.com/dotnet/building-resilient-cloud-services-with-dotnet-8/
+https://devblogs.microsoft.com/dotnet/creating-aot-compatible-libraries/
 https://devblogs.microsoft.com/dotnet/dotnet-framework-november-2023-security-and-quality-rollup/
 https://devblogs.microsoft.com/dotnet/efcore-mongodb/
 https://devblogs.microsoft.com/dotnet/fake-it-til-you-make-it-to-production/
