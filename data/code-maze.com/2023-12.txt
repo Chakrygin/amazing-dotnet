@@ -1,1 +1,2 @@
 https://code-maze.com/aspnetcore-webapi-read-request-body/
+https://code-maze.com/code-maze-weekly-194/
