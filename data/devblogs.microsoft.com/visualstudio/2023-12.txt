@@ -1,1 +1,2 @@
+https://devblogs.microsoft.com/visualstudio/embracing-sql-server-2022-with-ssdt-17-8-unveiling-key-updates/
 https://devblogs.microsoft.com/visualstudio/scroll-to-expand-document-tabs/
