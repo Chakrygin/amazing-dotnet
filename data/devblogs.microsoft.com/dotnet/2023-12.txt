@@ -1,1 +1,2 @@
 https://devblogs.microsoft.com/dotnet/extending-web-assembly-to-the-cloud/
+https://devblogs.microsoft.com/dotnet/learn-dotnet8-beginner-videos/
