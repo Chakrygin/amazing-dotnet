@@ -1,0 +1,2 @@
+https://blog.jetbrains.com/dotnet/2023/12/07/resharper-2023-3-release/
+https://blog.jetbrains.com/dotnet/2023/12/07/rider-2023-3-release/
