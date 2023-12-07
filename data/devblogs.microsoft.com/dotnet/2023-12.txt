@@ -1,2 +1,4 @@
+https://devblogs.microsoft.com/dotnet/dotnet-8-networking-improvements/
+https://devblogs.microsoft.com/dotnet/dotnet-conf-2023-recap-videos-slides-demos-and-more/
 https://devblogs.microsoft.com/dotnet/extending-web-assembly-to-the-cloud/
 https://devblogs.microsoft.com/dotnet/learn-dotnet8-beginner-videos/
