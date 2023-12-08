@@ -1,6 +1,7 @@
 https://code-maze.com/aspnetcore-webapi-read-request-body/
 https://code-maze.com/blazor-webassembly-ahead-of-time-compilation/
 https://code-maze.com/code-maze-weekly-194/
+https://code-maze.com/code-maze-weekly-195/
 https://code-maze.com/csharp-hexagonal-architectural-pattern/
 https://code-maze.com/csharp-local-functions/
 https://code-maze.com/csharp-rename-files-in-a-folder/
