@@ -6,5 +6,6 @@ https://code-maze.com/csharp-create-better-looking-console-applications-with-spe
 https://code-maze.com/csharp-hexagonal-architectural-pattern/
 https://code-maze.com/csharp-local-functions/
 https://code-maze.com/csharp-rename-files-in-a-folder/
+https://code-maze.com/csharp-tuple-aliases/
 https://code-maze.com/dotnet-switch-between-sdk-versions/
 https://code-maze.com/insert-and-return-inserted-identity-with-dapper/
