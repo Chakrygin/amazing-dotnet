@@ -1,3 +1,4 @@
+https://devblogs.microsoft.com/dotnet/dotnet-8-hardware-intrinsics/
 https://devblogs.microsoft.com/dotnet/dotnet-8-networking-improvements/
 https://devblogs.microsoft.com/dotnet/dotnet-conf-2023-recap-videos-slides-demos-and-more/
 https://devblogs.microsoft.com/dotnet/extending-web-assembly-to-the-cloud/
