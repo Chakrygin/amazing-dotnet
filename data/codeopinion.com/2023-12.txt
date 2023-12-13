@@ -1,1 +1,2 @@
 https://codeopinion.com/ddd-is-just-giving-a-about-your-domain/
+https://codeopinion.com/path-to-event-driven-architecture-start-capturing-intent/
