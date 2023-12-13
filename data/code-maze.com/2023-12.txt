@@ -3,6 +3,7 @@ https://code-maze.com/blazor-webassembly-ahead-of-time-compilation/
 https://code-maze.com/code-maze-weekly-194/
 https://code-maze.com/code-maze-weekly-195/
 https://code-maze.com/csharp-create-better-looking-console-applications-with-spectre-console/
+https://code-maze.com/csharp-file-access-modifier/
 https://code-maze.com/csharp-hexagonal-architectural-pattern/
 https://code-maze.com/csharp-local-functions/
 https://code-maze.com/csharp-rename-files-in-a-folder/
