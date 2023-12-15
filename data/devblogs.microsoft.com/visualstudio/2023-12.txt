@@ -1,3 +1,4 @@
 https://devblogs.microsoft.com/visualstudio/embracing-sql-server-2022-with-ssdt-17-8-unveiling-key-updates/
 https://devblogs.microsoft.com/visualstudio/scroll-to-expand-document-tabs/
+https://devblogs.microsoft.com/visualstudio/unlocking-the-secrets-of-managed-memory-dive-into-event-handler-leak-insights/
 https://devblogs.microsoft.com/visualstudio/visual-studio-17-9-preview-2-has-arrived/
