@@ -1,1 +1,2 @@
 https://michaelscodingspot.com/debug-linq-in-csharp/
+https://michaelscodingspot.com/slow-development-in-big-companies/
