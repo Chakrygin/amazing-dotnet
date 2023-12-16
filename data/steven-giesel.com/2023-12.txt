@@ -1,1 +1,2 @@
 https://steven-giesel.com/blogPost/5bf635cb-3533-4207-905f-81eb86512219
+https://steven-giesel.com/blogPost/5bf635cb-3533-4207-905f-81eb86512219/entity-framework-storing-complex-objects-as-json
