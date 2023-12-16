@@ -13,4 +13,5 @@ https://code-maze.com/csharp-select-a-dropdown-option-using-selenium-webdriver/
 https://code-maze.com/csharp-tuple-aliases/
 https://code-maze.com/dotnet-switch-between-sdk-versions/
 https://code-maze.com/how-to-decode-jwt-tokens-in-net/
+https://code-maze.com/how-to-publish-a-blazor-webassembly-application-on-iis/
 https://code-maze.com/insert-and-return-inserted-identity-with-dapper/
