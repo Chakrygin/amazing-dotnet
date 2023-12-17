@@ -1,2 +1,3 @@
 https://steven-giesel.com/blogPost/5bf635cb-3533-4207-905f-81eb86512219
 https://steven-giesel.com/blogPost/5bf635cb-3533-4207-905f-81eb86512219/entity-framework-storing-complex-objects-as-json
+https://steven-giesel.com/blogPost/76b40ab1-033b-488e-b11a-a5922fa8a4b7/bunit-generators-generate-your-stubs-automatically
