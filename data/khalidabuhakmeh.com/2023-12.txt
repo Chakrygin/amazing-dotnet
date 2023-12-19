@@ -1,2 +1,3 @@
 https://khalidabuhakmeh.com/how-to-use-regular-expressions-and-match-evaluators-in-dotnet
+https://khalidabuhakmeh.com/memoizr-declarative-structured-concurrency-for-csharp
 https://khalidabuhakmeh.com/testing-typesense-search-with-testcontainers-and-dotnet
