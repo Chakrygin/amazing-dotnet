@@ -1,5 +1,6 @@
 https://code-maze.com/aspnetcore-how-to-get-an-access-token-from-httpcontext/
 https://code-maze.com/aspnetcore-webapi-read-request-body/
+https://code-maze.com/autofac-fakeiteasy-package-basics/
 https://code-maze.com/blazor-webassembly-ahead-of-time-compilation/
 https://code-maze.com/code-maze-weekly-194/
 https://code-maze.com/code-maze-weekly-195/
