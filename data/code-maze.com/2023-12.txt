@@ -7,6 +7,7 @@ https://code-maze.com/code-maze-weekly-195/
 https://code-maze.com/code-maze-weekly-196/
 https://code-maze.com/csharp-create-better-looking-console-applications-with-spectre-console/
 https://code-maze.com/csharp-custom-naming-policy-for-json/
+https://code-maze.com/csharp-execute-javascript-using-selenium-webdriver/
 https://code-maze.com/csharp-file-access-modifier/
 https://code-maze.com/csharp-hexagonal-architectural-pattern/
 https://code-maze.com/csharp-local-functions/
