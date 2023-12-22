@@ -6,6 +6,7 @@ https://code-maze.com/blazor-webassembly-ahead-of-time-compilation/
 https://code-maze.com/code-maze-weekly-194/
 https://code-maze.com/code-maze-weekly-195/
 https://code-maze.com/code-maze-weekly-196/
+https://code-maze.com/code-maze-weekly-197/
 https://code-maze.com/csharp-create-better-looking-console-applications-with-spectre-console/
 https://code-maze.com/csharp-custom-naming-policy-for-json/
 https://code-maze.com/csharp-execute-javascript-using-selenium-webdriver/
