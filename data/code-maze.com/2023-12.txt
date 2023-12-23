@@ -16,6 +16,7 @@ https://code-maze.com/csharp-local-functions/
 https://code-maze.com/csharp-rename-files-in-a-folder/
 https://code-maze.com/csharp-select-a-dropdown-option-using-selenium-webdriver/
 https://code-maze.com/csharp-tuple-aliases/
+https://code-maze.com/dotnet-debugging-and-profiling-multithreaded-applications/
 https://code-maze.com/dotnet-switch-between-sdk-versions/
 https://code-maze.com/dotnet-using-the-cli-to-build-and-run-net-applications/
 https://code-maze.com/how-to-decode-jwt-tokens-in-net/
