@@ -1,2 +1,3 @@
 https://www.meziantou.net/inline-snapshot-testing-in-dotnet.htm
 https://www.meziantou.net/resilient-httpclient-with-or-without-polly.htm
+https://www.meziantou.net/weak-events-in-csharp.htm
