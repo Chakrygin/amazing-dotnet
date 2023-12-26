@@ -13,6 +13,7 @@ https://code-maze.com/csharp-custom-naming-policy-for-json/
 https://code-maze.com/csharp-execute-javascript-using-selenium-webdriver/
 https://code-maze.com/csharp-file-access-modifier/
 https://code-maze.com/csharp-hexagonal-architectural-pattern/
+https://code-maze.com/csharp-inserting-text-into-an-existing-pdf-using-itext/
 https://code-maze.com/csharp-local-functions/
 https://code-maze.com/csharp-rename-files-in-a-folder/
 https://code-maze.com/csharp-select-a-dropdown-option-using-selenium-webdriver/
