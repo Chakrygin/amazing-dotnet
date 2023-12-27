@@ -1,3 +1,4 @@
+https://devblogs.microsoft.com/visualstudio/a-year-of-making-you-more-productive-using-git-in-visual-studio/
 https://devblogs.microsoft.com/visualstudio/ai-powered-rename-suggestions/
 https://devblogs.microsoft.com/visualstudio/embracing-sql-server-2022-with-ssdt-17-8-unveiling-key-updates/
 https://devblogs.microsoft.com/visualstudio/scroll-to-expand-document-tabs/
