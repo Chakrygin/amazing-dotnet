@@ -1,4 +1,5 @@
 https://code-maze.com/aspnetcore-how-to-get-an-access-token-from-httpcontext/
+https://code-maze.com/aspnetcore-implement-custom-authorization-policy-provider-in-asp-net-core/
 https://code-maze.com/aspnetcore-register-multiple-interface-implementations/
 https://code-maze.com/aspnetcore-webapi-read-request-body/
 https://code-maze.com/aspnetcore-what-is-service-discovery-and-how-to-use-it/
