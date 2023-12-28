@@ -5,4 +5,5 @@ https://devblogs.microsoft.com/dotnet/dotnet-conf-2023-recap-videos-slides-demos
 https://devblogs.microsoft.com/dotnet/extending-web-assembly-to-the-cloud/
 https://devblogs.microsoft.com/dotnet/great-dotnet-8-hack-winners/
 https://devblogs.microsoft.com/dotnet/learn-dotnet8-beginner-videos/
+https://devblogs.microsoft.com/dotnet/safer-recursion-in-fsharp/
 https://devblogs.microsoft.com/dotnet/whats-new-in-our-code-coverage-tooling/
