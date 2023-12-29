@@ -9,6 +9,7 @@ https://code-maze.com/code-maze-weekly-194/
 https://code-maze.com/code-maze-weekly-195/
 https://code-maze.com/code-maze-weekly-196/
 https://code-maze.com/code-maze-weekly-197/
+https://code-maze.com/csharp-controlling-precision-of-decimal-numbers/
 https://code-maze.com/csharp-create-better-looking-console-applications-with-spectre-console/
 https://code-maze.com/csharp-custom-naming-policy-for-json/
 https://code-maze.com/csharp-default-values-for-lambda-expressions/
