@@ -1,0 +1,1 @@
+https://steven-giesel.com/blogPost/11f0ded8-7119-4cfc-b7cf-317ff73fb671/an-asynchronous-lock-free-ring-buffer-for-logging
