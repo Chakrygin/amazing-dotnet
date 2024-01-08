@@ -1,1 +1,2 @@
 https://www.meziantou.net/getting-a-handle-for-a-directory-in-dotnet.htm
+https://www.meziantou.net/making-primary-constructor-parameters-read-only.htm
