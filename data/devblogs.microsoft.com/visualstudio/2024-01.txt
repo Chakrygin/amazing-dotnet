@@ -1,1 +1,2 @@
 https://devblogs.microsoft.com/visualstudio/visual-studio-2013-retirement-support-reminder-for-older-versions-of-visual-studio/
+https://devblogs.microsoft.com/visualstudio/visual-studio-performance-highlights-delivered-in-2023/
