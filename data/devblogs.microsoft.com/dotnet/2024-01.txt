@@ -1,1 +1,2 @@
 https://devblogs.microsoft.com/dotnet/azure-migrate-app-and-code-assessment-tool-release/
+https://devblogs.microsoft.com/dotnet/january-2024-updates/
