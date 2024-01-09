@@ -1,4 +1,5 @@
 https://code-maze.com/aspnetcore-swagger-ignore-properties/
+https://code-maze.com/csharp-append-or-update-query-string-values/
 https://code-maze.com/csharp-broker-architectural-pattern/
 https://code-maze.com/csharp-client-server-architecture/
 https://code-maze.com/csharp-consistent-byte-representation-of-strings-without-encoding/
