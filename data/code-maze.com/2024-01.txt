@@ -10,3 +10,4 @@ https://code-maze.com/csharp-periodic-timer/
 https://code-maze.com/csharp-record-parameter-initialization/
 https://code-maze.com/csharp-testing-framework-differences-between-nunit-xunit-and-mstest/
 https://code-maze.com/dotnet-aspire-building-distributed-applications/
+https://code-maze.com/how-to-use-sections-in-blazor/
