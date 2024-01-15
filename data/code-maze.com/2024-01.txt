@@ -13,4 +13,5 @@ https://code-maze.com/csharp-simple-initialization-with-collection-expressions-i
 https://code-maze.com/csharp-testing-framework-differences-between-nunit-xunit-and-mstest/
 https://code-maze.com/csharp-thread-sleep-vs-task-delay/
 https://code-maze.com/dotnet-aspire-building-distributed-applications/
+https://code-maze.com/dotnet-use-iexceptionhandler-to-handle-exceptions/
 https://code-maze.com/how-to-use-sections-in-blazor/
