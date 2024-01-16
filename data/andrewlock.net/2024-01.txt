@@ -1,2 +1,3 @@
 https://andrewlock.net/a-brief-look-at-stringvalues/
 https://andrewlock.net/backing-up-files-to-azure-blob-storage-with-azcopy/
+https://andrewlock.net/creating-a-source-generator-part-9-avoiding-performance-pitfalls-in-incremental-generators/
