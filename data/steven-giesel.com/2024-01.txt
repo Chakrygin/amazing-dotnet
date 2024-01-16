@@ -1,2 +1,3 @@
 https://steven-giesel.com/blogPost/11f0ded8-7119-4cfc-b7cf-317ff73fb671/an-asynchronous-lock-free-ring-buffer-for-logging
+https://steven-giesel.com/blogPost/3368bf96-648e-4fa2-9c6c-be71e40ac4cc/an-alternative-to-automapper
 https://steven-giesel.com/blogPost/544c33da-be2e-4d96-99c9-9313f48548bd/const-strings-are-not-so-const-after-all
