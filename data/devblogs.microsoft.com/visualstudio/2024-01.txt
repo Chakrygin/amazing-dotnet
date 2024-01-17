@@ -1,3 +1,4 @@
+https://devblogs.microsoft.com/visualstudio/17-9-preview-3-brings-exciting-changes-to-code-search/
 https://devblogs.microsoft.com/visualstudio/2023-a-year-of-community-experiments/
 https://devblogs.microsoft.com/visualstudio/visual-studio-2013-retirement-support-reminder-for-older-versions-of-visual-studio/
 https://devblogs.microsoft.com/visualstudio/visual-studio-live-2024-las-vegas/
