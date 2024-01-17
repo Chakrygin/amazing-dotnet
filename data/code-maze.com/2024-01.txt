@@ -6,6 +6,7 @@ https://code-maze.com/csharp-consistent-byte-representation-of-strings-without-e
 https://code-maze.com/csharp-conversions-convert-class/
 https://code-maze.com/csharp-converting-string-to-byte-array/
 https://code-maze.com/csharp-escape-the-backslash-character/
+https://code-maze.com/csharp-how-to-ensure-a-string-is-valid-json/
 https://code-maze.com/csharp-how-to-save-a-list-to-a-text-file/
 https://code-maze.com/csharp-how-to-set-an-authenticator-for-a-new-restclient-in-restsharp/
 https://code-maze.com/csharp-path-file-or-directory/
