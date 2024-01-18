@@ -12,6 +12,7 @@ https://code-maze.com/csharp-how-to-save-a-list-to-a-text-file/
 https://code-maze.com/csharp-how-to-set-an-authenticator-for-a-new-restclient-in-restsharp/
 https://code-maze.com/csharp-path-file-or-directory/
 https://code-maze.com/csharp-periodic-timer/
+https://code-maze.com/csharp-plugin-architecture-pattern/
 https://code-maze.com/csharp-record-parameter-initialization/
 https://code-maze.com/csharp-simple-initialization-with-collection-expressions-in-net-8/
 https://code-maze.com/csharp-testing-framework-differences-between-nunit-xunit-and-mstest/
