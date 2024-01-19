@@ -19,4 +19,5 @@ https://code-maze.com/csharp-testing-framework-differences-between-nunit-xunit-a
 https://code-maze.com/csharp-thread-sleep-vs-task-delay/
 https://code-maze.com/dotnet-aspire-building-distributed-applications/
 https://code-maze.com/dotnet-use-iexceptionhandler-to-handle-exceptions/
+https://code-maze.com/efcore-how-to-revert-a-migration/
 https://code-maze.com/how-to-use-sections-in-blazor/
