@@ -4,3 +4,4 @@ https://devblogs.microsoft.com/visualstudio/latest-updates-for-remote-linux-deve
 https://devblogs.microsoft.com/visualstudio/visual-studio-2013-retirement-support-reminder-for-older-versions-of-visual-studio/
 https://devblogs.microsoft.com/visualstudio/visual-studio-live-2024-las-vegas/
 https://devblogs.microsoft.com/visualstudio/visual-studio-performance-highlights-delivered-in-2023/
+https://devblogs.microsoft.com/visualstudio/visual-studio-productivity-features-in-2023/
