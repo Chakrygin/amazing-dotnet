@@ -17,6 +17,7 @@ https://code-maze.com/csharp-path-file-or-directory/
 https://code-maze.com/csharp-periodic-timer/
 https://code-maze.com/csharp-plugin-architecture-pattern/
 https://code-maze.com/csharp-record-parameter-initialization/
+https://code-maze.com/csharp-remove-html-tags-from-a-string/
 https://code-maze.com/csharp-simple-initialization-with-collection-expressions-in-net-8/
 https://code-maze.com/csharp-testing-framework-differences-between-nunit-xunit-and-mstest/
 https://code-maze.com/csharp-thread-sleep-vs-task-delay/
