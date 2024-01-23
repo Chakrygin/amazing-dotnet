@@ -1,4 +1,5 @@
 https://devblogs.microsoft.com/dotnet/azure-migrate-app-and-code-assessment-tool-release/
+https://devblogs.microsoft.com/dotnet/dotnet-framework-january-2024-cumulative-update-preview/
 https://devblogs.microsoft.com/dotnet/dotnet-framework-january-2024-security-and-quality-rollup/
 https://devblogs.microsoft.com/dotnet/introducing-blazor-sortable/
 https://devblogs.microsoft.com/dotnet/january-2024-updates/
