@@ -1,3 +1,4 @@
+https://khalidabuhakmeh.com/how-to-use-blazor-server-rendered-components-with-htmx
 https://khalidabuhakmeh.com/how-to-use-iasyncenumerable-with-blazor-stream-rendering
 https://khalidabuhakmeh.com/how-to-write-a-dotnet-markdig-extension-for-markdown-processing
 https://khalidabuhakmeh.com/view-transitions-api-with-aspnet-core-and-htmx
