@@ -1,5 +1,6 @@
 https://code-maze.com/add-custom-claims-to-access-token-in-duende/
 https://code-maze.com/aspnetcore-swagger-ignore-properties/
+https://code-maze.com/aspnetcore-using-mariadb-with-web-api/
 https://code-maze.com/chsarp-how-to-escape-curly-brackets-and-special-characters/
 https://code-maze.com/csharp-append-or-update-query-string-values/
 https://code-maze.com/csharp-broker-architectural-pattern/
