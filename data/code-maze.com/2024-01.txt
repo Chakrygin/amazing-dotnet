@@ -5,6 +5,7 @@ https://code-maze.com/chsarp-how-to-escape-curly-brackets-and-special-characters
 https://code-maze.com/csharp-append-or-update-query-string-values/
 https://code-maze.com/csharp-broker-architectural-pattern/
 https://code-maze.com/csharp-calculate-the-number-of-days-between-two-dates/
+https://code-maze.com/csharp-check-if-items-of-a-list-exist-in-another-list/
 https://code-maze.com/csharp-client-server-architecture/
 https://code-maze.com/csharp-compare-two-lists-through-one-property/
 https://code-maze.com/csharp-consistent-byte-representation-of-strings-without-encoding/
