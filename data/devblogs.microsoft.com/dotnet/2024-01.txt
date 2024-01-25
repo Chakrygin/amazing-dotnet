@@ -4,3 +4,4 @@ https://devblogs.microsoft.com/dotnet/dotnet-framework-january-2024-security-and
 https://devblogs.microsoft.com/dotnet/introducing-blazor-sortable/
 https://devblogs.microsoft.com/dotnet/introducing-ms-test-runner/
 https://devblogs.microsoft.com/dotnet/january-2024-updates/
+https://devblogs.microsoft.com/dotnet/office-rtc-dotnet-migration/
