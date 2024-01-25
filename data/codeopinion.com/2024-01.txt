@@ -1,3 +1,4 @@
 https://codeopinion.com/domain-modeling-gone-wrong-part-1/
 https://codeopinion.com/domain-modeling-gone-wrong-to-right/
+https://codeopinion.com/free-your-http-api-misconceptions-are-holding-you-back/
 https://codeopinion.com/want-to-build-a-good-api-here-are-5-tips-for-api-design/
