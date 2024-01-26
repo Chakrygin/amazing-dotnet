@@ -2,6 +2,7 @@ https://code-maze.com/add-custom-claims-to-access-token-in-duende/
 https://code-maze.com/aspnetcore-swagger-ignore-properties/
 https://code-maze.com/aspnetcore-using-mariadb-with-web-api/
 https://code-maze.com/chsarp-how-to-escape-curly-brackets-and-special-characters/
+https://code-maze.com/code-maze-weekly-199/
 https://code-maze.com/csharp-append-or-update-query-string-values/
 https://code-maze.com/csharp-broker-architectural-pattern/
 https://code-maze.com/csharp-calculate-the-number-of-days-between-two-dates/
@@ -10,6 +11,7 @@ https://code-maze.com/csharp-client-server-architecture/
 https://code-maze.com/csharp-compare-two-lists-through-one-property/
 https://code-maze.com/csharp-consistent-byte-representation-of-strings-without-encoding/
 https://code-maze.com/csharp-conversions-convert-class/
+https://code-maze.com/csharp-convert-a-jobject-to-a-dictionary/
 https://code-maze.com/csharp-converting-string-to-byte-array/
 https://code-maze.com/csharp-escape-the-backslash-character/
 https://code-maze.com/csharp-get-a-value-of-a-property-by-using-its-name/
