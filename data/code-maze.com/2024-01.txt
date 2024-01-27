@@ -13,6 +13,7 @@ https://code-maze.com/csharp-consistent-byte-representation-of-strings-without-e
 https://code-maze.com/csharp-conversions-convert-class/
 https://code-maze.com/csharp-convert-a-jobject-to-a-dictionary/
 https://code-maze.com/csharp-converting-string-to-byte-array/
+https://code-maze.com/csharp-difference-between-select-and-selectmany-methods-in-linq/
 https://code-maze.com/csharp-escape-the-backslash-character/
 https://code-maze.com/csharp-get-a-value-of-a-property-by-using-its-name/
 https://code-maze.com/csharp-how-to-create-a-temp-file-in-temp-folder/
