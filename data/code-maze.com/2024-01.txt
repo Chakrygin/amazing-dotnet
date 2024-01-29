@@ -18,6 +18,7 @@ https://code-maze.com/csharp-differences-between-a-virtual-method-and-an-abstrac
 https://code-maze.com/csharp-escape-the-backslash-character/
 https://code-maze.com/csharp-get-a-value-of-a-property-by-using-its-name/
 https://code-maze.com/csharp-how-to-create-a-temp-file-in-temp-folder/
+https://code-maze.com/csharp-how-to-create-xml-documents/
 https://code-maze.com/csharp-how-to-ensure-a-string-is-valid-json/
 https://code-maze.com/csharp-how-to-save-a-list-to-a-text-file/
 https://code-maze.com/csharp-how-to-set-an-authenticator-for-a-new-restclient-in-restsharp/
