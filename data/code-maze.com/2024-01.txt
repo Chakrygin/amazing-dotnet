@@ -26,6 +26,7 @@ https://code-maze.com/csharp-how-to-truncate-a-string/
 https://code-maze.com/csharp-path-file-or-directory/
 https://code-maze.com/csharp-periodic-timer/
 https://code-maze.com/csharp-plugin-architecture-pattern/
+https://code-maze.com/csharp-reading-xml-documents/
 https://code-maze.com/csharp-record-parameter-initialization/
 https://code-maze.com/csharp-remove-html-tags-from-a-string/
 https://code-maze.com/csharp-selenium-maximize-browser/
