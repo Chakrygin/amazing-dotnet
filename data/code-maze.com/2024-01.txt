@@ -23,6 +23,7 @@ https://code-maze.com/csharp-how-to-ensure-a-string-is-valid-json/
 https://code-maze.com/csharp-how-to-save-a-list-to-a-text-file/
 https://code-maze.com/csharp-how-to-set-an-authenticator-for-a-new-restclient-in-restsharp/
 https://code-maze.com/csharp-how-to-truncate-a-string/
+https://code-maze.com/csharp-logging-message-templates/
 https://code-maze.com/csharp-path-file-or-directory/
 https://code-maze.com/csharp-periodic-timer/
 https://code-maze.com/csharp-plugin-architecture-pattern/
