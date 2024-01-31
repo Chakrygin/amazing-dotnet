@@ -21,6 +21,7 @@ https://code-maze.com/csharp-how-to-create-a-temp-file-in-temp-folder/
 https://code-maze.com/csharp-how-to-create-xml-documents/
 https://code-maze.com/csharp-how-to-ensure-a-string-is-valid-json/
 https://code-maze.com/csharp-how-to-save-a-list-to-a-text-file/
+https://code-maze.com/csharp-how-to-select-multiple-records-using-linq/
 https://code-maze.com/csharp-how-to-set-an-authenticator-for-a-new-restclient-in-restsharp/
 https://code-maze.com/csharp-how-to-truncate-a-string/
 https://code-maze.com/csharp-logging-message-templates/
