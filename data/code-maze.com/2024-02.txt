@@ -1,1 +1,2 @@
 https://code-maze.com/aspnetcore-different-ways-to-run-background-tasks/
+https://code-maze.com/csharp-different-ways-to-get-the-first-record-in-each-group-with-linq/
