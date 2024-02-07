@@ -6,5 +6,6 @@ https://code-maze.com/csharp-different-ways-to-get-the-first-record-in-each-grou
 https://code-maze.com/csharp-how-to-correctly-implement-idisposable-interface/
 https://code-maze.com/csharp-how-to-divide-data-into-batches-with-linq/
 https://code-maze.com/csharp-machine-learning-probabilistic-programming-with-infer-net/
+https://code-maze.com/dotnet-appsettings-json-content-to-dictionary/
 https://code-maze.com/lazy-loading-and-eager-loading-in-entity-framework-core/
 https://code-maze.com/xunit-how-to-pass-complex-parameters-to-theory/
