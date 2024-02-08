@@ -2,6 +2,7 @@ https://code-maze.com/aspnetcore-different-ways-to-run-background-tasks/
 https://code-maze.com/aspnetcore-mapcontrollers-vs-mapcontrollerroute-routing/
 https://code-maze.com/aspnetcore-secret-management/
 https://code-maze.com/code-maze-weekly-200/
+https://code-maze.com/csharp-comparing-for-and-foreach-loop/
 https://code-maze.com/csharp-different-ways-to-get-the-first-record-in-each-group-with-linq/
 https://code-maze.com/csharp-how-to-correctly-implement-idisposable-interface/
 https://code-maze.com/csharp-how-to-divide-data-into-batches-with-linq/
