@@ -1,1 +1,2 @@
 https://devblogs.microsoft.com/dotnet/dev-tunnels-a-game-changer-for-mobile-developers/
+https://devblogs.microsoft.com/dotnet/my-top-10-new-visual-studio-features-of-2023-for-dotnet-developers/
