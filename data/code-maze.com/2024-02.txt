@@ -1,3 +1,4 @@
+https://code-maze.com/aspnetcore-difference-between-restful-apis-and-web-apis/
 https://code-maze.com/aspnetcore-different-ways-to-run-background-tasks/
 https://code-maze.com/aspnetcore-mapcontrollers-vs-mapcontrollerroute-routing/
 https://code-maze.com/aspnetcore-secret-management/
