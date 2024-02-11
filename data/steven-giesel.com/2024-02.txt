@@ -1,1 +1,2 @@
 https://steven-giesel.com/blogPost/080c8f82-f376-489f-a304-72d419978294/searchvalues-object-become-better-with-net-9
+https://steven-giesel.com/blogPost/2e23afb8-4dc6-461e-8110-4122c7fefee7/garbage-collector-oversimplified
