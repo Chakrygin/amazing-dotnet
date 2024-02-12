@@ -3,5 +3,10 @@
     "timestamp": "2024-02-01T12:53:14.322Z",
     "message": "certificate has expired",
     "counter": 11
+  },
+  "TheMorningBrew": {
+    "timestamp": "2024-02-12T08:47:30.567Z",
+    "message": "getaddrinfo EAI_AGAIN blog.cwa.me.uk",
+    "counter": 1
   }
 }
