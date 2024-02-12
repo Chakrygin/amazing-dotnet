@@ -1,1 +1,2 @@
+https://www.meziantou.net/creating-an-httpclient-that-uses-dns-over-https.htm
 https://www.meziantou.net/enable-the-new-terminallogger-in-dotnet-8-sdk-automatically.htm
