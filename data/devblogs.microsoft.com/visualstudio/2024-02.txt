@@ -1,3 +1,4 @@
 https://devblogs.microsoft.com/visualstudio/2023s-top-10-new-features-for-net-in-visual-studio/
 https://devblogs.microsoft.com/visualstudio/a-look-back-visual-studios-profiling-tool-advancements-in-2023/
 https://devblogs.microsoft.com/visualstudio/developing-with-accessibility-in-mind-at-microsoft/
+https://devblogs.microsoft.com/visualstudio/visual-studio-2022-17-9-now-available/
