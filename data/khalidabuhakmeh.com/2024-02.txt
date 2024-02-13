@@ -1,1 +1,2 @@
 https://khalidabuhakmeh.com/html-web-components-with-vanilla-javascript-and-aspnet-core
+https://khalidabuhakmeh.com/increase-performance-with-complex-types-in-entity-framework-core-8
