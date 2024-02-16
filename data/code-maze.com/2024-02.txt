@@ -7,6 +7,7 @@ https://code-maze.com/aspnetcore-secret-management/
 https://code-maze.com/aspnetcore-validate-uploaded-file/
 https://code-maze.com/code-maze-weekly-200/
 https://code-maze.com/code-maze-weekly-201/
+https://code-maze.com/code-maze-weekly-202/
 https://code-maze.com/csharp-comparing-for-and-foreach-loop/
 https://code-maze.com/csharp-convert-a-number-between-hexadecimal-and-decimal/
 https://code-maze.com/csharp-difference-between-properties-and-fields/
