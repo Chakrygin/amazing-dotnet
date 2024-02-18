@@ -9,6 +9,7 @@ https://code-maze.com/code-maze-weekly-200/
 https://code-maze.com/code-maze-weekly-201/
 https://code-maze.com/code-maze-weekly-202/
 https://code-maze.com/csharp-check-if-a-string-contains-only-letters/
+https://code-maze.com/csharp-check-positive-negative-number/
 https://code-maze.com/csharp-comparing-for-and-foreach-loop/
 https://code-maze.com/csharp-convert-a-number-between-hexadecimal-and-decimal/
 https://code-maze.com/csharp-difference-between-properties-and-fields/
