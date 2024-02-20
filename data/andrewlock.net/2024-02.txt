@@ -1,2 +1,3 @@
 https://andrewlock.net/8-ways-to-set-the-urls-for-an-aspnetcore-app/
 https://andrewlock.net/using-default-interface-methods-for-performance-gains-in-iheaderdictionary/
+https://andrewlock.net/using-named-pipes-with-aspnetcore-and-httpclient/
