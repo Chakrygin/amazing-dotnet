@@ -1,2 +1,3 @@
+https://khalidabuhakmeh.com/how-to-map-sql-results-to-any-object-using-entity-framework-core-8
 https://khalidabuhakmeh.com/html-web-components-with-vanilla-javascript-and-aspnet-core
 https://khalidabuhakmeh.com/increase-performance-with-complex-types-in-entity-framework-core-8
