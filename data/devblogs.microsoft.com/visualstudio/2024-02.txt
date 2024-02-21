@@ -1,5 +1,6 @@
 https://devblogs.microsoft.com/visualstudio/2023s-top-10-new-features-for-net-in-visual-studio/
 https://devblogs.microsoft.com/visualstudio/a-look-back-visual-studios-profiling-tool-advancements-in-2023/
+https://devblogs.microsoft.com/visualstudio/a-streamlined-extension-manager-comes-to-visual-studio-17-9/
 https://devblogs.microsoft.com/visualstudio/developing-with-accessibility-in-mind-at-microsoft/
 https://devblogs.microsoft.com/visualstudio/introducing-visual-studio-17-10-preview-1-is-here/
 https://devblogs.microsoft.com/visualstudio/last-chance-visual-studio-live-las-vegas/
