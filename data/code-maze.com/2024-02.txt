@@ -16,6 +16,7 @@ https://code-maze.com/csharp-comparing-for-and-foreach-loop/
 https://code-maze.com/csharp-convert-a-number-between-hexadecimal-and-decimal/
 https://code-maze.com/csharp-difference-between-properties-and-fields/
 https://code-maze.com/csharp-different-ways-to-get-the-first-record-in-each-group-with-linq/
+https://code-maze.com/csharp-find-number-of-weekdays-between-two-dates/
 https://code-maze.com/csharp-get-the-number-of-files-in-a-folder/
 https://code-maze.com/csharp-get-the-number-of-lines-in-a-text-file/
 https://code-maze.com/csharp-how-to-check-if-an-object-is-a-number/
