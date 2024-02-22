@@ -21,6 +21,7 @@ https://code-maze.com/csharp-find-number-of-weekdays-between-two-dates/
 https://code-maze.com/csharp-get-the-number-of-files-in-a-folder/
 https://code-maze.com/csharp-get-the-number-of-lines-in-a-text-file/
 https://code-maze.com/csharp-how-to-check-if-an-object-is-a-number/
+https://code-maze.com/csharp-how-to-check-if-an-url-is-valid/
 https://code-maze.com/csharp-how-to-correctly-implement-idisposable-interface/
 https://code-maze.com/csharp-how-to-divide-data-into-batches-with-linq/
 https://code-maze.com/csharp-machine-learning-probabilistic-programming-with-infer-net/
