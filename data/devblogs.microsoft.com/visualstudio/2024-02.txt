@@ -4,5 +4,6 @@ https://devblogs.microsoft.com/visualstudio/a-streamlined-extension-manager-come
 https://devblogs.microsoft.com/visualstudio/developing-with-accessibility-in-mind-at-microsoft/
 https://devblogs.microsoft.com/visualstudio/introducing-visual-studio-17-10-preview-1-is-here/
 https://devblogs.microsoft.com/visualstudio/last-chance-visual-studio-live-las-vegas/
+https://devblogs.microsoft.com/visualstudio/using-copilot-chat-with-c-in-visual-studio-generate-code-fix-functions-and-more/
 https://devblogs.microsoft.com/visualstudio/visual-studio-2022-17-9-now-available/
 https://devblogs.microsoft.com/visualstudio/visualstudio-extensibility-17-9/
