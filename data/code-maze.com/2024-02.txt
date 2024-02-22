@@ -5,6 +5,7 @@ https://code-maze.com/aspnetcore-different-ways-to-run-background-tasks/
 https://code-maze.com/aspnetcore-how-to-log-a-class-and-method-names-using-serilog/
 https://code-maze.com/aspnetcore-mapcontrollers-vs-mapcontrollerroute-routing/
 https://code-maze.com/aspnetcore-secret-management/
+https://code-maze.com/aspnetcore-using-serilog-with-microsofts-ilogger-api/
 https://code-maze.com/aspnetcore-validate-uploaded-file/
 https://code-maze.com/code-maze-weekly-200/
 https://code-maze.com/code-maze-weekly-201/
