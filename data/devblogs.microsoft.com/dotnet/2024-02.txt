@@ -5,3 +5,4 @@ https://devblogs.microsoft.com/dotnet/introducing-aspnetcore-metrics-and-grafana
 https://devblogs.microsoft.com/dotnet/my-top-10-new-visual-studio-features-of-2023-for-dotnet-developers/
 https://devblogs.microsoft.com/dotnet/our-vision-for-dotnet-9/
 https://devblogs.microsoft.com/dotnet/resilience-and-chaos-engineering/
+https://devblogs.microsoft.com/dotnet/winforms-designer-64-bit-path-forward/
