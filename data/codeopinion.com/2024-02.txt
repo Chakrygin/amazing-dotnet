@@ -1,2 +1,3 @@
 https://codeopinion.com/best-developer-interview-question/
 https://codeopinion.com/listen-to-yourself-pattern-is-it-an-alternative-to-the-outbox-pattern/
+https://codeopinion.com/orms-can-lead-to-fat-domain-models-slim-them-down/
