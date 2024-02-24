@@ -31,6 +31,7 @@ https://code-maze.com/csharp-parsing-html-with-anglesharp/
 https://code-maze.com/dotnet-appsettings-json-content-to-dictionary/
 https://code-maze.com/dotnet-clean-architecture/
 https://code-maze.com/dotnet-how-to-overwrite-datetime-now-during-testing/
+https://code-maze.com/efcore-single-and-split-queries/
 https://code-maze.com/fluxor-for-state-management-in-blazor/
 https://code-maze.com/lazy-loading-and-eager-loading-in-entity-framework-core/
 https://code-maze.com/xunit-how-to-pass-complex-parameters-to-theory/
