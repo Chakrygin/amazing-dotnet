@@ -3,10 +3,5 @@
     "timestamp": "2024-02-01T12:53:14.322Z",
     "message": "certificate has expired",
     "counter": 11
-  },
-  "RadioDotNet": {
-    "timestamp": "2024-02-26T16:50:15.094Z",
-    "message": "Request failed with status code 504",
-    "counter": 1
   }
 }
