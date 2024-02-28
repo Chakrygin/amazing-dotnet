@@ -37,4 +37,5 @@ https://code-maze.com/efcore-inject-dbcontext-instance-into-ihostedservice/
 https://code-maze.com/efcore-single-and-split-queries/
 https://code-maze.com/fluxor-for-state-management-in-blazor/
 https://code-maze.com/lazy-loading-and-eager-loading-in-entity-framework-core/
+https://code-maze.com/visual-studio-difference-between-build-and-publish/
 https://code-maze.com/xunit-how-to-pass-complex-parameters-to-theory/
