@@ -1,5 +1,6 @@
 https://devblogs.microsoft.com/dotnet/dev-tunnels-a-game-changer-for-mobile-developers/
 https://devblogs.microsoft.com/dotnet/developing-optimized-github-actions-with-net-and-native-aot/
+https://devblogs.microsoft.com/dotnet/dotnet-maui-community-toolkit-2023-highlights/
 https://devblogs.microsoft.com/dotnet/february-2024-updates/
 https://devblogs.microsoft.com/dotnet/introducing-aspnetcore-metrics-and-grafana-dashboards-in-dotnet-8/
 https://devblogs.microsoft.com/dotnet/my-top-10-new-visual-studio-features-of-2023-for-dotnet-developers/
