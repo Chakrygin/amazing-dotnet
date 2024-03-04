@@ -1,5 +1,0 @@
-https://devblogs.microsoft.com/visualstudio/exploring-javascript-and-typescript-development-in-visual-studio/
-https://devblogs.microsoft.com/visualstudio/git-tooling-preview-features-to-enhance-productivity/
-https://devblogs.microsoft.com/visualstudio/improving-the-syntax-highlighting-of-javascript-in-visual-studio/
-https://devblogs.microsoft.com/visualstudio/improving-visual-studio-performance-with-the-new-instrumentation-tool/
-https://devblogs.microsoft.com/visualstudio/visual-studio-toolbox-debug-threads-tasks-with-parallel-stacks/
