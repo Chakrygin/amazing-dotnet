@@ -1,2 +1,0 @@
-https://www.meziantou.net/detecting-dark-and-light-themes-in-a-wpf-application.htm
-https://www.meziantou.net/investigating-a-crash-in-enumerable-lastordefault.htm
