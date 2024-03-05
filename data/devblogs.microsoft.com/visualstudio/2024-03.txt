@@ -1,1 +1,2 @@
 https://devblogs.microsoft.com/visualstudio/code-coverage-features-in-visual-studio-enterprise/
+https://devblogs.microsoft.com/visualstudio/visual-studio-subscriptions-benefit-journey-pt1/
