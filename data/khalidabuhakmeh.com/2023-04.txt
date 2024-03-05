@@ -1,3 +1,0 @@
-https://khalidabuhakmeh.com/dependency-injection-with-avalonia-ui-apps
-https://khalidabuhakmeh.com/unit-test-11ty-pages-with-vitest-and-typescript
-https://khalidabuhakmeh.com/writing-a-cross-platform-clock-app-with-avalonia-ui-and-nxui
