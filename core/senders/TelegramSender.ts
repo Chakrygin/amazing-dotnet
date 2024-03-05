@@ -19,7 +19,9 @@ export class TelegramSender implements Sender {
     if (!post.image || message.length > MAX_CAPTION_LENGTH) {
       await this.telegram.sendMessage(this.chatId, message, {
         parse_mode: 'HTML',
-        disable_web_page_preview: true,
+        link_preview_options: {
+          is_disabled: true,
+        },
       });
     }
     else if (isAnimation(post.image)) {
