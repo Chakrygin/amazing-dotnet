@@ -1,12 +1,7 @@
 {
-  "CodeMaze": {
-    "timestamp": "2024-03-04T12:54:13.839Z",
-    "message": "Post is not valid: image is not valid url.",
-    "counter": 5
-  },
   "DotNetCoreTutorials": {
-    "timestamp": "2024-02-01T12:53:14.322Z",
+    "timestamp": "2024-03-04T18:45:22.388Z",
     "message": "certificate has expired",
-    "counter": 11
+    "counter": 12
   }
 }
