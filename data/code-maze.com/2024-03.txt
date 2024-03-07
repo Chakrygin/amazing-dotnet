@@ -1,3 +1,4 @@
+https://code-maze.com/csharp-architecture-tests-with-netarchtest-rules/
 https://code-maze.com/csharp-outer-join-linq/
 https://code-maze.com/csharp-read-a-text-file-without-specifying-the-full-path/
 https://code-maze.com/dotnet-introduction-to-brighter/
