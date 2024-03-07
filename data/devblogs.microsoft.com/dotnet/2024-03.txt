@@ -1,2 +1,3 @@
 https://devblogs.microsoft.com/dotnet/azure-migrate-application-and-code-assessment-march-2024-update/
 https://devblogs.microsoft.com/dotnet/get-started-milvus-vector-db-dotnet/
+https://devblogs.microsoft.com/dotnet/teams-toolkit-for-visual-studio-release-updates/
