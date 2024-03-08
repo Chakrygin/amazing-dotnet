@@ -1,3 +1,4 @@
+https://code-maze.com/code-maze-weekly-205/
 https://code-maze.com/csharp-architecture-tests-with-netarchtest-rules/
 https://code-maze.com/csharp-difference-between-abstraction-and-encapsulation/
 https://code-maze.com/csharp-outer-join-linq/
