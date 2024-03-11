@@ -1,1 +1,2 @@
+https://steven-giesel.com/blogPost/0827131c-9b33-4c92-a2fa-5dd6616b72f9/bunit-v2-the-blazor-unit-testing-library-vnext
 https://steven-giesel.com/blogPost/a8aa3385-8829-444a-b269-7ecb38aeaf2f/typesafety-in-xunit-with-theorydatat
