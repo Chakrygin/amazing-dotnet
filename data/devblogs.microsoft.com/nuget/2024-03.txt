@@ -1,1 +1,2 @@
 https://devblogs.microsoft.com/nuget/refining-your-search-introducing-nuget-orgs-compatible-framework-filters/
+https://devblogs.microsoft.com/nuget/the-nuget-org-repository-signing-certificate-will-be-updated-as-soon-as-april-8th-2024/
