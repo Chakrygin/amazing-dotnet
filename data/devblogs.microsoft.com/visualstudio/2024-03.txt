@@ -1,4 +1,5 @@
 https://devblogs.microsoft.com/visualstudio/code-coverage-features-in-visual-studio-enterprise/
+https://devblogs.microsoft.com/visualstudio/github-copilot-in-visual-studio-a-recap-of-2023/
 https://devblogs.microsoft.com/visualstudio/introducing-visual-studio-17-10-preview-2-is-here/
 https://devblogs.microsoft.com/visualstudio/visual-studio-2022-version-17-9-a-comprehensive-update-for-c-developers/
 https://devblogs.microsoft.com/visualstudio/visual-studio-subscriptions-benefit-journey-pt1/
