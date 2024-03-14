@@ -1,4 +1,5 @@
 https://devblogs.microsoft.com/dotnet/azure-migrate-application-and-code-assessment-march-2024-update/
+https://devblogs.microsoft.com/dotnet/generate-dotnet-secrets-automatically-from-azure-deployment/
 https://devblogs.microsoft.com/dotnet/get-started-milvus-vector-db-dotnet/
 https://devblogs.microsoft.com/dotnet/get-started-with-dotnet-ai-quickstarts/
 https://devblogs.microsoft.com/dotnet/march-2024-updates/
