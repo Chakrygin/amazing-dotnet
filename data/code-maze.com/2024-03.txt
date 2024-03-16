@@ -1,6 +1,7 @@
 https://code-maze.com/aspnetcore-automatic-registration-of-minimal-api-endpoints/
 https://code-maze.com/code-maze-weekly-205/
 https://code-maze.com/csharp-architecture-tests-with-netarchtest-rules/
+https://code-maze.com/csharp-avoid-await-in-loop/
 https://code-maze.com/csharp-calculate-the-date-of-the-first-day-in-a-week/
 https://code-maze.com/csharp-comparing-performance-of-the-switch-and-if-else-statements/
 https://code-maze.com/csharp-difference-between-abstraction-and-encapsulation/
