@@ -1,1 +1,2 @@
+https://www.meziantou.net/generate-openapi-specification-at-build-time-from-the-code-in-asp-net-core.htm
 https://www.meziantou.net/optional-parameters.htm
