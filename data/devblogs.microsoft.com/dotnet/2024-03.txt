@@ -2,6 +2,7 @@ https://devblogs.microsoft.com/dotnet/azure-migrate-application-and-code-assessm
 https://devblogs.microsoft.com/dotnet/generate-dotnet-secrets-automatically-from-azure-deployment/
 https://devblogs.microsoft.com/dotnet/get-started-milvus-vector-db-dotnet/
 https://devblogs.microsoft.com/dotnet/get-started-with-dotnet-ai-quickstarts/
+https://devblogs.microsoft.com/dotnet/introducing-dotnet-smart-components/
 https://devblogs.microsoft.com/dotnet/march-2024-updates/
 https://devblogs.microsoft.com/dotnet/teams-toolkit-for-visual-studio-release-updates/
 https://devblogs.microsoft.com/dotnet/unity-extension-for-visual-studio-code-now-generally-available/
