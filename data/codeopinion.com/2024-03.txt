@@ -1,2 +1,3 @@
 https://codeopinion.com/event-driven-architecture-lost-its-way/
 https://codeopinion.com/events-are-an-api-treat-them-like-one/
+https://codeopinion.com/the-worst-domain-modeling-mistakes/
