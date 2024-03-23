@@ -13,6 +13,7 @@ https://code-maze.com/csharp-different-methods-for-computing-the-size-of-a-direc
 https://code-maze.com/csharp-exception-handling/
 https://code-maze.com/csharp-fastest-way-to-generate-a-random-boolean/
 https://code-maze.com/csharp-fastest-way-to-get-the-first-n-characters-of-a-string/
+https://code-maze.com/csharp-how-to-convert-readonlymemory-to-a-byte-array/
 https://code-maze.com/csharp-how-to-convert-string-to-char/
 https://code-maze.com/csharp-how-to-resolve-ioptions-instance-inside-program-class/
 https://code-maze.com/csharp-outer-join-linq/
