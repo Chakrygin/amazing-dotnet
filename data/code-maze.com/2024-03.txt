@@ -22,4 +22,5 @@ https://code-maze.com/csharp-use-stringpool-to-reduce-string-allocations/
 https://code-maze.com/csharp-using-memory/
 https://code-maze.com/dotnet-how-to-send-a-json-object-using-httpclient/
 https://code-maze.com/dotnet-introduction-to-brighter/
+https://code-maze.com/efcore-why-do-we-use-the-virtual-keyword-for-class-properties/
 https://code-maze.com/linq-execute-the-select-where-not-exist-sql-query-csharp/
