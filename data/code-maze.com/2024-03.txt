@@ -20,6 +20,7 @@ https://code-maze.com/csharp-outer-join-linq/
 https://code-maze.com/csharp-read-a-text-file-without-specifying-the-full-path/
 https://code-maze.com/csharp-use-stringpool-to-reduce-string-allocations/
 https://code-maze.com/csharp-using-memory/
+https://code-maze.com/dotnet-best-practices-for-logging-with-serilog/
 https://code-maze.com/dotnet-how-to-send-a-json-object-using-httpclient/
 https://code-maze.com/dotnet-introduction-to-brighter/
 https://code-maze.com/efcore-why-do-we-use-the-virtual-keyword-for-class-properties/
