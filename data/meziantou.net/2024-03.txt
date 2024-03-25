@@ -1,2 +1,3 @@
+https://www.meziantou.net/convert-datetime-to-user-s-time-zone-with-server-side-blazor-time-provider.htm
 https://www.meziantou.net/generate-openapi-specification-at-build-time-from-the-code-in-asp-net-core.htm
 https://www.meziantou.net/optional-parameters.htm
