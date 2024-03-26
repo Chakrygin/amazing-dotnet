@@ -1,2 +1,3 @@
 https://andrewlock.net/an-introduction-to-the-heap-data-structure-and-dotnets-priority-queue/
 https://andrewlock.net/behind-the-implementation-of-dotnets-priorityqueue/
+https://andrewlock.net/implementing-dijkstras-algorithm-for-finding-the-shortest-path-between-two-nodes-using-priorityqueue-in-dotnet-9/
