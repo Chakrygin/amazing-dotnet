@@ -6,4 +6,5 @@ https://devblogs.microsoft.com/visualstudio/introducing-visual-studio-17-10-prev
 https://devblogs.microsoft.com/visualstudio/see-your-pull-request-comments-with-the-latest-preview/
 https://devblogs.microsoft.com/visualstudio/visual-studio-2022-version-17-9-a-comprehensive-update-for-c-developers/
 https://devblogs.microsoft.com/visualstudio/visual-studio-and-github-copilot-at-gdc-2024/
+https://devblogs.microsoft.com/visualstudio/visual-studio-live-2024-chicago/
 https://devblogs.microsoft.com/visualstudio/visual-studio-subscriptions-benefit-journey-pt1/
