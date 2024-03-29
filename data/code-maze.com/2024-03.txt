@@ -1,6 +1,7 @@
 https://code-maze.com/aspnetcore-automatic-registration-of-minimal-api-endpoints/
 https://code-maze.com/code-maze-weekly-205/
 https://code-maze.com/code-maze-weekly-206/
+https://code-maze.com/code-maze-weekly-207/
 https://code-maze.com/csharp-architecture-tests-with-netarchtest-rules/
 https://code-maze.com/csharp-avoid-await-in-loop/
 https://code-maze.com/csharp-benchmark-methods-performance-across-different-net-versions/
