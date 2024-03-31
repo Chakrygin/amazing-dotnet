@@ -11,6 +11,7 @@ https://code-maze.com/csharp-convert-iasyncenumerable-to-list/
 https://code-maze.com/csharp-difference-between-abstraction-and-encapsulation/
 https://code-maze.com/csharp-difference-between-await-and-task-wait/
 https://code-maze.com/csharp-different-methods-for-computing-the-size-of-a-directory/
+https://code-maze.com/csharp-different-ways-to-create-a-generic-list-of-anonymous-types/
 https://code-maze.com/csharp-exception-handling/
 https://code-maze.com/csharp-fastest-way-to-check-if-a-list-is-in-order/
 https://code-maze.com/csharp-fastest-way-to-generate-a-random-boolean/
