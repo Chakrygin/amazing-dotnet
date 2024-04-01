@@ -1,3 +1,0 @@
-https://www.meziantou.net/control-visual-studio-from-an-external-application.htm
-https://www.meziantou.net/detect-globalization-invariant-mode-in-dotnet.htm
-https://www.meziantou.net/reading-windows-application-manifest-of-an-exe-in-dotnet.htm
