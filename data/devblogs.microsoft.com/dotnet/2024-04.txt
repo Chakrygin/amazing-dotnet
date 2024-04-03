@@ -1,1 +1,2 @@
 https://devblogs.microsoft.com/dotnet/redis-makes-intelligent-apps-smarter-and-consistent/
+https://devblogs.microsoft.com/dotnet/testing-your-native-aot-dotnet-apps/
