@@ -1,2 +1,3 @@
 https://code-maze.com/csharp-how-to-validate-a-guid/
+https://code-maze.com/csharp-service-oriented-architecture-pattern-in-net/
 https://code-maze.com/dotnet-generate-sortable-unique-ids-with-the-newid-library/
