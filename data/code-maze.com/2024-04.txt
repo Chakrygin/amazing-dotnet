@@ -1,4 +1,5 @@
 https://code-maze.com/aspnetcore-directory-browsing/
+https://code-maze.com/code-maze-weekly-208/
 https://code-maze.com/csharp-how-to-validate-a-guid/
 https://code-maze.com/csharp-improve-performance-with-source-generated-regex/
 https://code-maze.com/csharp-service-oriented-architecture-pattern-in-net/
