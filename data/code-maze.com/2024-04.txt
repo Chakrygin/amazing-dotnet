@@ -4,4 +4,5 @@ https://code-maze.com/csharp-how-to-validate-a-guid/
 https://code-maze.com/csharp-improve-performance-with-source-generated-regex/
 https://code-maze.com/csharp-retrieve-the-number-of-cpu-cores/
 https://code-maze.com/csharp-service-oriented-architecture-pattern-in-net/
+https://code-maze.com/csharp-the-best-way-to-assign-an-initial-value-to-auto-properties/
 https://code-maze.com/dotnet-generate-sortable-unique-ids-with-the-newid-library/
