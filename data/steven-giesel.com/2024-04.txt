@@ -1,1 +1,2 @@
+https://steven-giesel.com/blogPost/0775d3d3-8f90-4546-95d8-71a6b1e7b0e8/equip-3rd-party-types-with-a-deconstructor
 https://steven-giesel.com/blogPost/9892bd03-96bf-4ab0-aacc-973a99d5f5e0/pattern-matching-and-the-compiler-can-be-surprising
