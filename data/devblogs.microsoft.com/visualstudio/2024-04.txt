@@ -1,2 +1,3 @@
 https://devblogs.microsoft.com/visualstudio/how-to-install-github-copilot-in-visual-studio/
 https://devblogs.microsoft.com/visualstudio/how-to-use-comments-to-prompt-github-copilot-visual-studio/
+https://devblogs.microsoft.com/visualstudio/introducing-the-new-copilot-experience-in-visual-studio/
