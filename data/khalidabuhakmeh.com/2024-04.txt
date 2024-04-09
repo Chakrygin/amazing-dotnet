@@ -1,1 +1,2 @@
+https://khalidabuhakmeh.com/output-csv-results-to-console-table-in-rust
 https://khalidabuhakmeh.com/responsive-images-crash-course-for-aspnet-core-developers
