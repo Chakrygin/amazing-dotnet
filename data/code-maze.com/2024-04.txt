@@ -4,6 +4,7 @@ https://code-maze.com/aspnetcore-how-to-validate-file-upload-extensions/
 https://code-maze.com/aspnetcore-set-a-default-user-agent-on-an-httpclient/
 https://code-maze.com/aspnetcore-test-grpc-services/
 https://code-maze.com/code-maze-weekly-208/
+https://code-maze.com/code-maze-weekly-209/
 https://code-maze.com/csharp-how-to-validate-a-guid/
 https://code-maze.com/csharp-improve-performance-with-source-generated-regex/
 https://code-maze.com/csharp-retrieve-the-number-of-cpu-cores/
