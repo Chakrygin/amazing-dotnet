@@ -1,1 +1,2 @@
+https://andrewlock.net/rendering-math-in-html-mathml-mathml-core-and-asciimath/
 https://andrewlock.net/working-on-a-git-branch-in-two-different-folders-concurrently/
