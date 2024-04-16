@@ -15,4 +15,5 @@ https://code-maze.com/csharp-scoped-keyword/
 https://code-maze.com/csharp-service-oriented-architecture-pattern-in-net/
 https://code-maze.com/csharp-the-best-way-to-assign-an-initial-value-to-auto-properties/
 https://code-maze.com/dotnet-generate-sortable-unique-ids-with-the-newid-library/
+https://code-maze.com/dotnet-introduction-to-strawberry-shake-and-graphql/
 https://code-maze.com/how-to-use-httponly-cookie-in-net-core-for-authentication-and-refresh-token-actions/
