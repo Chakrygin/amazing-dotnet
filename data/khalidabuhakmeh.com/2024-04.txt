@@ -1,2 +1,3 @@
+https://khalidabuhakmeh.com/event-queues-and-buffering-functions-with-javascript
 https://khalidabuhakmeh.com/output-csv-results-to-console-table-in-rust
 https://khalidabuhakmeh.com/responsive-images-crash-course-for-aspnet-core-developers
