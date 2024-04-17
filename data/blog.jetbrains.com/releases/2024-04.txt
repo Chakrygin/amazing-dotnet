@@ -1,3 +1,4 @@
 https://blog.jetbrains.com/dotnet/2024/04/09/dotnet-tools-241-release/
 https://blog.jetbrains.com/dotnet/2024/04/09/resharper-2024-1/
 https://blog.jetbrains.com/dotnet/2024/04/09/rider-2024-1/
+https://blog.jetbrains.com/dotnet/2024/04/17/the-first-set-of-bug-fixes-for-resharper-and-rider-2024-1-are-here/
