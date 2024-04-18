@@ -5,6 +5,7 @@ https://code-maze.com/aspnetcore-set-a-default-user-agent-on-an-httpclient/
 https://code-maze.com/aspnetcore-test-grpc-services/
 https://code-maze.com/code-maze-weekly-208/
 https://code-maze.com/code-maze-weekly-209/
+https://code-maze.com/csharp-baseline-styling-in-benchmarkdotnet/
 https://code-maze.com/csharp-fastest-way-to-find-and-extract-a-number-from-a-string/
 https://code-maze.com/csharp-how-to-detect-if-a-key-is-pressed-in-a-console-application/
 https://code-maze.com/csharp-how-to-validate-a-guid/
