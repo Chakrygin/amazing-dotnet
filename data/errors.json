@@ -3,5 +3,20 @@
     "timestamp": "2024-03-04T18:45:22.388Z",
     "message": "certificate has expired",
     "counter": 12
+  },
+  "Habr / .NET": {
+    "timestamp": "2024-04-20T22:46:26.024Z",
+    "message": "Failed to parse html page by url https://habr.com/ru/hub/net/. No posts found.",
+    "counter": 1
+  },
+  "Habr / C#": {
+    "timestamp": "2024-04-20T22:46:27.167Z",
+    "message": "Failed to parse html page by url https://habr.com/ru/hub/csharp/. No posts found.",
+    "counter": 1
+  },
+  "Habr / F#": {
+    "timestamp": "2024-04-20T22:46:28.280Z",
+    "message": "Failed to parse html page by url https://habr.com/ru/hub/fsharp/. No posts found.",
+    "counter": 1
   }
 }
