@@ -1,3 +1,4 @@
 https://www.meziantou.net/computing-code-coverage-for-a-dotnet-project.htm
 https://www.meziantou.net/creating-ico-files-from-multiple-images-in-dotnet.htm
 https://www.meziantou.net/json-schema-validation-in-dotnet.htm
+https://www.meziantou.net/using-type-aliases-to-make-code-clearer-with-generics.htm
