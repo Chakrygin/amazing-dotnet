@@ -4,6 +4,7 @@ https://code-maze.com/aspnetcore-how-to-validate-file-upload-extensions/
 https://code-maze.com/aspnetcore-introduction-to-carter/
 https://code-maze.com/aspnetcore-set-a-default-user-agent-on-an-httpclient/
 https://code-maze.com/aspnetcore-test-grpc-services/
+https://code-maze.com/aspnetcore-webapi-rate-limiting/
 https://code-maze.com/code-maze-weekly-208/
 https://code-maze.com/code-maze-weekly-209/
 https://code-maze.com/code-maze-weekly-210/
