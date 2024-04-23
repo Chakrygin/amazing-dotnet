@@ -1,3 +1,4 @@
+https://devblogs.microsoft.com/visualstudio/exploring-the-askvs-command-in-github-copilot-for-visual-studio/
 https://devblogs.microsoft.com/visualstudio/how-to-install-github-copilot-in-visual-studio/
 https://devblogs.microsoft.com/visualstudio/how-to-use-comments-to-prompt-github-copilot-visual-studio/
 https://devblogs.microsoft.com/visualstudio/how-to-use-github-copilot-chat-in-visual-studio/
