@@ -1,4 +1,5 @@
 https://steven-giesel.com/blogPost/0775d3d3-8f90-4546-95d8-71a6b1e7b0e8/equip-3rd-party-types-with-a-deconstructor
+https://steven-giesel.com/blogPost/50b84029-4f1e-4e6d-8fd1-0311b0605562/does-readonly-make-your-code-faster
 https://steven-giesel.com/blogPost/5194faba-28db-4949-9d33-d7c1000b1156/ai-hype-am-i-out-of-work-in-five-years
 https://steven-giesel.com/blogPost/9892bd03-96bf-4ab0-aacc-973a99d5f5e0/pattern-matching-and-the-compiler-can-be-surprising
 https://steven-giesel.com/blogPost/d55cdae5-7294-40cc-a9d5-7552e092205e/fluent-api-to-await-multiple-calls-and-get-their-respective-results
