@@ -2,6 +2,7 @@ https://devblogs.microsoft.com/dotnet/announcing-azure-developers-dotnet-day-202
 https://devblogs.microsoft.com/dotnet/april-2024-updates/
 https://devblogs.microsoft.com/dotnet/build-test-resilient-apps-dotnet-dev-proxy/
 https://devblogs.microsoft.com/dotnet/building-a-scalable-gateway-for-microsoft-ai/
+https://devblogs.microsoft.com/dotnet/csharp-primary-constructors-refactoring/
 https://devblogs.microsoft.com/dotnet/introducing-mstest-sdk/
 https://devblogs.microsoft.com/dotnet/redis-makes-intelligent-apps-smarter-and-consistent/
 https://devblogs.microsoft.com/dotnet/streamline-container-build-dotnet-8/
