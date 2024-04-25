@@ -25,4 +25,5 @@ https://code-maze.com/csharp-the-best-way-to-assign-an-initial-value-to-auto-pro
 https://code-maze.com/csharp-the-difference-between-invariance-contravariance-and-covariance-in-generics/
 https://code-maze.com/dotnet-generate-sortable-unique-ids-with-the-newid-library/
 https://code-maze.com/dotnet-introduction-to-strawberry-shake-and-graphql/
+https://code-maze.com/efcore-show-generated-sql-query/
 https://code-maze.com/how-to-use-httponly-cookie-in-net-core-for-authentication-and-refresh-token-actions/
