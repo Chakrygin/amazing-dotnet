@@ -12,6 +12,7 @@ https://code-maze.com/code-maze-weekly-209/
 https://code-maze.com/code-maze-weekly-210/
 https://code-maze.com/csharp-baseline-styling-in-benchmarkdotnet/
 https://code-maze.com/csharp-check-the-total-number-of-items-in-an-enum/
+https://code-maze.com/csharp-create-a-zip-file-in-memory/
 https://code-maze.com/csharp-fastest-way-to-find-and-extract-a-number-from-a-string/
 https://code-maze.com/csharp-getting-property-mappings-from-automapper/
 https://code-maze.com/csharp-how-to-detect-if-a-key-is-pressed-in-a-console-application/
