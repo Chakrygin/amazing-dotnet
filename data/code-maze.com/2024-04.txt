@@ -6,6 +6,7 @@ https://code-maze.com/aspnetcore-hsts-header-implementation/
 https://code-maze.com/aspnetcore-introduction-to-carter/
 https://code-maze.com/aspnetcore-set-a-default-user-agent-on-an-httpclient/
 https://code-maze.com/aspnetcore-test-grpc-services/
+https://code-maze.com/aspnetcore-using-kafka-in-a-web-api/
 https://code-maze.com/aspnetcore-using-server-sent-events-for-realtime-updates/
 https://code-maze.com/aspnetcore-webapi-rate-limiting/
 https://code-maze.com/code-maze-weekly-208/
