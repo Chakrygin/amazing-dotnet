@@ -1,1 +1,2 @@
 https://blog.jetbrains.com/dotnet/2024/04/15/exploring-collections-and-datatables/
+https://blog.jetbrains.com/dotnet/2024/04/30/jet-brains-ai-assistant-in-resharper/
