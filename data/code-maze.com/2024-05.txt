@@ -1,2 +1,3 @@
+https://code-maze.com/code-maze-weekly-212/
 https://code-maze.com/csharp-generate-images-using-imagemagick/
 https://code-maze.com/csharp-generate-images-using-imagesharp/
