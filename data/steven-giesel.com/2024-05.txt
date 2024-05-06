@@ -1,1 +1,2 @@
+https://steven-giesel.com/blogPost/a5f6f281-1d0c-4b9e-8812-dc84faf41bcf/boosting-productivity-with-analyzers
 https://steven-giesel.com/blogPost/a825c041-26dc-4488-8707-17697871d08e/checking-your-solution-for-nuget-vulnerabilities-or-deprecated-packages
