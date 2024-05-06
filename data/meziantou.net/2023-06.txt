@@ -1,2 +1,0 @@
-https://www.meziantou.net/debug-asp-net-core-application-configuration.htm
-https://www.meziantou.net/how-to-use-runtimehelpers-isreferenceorcontainsreferences-to-micro-optimize-coll.htm
