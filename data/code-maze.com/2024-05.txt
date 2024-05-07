@@ -5,3 +5,4 @@ https://code-maze.com/csharp-generate-images-using-imagemagick/
 https://code-maze.com/csharp-generate-images-using-imagesharp/
 https://code-maze.com/csharp-generate-images-using-skiasharp/
 https://code-maze.com/csharp-serialization-and-deserialization-with-yamldotnet/
+https://code-maze.com/differences-between-dotnet-and-csharp/
