@@ -1,4 +1,0 @@
-https://khalidabuhakmeh.com/entity-framework-core-7-filtering-on-json-arrays
-https://khalidabuhakmeh.com/htmx-boosts-and-aspnet-core-anti-forgery-tokens
-https://khalidabuhakmeh.com/the-privilege-of-dotnet-tooling-choices
-https://khalidabuhakmeh.com/using-stringbuilder-to-replace-values
