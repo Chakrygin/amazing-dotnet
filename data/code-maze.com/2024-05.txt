@@ -4,3 +4,4 @@ https://code-maze.com/csharp-fastest-way-to-get-a-dictionary-key-by-value/
 https://code-maze.com/csharp-generate-images-using-imagemagick/
 https://code-maze.com/csharp-generate-images-using-imagesharp/
 https://code-maze.com/csharp-generate-images-using-skiasharp/
+https://code-maze.com/csharp-serialization-and-deserialization-with-yamldotnet/
