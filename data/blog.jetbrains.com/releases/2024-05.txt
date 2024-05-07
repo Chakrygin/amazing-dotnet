@@ -1,0 +1,2 @@
+https://blog.jetbrains.com/dotnet/2024/05/07/resharper-2024-1-2/
+https://blog.jetbrains.com/dotnet/2024/05/07/rider-2024-1-2/

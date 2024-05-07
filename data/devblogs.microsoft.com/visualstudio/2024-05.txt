@@ -1,0 +1,1 @@
+https://devblogs.microsoft.com/visualstudio/using-github-copilot-as-your-coding-gps/
