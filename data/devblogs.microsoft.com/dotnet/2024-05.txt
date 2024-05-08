@@ -1,1 +1,2 @@
 https://devblogs.microsoft.com/dotnet/may-release-of-csharp-dev-kit/
+https://devblogs.microsoft.com/dotnet/refactor-your-code-with-collection-expressions/
