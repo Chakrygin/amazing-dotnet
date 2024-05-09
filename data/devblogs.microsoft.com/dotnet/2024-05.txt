@@ -1,2 +1,3 @@
+https://devblogs.microsoft.com/dotnet/join-the-dotnet-team-microsoft-build-2024/
 https://devblogs.microsoft.com/dotnet/may-release-of-csharp-dev-kit/
 https://devblogs.microsoft.com/dotnet/refactor-your-code-with-collection-expressions/
