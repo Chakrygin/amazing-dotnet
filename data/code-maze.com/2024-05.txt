@@ -1,5 +1,6 @@
 https://code-maze.com/aspnetcore-show-query-parameters-in-swagger/
 https://code-maze.com/code-maze-weekly-212/
+https://code-maze.com/csharp-count-the-number-of-vowels-in-a-string/
 https://code-maze.com/csharp-fastest-way-to-get-a-dictionary-key-by-value/
 https://code-maze.com/csharp-generate-images-using-imagemagick/
 https://code-maze.com/csharp-generate-images-using-imagesharp/
