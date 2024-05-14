@@ -1,1 +1,2 @@
+https://khalidabuhakmeh.com/aspnet-core-ssr-web-components-and-enhance-wasm
 https://khalidabuhakmeh.com/how-to-add-http-headers-to-blazor-components-with-razorcomponentresult
