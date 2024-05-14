@@ -1,5 +1,6 @@
 https://code-maze.com/aspnetcore-call-an-action-from-another-controller/
 https://code-maze.com/aspnetcore-generate-qr-codes-with-qrcoder/
+https://code-maze.com/aspnetcore-result-pattern/
 https://code-maze.com/aspnetcore-show-query-parameters-in-swagger/
 https://code-maze.com/code-maze-weekly-212/
 https://code-maze.com/csharp-count-the-number-of-vowels-in-a-string/
