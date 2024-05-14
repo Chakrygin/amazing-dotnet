@@ -1,0 +1,1 @@
+https://andrewlock.net/an-introduction-to-primary-constructors-in-csharp-12/
