@@ -1,2 +1,3 @@
 https://devblogs.microsoft.com/visualstudio/mastering-slash-commands-with-github-copilot-in-visual-studio/
 https://devblogs.microsoft.com/visualstudio/using-github-copilot-as-your-coding-gps/
+https://devblogs.microsoft.com/visualstudio/visual-studio-at-build-2024/
