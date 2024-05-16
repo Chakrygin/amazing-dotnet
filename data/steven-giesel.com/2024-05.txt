@@ -1,4 +1,5 @@
 https://steven-giesel.com/blogPost/2cb4a908-2dbb-4a9d-9c32-73d094b6670f/ncronjob-big-updates
 https://steven-giesel.com/blogPost/783a404a-e39e-480f-bc99-a514a75d752d/net-9-linq-performance-edition
+https://steven-giesel.com/blogPost/9fa236ef-67da-4113-95e7-99770dc70444/generate-http-files-from-a-swagger-definition
 https://steven-giesel.com/blogPost/a5f6f281-1d0c-4b9e-8812-dc84faf41bcf/boosting-productivity-with-analyzers
 https://steven-giesel.com/blogPost/a825c041-26dc-4488-8707-17697871d08e/checking-your-solution-for-nuget-vulnerabilities-or-deprecated-packages
