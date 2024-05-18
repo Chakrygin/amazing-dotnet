@@ -1,3 +1,4 @@
+https://code-maze.com/aspnetcore-add-a-cookie-to-an-httpclient-request-response/
 https://code-maze.com/aspnetcore-call-an-action-from-another-controller/
 https://code-maze.com/aspnetcore-change-default-and-per-request-timeout-in-httpclient/
 https://code-maze.com/aspnetcore-generate-qr-codes-with-qrcoder/
