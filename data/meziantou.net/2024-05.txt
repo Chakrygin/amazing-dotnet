@@ -1,2 +1,3 @@
 https://www.meziantou.net/how-to-avoid-conflicts-when-testing-your-dotnet-templates-locally.htm
 https://www.meziantou.net/how-to-check-if-a-dll-and-an-exe-is-a-dotnet-assembly.htm
+https://www.meziantou.net/roslyn-analyzers-how-to.htm
