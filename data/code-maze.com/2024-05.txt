@@ -14,6 +14,7 @@ https://code-maze.com/csharp-generate-a-random-color-name/
 https://code-maze.com/csharp-generate-images-using-imagemagick/
 https://code-maze.com/csharp-generate-images-using-imagesharp/
 https://code-maze.com/csharp-generate-images-using-skiasharp/
+https://code-maze.com/csharp-real-time-net-error-reporting-with-exceptionless/
 https://code-maze.com/csharp-serialization-and-deserialization-with-yamldotnet/
 https://code-maze.com/csharp-update-list-item/
 https://code-maze.com/csharrp-find-latitude-and-longitude-of-a-location/
