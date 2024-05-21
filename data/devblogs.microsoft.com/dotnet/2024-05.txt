@@ -1,4 +1,5 @@
 https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-may-2024-servicing-updates/
+https://devblogs.microsoft.com/dotnet/dotnet-aspire-general-availability/
 https://devblogs.microsoft.com/dotnet/join-the-dotnet-team-microsoft-build-2024/
 https://devblogs.microsoft.com/dotnet/may-release-of-csharp-dev-kit/
 https://devblogs.microsoft.com/dotnet/refactor-your-code-with-collection-expressions/
