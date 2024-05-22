@@ -1,3 +1,4 @@
+https://devblogs.microsoft.com/visualstudio/first-preview-of-visual-studio-2022-v17-11/
 https://devblogs.microsoft.com/visualstudio/improve-your-code-quality-with-github-copilot-in-visual-studio/
 https://devblogs.microsoft.com/visualstudio/mastering-slash-commands-with-github-copilot-in-visual-studio/
 https://devblogs.microsoft.com/visualstudio/maximizing-joy-and-minimizing-toil-with-great-developer-experiences/
