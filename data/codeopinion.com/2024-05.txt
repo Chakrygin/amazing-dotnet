@@ -1,1 +1,2 @@
 https://codeopinion.com/how-to-and-how-not-to-design-rest-apis/
+https://codeopinion.com/locking-in-on-concurrency-control/
