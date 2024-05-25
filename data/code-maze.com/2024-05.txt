@@ -22,3 +22,4 @@ https://code-maze.com/csharp-serialization-and-deserialization-with-yamldotnet/
 https://code-maze.com/csharp-update-list-item/
 https://code-maze.com/csharrp-find-latitude-and-longitude-of-a-location/
 https://code-maze.com/differences-between-dotnet-and-csharp/
+https://code-maze.com/dotnet-introduction-to-stronglytypedid-package/
