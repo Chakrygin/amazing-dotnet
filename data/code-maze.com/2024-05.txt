@@ -6,6 +6,7 @@ https://code-maze.com/aspnetcore-generate-qr-codes-with-qrcoder/
 https://code-maze.com/aspnetcore-result-pattern/
 https://code-maze.com/aspnetcore-set-global-default-json-serialization-options/
 https://code-maze.com/aspnetcore-show-query-parameters-in-swagger/
+https://code-maze.com/aspnetcore-using-delegating-handlers-to-extend-httpclient/
 https://code-maze.com/aspnetcore-using-source-generators-to-validate-ioptions/
 https://code-maze.com/aspnetcore-view-based-authorization/
 https://code-maze.com/code-maze-weekly-212/
