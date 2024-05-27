@@ -10,6 +10,7 @@ https://code-maze.com/aspnetcore-using-delegating-handlers-to-extend-httpclient/
 https://code-maze.com/aspnetcore-using-source-generators-to-validate-ioptions/
 https://code-maze.com/aspnetcore-view-based-authorization/
 https://code-maze.com/code-maze-weekly-212/
+https://code-maze.com/csharp-compare-two-dictionaries/
 https://code-maze.com/csharp-compare-two-files/
 https://code-maze.com/csharp-count-the-number-of-vowels-in-a-string/
 https://code-maze.com/csharp-fastest-way-to-get-a-dictionary-key-by-value/
