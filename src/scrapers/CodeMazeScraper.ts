@@ -87,7 +87,7 @@ class CodeMazeScrapeReader {
   readonly href = this.link.attr('href') ?? '';
 
   getDefaultImage(): string | undefined {
-    let src = this.article.find('.et_pb_image_container img').attr('data-src');
+    let src = this.article.find('.et_pb_image_container img').attr('src');
 
     if (src) {
       src = src.replace(/-\d+x\d+(\.\w+)$/, '$1');
