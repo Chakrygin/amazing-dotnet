@@ -6,4 +6,5 @@ https://devblogs.microsoft.com/visualstudio/maximizing-joy-and-minimizing-toil-w
 https://devblogs.microsoft.com/visualstudio/using-github-copilot-as-your-coding-gps/
 https://devblogs.microsoft.com/visualstudio/visual-studio-2022-17-10-now-available/
 https://devblogs.microsoft.com/visualstudio/visual-studio-at-build-2024/
+https://devblogs.microsoft.com/visualstudio/visual-studio-extension-manager-17-10/
 https://devblogs.microsoft.com/visualstudio/visualstudio-extensibility-17-10/
