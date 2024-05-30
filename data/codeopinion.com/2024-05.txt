@@ -1,2 +1,3 @@
 https://codeopinion.com/how-to-and-how-not-to-design-rest-apis/
 https://codeopinion.com/locking-in-on-concurrency-control/
+https://codeopinion.com/the-bulkhead-pattern-how-to-make-your-system-fault-tolerant/
