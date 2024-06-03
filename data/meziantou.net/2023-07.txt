@@ -1,3 +1,0 @@
-https://www.meziantou.net/micro-optimization-concatenating-a-string-with-a-char-using-string-concat.htm
-https://www.meziantou.net/polyfills-in-dotnet-to-ease-multi-targeting.htm
-https://www.meziantou.net/roslyn-analyzer-to-check-the-types-of-structured-log-messages.htm

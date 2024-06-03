@@ -1,0 +1,1 @@
+https://www.meziantou.net/create-a-multi-arch-docker-image-for-a-dotnet-application.htm
