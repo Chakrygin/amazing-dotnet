@@ -1,1 +1,2 @@
+https://devblogs.microsoft.com/dotnet/array-mapping-in-ef-core-8/
 https://devblogs.microsoft.com/dotnet/refactor-your-code-using-alias-any-type/
