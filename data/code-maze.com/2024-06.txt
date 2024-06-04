@@ -1,3 +1,4 @@
 https://code-maze.com/aspnetcore-easycaching/
+https://code-maze.com/aspnetcore-mock-iconfiguration-getvalue/
 https://code-maze.com/csharp-print-2d-array-to-the-console/
 https://code-maze.com/dotnet-embedded-resources/
