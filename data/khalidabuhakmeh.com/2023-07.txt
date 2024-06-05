@@ -1,4 +1,0 @@
-https://khalidabuhakmeh.com/adding-a-readme-to-nuget-package-landing-pages
-https://khalidabuhakmeh.com/csharp-records-the-with-keyword-and-reference-types
-https://khalidabuhakmeh.com/dotnet-8-timeprovider-and-unit-tests
-https://khalidabuhakmeh.com/htmx-aspnet-core-and-bootstrap-modals
