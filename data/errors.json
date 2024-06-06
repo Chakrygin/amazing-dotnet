@@ -3,10 +3,5 @@
     "timestamp": "2024-03-04T18:45:22.388Z",
     "message": "certificate has expired",
     "counter": 12
-  },
-  "StevenGiesel": {
-    "timestamp": "2024-06-05T20:46:42.852Z",
-    "message": "400: Bad Request: wrong file identifier/HTTP URL specified",
-    "counter": 4
   }
 }

@@ -1,1 +1,2 @@
+https://steven-giesel.com/blogPost/c0144fea-0ff8-4638-be01-b62b48ef7188/stringbuilders-magic-for-very-large-strings
 https://steven-giesel.com/blogPost/e44d777a-dd94-4fd0-b066-f93259a16323/aspnet-8-webinar
