@@ -1,0 +1,1 @@
+https://codeopinion.com/beware-anti-patterns-in-event-driven-architecture/
