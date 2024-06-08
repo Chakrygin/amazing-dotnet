@@ -1,9 +1,4 @@
 {
-  "CodeOpinion": {
-    "timestamp": "2024-06-08T20:47:22.074Z",
-    "message": "Request timed out after 60000ms",
-    "counter": 1
-  },
   "DotNetCoreTutorials": {
     "timestamp": "2024-03-04T18:45:22.388Z",
     "message": "certificate has expired",
