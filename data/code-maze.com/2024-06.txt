@@ -3,6 +3,7 @@ https://code-maze.com/aspnetcore-mock-iconfiguration-getvalue/
 https://code-maze.com/csharp-bouncy-castle-cryptography/
 https://code-maze.com/csharp-linq-todictionary-method/
 https://code-maze.com/csharp-print-2d-array-to-the-console/
+https://code-maze.com/csharp-weak-events/
 https://code-maze.com/dotnet-comparing-executeasync-and-startasync-methods-from-the-backgroundservice-class/
 https://code-maze.com/dotnet-embedded-resources/
 https://code-maze.com/dotnet-how-to-serialize-a-pascalcase-json-net-jobject-to-camelcase/
