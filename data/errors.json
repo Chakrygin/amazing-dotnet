@@ -4,6 +4,11 @@
     "message": "certificate has expired",
     "counter": 12
   },
+  "RadioDotNet": {
+    "timestamp": "2024-06-11T16:46:31.458Z",
+    "message": "Request failed with status code 503",
+    "counter": 1
+  },
   "StevenGiesel": {
     "timestamp": "2024-06-11T08:46:29.805Z",
     "message": "400: Bad Request: wrong file identifier/HTTP URL specified",
