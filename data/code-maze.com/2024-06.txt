@@ -1,3 +1,4 @@
+https://code-maze.com/aspnetcore-adding-a-custom-header-parameter-to-all-api-endpoints-in-swagger/
 https://code-maze.com/aspnetcore-easycaching/
 https://code-maze.com/aspnetcore-mock-iconfiguration-getvalue/
 https://code-maze.com/csharp-bouncy-castle-cryptography/
