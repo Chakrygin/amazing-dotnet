@@ -1,4 +1,0 @@
-{
-  "jest.autoRun": "off",
-  "jest.jestCommandLine": "node_modules\\.bin\\jest",
-}
