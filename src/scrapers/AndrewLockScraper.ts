@@ -25,7 +25,7 @@ export class AndrewLockScraper extends ScraperBase {
       })
       .fetchPosts((_, item) => {
 
-        const image = this.getImage(item)
+        const image = this.getImage(item);
         const title = item.title ?? '';
         const href = item.link ?? '';
         const date = item.isoDate ?? '';

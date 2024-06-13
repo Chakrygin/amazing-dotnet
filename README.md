@@ -12,6 +12,13 @@
         - TypeScript - https://devblogs.microsoft.com/typescript/
         - Visual Studio Blog - https://devblogs.microsoft.com/visualstudio/
         - Windows Command Line - https://devblogs.microsoft.com/commandline/
+
+- Персональные блоги:
+    - Andrew Lock - .NET Escapades - https://andrewlock.net
+
+## OLD
+
+- Коллективные блоги:
     - The JetBrains Blog / The .NET Tools Blog:
         - How-To's - https://blog.jetbrains.com/dotnet/category/how-tos/
         - Releases - https://blog.jetbrains.com/dotnet/category/releases/
@@ -23,7 +30,6 @@
     - Code Maze - https://code-maze.com
 
 - Персональные блоги:
-    - Andrew Lock - .NET Escapades - https://andrewlock.net
     - Chris Alcock - The Morning Brew - https://blog.cwa.me.uk
     - Derek Comartin - CodeOpinion - https://codeopinion.com
     - Gérald Barré - Meziantou's blog - https://www.meziantou.net

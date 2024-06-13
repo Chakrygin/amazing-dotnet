@@ -3,7 +3,7 @@ import { App } from '@core/App';
 import { AndrewLockScraper } from './scrapers/AndrewLockScraper';
 // import { CodeMazeScraper } from './scrapers/CodeMazeScraper';
 // import { CodeOpinionScraperV2 } from './scrapers/CodeOpinionScraperV2';
-// import { DevBlogsScraper } from './scrapers/DevBlogsScraper';
+import { DevBlogsScraper } from './scrapers/DevBlogsScraper';
 // import { EnterpriseCraftsmanshipScraper } from './scrapers/EnterpriseCraftsmanshipScraper';
 // import { HaackedScraper } from './scrapers/HaackedScraper';
 // import { HabrScraper } from './scrapers/HabrScraper';
@@ -20,12 +20,12 @@ const app = new App(knownHosts => [
   new AndrewLockScraper(),
   // new CodeMazeScraper(knownHosts),
   // new CodeOpinionScraperV2(),
-  // new DevBlogsScraper('dotnet'),
-  // new DevBlogsScraper('odata'),
-  // new DevBlogsScraper('nuget'),
-  // new DevBlogsScraper('typescript'),
-  // new DevBlogsScraper('visualstudio'),
-  // new DevBlogsScraper('commandline'),
+  new DevBlogsScraper('dotnet'),
+  new DevBlogsScraper('odata'),
+  new DevBlogsScraper('nuget'),
+  new DevBlogsScraper('typescript'),
+  new DevBlogsScraper('visualstudio'),
+  new DevBlogsScraper('commandline'),
   // new EnterpriseCraftsmanshipScraper(),
   // new HaackedScraper(),
   // new HabrScraper('net'),

@@ -1,6 +1,6 @@
-import { DevBlogsScraperBase } from '../../core/scrapers/shared';
+import { DevBlogsScraperBase } from '@core/scrapers/shared';
 
-const Blogs = {
+const blogs = {
   'dotnet': '.NET Blog',
   'odata': 'OData',
   'nuget': 'The NuGet Blog',
@@ -10,7 +10,7 @@ const Blogs = {
 };
 
 export class DevBlogsScraper extends DevBlogsScraperBase {
-  constructor(blogId: keyof typeof Blogs) {
-    super(blogId, Blogs[blogId]);
+  constructor(id: keyof typeof blogs) {
+    super(id, blogs[id]);
   }
 }
