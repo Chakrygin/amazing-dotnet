@@ -6,7 +6,7 @@ import { AndrewLockScraper } from './scrapers/AndrewLockScraper';
 import { DevBlogsScraper } from './scrapers/DevBlogsScraper';
 // import { EnterpriseCraftsmanshipScraper } from './scrapers/EnterpriseCraftsmanshipScraper';
 // import { HaackedScraper } from './scrapers/HaackedScraper';
-// import { HabrScraper } from './scrapers/HabrScraper';
+import { HabrScraper } from './scrapers/HabrScraper';
 // import { JetBrainsBlogScraper } from './scrapers/JetBrainsBlogScraper';
 // import { KhalidAbuhakmehScraper } from './scrapers/KhalidAbuhakmehScraper';
 // // import { MaoniScraper } from './scrapers/MaoniScraper';
@@ -28,9 +28,9 @@ const app = new App(knownHosts => [
   new DevBlogsScraper('commandline'),
   // new EnterpriseCraftsmanshipScraper(),
   // new HaackedScraper(),
-  // new HabrScraper('net'),
-  // new HabrScraper('csharp'),
-  // new HabrScraper('fsharp'),
+  new HabrScraper('net'),
+  new HabrScraper('csharp'),
+  new HabrScraper('fsharp'),
   // new JetBrainsBlogScraper('how-tos'),
   // new JetBrainsBlogScraper('releases'),
   // new JetBrainsBlogScraper('net-annotated', knownHosts),

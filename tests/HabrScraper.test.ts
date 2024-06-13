@@ -1,5 +1,6 @@
-import { testScraper } from '../core/testing';
-import { HabrScraper } from '../src/scrapers/HabrScraper';
+import { testScraper } from '@core/testing';
+
+import { HabrScraper } from '@src/scrapers/HabrScraper';
 
 test('Habr / .NET', async () => {
   await testScraper(() => new HabrScraper('net'));
