@@ -1,10 +1,10 @@
 import moment from 'moment';
 import RssParser from 'rss-parser';
 
-import { Link, Post } from '../../core/models';
-import { RssFeedScraper } from '../../core/scrapers';
+import { Link, Post } from '@core/models';
+import { ScraperBase } from '@core/scrapers';
 
-export class AndrewLockScraper extends RssFeedScraper {
+export class AndrewLockScraper extends ScraperBase {
   readonly name = 'AndrewLock';
   readonly path = 'andrewlock.net';
   readonly author = 'Andrew Lock';
@@ -23,43 +23,31 @@ export class AndrewLockScraper extends RssFeedScraper {
           ],
         },
       })
-      .fetchPosts(AndrewLockFetchReader, reader => {
-        const post: Post = {
-          image: reader.getImage(),
-          title: reader.title,
-          href: reader.href,
-          categories: [
-            this.AndrewLock,
-          ],
+      .fetchPosts((_, item) => {
+
+        const image = this.getImage(item)
+        const title = item.title ?? '';
+        const href = item.link ?? '';
+        const date = item.isoDate ?? '';
+        const description = this.getDescription(item);
+        const tags = item.categories;
+
+        return {
+          image,
+          title,
+          href,
+          categories: [this.AndrewLock],
           author: this.author,
-          date: moment(reader.date),
-          description: reader.getDescription(),
-          links: [
-            {
-              title: 'Read more',
-              href: reader.href,
-            },
-          ],
-          tags: reader.tags,
+          date: moment(date),
+          description,
+          tags,
         };
 
-        return post;
       });
   }
-}
 
-class AndrewLockFetchReader<T extends { 'media:content': unknown }> {
-  constructor(
-    private readonly feed: RssParser.Output<T>,
-    private readonly item: RssParser.Item & T) { }
-
-  readonly title = this.item.title ?? '';
-  readonly href = this.item.link ?? '';
-  readonly date = this.item.isoDate ?? '';
-  readonly tags = this.item.categories;
-
-  getImage(): string | undefined {
-    const content = this.item['media:content'] as {
+  private getImage(item: RssParser.Item & { 'media:content': unknown }): string | undefined {
+    const content = item['media:content'] as {
       readonly $: {
         readonly medium: string;
         readonly url: string;
@@ -71,8 +59,8 @@ class AndrewLockFetchReader<T extends { 'media:content': unknown }> {
     }
   }
 
-  getDescription(): string[] {
-    let description = this.item.contentSnippet?.trim() ?? '';
+  getDescription(item: RssParser.Item): string[] {
+    let description = item.contentSnippet?.trim() ?? '';
 
     if (!description.endsWith('.')) {
       description += '.';

@@ -1,0 +1,19 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch",
+      "type": "node",
+      "request": "launch",
+      "console": "integratedTerminal",
+      "program": "src/main.ts",
+      "cwd": "${workspaceFolder}",
+      "envFile": "${env:USERPROFILE}/amazing.env",
+      "runtimeExecutable": "tsx",
+      "skipFiles": [
+        "<node_internals>/**",
+        "${workspaceFolder}/node_modules/**",
+      ]
+    }
+  ]
+}

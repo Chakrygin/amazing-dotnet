@@ -1,0 +1,22 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "npm",
+      "script": "build",
+      "label": "Build",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "dependsOn": [
+        "Clean"
+      ]
+    },
+    {
+      "type": "npm",
+      "script": "clean",
+      "label": "Clean",
+    }
+  ]
+}

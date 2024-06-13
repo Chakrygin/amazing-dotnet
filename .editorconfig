@@ -1,0 +1,28 @@
+##########################################
+# Common Settings
+##########################################
+
+root = true
+
+[*]
+charset = utf-8
+indent_size = 4
+indent_style = space
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+##########################################
+# File Extension Settings
+##########################################
+
+[*.json]
+indent_size = 2
+
+[*.{yaml,yml}]
+indent_size = 2
+
+[*.md]
+trim_trailing_whitespace = false
+
+[*.{js,ts}]
+indent_size = 2

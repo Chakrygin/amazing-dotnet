@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ES2015",
+    "module": "ES2015",
+    "moduleResolution": "Bundler",
+    "strict": true,
+    "esModuleInterop": true,
+    "paths": {
+      "@core/*": [
+        "./core/src/*"
+      ],
+      "@src/*": [
+        "./src/*"
+      ]
+    }
+  }
+}
