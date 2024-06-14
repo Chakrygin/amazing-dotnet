@@ -2,6 +2,7 @@
 export default {
   preset: 'ts-jest',
   testEnvironment: 'node',
+  testTimeout: 50000,
   openHandlesTimeout: 0,
   setupFiles: [
     '<rootDir>/jest.setup.ts',

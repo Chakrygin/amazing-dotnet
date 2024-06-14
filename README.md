@@ -13,6 +13,10 @@
         - TypeScript - https://devblogs.microsoft.com/typescript/
         - Visual Studio Blog - https://devblogs.microsoft.com/visualstudio/
         - Windows Command Line - https://devblogs.microsoft.com/commandline/
+    - The JetBrains Blog / The .NET Tools Blog:
+        - How-To's - https://blog.jetbrains.com/dotnet/category/how-tos/
+        - Releases - https://blog.jetbrains.com/dotnet/category/releases/
+        - dotInsights - https://blog.jetbrains.com/dotnet/tag/dotinsights/
     - Хабр (статьи с рейтингом 10 и выше):
         - .NET - https://habr.com/ru/hub/net/
         - C# - https://habr.com/ru/hub/csharp/
@@ -25,20 +29,14 @@
 ## OLD
 
 - Коллективные блоги:
-    - The JetBrains Blog / The .NET Tools Blog:
-        - How-To's - https://blog.jetbrains.com/dotnet/category/how-tos/
-        - Releases - https://blog.jetbrains.com/dotnet/category/releases/
-        - .NET Annotated - https://blog.jetbrains.com/dotnet/tag/net-annotated/
 
 
 - Персональные блоги:
     - Chris Alcock - The Morning Brew - https://blog.cwa.me.uk
     - Gérald Barré - Meziantou's blog - https://www.meziantou.net
     - Khalid Abuhakmeh - https://khalidabuhakmeh.com
-    - ~~Maoni Stephens - https://maoni0.medium.com~~ (Временно не работает)
     - Michael Shpilt - Michael's Coding Spot - https://michaelscodingspot.com
     - Steven Giesel - https://steven-giesel.com
-    - Vladimir Khorikov - Enterprise Craftsmanship - https://enterprisecraftsmanship.com/posts
     - Wade Gausden - .NET Core Tutorials - https://dotnetcoretutorials.com
 
 - Подкасты:
