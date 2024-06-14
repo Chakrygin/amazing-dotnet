@@ -1,2 +1,0 @@
-https://dotnetcoretutorials.com/ref-in-c-sharp/
-https://dotnetcoretutorials.com/var-keyword-in-c-sharp/
