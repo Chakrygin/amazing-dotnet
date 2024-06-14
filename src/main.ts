@@ -6,8 +6,7 @@ import { CodeOpinionScraper } from './scrapers/CodeOpinionScraper';
 import { DevBlogsScraper } from './scrapers/DevBlogsScraper';
 import { HabrScraper } from './scrapers/HabrScraper';
 import { JetBrainsBlogScraper } from './scrapers/JetBrainsBlogScraper';
-// import { KhalidAbuhakmehScraper } from './scrapers/KhalidAbuhakmehScraper';
-// // import { MaoniScraper } from './scrapers/MaoniScraper';
+import { KhalidAbuhakmehScraper } from './scrapers/KhalidAbuhakmehScraper';
 // import { MeziantouScraper } from './scrapers/MeziantouScraper';
 // import { MichaelsCodingSpotScraper } from './scrapers/MichaelsCodingSpotScraper';
 // import { RadioDotNetScraper } from './scrapers/RadioDotNetScraper';
@@ -30,8 +29,7 @@ const app = new App(knownHosts => [
   new JetBrainsBlogScraper('how-tos'),
   new JetBrainsBlogScraper('releases'),
   new JetBrainsBlogScraper('dotinsights', knownHosts),
-  // new KhalidAbuhakmehScraper(),
-  // // new MaoniScraper(),
+  new KhalidAbuhakmehScraper(),
   // new MeziantouScraper(),
   // new MichaelsCodingSpotScraper(),
   // new RadioDotNetScraper(),
