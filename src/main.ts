@@ -7,7 +7,7 @@ import { DevBlogsScraper } from './scrapers/DevBlogsScraper';
 import { HabrScraper } from './scrapers/HabrScraper';
 import { JetBrainsBlogScraper } from './scrapers/JetBrainsBlogScraper';
 import { KhalidAbuhakmehScraper } from './scrapers/KhalidAbuhakmehScraper';
-// import { MeziantouScraper } from './scrapers/MeziantouScraper';
+import { MeziantouScraper } from './scrapers/MeziantouScraper';
 // import { MichaelsCodingSpotScraper } from './scrapers/MichaelsCodingSpotScraper';
 // import { RadioDotNetScraper } from './scrapers/RadioDotNetScraper';
 // import { StevenGieselScraper } from './scrapers/StevenGieselScraper';
@@ -30,7 +30,7 @@ const app = new App(knownHosts => [
   new JetBrainsBlogScraper('releases'),
   new JetBrainsBlogScraper('dotinsights', knownHosts),
   new KhalidAbuhakmehScraper(),
-  // new MeziantouScraper(),
+  new MeziantouScraper(),
   // new MichaelsCodingSpotScraper(),
   // new RadioDotNetScraper(),
   // new StevenGieselScraper(),

@@ -25,6 +25,8 @@
 - Персональные блоги:
     - Andrew Lock - .NET Escapades - https://andrewlock.net
     - Derek Comartin - CodeOpinion - https://codeopinion.com
+    - Gérald Barré - Meziantou's blog - https://www.meziantou.net
+    - Khalid Abuhakmeh - https://khalidabuhakmeh.com
 
 ## OLD
 
@@ -33,8 +35,6 @@
 
 - Персональные блоги:
     - Chris Alcock - The Morning Brew - https://blog.cwa.me.uk
-    - Gérald Barré - Meziantou's blog - https://www.meziantou.net
-    - Khalid Abuhakmeh - https://khalidabuhakmeh.com
     - Michael Shpilt - Michael's Coding Spot - https://michaelscodingspot.com
     - Steven Giesel - https://steven-giesel.com
     - Wade Gausden - .NET Core Tutorials - https://dotnetcoretutorials.com
