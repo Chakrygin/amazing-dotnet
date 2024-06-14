@@ -1,9 +1,9 @@
 #!/bin/sh
 
-# set -e
+set -e
 
-# npm run clean
-# npm run build
+npm run clean
+npm run build
 
-# git add "dist/index.js"
-# git add "dist/package.json"
+git add "dist/index.js"
+git add "dist/package.json"
