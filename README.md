@@ -12,6 +12,10 @@
         - TypeScript - https://devblogs.microsoft.com/typescript/
         - Visual Studio Blog - https://devblogs.microsoft.com/visualstudio/
         - Windows Command Line - https://devblogs.microsoft.com/commandline/
+    - Хабр (статьи с рейтингом 10 и выше):
+        - .NET - https://habr.com/ru/hub/net/
+        - C# - https://habr.com/ru/hub/csharp/
+        - F# - https://habr.com/ru/hub/fsharp/
 
 - Персональные блоги:
     - Andrew Lock - .NET Escapades - https://andrewlock.net
@@ -23,10 +27,7 @@
         - How-To's - https://blog.jetbrains.com/dotnet/category/how-tos/
         - Releases - https://blog.jetbrains.com/dotnet/category/releases/
         - .NET Annotated - https://blog.jetbrains.com/dotnet/tag/net-annotated/
-    - Хабр (статьи с рейтингом 10 и выше):
-        - .NET - https://habr.com/ru/hub/net/
-        - C# - https://habr.com/ru/hub/csharp/
-        - F# - https://habr.com/ru/hub/fsharp/
+
     - Code Maze - https://code-maze.com
 
 - Персональные блоги:
