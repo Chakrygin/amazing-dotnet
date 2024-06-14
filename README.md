@@ -5,6 +5,7 @@
 ## Какие ресурсы мониторятся?
 
 - Коллективные блоги:
+    - Code Maze - https://code-maze.com
     - Microsoft Developer Blogs:
         - .NET Blog - https://devblogs.microsoft.com/dotnet/
         - OData - https://devblogs.microsoft.com/odata/
@@ -19,6 +20,7 @@
 
 - Персональные блоги:
     - Andrew Lock - .NET Escapades - https://andrewlock.net
+    - Derek Comartin - CodeOpinion - https://codeopinion.com
 
 ## OLD
 
@@ -28,11 +30,9 @@
         - Releases - https://blog.jetbrains.com/dotnet/category/releases/
         - .NET Annotated - https://blog.jetbrains.com/dotnet/tag/net-annotated/
 
-    - Code Maze - https://code-maze.com
 
 - Персональные блоги:
     - Chris Alcock - The Morning Brew - https://blog.cwa.me.uk
-    - Derek Comartin - CodeOpinion - https://codeopinion.com
     - Gérald Barré - Meziantou's blog - https://www.meziantou.net
     - Khalid Abuhakmeh - https://khalidabuhakmeh.com
     - ~~Maoni Stephens - https://maoni0.medium.com~~ (Временно не работает)

@@ -1,7 +1,7 @@
 import { App } from '@core/App';
 
 import { AndrewLockScraper } from './scrapers/AndrewLockScraper';
-// import { CodeMazeScraper } from './scrapers/CodeMazeScraper';
+import { CodeMazeScraper } from './scrapers/CodeMazeScraper';
 // import { CodeOpinionScraperV2 } from './scrapers/CodeOpinionScraperV2';
 import { DevBlogsScraper } from './scrapers/DevBlogsScraper';
 // import { EnterpriseCraftsmanshipScraper } from './scrapers/EnterpriseCraftsmanshipScraper';
@@ -18,7 +18,7 @@ import { HabrScraper } from './scrapers/HabrScraper';
 
 const app = new App(knownHosts => [
   new AndrewLockScraper(),
-  // new CodeMazeScraper(knownHosts),
+  new CodeMazeScraper(knownHosts),
   // new CodeOpinionScraperV2(),
   new DevBlogsScraper('dotnet'),
   new DevBlogsScraper('odata'),
