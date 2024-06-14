@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - dist/index.js
+      - data/errors.json
   schedule:
     - cron: 42 */2 * * *
 
