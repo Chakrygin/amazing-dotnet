@@ -46,7 +46,17 @@ export class RadioDotNetScraper extends ScraperBase {
         post = {
           ...post,
           description: [description],
-          links: links,
+          links: [
+            ...links,
+            {
+              title: 'Слушать на Mave',
+              href: post.href,
+            },
+            {
+              title: 'Поддержать на Boosty',
+              href: 'https://boosty.to/radiodotnet',
+            },
+          ],
         };
 
         return post;
@@ -100,11 +110,6 @@ export class RadioDotNetScraper extends ScraperBase {
         }
       }
     }
-
-    result.push({
-      title: 'Поддержать на Boosty',
-      href: 'https://boosty.to/radiodotnet'
-    });
 
     return result;
   }
