@@ -4,6 +4,7 @@ https://code-maze.com/aspnetcore-how-to-properly-set-connection-strings/
 https://code-maze.com/aspnetcore-mock-iconfiguration-getvalue/
 https://code-maze.com/csharp-bouncy-castle-cryptography/
 https://code-maze.com/csharp-differences-between-span-and-memory/
+https://code-maze.com/csharp-flattening-nested-collections/
 https://code-maze.com/csharp-linq-todictionary-method/
 https://code-maze.com/csharp-print-2d-array-to-the-console/
 https://code-maze.com/csharp-using-the-except-method-in-linq/
