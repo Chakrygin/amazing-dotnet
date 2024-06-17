@@ -1,3 +1,4 @@
+https://devblogs.microsoft.com/visualstudio/bosch-widely-adopts-visual-studio-for-their-c-remote-linux-projects/
 https://devblogs.microsoft.com/visualstudio/catch-up-on-the-latest-git-tooling-features-in-17-10-ga/
 https://devblogs.microsoft.com/visualstudio/get-hands-on-with-visual-studio-and-azure-live-at-microsoft-hq-this-august/
 https://devblogs.microsoft.com/visualstudio/giving-our-visual-studio-azure-marketplace-images-a-makeover/
