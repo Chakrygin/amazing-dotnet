@@ -1,0 +1,7 @@
+{
+  "AndrewLock": {
+    "timestamp": "2024-06-18T10:46:35.919Z",
+    "message": "400: Bad Request: can't parse entities: Unsupported start tag \"t\" at byte offset 37",
+    "counter": 1
+  }
+}
