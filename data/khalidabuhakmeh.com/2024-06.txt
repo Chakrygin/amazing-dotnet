@@ -1,2 +1,3 @@
 https://khalidabuhakmeh.com/how-to-encrypt-aspnet-core-route-parameters
 https://khalidabuhakmeh.com/state-machines-light-switches-and-space-travel-with-stateless-and-dotnet-8
+https://khalidabuhakmeh.com/what-is-hsts-and-why-is-it-in-my-aspnet-core-app
