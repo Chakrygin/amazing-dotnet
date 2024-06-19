@@ -13,4 +13,5 @@ https://code-maze.com/csharp-weak-events/
 https://code-maze.com/dotnet-comparing-executeasync-and-startasync-methods-from-the-backgroundservice-class/
 https://code-maze.com/dotnet-embedded-resources/
 https://code-maze.com/dotnet-how-to-serialize-a-pascalcase-json-net-jobject-to-camelcase/
+https://code-maze.com/dotnet-how-to-use-fakelogger/
 https://code-maze.com/retrying-failed-httpclient-requests-dotnet-polly/
