@@ -1,17 +1,7 @@
 {
-  "Habr / .NET": {
-    "timestamp": "2024-06-19T20:46:34.356Z",
-    "message": "Request failed with status code 503",
-    "counter": 1
-  },
-  "Habr / C#": {
-    "timestamp": "2024-06-19T20:46:36.433Z",
-    "message": "Request failed with status code 503",
-    "counter": 1
-  },
-  "Habr / F#": {
-    "timestamp": "2024-06-19T20:46:38.610Z",
-    "message": "Request failed with status code 503",
+  "RadioDotNet": {
+    "timestamp": "2024-06-19T22:50:02.827Z",
+    "message": "Request failed with status code 504",
     "counter": 1
   }
 }
