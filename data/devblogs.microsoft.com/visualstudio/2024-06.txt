@@ -1,3 +1,4 @@
+https://devblogs.microsoft.com/visualstudio/automatically-install-visual-studio-security-updates-through-microsoft-update/
 https://devblogs.microsoft.com/visualstudio/bosch-widely-adopts-visual-studio-for-their-c-remote-linux-projects/
 https://devblogs.microsoft.com/visualstudio/catch-up-on-the-latest-git-tooling-features-in-17-10-ga/
 https://devblogs.microsoft.com/visualstudio/easily-navigate-code-delegates-while-debugging/
