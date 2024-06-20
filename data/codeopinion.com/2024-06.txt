@@ -1,2 +1,3 @@
 https://codeopinion.com/beware-anti-patterns-in-event-driven-architecture/
+https://codeopinion.com/enums-arent-evil-conditional-statements-everywhere-are/
 https://codeopinion.com/goodbye-long-procedural-code-fix-it-with-workflows/
