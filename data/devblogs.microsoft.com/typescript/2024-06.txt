@@ -1,1 +1,2 @@
 https://devblogs.microsoft.com/typescript/announcing-typescript-5-5-rc/
+https://devblogs.microsoft.com/typescript/announcing-typescript-5-5/
