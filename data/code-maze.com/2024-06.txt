@@ -7,6 +7,7 @@ https://code-maze.com/csharp-differences-between-span-and-memory/
 https://code-maze.com/csharp-flattening-nested-collections/
 https://code-maze.com/csharp-how-to-ignore-a-property-in-automapper/
 https://code-maze.com/csharp-linq-todictionary-method/
+https://code-maze.com/csharp-null-statement/
 https://code-maze.com/csharp-print-2d-array-to-the-console/
 https://code-maze.com/csharp-using-the-except-method-in-linq/
 https://code-maze.com/csharp-weak-events/
