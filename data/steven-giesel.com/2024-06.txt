@@ -1,4 +1,5 @@
 https://steven-giesel.com/blogPost/35ec8819-220a-42bc-9224-a812ec358434/are-my-ef-linq-to-sql-queries-safe
+https://steven-giesel.com/blogPost/40647b2f-6efa-4bc2-a7ab-53df460dd6fe/ncronjob-june-edition
 https://steven-giesel.com/blogPost/c0144fea-0ff8-4638-be01-b62b48ef7188/stringbuilders-magic-for-very-large-strings
 https://steven-giesel.com/blogPost/e2c3bcba-4f81-42b0-9b25-060da5e819fa/does-an-httpclient-await-the-header-and-the-body
 https://steven-giesel.com/blogPost/e44d777a-dd94-4fd0-b066-f93259a16323/aspnet-8-webinar
