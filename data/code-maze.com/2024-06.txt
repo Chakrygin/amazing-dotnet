@@ -9,6 +9,7 @@ https://code-maze.com/csharp-how-to-ignore-a-property-in-automapper/
 https://code-maze.com/csharp-linq-todictionary-method/
 https://code-maze.com/csharp-null-statement/
 https://code-maze.com/csharp-print-2d-array-to-the-console/
+https://code-maze.com/csharp-proxy-design-pattern/
 https://code-maze.com/csharp-using-the-except-method-in-linq/
 https://code-maze.com/csharp-weak-events/
 https://code-maze.com/dotnet-comparing-executeasync-and-startasync-methods-from-the-backgroundservice-class/
