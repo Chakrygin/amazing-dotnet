@@ -16,5 +16,6 @@ https://code-maze.com/dotnet-comparing-executeasync-and-startasync-methods-from-
 https://code-maze.com/dotnet-embedded-resources/
 https://code-maze.com/dotnet-how-to-serialize-a-pascalcase-json-net-jobject-to-camelcase/
 https://code-maze.com/dotnet-how-to-use-fakelogger/
+https://code-maze.com/dotnet-multitenancy-with-orchard-core/
 https://code-maze.com/retrying-failed-httpclient-requests-dotnet-polly/
 https://code-maze.com/semaphore-introduction-csharp/
