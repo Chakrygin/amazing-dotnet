@@ -1,2 +1,3 @@
 https://code-maze.com/csharp-bridge-design-pattern/
 https://code-maze.com/csharp-local-function-lambda-expressions/
+https://code-maze.com/how-to-read-appsettings-json-in-a-net-console-application/
