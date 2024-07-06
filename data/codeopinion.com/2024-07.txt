@@ -1,0 +1,1 @@
+https://codeopinion.com/avoiding-long-running-http-api-requests/

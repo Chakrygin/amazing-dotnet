@@ -1,3 +1,0 @@
-https://codeopinion.com/aggregate-ddd-isnt-hierarchy-relationships/
-https://codeopinion.com/distributed-isnt-microservices-in-process-isnt-a-monolith/
-https://codeopinion.com/the-pendulum-swings-microservices-to-monoliths/
