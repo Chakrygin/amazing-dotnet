@@ -1,2 +1,3 @@
+https://devblogs.microsoft.com/visualstudio/demystify-history-with-github-copilot-commit-explanations/
 https://devblogs.microsoft.com/visualstudio/dive-into-native-windows-development-with-new-winui-workload-and-template-improvements/
 https://devblogs.microsoft.com/visualstudio/let-github-copilot-draft-of-your-pull-request-description/
