@@ -1,3 +1,4 @@
+https://code-maze.com/csharp-abstract-factory-design-pattern/
 https://code-maze.com/csharp-bridge-design-pattern/
 https://code-maze.com/csharp-find-all-the-positions-of-substring-in-another-string/
 https://code-maze.com/csharp-local-function-lambda-expressions/
