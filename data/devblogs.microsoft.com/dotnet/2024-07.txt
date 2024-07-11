@@ -1,2 +1,3 @@
 https://devblogs.microsoft.com/dotnet/csharp-13-explore-preview-features/
 https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-july-2024-servicing-updates/
+https://devblogs.microsoft.com/dotnet/why-and-how-to-execute-graph-ql-queries-in-dotnet/
