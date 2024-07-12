@@ -1,0 +1,1 @@
+https://devblogs.microsoft.com/odata/announcing-odata-net-8-release-candidate-1/
