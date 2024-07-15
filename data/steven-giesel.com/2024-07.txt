@@ -1,2 +1,3 @@
 https://steven-giesel.com/blogPost/3b993efb-5f70-4d71-8ac9-89f4b85a3dfa/codespaces-for-your-opensource-project
+https://steven-giesel.com/blogPost/98458f74-5205-4b2b-9f5b-535e34ec2fea/how-not-to-benchmark
 https://steven-giesel.com/blogPost/ea42a518-4d8b-4e08-8f73-e542bdd3b983/uuid-v7-in-net-9
