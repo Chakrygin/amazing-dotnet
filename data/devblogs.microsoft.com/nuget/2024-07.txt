@@ -1,1 +1,2 @@
+https://devblogs.microsoft.com/nuget/building-a-safer-future-how-nuget-is-tackling-software-supply-chain-threats/
 https://devblogs.microsoft.com/nuget/dark-mode-now-available-on-nuget-org/
