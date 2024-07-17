@@ -1,1 +1,2 @@
 https://codeopinion.com/avoiding-long-running-http-api-requests/
+https://codeopinion.com/is-vertical-slice-architecture-better-than-clean-architecture-or-ports-and-adapters/
