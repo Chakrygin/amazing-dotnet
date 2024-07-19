@@ -3,6 +3,7 @@ https://code-maze.com/csharp-abstract-factory-design-pattern/
 https://code-maze.com/csharp-bridge-design-pattern/
 https://code-maze.com/csharp-find-all-the-positions-of-substring-in-another-string/
 https://code-maze.com/csharp-local-function-lambda-expressions/
+https://code-maze.com/dotnet-how-to-test-iservicecollection-registrations/
 https://code-maze.com/efcore-improve-performance-with-complex-types/
 https://code-maze.com/efcore-interceptors/
 https://code-maze.com/how-to-read-appsettings-json-in-a-net-console-application/
