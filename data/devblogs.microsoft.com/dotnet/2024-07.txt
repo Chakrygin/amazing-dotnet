@@ -1,7 +1,9 @@
 https://devblogs.microsoft.com/dotnet/add-ai-to-your-dotnet-apps-easily-with-prompty/
+https://devblogs.microsoft.com/dotnet/announcing-dotnetconf-focus-on-ai/
 https://devblogs.microsoft.com/dotnet/csharp-13-explore-preview-features/
 https://devblogs.microsoft.com/dotnet/dotnet-6-end-of-support/
 https://devblogs.microsoft.com/dotnet/dotnet-9-preview-6/
 https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-july-2024-servicing-updates/
 https://devblogs.microsoft.com/dotnet/introducing-core-wcf-and-wcf-client-azure-queue-storage-bindings-for-dotnet/
+https://devblogs.microsoft.com/dotnet/whats-new-in-aspire-8-1/
 https://devblogs.microsoft.com/dotnet/why-and-how-to-execute-graph-ql-queries-in-dotnet/
