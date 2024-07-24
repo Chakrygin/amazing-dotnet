@@ -4,3 +4,4 @@ https://devblogs.microsoft.com/visualstudio/let-github-copilot-draft-of-your-pul
 https://devblogs.microsoft.com/visualstudio/making-visual-studio-a-bit-more-visual/
 https://devblogs.microsoft.com/visualstudio/new-visual-studio-benefits-2024/
 https://devblogs.microsoft.com/visualstudio/visual-studio-live-2024-microsoft-hq/
+https://devblogs.microsoft.com/visualstudio/visual-studio-tip-deleting-a-line/
