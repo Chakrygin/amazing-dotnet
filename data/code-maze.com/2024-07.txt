@@ -3,6 +3,7 @@ https://code-maze.com/csharp-abstract-factory-design-pattern/
 https://code-maze.com/csharp-bridge-design-pattern/
 https://code-maze.com/csharp-convert-a-stream-to-a-file/
 https://code-maze.com/csharp-find-all-the-positions-of-substring-in-another-string/
+https://code-maze.com/csharp-linq-where-method/
 https://code-maze.com/csharp-local-function-lambda-expressions/
 https://code-maze.com/dotnet-how-to-test-iservicecollection-registrations/
 https://code-maze.com/dotnetcore-multi-source-data-integration-with-strawberry-shake-subscriptions/
