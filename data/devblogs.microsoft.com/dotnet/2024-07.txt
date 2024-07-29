@@ -6,5 +6,6 @@ https://devblogs.microsoft.com/dotnet/dotnet-9-preview-6/
 https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-july-2024-servicing-updates/
 https://devblogs.microsoft.com/dotnet/how-use-a-blazor-quickgrid-with-graphql/
 https://devblogs.microsoft.com/dotnet/introducing-core-wcf-and-wcf-client-azure-queue-storage-bindings-for-dotnet/
+https://devblogs.microsoft.com/dotnet/native-library-interop-dotnet-maui/
 https://devblogs.microsoft.com/dotnet/whats-new-in-aspire-8-1/
 https://devblogs.microsoft.com/dotnet/why-and-how-to-execute-graph-ql-queries-in-dotnet/
