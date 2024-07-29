@@ -3,5 +3,6 @@ https://devblogs.microsoft.com/visualstudio/dive-into-native-windows-development
 https://devblogs.microsoft.com/visualstudio/let-github-copilot-draft-of-your-pull-request-description/
 https://devblogs.microsoft.com/visualstudio/making-visual-studio-a-bit-more-visual/
 https://devblogs.microsoft.com/visualstudio/new-visual-studio-benefits-2024/
+https://devblogs.microsoft.com/visualstudio/sign-vsix-packages-with-sign-cli/
 https://devblogs.microsoft.com/visualstudio/visual-studio-live-2024-microsoft-hq/
 https://devblogs.microsoft.com/visualstudio/visual-studio-tip-deleting-a-line/
