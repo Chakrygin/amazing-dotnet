@@ -1,3 +1,4 @@
 https://andrewlock.net/behind-the-scenes-of-collection-expressions-part-4-the-spread-element/
 https://andrewlock.net/behind-the-scenes-of-collection-expressions-part-5-adding-support-for-collection-expressions-to-your-own-types/
+https://andrewlock.net/creating-source-only-nuget-packages/
 https://andrewlock.net/disambiguating-types-with-the-same-name-with-extern-alias/
