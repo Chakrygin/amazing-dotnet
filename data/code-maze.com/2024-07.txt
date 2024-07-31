@@ -1,4 +1,5 @@
 https://code-maze.com/aspnetcore-generate-images-using-openai/
+https://code-maze.com/blazor-cancel-http-request-on-leaving-a-component/
 https://code-maze.com/csharp-abstract-factory-design-pattern/
 https://code-maze.com/csharp-bridge-design-pattern/
 https://code-maze.com/csharp-convert-a-stream-to-a-file/
