@@ -1,6 +1,7 @@
 import { App } from '@core/App';
 
 import { AndrewLockScraper } from './scrapers/AndrewLockScraper';
+import { BreslavLozhechkinScraper } from './scrapers/BreslavLozhechkinScraper';
 import { CodeMazeScraper } from './scrapers/CodeMazeScraper';
 import { CodeOpinionScraper } from './scrapers/CodeOpinionScraper';
 import { DevBlogsScraper } from './scrapers/DevBlogsScraper';
@@ -14,6 +15,7 @@ import { TheMorningBrewScraper } from './scrapers/TheMorningBrewScraper';
 
 const app = new App(knownHosts => [
   new AndrewLockScraper(),
+  new BreslavLozhechkinScraper(),
   new CodeMazeScraper(knownHosts),
   new CodeOpinionScraper(),
   new DevBlogsScraper('dotnet'),
