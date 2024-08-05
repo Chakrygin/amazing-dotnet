@@ -1,0 +1,1 @@
+https://code-maze.com/dotnet-implementing-the-saga-pattern-using-rebus-and-rabbitmq/

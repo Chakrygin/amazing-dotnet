@@ -1,0 +1,1 @@
+https://steven-giesel.com/blogPost/ee26a396-8f5a-40a7-9dd5-f08cd8c03518/organizing-parameters-in-minimal-api-with-the-asparametersattribute
