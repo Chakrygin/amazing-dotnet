@@ -1,8 +1,0 @@
-https://devblogs.microsoft.com/visualstudio/a-unit-of-profiling-makes-the-allocations-go-away/
-https://devblogs.microsoft.com/visualstudio/elevating-debugging-with-auto-decompilation-and-external-sources/
-https://devblogs.microsoft.com/visualstudio/intellitest-simplifies-writing-and-maintaining-unit-tests/
-https://devblogs.microsoft.com/visualstudio/keep-your-casing-with-case-preserving-find-and-replace/
-https://devblogs.microsoft.com/visualstudio/new-react-typescript-spa-templates-and-more/
-https://devblogs.microsoft.com/visualstudio/standard-user-update/
-https://devblogs.microsoft.com/visualstudio/visual-studio-2022-17-8-preview-2-has-arrived/
-https://devblogs.microsoft.com/visualstudio/visual-studio-tea-technology-miniseries/
