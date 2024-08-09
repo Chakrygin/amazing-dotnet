@@ -1,2 +1,3 @@
 https://blog.jetbrains.com/dotnet/2024/08/07/escape-character-extract-common-code-params-modifier-out-vars-csharp-language-support-in-2024-2/
 https://blog.jetbrains.com/dotnet/2024/08/08/equality-analysis-ref-structs-culture-previews-using-directives-csharp-language-support-in-2024-2/
+https://blog.jetbrains.com/dotnet/2024/08/09/cast-expressions-primary-constructors-collection-expressions-list-patterns-csharp-language-support-in-2024-2/
