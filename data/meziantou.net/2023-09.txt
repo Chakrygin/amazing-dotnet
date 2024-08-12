@@ -1,3 +1,0 @@
-https://www.meziantou.net/accessing-private-members-without-reflection-in-csharp
-https://www.meziantou.net/how-to-view-logs-from-ilogger-in-xunitdotnet
-https://www.meziantou.net/listing-windows-virtual-desktops-using-dotnet

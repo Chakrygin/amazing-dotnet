@@ -1,0 +1,1 @@
+https://www.meziantou.net/useful-resources-to-write-roslyn-analyzers.htm
