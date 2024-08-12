@@ -1,2 +1,3 @@
+https://code-maze.com/csharp-run-large-language-model-like-chatgpt-locally/
 https://code-maze.com/dotnet-differences-between-onion-architecture-and-clean-architecture/
 https://code-maze.com/dotnet-implementing-the-saga-pattern-using-rebus-and-rabbitmq/
