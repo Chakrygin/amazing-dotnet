@@ -1,2 +1,3 @@
 https://devblogs.microsoft.com/visualstudio/introducing-the-revamped-attach-to-process-experience/
 https://devblogs.microsoft.com/visualstudio/my-summer-experience-as-a-swe-intern-at-microsoft/
+https://devblogs.microsoft.com/visualstudio/visual-studio-2022-v17-11-your-feedback-in-action/

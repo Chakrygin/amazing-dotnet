@@ -1,1 +1,3 @@
 https://devblogs.microsoft.com/dotnet/adding-dotnet-aspire-to-your-existing-dotnet-apps/
+https://devblogs.microsoft.com/dotnet/azure-ai-model-catalog-dotnet-inference-sdk/
+https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-august-2024-updates/
