@@ -1,12 +1,12 @@
 {
   "BreslavLozhechkin": {
-    "timestamp": "2024-08-12T18:47:12.630Z",
+    "timestamp": "2024-08-13T20:46:25.245Z",
     "message": "Failed to parse html page. No posts found.",
-    "counter": 5
+    "counter": 6
   },
   "RadioDotNet": {
-    "timestamp": "2024-08-12T18:47:19.126Z",
+    "timestamp": "2024-08-13T20:46:32.241Z",
     "message": "Failed to parse html page. No posts found.",
-    "counter": 5
+    "counter": 6
   }
 }
