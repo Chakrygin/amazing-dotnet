@@ -1,3 +1,4 @@
+https://devblogs.microsoft.com/visualstudio/copilot-content-exclusion-in-visual-studio/
 https://devblogs.microsoft.com/visualstudio/first-preview-of-visual-studio-2022-v17-12-with-net-9/
 https://devblogs.microsoft.com/visualstudio/introducing-the-revamped-attach-to-process-experience/
 https://devblogs.microsoft.com/visualstudio/my-summer-experience-as-a-swe-intern-at-microsoft/
