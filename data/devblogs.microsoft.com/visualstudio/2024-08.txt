@@ -2,5 +2,6 @@ https://devblogs.microsoft.com/visualstudio/copilot-content-exclusion-in-visual-
 https://devblogs.microsoft.com/visualstudio/first-preview-of-visual-studio-2022-v17-12-with-net-9/
 https://devblogs.microsoft.com/visualstudio/introducing-the-revamped-attach-to-process-experience/
 https://devblogs.microsoft.com/visualstudio/my-summer-experience-as-a-swe-intern-at-microsoft/
+https://devblogs.microsoft.com/visualstudio/new-debugging-and-diagnostic-features/
 https://devblogs.microsoft.com/visualstudio/new-git-tooling-features/
 https://devblogs.microsoft.com/visualstudio/visual-studio-2022-v17-11-your-feedback-in-action/
