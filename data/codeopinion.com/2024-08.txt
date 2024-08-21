@@ -1,2 +1,3 @@
 https://codeopinion.com/build-better-http-apis/
 https://codeopinion.com/is-this-a-monolith-or-microservices/
+https://codeopinion.com/serverless-sucks/
