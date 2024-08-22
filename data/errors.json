@@ -4,11 +4,6 @@
     "message": "Failed to parse html page. No posts found.",
     "counter": 10
   },
-  "CodeMaze": {
-    "timestamp": "2024-08-22T08:46:17.924Z",
-    "message": "Request failed with status code 500",
-    "counter": 1
-  },
   "RadioDotNet": {
     "timestamp": "2024-08-18T02:52:52.091Z",
     "message": "Failed to parse html page. No posts found.",
