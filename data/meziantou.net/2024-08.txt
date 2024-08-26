@@ -1,1 +1,2 @@
+https://www.meziantou.net/automated-tests.htm
 https://www.meziantou.net/useful-resources-to-write-roslyn-analyzers.htm
