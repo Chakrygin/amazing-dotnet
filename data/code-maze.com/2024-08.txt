@@ -3,5 +3,6 @@ https://code-maze.com/csharp-differences-between-record-struct-and-record-class/
 https://code-maze.com/csharp-run-large-language-model-like-chatgpt-locally/
 https://code-maze.com/csharp-simd-accelerated-numeric-types/
 https://code-maze.com/dotnet-differences-between-onion-architecture-and-clean-architecture/
+https://code-maze.com/dotnet-dynamically-change-the-servicelifetime-of-a-registered-service/
 https://code-maze.com/dotnet-implementing-the-saga-pattern-using-rebus-and-rabbitmq/
 https://code-maze.com/dotnet-wolverine-library/
