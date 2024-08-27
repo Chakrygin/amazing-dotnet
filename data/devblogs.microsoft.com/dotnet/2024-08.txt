@@ -1,6 +1,8 @@
 https://devblogs.microsoft.com/dotnet/adding-dotnet-aspire-to-your-existing-dotnet-apps/
+https://devblogs.microsoft.com/dotnet/announcing-the-dotnet-community-toolkit-830/
 https://devblogs.microsoft.com/dotnet/azure-ai-model-catalog-dotnet-inference-sdk/
 https://devblogs.microsoft.com/dotnet/dotnet-9-preview-7/
 https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-august-2024-updates/
 https://devblogs.microsoft.com/dotnet/dotnet-conf-2024-celebrating-the-release-of-dotnet-9-save-the-date/
 https://devblogs.microsoft.com/dotnet/supercharge-your-testing-experience-with-ms-test-analyzers/
+https://devblogs.microsoft.com/dotnet/whats-new-in-csharp-dev-kit-august-2024/
