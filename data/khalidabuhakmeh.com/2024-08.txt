@@ -1,3 +1,4 @@
 https://khalidabuhakmeh.com/add-a-property-to-the-top-level-statements-program-class
+https://khalidabuhakmeh.com/checked-and-unchecked-arithmetic-operations-in-dotnet
 https://khalidabuhakmeh.com/confirmation-dialogs-with-htmx-and-sweetalert
 https://khalidabuhakmeh.com/how-to-pick-the-right-constructor-when-using-activatorutilities-in-dotnet

@@ -1,4 +1,5 @@
 https://devblogs.microsoft.com/dotnet/adding-dotnet-aspire-to-your-existing-dotnet-apps/
+https://devblogs.microsoft.com/dotnet/announcing-dotnet-aspire-8-2/
 https://devblogs.microsoft.com/dotnet/announcing-the-dotnet-community-toolkit-830/
 https://devblogs.microsoft.com/dotnet/azure-ai-model-catalog-dotnet-inference-sdk/
 https://devblogs.microsoft.com/dotnet/binaryformatter-removed-from-dotnet-9/
