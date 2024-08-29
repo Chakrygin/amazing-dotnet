@@ -7,5 +7,6 @@ https://devblogs.microsoft.com/visualstudio/my-summer-experience-as-a-swe-intern
 https://devblogs.microsoft.com/visualstudio/new-c-features-in-visual-studio-v17-11/
 https://devblogs.microsoft.com/visualstudio/new-debugging-and-diagnostic-features/
 https://devblogs.microsoft.com/visualstudio/new-git-tooling-features/
+https://devblogs.microsoft.com/visualstudio/new-github-copilot-features-in-visual-studio-2022-17-11/
 https://devblogs.microsoft.com/visualstudio/new-ide-features-in-visual-studio-v17-11/
 https://devblogs.microsoft.com/visualstudio/visual-studio-2022-v17-11-your-feedback-in-action/
