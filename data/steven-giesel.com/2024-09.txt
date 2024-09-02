@@ -1,0 +1,1 @@
+https://steven-giesel.com/blogPost/47e4a351-0f1b-4bb5-a3d5-0ce4d7c1fa61/how-to-test-httpclient-inside-api-tests
