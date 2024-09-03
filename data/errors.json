@@ -1,0 +1,32 @@
+{
+  "DevBlogs / .NET Blog": {
+    "timestamp": "2024-09-03T16:48:24.320Z",
+    "message": "Failed to parse html page. No posts found.",
+    "counter": 1
+  },
+  "DevBlogs / OData": {
+    "timestamp": "2024-09-03T16:48:24.567Z",
+    "message": "Failed to parse html page. No posts found.",
+    "counter": 1
+  },
+  "DevBlogs / The NuGet Blog": {
+    "timestamp": "2024-09-03T16:48:24.809Z",
+    "message": "Failed to parse html page. No posts found.",
+    "counter": 1
+  },
+  "DevBlogs / TypeScript": {
+    "timestamp": "2024-09-03T16:48:25.124Z",
+    "message": "Failed to parse html page. No posts found.",
+    "counter": 1
+  },
+  "DevBlogs / Visual Studio Blog": {
+    "timestamp": "2024-09-03T16:48:25.153Z",
+    "message": "Failed to parse html page. No posts found.",
+    "counter": 1
+  },
+  "DevBlogs / Windows Command Line": {
+    "timestamp": "2024-09-03T16:48:25.414Z",
+    "message": "Failed to parse html page. No posts found.",
+    "counter": 1
+  }
+}
