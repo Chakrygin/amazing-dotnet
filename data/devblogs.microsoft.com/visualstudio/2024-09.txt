@@ -1,2 +1,3 @@
+https://devblogs.microsoft.com/visualstudio/easily-dock-and-float-tool-windows/
 https://devblogs.microsoft.com/visualstudio/enhancing-your-visual-studio-authentication-experience/
 https://devblogs.microsoft.com/visualstudio/incorporate-github-copilot-into-your-daily-flow/
