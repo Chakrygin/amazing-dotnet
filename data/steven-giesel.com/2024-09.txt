@@ -1,1 +1,2 @@
 https://steven-giesel.com/blogPost/47e4a351-0f1b-4bb5-a3d5-0ce4d7c1fa61/how-to-test-httpclient-inside-api-tests
+https://steven-giesel.com/blogPost/78753461-d80f-4f81-9b4d-6484066aa43e/linq-joins-on-multiple-columns-in-entity-framework
