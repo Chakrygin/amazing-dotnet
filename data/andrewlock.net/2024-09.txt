@@ -1,1 +1,2 @@
+https://andrewlock.net/preventing-breaking-changes-in-public-apis-with-publicapigenerator/
 https://andrewlock.net/working-with-tar-files-in-dotnet/
