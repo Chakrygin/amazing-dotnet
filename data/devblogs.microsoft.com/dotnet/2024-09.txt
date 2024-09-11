@@ -1,4 +1,5 @@
 https://devblogs.microsoft.com/dotnet/discover-dotnet-at-dev-intersection-las-vegas-2024/
 https://devblogs.microsoft.com/dotnet/enhance-your-cloud-development-skills-at-azure-developers-dotnet-aspire-day-2024/
 https://devblogs.microsoft.com/dotnet/introducing-blazor-hybrid-workshop/
+https://devblogs.microsoft.com/dotnet/using-github-models-and-dotnet-to-build-generative-ai-apps/
 https://devblogs.microsoft.com/dotnet/why-is-fsharp-code-so-robust-and-reliable/
