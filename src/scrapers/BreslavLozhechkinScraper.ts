@@ -1,4 +1,5 @@
-import { MaveEpisodeData, MaveScraperBase } from '@core/scrapers/shared';
+import { Link } from '@core/models';
+import { MaveEpisodeData, MavePodcastData, MaveScraperBase } from '@core/scrapers/shared';
 
 export class BreslavLozhechkinScraper extends MaveScraperBase {
   constructor() {
@@ -23,11 +24,21 @@ export class BreslavLozhechkinScraper extends MaveScraperBase {
       }
 
       if (line) {
-        if (links) {
-          links.push(line);
-        }
-        else if (line.endsWith(':')) {
+        if (line.endsWith(':')) {
+          if (links) {
+            description.push(
+              links.join('\n'));
+
+            flag = false;
+            links = null;
+          }
+
           links = [line];
+        }
+        else if (links) {
+          links.push(!line.startsWith('—')
+            ? `— ${line}`
+            : line);
         }
         else if (flag) {
           description.push(line);
@@ -53,5 +64,16 @@ export class BreslavLozhechkinScraper extends MaveScraperBase {
     if (description.length > 0) {
       return description;
     }
+  }
+
+  protected override getLinks(podcast: MavePodcastData, episode: MaveEpisodeData): Link[] {
+    const links = this.getDefaultLinks(podcast, episode);
+
+    links.push({
+      title: 'Обсудить',
+      href: 'https://t.me/breslavandlozhechkin',
+    });
+
+    return links;
   }
 }
