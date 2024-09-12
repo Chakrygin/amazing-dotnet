@@ -1,3 +1,4 @@
+https://devblogs.microsoft.com/dotnet/android-asset-packs-in-dotnet-android/
 https://devblogs.microsoft.com/dotnet/discover-dotnet-at-dev-intersection-las-vegas-2024/
 https://devblogs.microsoft.com/dotnet/dotnet-9-release-candidate-1-is-now-available/
 https://devblogs.microsoft.com/dotnet/enhance-your-cloud-development-skills-at-azure-developers-dotnet-aspire-day-2024/
