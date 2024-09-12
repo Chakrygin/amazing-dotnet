@@ -1,2 +1,3 @@
+https://code-maze.com/aspnetcore-ihostedlifecycleservice-interface/
 https://code-maze.com/aspnetcore-load-testing-web-api-with-jmeter/
 https://code-maze.com/aspnetcore-stringvalues/
