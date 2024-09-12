@@ -68,9 +68,19 @@ export class BreslavLozhechkinScraper extends MaveScraperBase {
 
   protected override getLinks(podcast: MavePodcastData, episode: MaveEpisodeData): Link[] {
     const links = this.getDefaultLinks(podcast, episode);
+    const mave = links.pop();
 
     links.push({
-      title: 'Обсудить',
+      title: 'Слушать на YouTube',
+      href: 'https://www.youtube.com/playlist?list=PLNSmyatBJig64AjlwZrYIgjPwiTsHQNf_',
+    });
+
+    if (mave) {
+      links.push(mave);
+    }
+
+    links.push({
+      title: 'Обсудить выпуск',
       href: 'https://t.me/breslavandlozhechkin',
     });
 
