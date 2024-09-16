@@ -4,4 +4,5 @@ https://devblogs.microsoft.com/visualstudio/enhancing-your-visual-studio-authent
 https://devblogs.microsoft.com/visualstudio/incorporate-github-copilot-into-your-daily-flow/
 https://devblogs.microsoft.com/visualstudio/search-scoping-helps-you-find-what-youre-looking-for/
 https://devblogs.microsoft.com/visualstudio/supercharge-c-debugging-with-ai-generated-breakpoint-expressions/
+https://devblogs.microsoft.com/visualstudio/understanding-the-behavior-of-the-xaml-designer-with-abstract-base-classes/
 https://devblogs.microsoft.com/visualstudio/visualstudio-extensibility-17-11-settings-and-more-remote-ui-support/
