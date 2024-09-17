@@ -1,6 +1,7 @@
 https://devblogs.microsoft.com/visualstudio/break-for-async-user-unhandled-exceptions-in-the-visual-studio-debugger/
 https://devblogs.microsoft.com/visualstudio/easily-dock-and-float-tool-windows/
 https://devblogs.microsoft.com/visualstudio/enhancing-your-visual-studio-authentication-experience/
+https://devblogs.microsoft.com/visualstudio/how-to-run-net-apps-natively-on-arm64-devices/
 https://devblogs.microsoft.com/visualstudio/incorporate-github-copilot-into-your-daily-flow/
 https://devblogs.microsoft.com/visualstudio/search-scoping-helps-you-find-what-youre-looking-for/
 https://devblogs.microsoft.com/visualstudio/supercharge-c-debugging-with-ai-generated-breakpoint-expressions/
