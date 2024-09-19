@@ -4,6 +4,7 @@ https://devblogs.microsoft.com/dotnet/dotnet-9-release-candidate-1-is-now-availa
 https://devblogs.microsoft.com/dotnet/enhance-your-cloud-development-skills-at-azure-developers-dotnet-aspire-day-2024/
 https://devblogs.microsoft.com/dotnet/improving-github-copilot-completions-in-visual-studio-for-csharp-developers/
 https://devblogs.microsoft.com/dotnet/introducing-blazor-hybrid-workshop/
+https://devblogs.microsoft.com/dotnet/join-the-dotnet-smart-components-ecosystem/
 https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-9/
 https://devblogs.microsoft.com/dotnet/using-github-models-and-dotnet-to-build-generative-ai-apps/
 https://devblogs.microsoft.com/dotnet/why-is-fsharp-code-so-robust-and-reliable/
