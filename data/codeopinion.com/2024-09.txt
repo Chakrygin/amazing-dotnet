@@ -1,1 +1,2 @@
+https://codeopinion.com/debunking-kafka-top-5-use-cases/
 https://codeopinion.com/event-sourcing-101-terminology/
