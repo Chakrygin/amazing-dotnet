@@ -1,4 +1,5 @@
 https://code-maze.com/aspnetcore-ihostedlifecycleservice-interface/
 https://code-maze.com/aspnetcore-load-testing-web-api-with-jmeter/
+https://code-maze.com/aspnetcore-repr-request-endpoint-response-pattern/
 https://code-maze.com/aspnetcore-stringvalues/
 https://code-maze.com/csharp-mediator-design-pattern/
