@@ -1,1 +1,2 @@
 https://blog.jetbrains.com/dotnet/2024/09/17/building-a-graphql-client-in-net-with-jetbrains-rider-and-strawberryshake/
+https://blog.jetbrains.com/dotnet/2024/09/24/hot-reloading-cplusplus-with-liveplusplus-and-jetbrains-rider/

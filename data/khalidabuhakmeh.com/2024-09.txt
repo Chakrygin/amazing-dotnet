@@ -1,1 +1,2 @@
+https://khalidabuhakmeh.com/htmx-and-playwright-tests-in-csharp
 https://khalidabuhakmeh.com/intersperse-values-for-enumerable-collections
