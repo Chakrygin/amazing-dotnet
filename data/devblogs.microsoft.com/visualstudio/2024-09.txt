@@ -6,6 +6,7 @@ https://devblogs.microsoft.com/visualstudio/incorporate-github-copilot-into-your
 https://devblogs.microsoft.com/visualstudio/level-up-your-collaborations-with-the-pull-request-experience-in-visual-studio/
 https://devblogs.microsoft.com/visualstudio/multi-project-launch-configuration/
 https://devblogs.microsoft.com/visualstudio/next-gen-code-coverage-in-visual-studio-enhanced-c-support-and-security/
+https://devblogs.microsoft.com/visualstudio/organize-your-breakpoints-like-a-pro/
 https://devblogs.microsoft.com/visualstudio/search-scoping-helps-you-find-what-youre-looking-for/
 https://devblogs.microsoft.com/visualstudio/supercharge-c-debugging-with-ai-generated-breakpoint-expressions/
 https://devblogs.microsoft.com/visualstudio/understanding-the-behavior-of-the-xaml-designer-with-abstract-base-classes/
