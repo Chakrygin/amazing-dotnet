@@ -1,4 +1,5 @@
 https://steven-giesel.com/blogPost/47e4a351-0f1b-4bb5-a3d5-0ce4d7c1fa61/how-to-test-httpclient-inside-api-tests
 https://steven-giesel.com/blogPost/777776a2-a13c-46bb-bf6b-89316d88508c/swagger-replacement-in-aspnet-9
 https://steven-giesel.com/blogPost/78753461-d80f-4f81-9b4d-6484066aa43e/linq-joins-on-multiple-columns-in-entity-framework
+https://steven-giesel.com/blogPost/c5b4262e-fa6b-4b45-848c-cb5b44c8435c/fullstack-web-applications-with-net-nx-and-angular-seminar
 https://steven-giesel.com/blogPost/cacc60e5-4fbf-473a-a5af-c9fb333d9183/managing-taskcancellationtokens-in-a-central-service-in-aspnet
