@@ -1,3 +1,0 @@
-https://andrewlock.net/a-failed-experiment-with-interceptors-in-csharp-12-and-dotnet-8/
-https://andrewlock.net/behind-logproperties-and-the-new-telemetry-logging-source-generator/
-https://andrewlock.net/reading-json-and-binary-data-from-multipart-form-data-sections-in-aspnetcore/
