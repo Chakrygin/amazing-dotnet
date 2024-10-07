@@ -1,2 +1,3 @@
+https://devblogs.microsoft.com/visualstudio/accelerate-c-debugging-with-enhanced-conditional-breakpoints/
 https://devblogs.microsoft.com/visualstudio/discover-hidden-insights-with-profilers-external-code-decompilation/
 https://devblogs.microsoft.com/visualstudio/visual-studio-2022-recent-performance-enhancements/
