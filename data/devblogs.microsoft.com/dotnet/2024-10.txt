@@ -1,1 +1,3 @@
 https://devblogs.microsoft.com/dotnet/announcing-the-stable-release-of-the-official-open-ai-library-for-dotnet/
+https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-october-2024-servicing-updates/
+https://devblogs.microsoft.com/dotnet/introducing-microsoft-extensions-ai-preview/
