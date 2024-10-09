@@ -1,1 +1,2 @@
 https://codeopinion.com/keep-your-project-structure-simple/
+https://codeopinion.com/web-queue-worker-architecture-style-for-scaling/
