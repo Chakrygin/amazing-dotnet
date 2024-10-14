@@ -1,1 +1,2 @@
+https://code-maze.com/aspnetcore-prevent-concurrent-execution-of-a-hangfire-job/
 https://code-maze.com/mediatr-parallel-publishing-notifications/
