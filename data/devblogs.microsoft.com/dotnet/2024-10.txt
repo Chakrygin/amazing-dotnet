@@ -1,4 +1,5 @@
 https://devblogs.microsoft.com/dotnet/announcing-the-stable-release-of-the-official-open-ai-library-for-dotnet/
+https://devblogs.microsoft.com/dotnet/azure-developers-dotnet-aspire-day-recap/
 https://devblogs.microsoft.com/dotnet/dotnet-9-rc-2/
 https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-october-2024-servicing-updates/
 https://devblogs.microsoft.com/dotnet/engineering-sve-in-dotnet/
