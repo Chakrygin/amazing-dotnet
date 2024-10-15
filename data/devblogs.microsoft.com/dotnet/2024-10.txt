@@ -4,3 +4,4 @@ https://devblogs.microsoft.com/dotnet/dotnet-9-rc-2/
 https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-october-2024-servicing-updates/
 https://devblogs.microsoft.com/dotnet/engineering-sve-in-dotnet/
 https://devblogs.microsoft.com/dotnet/introducing-microsoft-extensions-ai-preview/
+https://devblogs.microsoft.com/dotnet/system-text-json-in-dotnet-9/
