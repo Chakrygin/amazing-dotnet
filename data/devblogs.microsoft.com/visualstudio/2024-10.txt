@@ -1,4 +1,5 @@
 https://devblogs.microsoft.com/visualstudio/accelerate-c-debugging-with-enhanced-conditional-breakpoints/
 https://devblogs.microsoft.com/visualstudio/discover-hidden-insights-with-profilers-external-code-decompilation/
 https://devblogs.microsoft.com/visualstudio/easier-localization-with-the-new-resource-resx-manager/
+https://devblogs.microsoft.com/visualstudio/improve-your-debugger-game-with-editable-expressions/
 https://devblogs.microsoft.com/visualstudio/visual-studio-2022-recent-performance-enhancements/
