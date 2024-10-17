@@ -33,7 +33,7 @@ export class StevenGieselScraper extends ScraperBase {
           title,
           href: this.getFullHref(href),
           categories: [this.StevenGiesel],
-          date: moment(date, 'DD/MM/YYYY', 'en'),
+          date: moment(date, 'MM/DD/YYYY', 'en'),
           description,
           tags,
         };
