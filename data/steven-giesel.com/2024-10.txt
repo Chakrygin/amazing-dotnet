@@ -1,2 +1,3 @@
+https://steven-giesel.com/blogPost/698c45c3-58c5-4157-b4da-2cde4e27862e/comparing-the-performance-between-the-minimal-api-and-classic-controllers
 https://steven-giesel.com/blogPost/988c047a-914a-446d-bd28-4840643dcfb9/centralize-your-packages-in-net-with-nuget
 https://steven-giesel.com/blogPost/bbfb8333-e05a-4de7-88b9-17ac2248d77f/git-tricks-get-the-last-checked-out-branch
