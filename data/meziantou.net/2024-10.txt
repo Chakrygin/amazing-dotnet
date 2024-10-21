@@ -1,1 +1,2 @@
+https://www.meziantou.net/how-to-remove-diacritics-from-a-string-in-dotnet.htm
 https://www.meziantou.net/understanding-overloadresolutionpriority-attribute-in-csharp-13.htm
