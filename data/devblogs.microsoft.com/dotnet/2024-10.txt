@@ -6,4 +6,5 @@ https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-october-2024-s
 https://devblogs.microsoft.com/dotnet/dotnetconf-2024-student-zone/
 https://devblogs.microsoft.com/dotnet/engineering-sve-in-dotnet/
 https://devblogs.microsoft.com/dotnet/introducing-microsoft-extensions-ai-preview/
+https://devblogs.microsoft.com/dotnet/mongodb-ef-core-provider-whats-new/
 https://devblogs.microsoft.com/dotnet/system-text-json-in-dotnet-9/
