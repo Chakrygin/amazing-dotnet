@@ -1,1 +1,2 @@
 https://khalidabuhakmeh.com/add-ef-core-migrations-to-dotnet-aspire-solutions
+https://khalidabuhakmeh.com/update-html-elements-with-htmx-triggers-and-aspnet-core
