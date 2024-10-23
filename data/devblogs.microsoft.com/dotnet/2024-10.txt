@@ -5,6 +5,7 @@ https://devblogs.microsoft.com/dotnet/dotnet-9-rc-2/
 https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-october-2024-servicing-updates/
 https://devblogs.microsoft.com/dotnet/dotnet-maui-welcomes-syncfusion-open-source-contributions/
 https://devblogs.microsoft.com/dotnet/dotnetconf-2024-student-zone/
+https://devblogs.microsoft.com/dotnet/e-shop-infused-with-ai-comprehensive-intelligent-dotnet-app-sample/
 https://devblogs.microsoft.com/dotnet/engineering-sve-in-dotnet/
 https://devblogs.microsoft.com/dotnet/introducing-microsoft-extensions-ai-preview/
 https://devblogs.microsoft.com/dotnet/mongodb-ef-core-provider-whats-new/
