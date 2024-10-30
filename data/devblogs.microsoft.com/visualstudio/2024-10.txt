@@ -6,5 +6,6 @@ https://devblogs.microsoft.com/visualstudio/easier-localization-with-the-new-res
 https://devblogs.microsoft.com/visualstudio/easily-add-unreal-engine-classes-to-your-c-project/
 https://devblogs.microsoft.com/visualstudio/improve-your-debugger-game-with-editable-expressions/
 https://devblogs.microsoft.com/visualstudio/live-360-orlando-2024/
+https://devblogs.microsoft.com/visualstudio/unreal-engine-toolbar-in-visual-studio/
 https://devblogs.microsoft.com/visualstudio/upgrade-your-windows-forms-net-projects-to-the-latest-net-version-for-enhanced-security/
 https://devblogs.microsoft.com/visualstudio/visual-studio-2022-recent-performance-enhancements/
