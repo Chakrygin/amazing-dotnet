@@ -1,3 +1,4 @@
 https://codeopinion.com/api-error-messages-for-a-good-developer-experience/
+https://codeopinion.com/htmx-whats-old-is-new-again/
 https://codeopinion.com/keep-your-project-structure-simple/
 https://codeopinion.com/web-queue-worker-architecture-style-for-scaling/
