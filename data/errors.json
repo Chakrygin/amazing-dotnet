@@ -1,7 +1,7 @@
 {
   "DevBlogs / .NET Blog": {
-    "timestamp": "2024-10-31T18:49:12.466Z",
-    "message": "Post is not valid: image is not valid url: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAA4AQMAAAAxYM+bAAAAA1BMVEXW1taWrGEgAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAEElEQVQokWNgGAWjYBTAAAADEAABC3uRhAAAAABJRU5ErkJggg==, date is not valid, description is empty.",
-    "counter": 1
+    "timestamp": "2024-10-31T20:46:30.557Z",
+    "message": "Post is not valid: image is not valid url: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAA4AQMAAAAxYM+bAAAAA1BMVEXW1taWrGEgAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAEElEQVQokWNgGAWjYBTAAAADEAABC3uRhAAAAABJRU5ErkJggg==, description is empty.",
+    "counter": 2
   }
 }
