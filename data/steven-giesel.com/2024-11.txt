@@ -1,0 +1,1 @@
+https://steven-giesel.com/blogPost/70cebcf5-d171-4852-ae73-4950accfe999/be-careful-with-tolistasync-and-toarrayasync-in-entity-framework-core
