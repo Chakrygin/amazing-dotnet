@@ -1,3 +1,0 @@
-https://andrewlock.net/customising-the-new-telemetry-logging-source-generator/
-https://andrewlock.net/redacting-sensitive-data-with-microsoft-extensions-compliance/
-https://andrewlock.net/updates-to-the-stronglytypedid-library/
