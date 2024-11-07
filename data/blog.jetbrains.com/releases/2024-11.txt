@@ -1,0 +1,2 @@
+https://blog.jetbrains.com/dotnet/2024/11/07/rsrp-net-tools-2024-3-rc/
+https://blog.jetbrains.com/dotnet/2024/11/07/the-rider-2024-3-rc/
