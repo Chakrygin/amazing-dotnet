@@ -1,1 +1,2 @@
+https://devblogs.microsoft.com/dotnet/get-ready-for-dotnet-conf-2024/
 https://devblogs.microsoft.com/dotnet/github-ai-models-dotnet-semantic-kernel/
