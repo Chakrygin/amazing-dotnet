@@ -1,0 +1,1 @@
+https://www.meziantou.net/stop-using-diagnostic-verbosity-in-msbuild.htm
