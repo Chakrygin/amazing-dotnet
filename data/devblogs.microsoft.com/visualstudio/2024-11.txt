@@ -1,3 +1,4 @@
+https://devblogs.microsoft.com/visualstudio/better-github-copilot-completions-for-c/
 https://devblogs.microsoft.com/visualstudio/conversational-way-to-chat-with-github-copilot/
 https://devblogs.microsoft.com/visualstudio/learn-how-to-create-a-client-server-application-in-under-45-minutes-in-the-new-season-of-ai/
 https://devblogs.microsoft.com/visualstudio/the-making-of-bring-back-plus-minus/
