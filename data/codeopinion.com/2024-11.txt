@@ -1,1 +1,2 @@
 https://codeopinion.com/your-customers-dont-care-about-javascript/
+https://codeopinion.com/youre-not-as-loosely-coupled-as-you-think/
