@@ -1,1 +1,2 @@
+https://www.meziantou.net/embeded-languages-in-string-values-supported-by-roslyn.htm
 https://www.meziantou.net/stop-using-diagnostic-verbosity-in-msbuild.htm
