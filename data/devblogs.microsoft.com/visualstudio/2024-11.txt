@@ -7,3 +7,4 @@ https://devblogs.microsoft.com/visualstudio/join-us-at-microsoft-ignite-unlock-g
 https://devblogs.microsoft.com/visualstudio/learn-how-to-create-a-client-server-application-in-under-45-minutes-in-the-new-season-of-ai/
 https://devblogs.microsoft.com/visualstudio/the-making-of-bring-back-plus-minus/
 https://devblogs.microsoft.com/visualstudio/visual-studio-2022-v17-12-with-dotnet-9/
+https://devblogs.microsoft.com/visualstudio/visualstudio-extensibility-17-12-codelens-support-is-here/
