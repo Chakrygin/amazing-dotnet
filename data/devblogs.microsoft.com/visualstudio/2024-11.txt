@@ -2,6 +2,7 @@ https://devblogs.microsoft.com/visualstudio/better-github-copilot-completions-fo
 https://devblogs.microsoft.com/visualstudio/conversational-way-to-chat-with-github-copilot/
 https://devblogs.microsoft.com/visualstudio/copy-files-across-instances-of-visual-studio/
 https://devblogs.microsoft.com/visualstudio/copying-error-messages-just-got-easier/
+https://devblogs.microsoft.com/visualstudio/debugger-and-diagnostics-updates-in-visual-studio-17-12/
 https://devblogs.microsoft.com/visualstudio/first-preview-of-visual-studio-2022-v17-13/
 https://devblogs.microsoft.com/visualstudio/fix-code-with-github-copilot/
 https://devblogs.microsoft.com/visualstudio/git-tooling-updates-in-visual-studio-17-12/
