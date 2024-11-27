@@ -1,5 +1,6 @@
 https://devblogs.microsoft.com/dotnet/announcing-dotnet-9/
 https://devblogs.microsoft.com/dotnet/csharp13-calling-methods-is-easier-and-faster/
+https://devblogs.microsoft.com/dotnet/dotnet-9-nuget-resolver/
 https://devblogs.microsoft.com/dotnet/dotnet9-openapi/
 https://devblogs.microsoft.com/dotnet/enhance-your-dotnet-developer-productivity-with-github-copilot/
 https://devblogs.microsoft.com/dotnet/evaluate-the-quality-of-your-ai-applications-with-ease/
