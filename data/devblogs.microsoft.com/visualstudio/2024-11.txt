@@ -11,5 +11,6 @@ https://devblogs.microsoft.com/visualstudio/learn-how-to-create-a-client-server-
 https://devblogs.microsoft.com/visualstudio/making-you-more-productive-with-visual-studio-v17-12/
 https://devblogs.microsoft.com/visualstudio/the-making-of-bring-back-plus-minus/
 https://devblogs.microsoft.com/visualstudio/top-5-github-copilot-features-in-visual-studio-from-microsoft-ignite-2024/
+https://devblogs.microsoft.com/visualstudio/updates-for-c-developers-in-visual-studio-2022-17-12/
 https://devblogs.microsoft.com/visualstudio/visual-studio-2022-v17-12-with-dotnet-9/
 https://devblogs.microsoft.com/visualstudio/visualstudio-extensibility-17-12-codelens-support-is-here/
