@@ -1,5 +1,0 @@
-https://steven-giesel.com/blogPost/0594ba85-356b-47f1-89a9-70e9761c582e/three-new-linq-methods-in-net-9
-https://steven-giesel.com/blogPost/11f0ded8-7119-4cfc-b7cf-317ff73fb671/an-asynchronous-lock-free-ring-buffer-for-logging
-https://steven-giesel.com/blogPost/3368bf96-648e-4fa2-9c6c-be71e40ac4cc/an-alternative-to-automapper
-https://steven-giesel.com/blogPost/4271d529-5625-4b67-bd59-d121f2d8c8f6/a-replacement-for-binaryformatter-in-net-8
-https://steven-giesel.com/blogPost/544c33da-be2e-4d96-99c9-9313f48548bd/const-strings-are-not-so-const-after-all
