@@ -1,5 +1,0 @@
-https://www.meziantou.net/checking-if-a-collection-is-empty-in-csharp.htm
-https://www.meziantou.net/difference-between-cultureinfo-get-and-new-cultureinfo.htm
-https://www.meziantou.net/getting-a-handle-for-a-directory-in-dotnet.htm
-https://www.meziantou.net/how-to-get-assembly-code-generated-by-the-jit-for-a-csharp-method.htm
-https://www.meziantou.net/making-primary-constructor-parameters-read-only.htm
