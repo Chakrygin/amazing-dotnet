@@ -1,0 +1,1 @@
+https://code-maze.com/efcore-how-to-connect-a-sqlite-database/
