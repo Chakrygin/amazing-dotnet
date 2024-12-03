@@ -1,0 +1,1 @@
+https://andrewlock.net/understanding-security-headers-part-3-cross-origin-embedder-policy/
