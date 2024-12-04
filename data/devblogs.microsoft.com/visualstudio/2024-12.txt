@@ -1,2 +1,3 @@
 https://devblogs.microsoft.com/visualstudio/ai-powered-insights-streamlining-variable-analysis-with-github-copilot-in-visual-studio/
+https://devblogs.microsoft.com/visualstudio/how-inline-return-values-simplify-debugging-in-visual-studio-2022/
 https://devblogs.microsoft.com/visualstudio/introducing-the-copy-git-permalink-feature-in-visual-studio-17-12/
