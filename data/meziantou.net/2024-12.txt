@@ -1,1 +1,2 @@
 https://www.meziantou.net/nuget-packages-security-risks-and-best-practices.htm
+https://www.meziantou.net/using-the-binary-log-to-find-the-source-of-a-dotnet-dependency.htm
