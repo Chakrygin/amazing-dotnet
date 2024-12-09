@@ -1,1 +1,2 @@
+https://devblogs.microsoft.com/dotnet/local-ai-models-with-dotnet-aspire/
 https://devblogs.microsoft.com/dotnet/using-dependabot-to-manage-dotnet-sdk-updates/
