@@ -2,3 +2,4 @@ https://devblogs.microsoft.com/visualstudio/ai-powered-insights-streamlining-var
 https://devblogs.microsoft.com/visualstudio/how-inline-return-values-simplify-debugging-in-visual-studio-2022/
 https://devblogs.microsoft.com/visualstudio/introducing-code-referencing-for-github-copilot-chat-in-visual-studio/
 https://devblogs.microsoft.com/visualstudio/introducing-the-copy-git-permalink-feature-in-visual-studio-17-12/
+https://devblogs.microsoft.com/visualstudio/keep-working-with-non-blocking-code-cleanup/
