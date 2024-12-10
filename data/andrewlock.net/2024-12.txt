@@ -1,1 +1,2 @@
 https://andrewlock.net/understanding-security-headers-part-3-cross-origin-embedder-policy/
+https://andrewlock.net/using-the-yamldotnet-source-generator-for-native-aot/
