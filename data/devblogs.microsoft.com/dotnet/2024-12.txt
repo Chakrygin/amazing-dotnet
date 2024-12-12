@@ -1,3 +1,4 @@
+https://devblogs.microsoft.com/dotnet/announcing-the-dotnet-community-toolkit-840/
 https://devblogs.microsoft.com/dotnet/introducing-winforms-async-apis/
 https://devblogs.microsoft.com/dotnet/local-ai-models-with-dotnet-aspire/
 https://devblogs.microsoft.com/dotnet/using-dependabot-to-manage-dotnet-sdk-updates/
