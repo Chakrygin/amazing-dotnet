@@ -1,2 +1,3 @@
 https://steven-giesel.com/blogPost/0a3db64c-e514-45fc-a1a1-2b79cc42f797/having-fun-with-valuetuple
+https://steven-giesel.com/blogPost/3a8c29a3-750a-40f0-aa43-c236b855813e/some-news-about-net-10-backgroundservices-and-new-string-comparer
 https://steven-giesel.com/blogPost/82ebfd51-23c0-44b7-9602-628d1aba5f3c/linq-might-get-a-left-join-operator-in-net-10
