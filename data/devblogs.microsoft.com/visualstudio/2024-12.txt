@@ -7,3 +7,4 @@ https://devblogs.microsoft.com/visualstudio/how-inline-return-values-simplify-de
 https://devblogs.microsoft.com/visualstudio/introducing-code-referencing-for-github-copilot-chat-in-visual-studio/
 https://devblogs.microsoft.com/visualstudio/introducing-the-copy-git-permalink-feature-in-visual-studio-17-12/
 https://devblogs.microsoft.com/visualstudio/keep-working-with-non-blocking-code-cleanup/
+https://devblogs.microsoft.com/visualstudio/refresh-your-find-results/
