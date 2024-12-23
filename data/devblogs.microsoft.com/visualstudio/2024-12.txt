@@ -8,3 +8,4 @@ https://devblogs.microsoft.com/visualstudio/introducing-code-referencing-for-git
 https://devblogs.microsoft.com/visualstudio/introducing-the-copy-git-permalink-feature-in-visual-studio-17-12/
 https://devblogs.microsoft.com/visualstudio/keep-working-with-non-blocking-code-cleanup/
 https://devblogs.microsoft.com/visualstudio/refresh-your-find-results/
+https://devblogs.microsoft.com/visualstudio/security-updates-to-azure-publishing-from-visual-studio/
