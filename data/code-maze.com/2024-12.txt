@@ -1,3 +1,4 @@
 https://code-maze.com/aspnetcore-comparison-of-rebus-nservicebus-and-masstransit/
 https://code-maze.com/csharp-chain-of-responsibility-design-pattern/
+https://code-maze.com/efcore-global-query-filters/
 https://code-maze.com/efcore-how-to-connect-a-sqlite-database/
