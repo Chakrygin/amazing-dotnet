@@ -1,5 +1,6 @@
 https://devblogs.microsoft.com/visualstudio/ai-powered-insights-streamlining-variable-analysis-with-github-copilot-in-visual-studio/
 https://devblogs.microsoft.com/visualstudio/boost-your-git-confidence-with-the-new-file-rename-notification/
+https://devblogs.microsoft.com/visualstudio/connect-securely-to-your-azure-resources/
 https://devblogs.microsoft.com/visualstudio/create-internal-github-repos-for-your-team/
 https://devblogs.microsoft.com/visualstudio/effortless-publishing-to-azure-webjobs-on-linux/
 https://devblogs.microsoft.com/visualstudio/effortless-publishing-with-azure-functions-flex-consumption/
