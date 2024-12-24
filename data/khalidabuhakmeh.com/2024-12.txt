@@ -1,1 +1,2 @@
+https://khalidabuhakmeh.com/alpinejs-polling-aspnet-core-apis-for-updates
 https://khalidabuhakmeh.com/building-a-persistent-counter-with-alpinejs
