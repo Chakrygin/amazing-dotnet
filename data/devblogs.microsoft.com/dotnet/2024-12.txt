@@ -1,4 +1,5 @@
 https://devblogs.microsoft.com/dotnet/announcing-the-dotnet-community-toolkit-840/
+https://devblogs.microsoft.com/dotnet/critical-dotnet-install-links-are-changing/
 https://devblogs.microsoft.com/dotnet/dotnet-conf-2024-recap/
 https://devblogs.microsoft.com/dotnet/introducing-winforms-async-apis/
 https://devblogs.microsoft.com/dotnet/local-ai-models-with-dotnet-aspire/
