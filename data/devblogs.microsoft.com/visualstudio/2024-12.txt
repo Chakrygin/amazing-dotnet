@@ -4,6 +4,7 @@ https://devblogs.microsoft.com/visualstudio/connect-securely-to-your-azure-resou
 https://devblogs.microsoft.com/visualstudio/create-internal-github-repos-for-your-team/
 https://devblogs.microsoft.com/visualstudio/effortless-publishing-to-azure-webjobs-on-linux/
 https://devblogs.microsoft.com/visualstudio/effortless-publishing-with-azure-functions-flex-consumption/
+https://devblogs.microsoft.com/visualstudio/go-to-line-anywhere-with-code-search-for-visual-studio-2022/
 https://devblogs.microsoft.com/visualstudio/how-inline-return-values-simplify-debugging-in-visual-studio-2022/
 https://devblogs.microsoft.com/visualstudio/introducing-code-referencing-for-github-copilot-chat-in-visual-studio/
 https://devblogs.microsoft.com/visualstudio/introducing-the-copy-git-permalink-feature-in-visual-studio-17-12/
