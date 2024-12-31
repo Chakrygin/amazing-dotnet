@@ -1,2 +1,3 @@
 https://khalidabuhakmeh.com/alpinejs-polling-aspnet-core-apis-for-updates
 https://khalidabuhakmeh.com/building-a-persistent-counter-with-alpinejs
+https://khalidabuhakmeh.com/great-dotnet-documentation-with-astro-starlight-and-markdownsnippets
