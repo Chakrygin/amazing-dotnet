@@ -1,5 +1,0 @@
-https://steven-giesel.com/blogPost/080c8f82-f376-489f-a304-72d419978294/searchvalues-object-become-better-with-net-9
-https://steven-giesel.com/blogPost/2e23afb8-4dc6-461e-8110-4122c7fefee7/garbage-collector-oversimplified
-https://steven-giesel.com/blogPost/4cf6d48a-ec9d-4c68-961c-31fd8d8c1340/lock-statement-patterns
-https://steven-giesel.com/blogPost/62049533-001a-46fb-a1da-88effc0183f1/linq-mindmap-net-9-edition
-https://steven-giesel.com/blogPost/9994b00c-8bc2-4794-ae74-80e6ee4cd5e5/avoid-multiple-boolean-parameters
