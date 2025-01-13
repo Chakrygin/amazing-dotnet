@@ -1,1 +1,2 @@
 https://code-maze.com/csharp-persist-values-with-asynclocal-in-async-flow/
+https://code-maze.com/csharp-snapshot-testing-with-verify/
