@@ -1,3 +1,4 @@
 https://devblogs.microsoft.com/visualstudio/benchmarking-with-visual-studio-profiler/
 https://devblogs.microsoft.com/visualstudio/enhanced-change-signature-in-c/
 https://devblogs.microsoft.com/visualstudio/unlocking-insights-with-meter-histogram-in-the-profiler/
+https://devblogs.microsoft.com/visualstudio/vs-live-2025-las-vegas/

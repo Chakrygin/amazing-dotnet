@@ -1,1 +1,2 @@
+https://khalidabuhakmeh.com/initialize-aspnet-core-taghelpers-with-shared-data
 https://khalidabuhakmeh.com/writing-a-string-numeric-comparer-with-dotnet-9
