@@ -1,1 +1,2 @@
 https://devblogs.microsoft.com/dotnet/dotnet-aspire-container-lifetime/
+https://devblogs.microsoft.com/dotnet/net-and-net-framework-january-2025-servicing-releases-updates/
