@@ -1,2 +1,3 @@
 https://codeopinion.com/design-patterns-for-building-resilient-systems/
+https://codeopinion.com/event-driven-architecture-issues-challenges/
 https://codeopinion.com/vertical-slice-architecture-isnt-technical/
