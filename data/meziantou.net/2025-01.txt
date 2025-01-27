@@ -1,3 +1,4 @@
 https://www.meziantou.net/exploring-collectionsmarshal-for-dictionary.htm
 https://www.meziantou.net/hsts-for-httpclient-in-dotnet.htm
+https://www.meziantou.net/roslyn-annotations-for-code-fix.htm
 https://www.meziantou.net/using-roslyn-to-analyze-and-rewrite-code-in-a-solution.htm
