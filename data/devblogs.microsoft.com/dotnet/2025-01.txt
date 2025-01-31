@@ -2,3 +2,4 @@ https://devblogs.microsoft.com/dotnet/dotnet-aspire-container-lifetime/
 https://devblogs.microsoft.com/dotnet/introducing-winforms-analyzers/
 https://devblogs.microsoft.com/dotnet/meet-the-dotnet-team-at-ndc-london-2025/
 https://devblogs.microsoft.com/dotnet/net-and-net-framework-january-2025-servicing-releases-updates/
+https://devblogs.microsoft.com/dotnet/start-building-an-intelligent-app-with-dotnet-and-deep-seek/
