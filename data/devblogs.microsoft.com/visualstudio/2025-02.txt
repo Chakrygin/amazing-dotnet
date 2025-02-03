@@ -1,0 +1,1 @@
+https://devblogs.microsoft.com/visualstudio/customize-your-ai-generated-git-commit-messages/
