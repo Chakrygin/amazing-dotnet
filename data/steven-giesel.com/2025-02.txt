@@ -1,0 +1,1 @@
+https://steven-giesel.com/blogPost/d67df2e6-b8f7-4fd8-92ba-426e268b5216/validate-that-your-di-container-can-be-created-in-aspnet-core
