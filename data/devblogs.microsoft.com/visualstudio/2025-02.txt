@@ -1,1 +1,2 @@
 https://devblogs.microsoft.com/visualstudio/customize-your-ai-generated-git-commit-messages/
+https://devblogs.microsoft.com/visualstudio/your-fonts-are-now-preserved-when-changing-theme/
