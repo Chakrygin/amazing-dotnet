@@ -1,0 +1,12 @@
+{
+  "BreslavLozhechkin": {
+    "timestamp": "2025-02-05T02:04:05.699Z",
+    "message": "Request failed with status code 503",
+    "counter": 1
+  },
+  "RadioDotNet": {
+    "timestamp": "2025-02-05T02:04:17.451Z",
+    "message": "Request failed with status code 503",
+    "counter": 1
+  }
+}
