@@ -1,2 +1,3 @@
 https://steven-giesel.com/blogPost/00443661-f75b-4694-852b-175b4a10d6c4/linq-mindmap-net-10-edition
 https://steven-giesel.com/blogPost/d67df2e6-b8f7-4fd8-92ba-426e268b5216/validate-that-your-di-container-can-be-created-in-aspnet-core
+https://steven-giesel.com/blogPost/e4720110-d276-4591-adf2-bea2351de6da/managed-postgres-instance-neon
