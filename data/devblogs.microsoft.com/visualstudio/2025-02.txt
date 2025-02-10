@@ -1,3 +1,4 @@
 https://devblogs.microsoft.com/visualstudio/customize-your-ai-generated-git-commit-messages/
 https://devblogs.microsoft.com/visualstudio/http-file-updates-for-request-variables-and-more/
+https://devblogs.microsoft.com/visualstudio/visualstudio-extensibility-managing-net-runtime-versions/
 https://devblogs.microsoft.com/visualstudio/your-fonts-are-now-preserved-when-changing-theme/
