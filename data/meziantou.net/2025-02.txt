@@ -1,2 +1,3 @@
+https://www.meziantou.net/detect-missing-migrations-in-entity-framework-core.htm
 https://www.meziantou.net/migrate-from-mstest-to-xunit-using-a-roslyn-analyzer.htm
 https://www.meziantou.net/using-snapshot-testing-to-validate-ef-core-schema.htm
