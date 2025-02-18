@@ -4,4 +4,5 @@ https://devblogs.microsoft.com/visualstudio/http-file-updates-for-request-variab
 https://devblogs.microsoft.com/visualstudio/new-restrictions-on-package-loading/
 https://devblogs.microsoft.com/visualstudio/visual-studio-2022-v17-13-is-now-available/
 https://devblogs.microsoft.com/visualstudio/visualstudio-extensibility-managing-net-runtime-versions/
+https://devblogs.microsoft.com/visualstudio/visualstudio-extensibility-tagger-support-and-updates-to-settings/
 https://devblogs.microsoft.com/visualstudio/your-fonts-are-now-preserved-when-changing-theme/
