@@ -1,2 +1,3 @@
 https://code-maze.com/dotnet-hybrid-caching/
 https://code-maze.com/keycloak-authentication-with-asp-net-core-web-api-and-blazor-webassembly/
+https://code-maze.com/keycloak-roles-blazor-webassembly-web-api/
