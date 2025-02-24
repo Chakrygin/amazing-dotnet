@@ -1,3 +1,4 @@
+https://devblogs.microsoft.com/visualstudio/attach-images-in-github-copilot-chat/
 https://devblogs.microsoft.com/visualstudio/customize-your-ai-generated-git-commit-messages/
 https://devblogs.microsoft.com/visualstudio/first-preview-of-visual-studio-2022-v17-14/
 https://devblogs.microsoft.com/visualstudio/function-calling-is-now-enabled-in-github-copilot/
