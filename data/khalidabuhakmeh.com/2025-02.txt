@@ -1,3 +1,4 @@
 https://khalidabuhakmeh.com/aspnet-core-and-chunking-http-cookies
+https://khalidabuhakmeh.com/strongly-typed-markdown-for-aspnet-core-content-apps
 https://khalidabuhakmeh.com/the-curious-case-of-dotnet-concurrentdictionary-and-closures
 https://khalidabuhakmeh.com/vogen-and-value-objects-with-csharp-and-dotnet
