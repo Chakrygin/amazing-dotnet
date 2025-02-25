@@ -1,6 +1,7 @@
 https://devblogs.microsoft.com/dotnet/announcing-chroma-db-csharp-sdk/
 https://devblogs.microsoft.com/dotnet/announcing-generative-ai-for-beginners-dotnet/
 https://devblogs.microsoft.com/dotnet/csharp-on-visual-studio-code-just-got-better-with-enhancements-to-csharp-dev-kit/
+https://devblogs.microsoft.com/dotnet/dotnet-10-preview-1/
 https://devblogs.microsoft.com/dotnet/dotnet-9-networking-improvements/
 https://devblogs.microsoft.com/dotnet/dotnet-9-performance-improvements-in-dotnet-maui/
 https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-february-2025-servicing-updates/
