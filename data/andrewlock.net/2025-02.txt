@@ -1,3 +1,4 @@
 https://andrewlock.net/creating-a-source-generator-part-14-supporting-multiple-sdk-versions-in-a-source-generator/
+https://andrewlock.net/disabling-localized-satellite-assemblies-during-dotnet-publish/
 https://andrewlock.net/preventing-client-side-cross-site-scripting-vulnerabilities-with-trusted-types/
 https://andrewlock.net/setting-environment-variables-in-iis-and-avoiding-app-pool-restarts/
