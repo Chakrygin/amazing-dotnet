@@ -1,1 +1,2 @@
+https://devblogs.microsoft.com/commandline/terminal-chat-now-included-in-github-copilot-free/
 https://devblogs.microsoft.com/commandline/windows-terminal-preview-1-23-release/
