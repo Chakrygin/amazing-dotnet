@@ -1,3 +1,0 @@
-https://codeopinion.com/google-service-weaver-is-a-bad-idea/
-https://codeopinion.com/not-everything-is-a-service/
-https://codeopinion.com/vertical-slice-architecture-myths-you-need-to-know/
