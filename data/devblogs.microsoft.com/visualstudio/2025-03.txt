@@ -1,2 +1,3 @@
+https://devblogs.microsoft.com/visualstudio/cloud-academy-visual-studio-subscription-benefit/
 https://devblogs.microsoft.com/visualstudio/great-new-productivity-features-in-visual-studio/
 https://devblogs.microsoft.com/visualstudio/new-debugging-and-profiling-features-in-visual-studio-v17-13/
