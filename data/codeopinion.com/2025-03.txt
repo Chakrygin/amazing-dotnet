@@ -1,1 +1,2 @@
+https://codeopinion.com/do-you-really-need-that-abstraction-or-generic-code-yagni/
 https://codeopinion.com/dry-principle-is-why-your-codebase-sucks/
