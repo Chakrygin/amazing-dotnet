@@ -1,6 +1,7 @@
 https://devblogs.microsoft.com/visualstudio/cloud-academy-visual-studio-subscription-benefit/
 https://devblogs.microsoft.com/visualstudio/gpt-4o-copilot-code-completion-model-available-now-in-visual-studio-public-preview/
 https://devblogs.microsoft.com/visualstudio/great-new-productivity-features-in-visual-studio/
+https://devblogs.microsoft.com/visualstudio/introducing-automatic-documentation-comment-generation-in-visual-studio/
 https://devblogs.microsoft.com/visualstudio/make-more-sense-of-multithreaded-debugging/
 https://devblogs.microsoft.com/visualstudio/new-debugging-and-profiling-features-in-visual-studio-v17-13/
 https://devblogs.microsoft.com/visualstudio/new-simpler-solution-file-format/
