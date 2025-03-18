@@ -19,7 +19,7 @@ export class StevenGieselScraper extends ScraperBase {
       .fetchPosts('main .content article .blog-card', ($, element) => {
 
         const image = element.find('.meta .photo picture img').attr('src') ?? '';
-        const title = element.find('.description h1').text();
+        const title = element.find('.description h4.card-title').text();
         const href = element.find('.description .read-more a').attr('href') ?? '';
         const date = element.find('.meta .details .date').text();
         const description = this.getDescription($, element);
