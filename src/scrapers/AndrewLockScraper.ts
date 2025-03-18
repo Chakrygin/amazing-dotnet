@@ -30,7 +30,7 @@ export class AndrewLockScraper extends ScraperBase {
         const href = item.link ?? '';
         const date = item.isoDate ?? '';
         const description = this.getDescription(item);
-        const tags = item.categories;
+        const tags = this.getTags(item);
 
         return {
           image,
@@ -59,7 +59,7 @@ export class AndrewLockScraper extends ScraperBase {
     }
   }
 
-  getDescription(item: RssParser.Item): string[] {
+  private getDescription(item: RssParser.Item): string[] {
     let description = item.contentSnippet?.trim() ?? '';
 
     if (!description.endsWith('.')) {
@@ -67,5 +67,17 @@ export class AndrewLockScraper extends ScraperBase {
     }
 
     return [description];
+  }
+
+  private getTags(item: RssParser.Item): string[] | undefined {
+    const categories = item.categories;
+
+    if (categories) {
+      const tags = categories
+        .map(x => x.split(';'))
+        .flat();
+
+      return tags;
+    }
   }
 }
