@@ -1,12 +1,7 @@
 {
   "DevBlogs / TypeScript": {
-    "timestamp": "2025-03-18T03:18:36.497Z",
+    "timestamp": "2025-03-18T19:37:02.011Z",
     "message": "400: Bad Request: wrong type of the web page content",
-    "counter": 8
-  },
-  "StevenGiesel": {
-    "timestamp": "2025-03-18T08:51:32.242Z",
-    "message": "Post is not valid: title is empty.",
-    "counter": 3
+    "counter": 9
   }
 }

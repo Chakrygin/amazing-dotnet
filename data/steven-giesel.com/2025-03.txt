@@ -1,2 +1,3 @@
 https://steven-giesel.com/blogPost/364c43d2-b31e-4377-8001-ac75ce78cdc6/tailwind-v4-with-blazor-it-just-got-easier
+https://steven-giesel.com/blogPost/a36cc4df-4dce-47e0-b154-9a4a9e4a7a37/typescriptgo-a-10x-faster-typescript-without-net-but-in-go
 https://steven-giesel.com/blogPost/e40aaedc-9e56-491f-9fe5-3bb0b162ae94/systemlinqasync-is-part-of-net-10-linq-for-iasyncenumerable
