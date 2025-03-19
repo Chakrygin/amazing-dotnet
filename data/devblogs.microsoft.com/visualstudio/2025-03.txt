@@ -1,5 +1,6 @@
 https://devblogs.microsoft.com/visualstudio/boost-your-github-productivity-with-our-new-multi-account-support/
 https://devblogs.microsoft.com/visualstudio/cloud-academy-visual-studio-subscription-benefit/
+https://devblogs.microsoft.com/visualstudio/find-the-ide-features-you-need-with-github-copilot-and-search/
 https://devblogs.microsoft.com/visualstudio/gpt-4o-copilot-code-completion-model-available-now-in-visual-studio-public-preview/
 https://devblogs.microsoft.com/visualstudio/great-new-productivity-features-in-visual-studio/
 https://devblogs.microsoft.com/visualstudio/introducing-automatic-documentation-comment-generation-in-visual-studio/
