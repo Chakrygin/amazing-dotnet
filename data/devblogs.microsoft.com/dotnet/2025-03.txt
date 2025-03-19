@@ -3,4 +3,5 @@ https://devblogs.microsoft.com/dotnet/dotnet-10-preview-2/
 https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-march-2025-servicing-updates/
 https://devblogs.microsoft.com/dotnet/hybrid-cache-is-now-ga/
 https://devblogs.microsoft.com/dotnet/introducing-slnx-support-dotnet-cli/
+https://devblogs.microsoft.com/dotnet/mstest-3-8-highlights/
 https://devblogs.microsoft.com/dotnet/start-using-the-microsoft-ai-evaluations-library-today/
