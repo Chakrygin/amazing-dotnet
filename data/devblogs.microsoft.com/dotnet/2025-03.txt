@@ -5,3 +5,4 @@ https://devblogs.microsoft.com/dotnet/hybrid-cache-is-now-ga/
 https://devblogs.microsoft.com/dotnet/introducing-slnx-support-dotnet-cli/
 https://devblogs.microsoft.com/dotnet/mstest-3-8-highlights/
 https://devblogs.microsoft.com/dotnet/start-using-the-microsoft-ai-evaluations-library-today/
+https://devblogs.microsoft.com/dotnet/xboxs-usage-of-aspire-transforming-development-practices/
