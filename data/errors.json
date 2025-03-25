@@ -1,0 +1,12 @@
+{
+  "BreslavLozhechkin": {
+    "timestamp": "2025-03-25T13:05:48.422Z",
+    "message": "t is not iterable",
+    "counter": 1
+  },
+  "RadioDotNet": {
+    "timestamp": "2025-03-25T13:05:54.032Z",
+    "message": "t is not iterable",
+    "counter": 1
+  }
+}

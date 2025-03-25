@@ -1,3 +1,4 @@
+https://andrewlock.net/creating-a-software-bill-of-materials-sbom-for-an-open-source-nuget-package/
 https://andrewlock.net/creating-an-analyzer-to-detect-infinite-loops-caused-by-threadabortexception/
 https://andrewlock.net/creating-provenance-attestations-for-nuget-packages-in-github-actions/
 https://andrewlock.net/running-an-aspnetcore-app-behind-iis-in-a-windows-container/
