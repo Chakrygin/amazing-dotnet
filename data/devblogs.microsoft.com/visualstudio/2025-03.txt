@@ -9,4 +9,5 @@ https://devblogs.microsoft.com/visualstudio/introducing-automatic-documentation-
 https://devblogs.microsoft.com/visualstudio/make-more-sense-of-multithreaded-debugging/
 https://devblogs.microsoft.com/visualstudio/new-debugging-and-profiling-features-in-visual-studio-v17-13/
 https://devblogs.microsoft.com/visualstudio/new-simpler-solution-file-format/
+https://devblogs.microsoft.com/visualstudio/view-and-manage-git-tags/
 https://devblogs.microsoft.com/visualstudio/visual-studio-hub/
