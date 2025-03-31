@@ -1,3 +1,4 @@
+https://www.meziantou.net/create-symbolic-links-in-dotnet.htm
 https://www.meziantou.net/how-to-iterate-on-a-concurrentdictionary-foreach-vs-keys-values.htm
 https://www.meziantou.net/listen-to-clipboard-changes-in-a-wpf-application.htm
 https://www.meziantou.net/nice-example-of-csharp-list-pattern-matching.htm
