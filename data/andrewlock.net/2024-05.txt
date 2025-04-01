@@ -1,3 +1,0 @@
-https://andrewlock.net/an-introduction-to-primary-constructors-in-csharp-12/
-https://andrewlock.net/blocking-primary-constructor-member-capture-using-an-analyzer/
-https://andrewlock.net/thoughts-about-primary-constructors-3-pros-and-5-cons/
