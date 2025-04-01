@@ -3,15 +3,5 @@
     "timestamp": "2025-04-01T03:32:36.439Z",
     "message": "Failed to parse html page. No posts found.",
     "counter": 2
-  },
-  "JetBrains / How-To's": {
-    "timestamp": "2025-04-01T13:14:59.541Z",
-    "message": "Request failed with status code 504",
-    "counter": 1
-  },
-  "JetBrains / Releases": {
-    "timestamp": "2025-04-01T13:15:03.768Z",
-    "message": "Request failed with status code 502",
-    "counter": 1
   }
 }
