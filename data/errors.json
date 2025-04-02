@@ -1,8 +1,8 @@
 {
   "BreslavLozhechkin": {
-    "timestamp": "2025-04-02T14:47:54.658Z",
+    "timestamp": "2025-04-02T16:52:38.111Z",
     "message": "unable to verify the first certificate",
-    "counter": 1
+    "counter": 2
   },
   "DevBlogs / The NuGet Blog": {
     "timestamp": "2025-04-02T04:49:35.827Z",
@@ -10,8 +10,8 @@
     "counter": 3
   },
   "RadioDotNet": {
-    "timestamp": "2025-04-02T14:48:22.683Z",
+    "timestamp": "2025-04-02T16:52:57.349Z",
     "message": "unable to verify the first certificate",
-    "counter": 1
+    "counter": 2
   }
 }
