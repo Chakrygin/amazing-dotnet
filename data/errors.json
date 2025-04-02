@@ -1,7 +1,17 @@
 {
+  "BreslavLozhechkin": {
+    "timestamp": "2025-04-02T14:47:54.658Z",
+    "message": "unable to verify the first certificate",
+    "counter": 1
+  },
   "DevBlogs / The NuGet Blog": {
     "timestamp": "2025-04-02T04:49:35.827Z",
     "message": "Failed to parse html page. No posts found.",
     "counter": 3
+  },
+  "RadioDotNet": {
+    "timestamp": "2025-04-02T14:48:22.683Z",
+    "message": "unable to verify the first certificate",
+    "counter": 1
   }
 }
