@@ -6,14 +6,6 @@ test('DevBlogs / .NET Blog', async () => {
   await testScraper(() => new DevBlogsScraper('dotnet'));
 });
 
-test('DevBlogs / OData', async () => {
-  await testScraper(() => new DevBlogsScraper('odata'));
-});
-
-test('DevBlogs / The NuGet Blog', async () => {
-  await testScraper(() => new DevBlogsScraper('nuget'));
-});
-
 test('DevBlogs / TypeScript', async () => {
   await testScraper(() => new DevBlogsScraper('typescript'));
 });

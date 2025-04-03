@@ -19,8 +19,6 @@ const app = new App(knownHosts => [
   new CodeMazeScraper(knownHosts),
   new CodeOpinionScraper(),
   new DevBlogsScraper('dotnet'),
-  new DevBlogsScraper('odata'),
-  new DevBlogsScraper('nuget'),
   new DevBlogsScraper('typescript'),
   new DevBlogsScraper('visualstudio'),
   new DevBlogsScraper('commandline'),

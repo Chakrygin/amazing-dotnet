@@ -2,8 +2,6 @@ import { DevBlogsScraperBase } from '@core/scrapers/shared';
 
 const blogs = {
   'dotnet': '.NET Blog',
-  'odata': 'OData',
-  'nuget': 'The NuGet Blog',
   'typescript': 'TypeScript',
   'visualstudio': 'Visual Studio Blog',
   'commandline': 'Windows Command Line',
