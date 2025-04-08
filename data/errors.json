@@ -1,0 +1,12 @@
+{
+  "BreslavLozhechkin": {
+    "timestamp": "2025-04-08T19:50:35.456Z",
+    "message": "unable to verify the first certificate",
+    "counter": 1
+  },
+  "RadioDotNet": {
+    "timestamp": "2025-04-08T19:50:45.949Z",
+    "message": "unable to verify the first certificate",
+    "counter": 1
+  }
+}
