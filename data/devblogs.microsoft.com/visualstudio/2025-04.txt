@@ -1,1 +1,2 @@
+https://devblogs.microsoft.com/visualstudio/multi-process-cpu-usage-analysis-in-visual-studio/
 https://devblogs.microsoft.com/visualstudio/vss-pluralsight-2025/
