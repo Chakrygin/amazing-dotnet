@@ -1,4 +1,0 @@
-https://blog.jetbrains.com/dotnet/2024/01/19/resharper-2024-1-eap1/
-https://blog.jetbrains.com/dotnet/2024/01/19/rider-2024-1-eap1/
-https://blog.jetbrains.com/dotnet/2024/01/22/2023-3-3-rsrp-rd/
-https://blog.jetbrains.com/qodana/2024/01/new-improve-team-code-quality-in-unity-and-net-projects-with-qodana/
