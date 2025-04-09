@@ -1,3 +1,4 @@
 https://devblogs.microsoft.com/dotnet/build-a-model-context-protocol-mcp-server-in-csharp/
+https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-april-2025-servicing-updates/
 https://devblogs.microsoft.com/dotnet/modernizing-push-notification-api-for-teams/
 https://devblogs.microsoft.com/dotnet/rewriting-nuget-restore-in-dotnet-9/
