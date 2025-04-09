@@ -1,2 +1,3 @@
 https://devblogs.microsoft.com/dotnet/build-a-model-context-protocol-mcp-server-in-csharp/
 https://devblogs.microsoft.com/dotnet/modernizing-push-notification-api-for-teams/
+https://devblogs.microsoft.com/dotnet/rewriting-nuget-restore-in-dotnet-9/
