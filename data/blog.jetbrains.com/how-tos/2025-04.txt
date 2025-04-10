@@ -1,0 +1,1 @@
+https://blog.jetbrains.com/dotnet/2025/04/10/csharp-language-support-in-resharper-and-rider-2025-1/
