@@ -1,1 +1,2 @@
 https://codeopinion.com/id-rather-read-50-lines-than-extract-method-refactoring/
+https://codeopinion.com/static-variables-methods-are-evil/
