@@ -1,1 +1,2 @@
 https://blog.jetbrains.com/dotnet/2025/04/09/resharper-2025-1-release-candidate/
+https://blog.jetbrains.com/dotnet/2025/04/09/rider-2025-1-rc/
