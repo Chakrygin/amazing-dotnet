@@ -1,1 +1,2 @@
 https://steven-giesel.com/blogPost/1534963c-fcf4-427c-847c-6ebfd8c91f31/more-linkedin-tips-dragging-your-whole-database-into-memory
+https://steven-giesel.com/blogPost/38a4f1dc-420f-4489-9179-77371a79b9a9/a-custom-404-page-in-blazor-web-apps
