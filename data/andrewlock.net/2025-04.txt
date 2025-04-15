@@ -1,2 +1,3 @@
 https://andrewlock.net/creating-sbom-attestations-in-github-actions/
+https://andrewlock.net/netescapades-aspnetcore-securityheaders-1-0-0-released/
 https://andrewlock.net/verifiying-tricky-git-rebases-with-range-diffs/
