@@ -1,4 +1,5 @@
 https://devblogs.microsoft.com/visualstudio/github-copilot-highlights-in-visual-studio-17-14-preview-3-available-now/
 https://devblogs.microsoft.com/visualstudio/multi-process-cpu-usage-analysis-in-visual-studio/
 https://devblogs.microsoft.com/visualstudio/net-aspire-and-azure-functions-integration-preview/
+https://devblogs.microsoft.com/visualstudio/toolbox-support-for-explicit-assembly-references-in-windows-forms-out-of-process-designer/
 https://devblogs.microsoft.com/visualstudio/vss-pluralsight-2025/
