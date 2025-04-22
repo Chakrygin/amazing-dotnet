@@ -1,0 +1,1 @@
+https://khalidabuhakmeh.com/server-sent-events-in-aspnet-core-and-dotnet-10
