@@ -4,6 +4,7 @@ https://devblogs.microsoft.com/dotnet/build-mcp-remote-servers-with-azure-functi
 https://devblogs.microsoft.com/dotnet/dotnet-10-preview-3/
 https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-april-2025-servicing-updates/
 https://devblogs.microsoft.com/dotnet/dotnet-aspire-92-is-now-available-with-new-ways-to-deploy/
+https://devblogs.microsoft.com/dotnet/introducing-ai-dev-gallery-gateway-to-local-ai-development/
 https://devblogs.microsoft.com/dotnet/join-us-at-build-2025/
 https://devblogs.microsoft.com/dotnet/modernizing-push-notification-api-for-teams/
 https://devblogs.microsoft.com/dotnet/rewriting-nuget-restore-in-dotnet-9/
