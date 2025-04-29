@@ -1,3 +1,4 @@
+https://andrewlock.net/creating-a-pooled-dependency-injection-lifetime/
 https://andrewlock.net/creating-sbom-attestations-in-github-actions/
 https://andrewlock.net/going-beyond-singleton-scoped-and-transient-lifetimes/
 https://andrewlock.net/netescapades-aspnetcore-securityheaders-1-0-0-released/
