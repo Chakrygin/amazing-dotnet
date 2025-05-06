@@ -1,4 +1,0 @@
-https://andrewlock.net/behind-the-scenes-of-collection-expressions-part-1-introducing-collection-expressions-in-csharp12/
-https://andrewlock.net/behind-the-scenes-of-collection-expressions-part-2-exploring-the-generated-code-list-and-fallback-cases/
-https://andrewlock.net/behind-the-scenes-of-collection-expressions-part-3-arrays-span-of-t-and-immutable-collections/
-https://andrewlock.net/conditionally-skipping-a-trigger-job-in-gitlab-based-on-a-previous-job/
