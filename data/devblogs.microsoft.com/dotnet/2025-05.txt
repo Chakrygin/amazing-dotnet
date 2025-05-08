@@ -1,1 +1,2 @@
+https://devblogs.microsoft.com/dotnet/csharp-exploring-extension-members/
 https://devblogs.microsoft.com/dotnet/why-we-built-our-startup-in-csharp/
