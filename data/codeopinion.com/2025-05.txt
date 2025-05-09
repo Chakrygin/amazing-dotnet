@@ -1,1 +1,2 @@
+https://codeopinion.com/crud-apis-are-poor-design/
 https://codeopinion.com/dtos-mapping-the-good-the-bad-and-the-excessive/
