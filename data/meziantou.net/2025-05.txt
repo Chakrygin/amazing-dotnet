@@ -1,1 +1,2 @@
 https://www.meziantou.net/stringcomparison-invariantculture-is-not-always-invariant.htm
+https://www.meziantou.net/use-csharp-14-extensions-to-simplify-enum-parsing.htm
