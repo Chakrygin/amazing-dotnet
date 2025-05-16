@@ -1,5 +1,0 @@
-https://blog.jetbrains.com/dotnet/2024/02/02/rider-2024-1-eap-3/
-https://blog.jetbrains.com/dotnet/2024/02/09/rider-2024-1-eap-4/
-https://blog.jetbrains.com/dotnet/2024/02/16/rider-2024-1-eap-5/
-https://blog.jetbrains.com/dotnet/2024/02/27/resharper-2024-1-eap-6/
-https://blog.jetbrains.com/dotnet/2024/02/27/rider-2024-1-eap-6/
