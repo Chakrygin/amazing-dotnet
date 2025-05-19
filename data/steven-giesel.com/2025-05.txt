@@ -1,2 +1,3 @@
 https://steven-giesel.com/blogPost/42cfcbfa-8e70-4b42-ba98-f8f2b7715185/does-net-documentation-get-ads-aka-is-copilot-in-the-docs-something-useful
+https://steven-giesel.com/blogPost/e2552b7a-293a-4f46-892f-95a0cd677e4d/writing-new-guards-with-extensions-in-c-14
 https://steven-giesel.com/blogPost/ef7e9271-3b8d-4658-988f-b48bbd11e320/clearing-nuget-caches
