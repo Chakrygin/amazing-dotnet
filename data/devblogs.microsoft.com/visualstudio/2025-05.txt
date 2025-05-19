@@ -1,1 +1,2 @@
 https://devblogs.microsoft.com/visualstudio/agent-mode-has-arrived-in-preview-for-visual-studio/
+https://devblogs.microsoft.com/visualstudio/faster-net-upgrades-powered-by-github-copilot/
