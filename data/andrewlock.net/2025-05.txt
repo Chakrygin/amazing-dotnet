@@ -1,2 +1,3 @@
 https://andrewlock.net/exploring-the-new-ai-chat-template/
+https://andrewlock.net/pushing-a-whole-stack-of-branches-with-a-single-git-command/
 https://andrewlock.net/using-the-new-ai-template-to-create-a-chatbot-about-a-website/
