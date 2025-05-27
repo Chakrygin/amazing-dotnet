@@ -1,3 +1,4 @@
 https://devblogs.microsoft.com/visualstudio/agent-mode-has-arrived-in-preview-for-visual-studio/
 https://devblogs.microsoft.com/visualstudio/connecting-to-private-nuget-feeds-just-got-easier/
 https://devblogs.microsoft.com/visualstudio/faster-net-upgrades-powered-by-github-copilot/
+https://devblogs.microsoft.com/visualstudio/visualstudio-extensibility-editor-classification-and-updates-to-user-prompt/
