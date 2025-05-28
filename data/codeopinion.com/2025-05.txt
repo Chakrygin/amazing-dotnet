@@ -1,3 +1,4 @@
 https://codeopinion.com/10-years-of-software-architecture-best-and-worst-decisions/
 https://codeopinion.com/crud-apis-are-poor-design/
+https://codeopinion.com/database-coupling-how-to-fix-a-spaghetti-code-system/
 https://codeopinion.com/dtos-mapping-the-good-the-bad-and-the-excessive/
