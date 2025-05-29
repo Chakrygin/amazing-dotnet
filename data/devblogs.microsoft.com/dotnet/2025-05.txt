@@ -5,6 +5,7 @@ https://devblogs.microsoft.com/dotnet/csharp-exploring-extension-members/
 https://devblogs.microsoft.com/dotnet/dotnet-10-preview-4/
 https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-may-2025-servicing-updates/
 https://devblogs.microsoft.com/dotnet/evaluating-ai-content-safety/
+https://devblogs.microsoft.com/dotnet/finetune-the-volume-of-logs-your-app-produces/
 https://devblogs.microsoft.com/dotnet/github-copilot-upgrade-dotnet/
 https://devblogs.microsoft.com/dotnet/introducing-dotnet-aspire-93/
 https://devblogs.microsoft.com/dotnet/why-we-built-our-startup-in-csharp/
