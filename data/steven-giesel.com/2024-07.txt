@@ -1,6 +1,0 @@
-https://steven-giesel.com/blogPost/09952d3c-6bbe-477b-b0ea-07276cdb3ba6/how-many-apis-does-net-have
-https://steven-giesel.com/blogPost/3b993efb-5f70-4d71-8ac9-89f4b85a3dfa/codespaces-for-your-opensource-project
-https://steven-giesel.com/blogPost/720a48fd-0abe-4c32-83ac-26926d501895/the-state-machine-in-c-with-asyncawait
-https://steven-giesel.com/blogPost/98458f74-5205-4b2b-9f5b-535e34ec2fea/how-not-to-benchmark
-https://steven-giesel.com/blogPost/add533e3-716c-488e-bb76-1105455564e9/free-net-8-web-api-live-streams
-https://steven-giesel.com/blogPost/ea42a518-4d8b-4e08-8f73-e542bdd3b983/uuid-v7-in-net-9
