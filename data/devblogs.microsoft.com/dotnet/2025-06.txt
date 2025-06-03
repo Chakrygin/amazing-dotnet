@@ -1,0 +1,1 @@
+https://devblogs.microsoft.com/dotnet/using-ai-foundry-with-dotnet-maui/
