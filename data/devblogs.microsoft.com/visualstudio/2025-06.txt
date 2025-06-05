@@ -1,2 +1,3 @@
 https://devblogs.microsoft.com/visualstudio/cloud-academy-benefit-for-visual-studio-subscribers/
 https://devblogs.microsoft.com/visualstudio/extension-manager-updates-in-visual-studio/
+https://devblogs.microsoft.com/visualstudio/how-to-filter-c-build-insights-by-project/
