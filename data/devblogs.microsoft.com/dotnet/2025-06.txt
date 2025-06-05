@@ -1,2 +1,3 @@
 https://devblogs.microsoft.com/dotnet/catching-up-on-microsoft-build-2025-essential-sessions-for-dotnet-developers/
+https://devblogs.microsoft.com/dotnet/emit-logs-on-demand-with-log-buffering/
 https://devblogs.microsoft.com/dotnet/using-ai-foundry-with-dotnet-maui/
