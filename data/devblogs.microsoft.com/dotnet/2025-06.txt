@@ -3,5 +3,6 @@ https://devblogs.microsoft.com/dotnet/dotnet-10-preview-5/
 https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-june-2025-servicing-updates/
 https://devblogs.microsoft.com/dotnet/emit-logs-on-demand-with-log-buffering/
 https://devblogs.microsoft.com/dotnet/improve-productivity-with-github-copilot-dotnet/
+https://devblogs.microsoft.com/dotnet/multimodal-vision-intelligence-with-dotnet-maui/
 https://devblogs.microsoft.com/dotnet/multimodal-voice-intelligence-with-dotnet-maui/
 https://devblogs.microsoft.com/dotnet/using-ai-foundry-with-dotnet-maui/
