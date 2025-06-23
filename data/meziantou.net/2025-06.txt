@@ -1,1 +1,2 @@
 https://www.meziantou.net/automating-null-forgiving-operator-removal-in-csharp-projects.htm
+https://www.meziantou.net/how-to-exclude-your-windows-app-from-screen-capture-and-recall.htm
