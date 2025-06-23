@@ -1,3 +1,4 @@
+https://steven-giesel.com/blogPost/b839cab5-55ad-4fd8-90ca-7799cde8ace0/you-cant-use-switch-expressions-in-blazor
 https://steven-giesel.com/blogPost/c518e8d6-54b4-407f-af82-e79e0889bc03/net-10-performance-edition
 https://steven-giesel.com/blogPost/c624c170-c16c-4414-8506-2ae25ba54df7/why-is-enumerating-over-list-faster-than-ilist
 https://steven-giesel.com/blogPost/f6ad319b-b095-47a0-91d7-800d30a0e3c2/how-to-get-to-know-the-latest-dotnet-features-the-nerdy-way
