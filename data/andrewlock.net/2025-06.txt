@@ -1,3 +1,4 @@
 https://andrewlock.net/converting-an-xna-game-to-monogame/
 https://andrewlock.net/creating-your-first-sample-game-with-monogame/
 https://andrewlock.net/working-with-stacked-branches-in-git-part-1/
+https://andrewlock.net/working-with-stacked-branches-in-git-part-2/
