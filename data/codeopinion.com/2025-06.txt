@@ -1,3 +1,4 @@
 https://codeopinion.com/5-mistakes-that-make-your-code-unmaintainable/
 https://codeopinion.com/api-caching-done-right/
+https://codeopinion.com/net-channels-as-a-in-memory-message-bus-beware/
 https://codeopinion.com/you-dont-need-microservices-for-serverless/
