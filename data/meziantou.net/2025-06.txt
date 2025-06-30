@@ -1,2 +1,3 @@
 https://www.meziantou.net/automating-null-forgiving-operator-removal-in-csharp-projects.htm
 https://www.meziantou.net/how-to-exclude-your-windows-app-from-screen-capture-and-recall.htm
+https://www.meziantou.net/how-to-find-public-symbols-that-can-be-internal-using-roslyn.htm
