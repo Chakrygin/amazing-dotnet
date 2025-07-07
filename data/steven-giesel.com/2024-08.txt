@@ -1,4 +1,0 @@
-https://steven-giesel.com/blogPost/59752c38-9c99-4641-9853-9cfa97bb2d29/async2-the-net-runtime-async-experiment-concludes
-https://steven-giesel.com/blogPost/a807373c-dcc6-42f9-995f-e69dcea1cd47/to-soft-delete-or-not-to-soft-delete
-https://steven-giesel.com/blogPost/ee26a396-8f5a-40a7-9dd5-f08cd8c03518/organizing-parameters-in-minimal-api-with-the-asparametersattribute
-https://steven-giesel.com/blogPost/f824cfce-2da4-4037-9f4e-ff652f0ee124/formattablestringfactory-creating-dynamic-formattablestring-instances
