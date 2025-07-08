@@ -1,1 +1,2 @@
 https://devblogs.microsoft.com/dotnet/alttext-generator-csharp-local-models/
+https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-july-2025-servicing-updates/
