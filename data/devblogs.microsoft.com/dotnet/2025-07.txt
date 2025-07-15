@@ -1,4 +1,5 @@
 https://devblogs.microsoft.com/dotnet/alttext-generator-csharp-local-models/
 https://devblogs.microsoft.com/dotnet/customize-ai-responses-from-github-copilot/
+https://devblogs.microsoft.com/dotnet/dotnet-10-preview-6/
 https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-july-2025-servicing-updates/
 https://devblogs.microsoft.com/dotnet/maui-team-copilot-tips/
