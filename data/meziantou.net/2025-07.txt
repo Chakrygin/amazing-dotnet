@@ -1,1 +1,2 @@
 https://www.meziantou.net/how-to-find-all-types-that-can-be-sealed-using-roslyn.htm
+https://www.meziantou.net/how-to-test-roslyn-source-generators.htm
