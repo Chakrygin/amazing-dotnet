@@ -18,7 +18,7 @@ export class StevenGieselScraper extends ScraperBase {
       .fromHtmlPage(this.StevenGiesel.href)
       .fetchPosts('main .content article .blog-card', ($, element) => {
 
-        //const image = element.find('.meta .photo source').attr('srcset') ?? '';
+        const image = element.find('.meta .photo source').attr('srcset') ?? '';
         const title = element.find('.description h4.card-title').text();
         const href = element.find('.description .read-more a').attr('href') ?? '';
         const date = element.find('.meta .details .date').text();
@@ -29,7 +29,7 @@ export class StevenGieselScraper extends ScraperBase {
           .toArray();
 
         return {
-          //image,
+          image,
           title,
           href: this.getFullHref(href),
           categories: [this.StevenGiesel],
