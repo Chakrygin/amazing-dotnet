@@ -1,7 +1,7 @@
 {
   "StevenGiesel": {
-    "timestamp": "2025-07-28T07:00:54.006Z",
-    "message": "400: Bad Request: failed to get HTTP URL content",
-    "counter": 1
+    "timestamp": "2025-07-28T08:59:22.429Z",
+    "message": "400: Bad Request: wrong type of the web page content",
+    "counter": 2
   }
 }
