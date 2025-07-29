@@ -2,3 +2,4 @@ https://andrewlock.net/exploring-dotnet-10-preview-features-1-exploring-the-dotn
 https://andrewlock.net/exploring-dotnet-10-preview-features-2-behind-the-scenes-of-dotnet-run-app.cs/
 https://andrewlock.net/exploring-dotnet-10-preview-features-3-csharp-14-extensions-members/
 https://andrewlock.net/exploring-dotnet-10-preview-features-4-solving-the-source-generator-marker-attribute-problem-in-dotnet-10/
+https://andrewlock.net/exploring-dotnet-10-preview-features-5-running-one-off-dotnet-tools-with-dnx/
