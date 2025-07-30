@@ -1,2 +1,3 @@
 https://steven-giesel.com/blogPost/2c204a37-1af5-45a4-ac4b-439d2d8a02f0/why-lists-are-not-lowered-to-a-while-loop
 https://steven-giesel.com/blogPost/dd7ab934-c311-45e0-9a04-9a28c624b957/tolistasync-is-fast-again-in-entity-framework-kind-of
+https://steven-giesel.com/blogPost/feac44f3-2c6e-4994-80c3-e2a17efbb8f3/using-architecture-tests-for-cancellationtokens-and-sealed-classes
