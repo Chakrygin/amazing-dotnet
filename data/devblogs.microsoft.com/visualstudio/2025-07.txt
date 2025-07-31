@@ -1,2 +1,3 @@
+https://devblogs.microsoft.com/visualstudio/smarter-ai-edits-in-visual-studio-copilot/
 https://devblogs.microsoft.com/visualstudio/vss-pluralsight-2025-2/
 https://devblogs.microsoft.com/visualstudio/watch-live-visual-studio-toolbox-at-vs-live-redmond-2025/
