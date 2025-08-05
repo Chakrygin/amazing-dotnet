@@ -1,1 +1,2 @@
+https://devblogs.microsoft.com/dotnet/dotnet-conf-2025-announcing-the-call-for-content/
 https://devblogs.microsoft.com/dotnet/the-new-dependabot-nuget-updater/
