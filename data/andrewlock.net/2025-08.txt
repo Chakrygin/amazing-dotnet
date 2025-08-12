@@ -1,1 +1,2 @@
 https://andrewlock.net/exploring-dotnet-10-preview-features-6-passkey-support-for-aspnetcore-identity/
+https://andrewlock.net/running-dotnet-in-the-browser-without-blazor/
