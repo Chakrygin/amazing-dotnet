@@ -1,4 +1,5 @@
 https://devblogs.microsoft.com/dotnet/5-copilot-chat-prompts-dotnet-devs-should-steal-today/
+https://devblogs.microsoft.com/dotnet/dotnet-10-preview-7/
 https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-august-2025-servicing-updates/
 https://devblogs.microsoft.com/dotnet/dotnet-conf-2025-announcing-the-call-for-content/
 https://devblogs.microsoft.com/dotnet/exploring-agent-quality-and-nlp-evaluators/
