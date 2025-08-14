@@ -1,0 +1,2 @@
+https://blog.jetbrains.com/dotnet/2025/08/14/resharper-and-the-net-tools-2025-2-are-out/
+https://blog.jetbrains.com/dotnet/2025/08/14/rider-2025-2-is-here-with-junie-in-ide-opentelemetry-game-dev-upgrades-and-more/
