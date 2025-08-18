@@ -1,2 +1,0 @@
-https://www.meziantou.net/using-mutex-t-to-synchronize-access-to-a-shared-resource.htm
-https://www.meziantou.net/waiting-for-a-manualreseteventslim-to-be-set-asynchronously.htm
