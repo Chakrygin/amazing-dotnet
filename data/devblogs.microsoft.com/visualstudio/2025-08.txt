@@ -1,3 +1,4 @@
+https://devblogs.microsoft.com/visualstudio/bring-your-own-model-visual-studio-chat/
 https://devblogs.microsoft.com/visualstudio/from-redmond-to-san-diego-vs-live-highlights-session-examples-and-whats-next/
 https://devblogs.microsoft.com/visualstudio/gpt-5-now-available-in-visual-studio/
 https://devblogs.microsoft.com/visualstudio/improving-codebase-awareness-in-visual-studio-chat/
