@@ -1,1 +1,2 @@
 https://codeopinion.com/loosely-coupled-monolith-software-architecture-2025-edition/
+https://codeopinion.com/why-separate-databases-explaining-like-youre-five/
