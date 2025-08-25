@@ -1,3 +1,4 @@
 https://steven-giesel.com/blogPost/5d88d808-03ac-431a-82fa-756b59b38a7d/two-more-linq-extensions-in-dotnet-10
 https://steven-giesel.com/blogPost/c6bea409-9e49-4915-8529-8a8a8574ba80/how-to-not-return-all-properties-in-sqlraw
 https://steven-giesel.com/blogPost/f1c14e0f-840c-4dd6-921c-364298a35d6f/disabling-thread-safety-check-in-entity-framework
+https://steven-giesel.com/blogPost/fea0b033-ccf5-4197-b62c-ffd8ca6d79c7/quick-one-difference-between-collection-expressions-and-collection-initializer
