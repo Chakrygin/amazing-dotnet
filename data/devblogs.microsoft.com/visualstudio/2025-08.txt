@@ -1,6 +1,7 @@
 https://devblogs.microsoft.com/visualstudio/better-control-over-your-copilot-code-suggestions/
 https://devblogs.microsoft.com/visualstudio/bring-your-own-model-visual-studio-chat/
 https://devblogs.microsoft.com/visualstudio/from-redmond-to-san-diego-vs-live-highlights-session-examples-and-whats-next/
+https://devblogs.microsoft.com/visualstudio/github-copilot-for-azure-preview-launches-in-visual-studio-2022-with-azure-mcp-support/
 https://devblogs.microsoft.com/visualstudio/gpt-5-now-available-in-visual-studio/
 https://devblogs.microsoft.com/visualstudio/improving-codebase-awareness-in-visual-studio-chat/
 https://devblogs.microsoft.com/visualstudio/mcp-is-now-generally-available-in-visual-studio/

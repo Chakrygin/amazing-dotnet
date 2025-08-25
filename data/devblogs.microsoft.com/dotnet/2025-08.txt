@@ -6,5 +6,6 @@ https://devblogs.microsoft.com/dotnet/dotnet-test-with-mtp/
 https://devblogs.microsoft.com/dotnet/exploring-agent-quality-and-nlp-evaluators/
 https://devblogs.microsoft.com/dotnet/github-copilot-diagnostics-toolset-for-dotnet-in-visual-studio/
 https://devblogs.microsoft.com/dotnet/gpt-oss-csharp-ollama/
+https://devblogs.microsoft.com/dotnet/mauireactor-mvu-for-dotnet-maui/
 https://devblogs.microsoft.com/dotnet/nuget-mcp-server-preview/
 https://devblogs.microsoft.com/dotnet/the-new-dependabot-nuget-updater/
