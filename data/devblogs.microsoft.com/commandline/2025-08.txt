@@ -1,1 +1,2 @@
 https://devblogs.microsoft.com/commandline/powertoys-0-93-is-here-faster-command-palette-new-dashboard-ux-and-more/
+https://devblogs.microsoft.com/commandline/windows-terminal-preview-1-24-release/
