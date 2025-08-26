@@ -1,3 +1,4 @@
 https://andrewlock.net/converting-an-xunit-project-to-tunit/
 https://andrewlock.net/exploring-dotnet-10-preview-features-6-passkey-support-for-aspnetcore-identity/
+https://andrewlock.net/fixing-an-old-dotnet-core-native-library-loading-issue-on-alpine/
 https://andrewlock.net/running-dotnet-in-the-browser-without-blazor/
