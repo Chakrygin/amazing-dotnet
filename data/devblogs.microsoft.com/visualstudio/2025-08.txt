@@ -5,5 +5,6 @@ https://devblogs.microsoft.com/visualstudio/github-copilot-for-azure-preview-lau
 https://devblogs.microsoft.com/visualstudio/gpt-5-now-available-in-visual-studio/
 https://devblogs.microsoft.com/visualstudio/improving-codebase-awareness-in-visual-studio-chat/
 https://devblogs.microsoft.com/visualstudio/mcp-is-now-generally-available-in-visual-studio/
+https://devblogs.microsoft.com/visualstudio/roadmap-for-ai-in-visual-studio-september/
 https://devblogs.microsoft.com/visualstudio/the-visual-studio-august-update-is-here-smarter-ai-better-debugging-and-more-control/
 https://devblogs.microsoft.com/visualstudio/visual-studio-2015-retirement-support-reminder-for-older-versions-of-visual-studio/
