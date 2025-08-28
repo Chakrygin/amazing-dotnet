@@ -1,3 +1,0 @@
-https://blog.jetbrains.com/dotnet/2024/01/10/use-jetbrains-ai-assistant-to-help-you-understand-changes-in-your-code/
-https://blog.jetbrains.com/dotnet/2024/01/16/interceptors-using-csharp-12-in-rider-and-resharper/
-https://blog.jetbrains.com/dotnet/2024/01/29/12-debugging-techniques-in-jetbrains-rider-you-should-know-about/
