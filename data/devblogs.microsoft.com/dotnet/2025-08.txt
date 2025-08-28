@@ -5,6 +5,7 @@ https://devblogs.microsoft.com/dotnet/dotnet-conf-2025-announcing-the-call-for-c
 https://devblogs.microsoft.com/dotnet/dotnet-test-with-mtp/
 https://devblogs.microsoft.com/dotnet/ef-core-visualizer-view-entity-framework-core-query-plan-inside-visual-studio/
 https://devblogs.microsoft.com/dotnet/exploring-agent-quality-and-nlp-evaluators/
+https://devblogs.microsoft.com/dotnet/getting-started-with-the-aspire-cli/
 https://devblogs.microsoft.com/dotnet/github-copilot-diagnostics-toolset-for-dotnet-in-visual-studio/
 https://devblogs.microsoft.com/dotnet/gpt-oss-csharp-ollama/
 https://devblogs.microsoft.com/dotnet/mauireactor-mvu-for-dotnet-maui/
