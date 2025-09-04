@@ -1,1 +1,2 @@
 https://devblogs.microsoft.com/visualstudio/boost-your-copilot-collaboration-with-reusable-prompt-files/
+https://devblogs.microsoft.com/visualstudio/make-sense-of-your-output-window-with-copilot/
