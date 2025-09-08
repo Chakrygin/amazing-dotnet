@@ -1,1 +1,2 @@
+https://www.meziantou.net/moving-files-and-folders-to-recycle-bin-in-dotnet.htm
 https://www.meziantou.net/using-multiple-loopback-addresses-for-socket-binding.htm
