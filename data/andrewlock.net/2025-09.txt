@@ -1,1 +1,2 @@
+https://andrewlock.net/exploring-dotnet-10-preview-features-7-packaging-self-contained-and-native-aot-dotnet-tools-for-nuget/
 https://andrewlock.net/using-and-authoring-dotnet-tools/
