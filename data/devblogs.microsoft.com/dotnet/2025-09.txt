@@ -1,1 +1,3 @@
 https://devblogs.microsoft.com/dotnet/copilot-coding-agent-dotnet/
+https://devblogs.microsoft.com/dotnet/dotnet-10-rc-1/
+https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-september-2025-servicing-updates/
