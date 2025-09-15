@@ -1,1 +1,2 @@
 https://codeopinion.com/composing-data-from-multiple-services/
+https://codeopinion.com/regex-for-email-validation-think-again/
