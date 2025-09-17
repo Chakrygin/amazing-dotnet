@@ -4,3 +4,4 @@ https://devblogs.microsoft.com/dotnet/dotnet-10-rc-1/
 https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-september-2025-servicing-updates/
 https://devblogs.microsoft.com/dotnet/dotnet-sts-releases-supported-for-24-months/
 https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-10/
+https://devblogs.microsoft.com/dotnet/prompt-files-and-instructions-files-explained/
