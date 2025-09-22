@@ -1,3 +1,4 @@
+https://www.meziantou.net/batch-migrate-sln-files-to-slnx-format-across-repositories.htm
 https://www.meziantou.net/moving-files-and-folders-to-recycle-bin-in-dotnet.htm
 https://www.meziantou.net/open-windows-explorer-to-a-specific-path-in-csharp.htm
 https://www.meziantou.net/using-multiple-loopback-addresses-for-socket-binding.htm
