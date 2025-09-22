@@ -1,5 +1,6 @@
 https://devblogs.microsoft.com/visualstudio/boost-your-copilot-collaboration-with-reusable-prompt-files/
 https://devblogs.microsoft.com/visualstudio/copilot-profiler-agent-visual-studio/
+https://devblogs.microsoft.com/visualstudio/enhancements-to-xaml-live-preview-in-visual-studio-for-net-maui/
 https://devblogs.microsoft.com/visualstudio/generating-and-viewing-mermaid-diagrams-with-copilot/
 https://devblogs.microsoft.com/visualstudio/make-sense-of-your-output-window-with-copilot/
 https://devblogs.microsoft.com/visualstudio/mcp-prompts-resources-sampling/
