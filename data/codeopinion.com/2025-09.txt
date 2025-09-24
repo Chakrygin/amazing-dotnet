@@ -1,2 +1,3 @@
 https://codeopinion.com/composing-data-from-multiple-services/
+https://codeopinion.com/crud-sourcing-is-why-your-event-streams-are-bloated/
 https://codeopinion.com/regex-for-email-validation-think-again/
