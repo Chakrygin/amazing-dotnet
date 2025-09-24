@@ -1,12 +1,12 @@
 {
   "BreslavLozhechkin": {
-    "timestamp": "2025-09-24T08:56:00.633Z",
-    "message": "Request failed with status code 504",
-    "counter": 1
+    "timestamp": "2025-09-24T10:47:56.520Z",
+    "message": "Request failed with status code 404",
+    "counter": 2
   },
   "RadioDotNet": {
-    "timestamp": "2025-09-24T08:59:08.659Z",
+    "timestamp": "2025-09-24T10:48:02.730Z",
     "message": "Request failed with status code 404",
-    "counter": 1
+    "counter": 2
   }
 }
