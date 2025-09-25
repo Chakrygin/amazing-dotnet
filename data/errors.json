@@ -1,12 +1,12 @@
 {
   "BreslavLozhechkin": {
-    "timestamp": "2025-09-25T20:55:15.428Z",
+    "timestamp": "2025-09-25T22:55:11.520Z",
     "message": "connect ETIMEDOUT 37.139.40.109:443",
-    "counter": 1
+    "counter": 2
   },
   "RadioDotNet": {
-    "timestamp": "2025-09-25T21:04:24.290Z",
+    "timestamp": "2025-09-25T23:04:16.285Z",
     "message": "connect ETIMEDOUT 37.139.40.109:443",
-    "counter": 1
+    "counter": 2
   }
 }
