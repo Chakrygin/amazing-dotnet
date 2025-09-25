@@ -1,3 +1,4 @@
+https://devblogs.microsoft.com/dotnet/announcing-dotnet-aspire-95/
 https://devblogs.microsoft.com/dotnet/application-insights-code-optimizations/
 https://devblogs.microsoft.com/dotnet/copilot-coding-agent-dotnet/
 https://devblogs.microsoft.com/dotnet/dotnet-10-rc-1/
