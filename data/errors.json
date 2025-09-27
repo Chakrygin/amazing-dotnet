@@ -1,12 +1,7 @@
 {
-  "BreslavLozhechkin": {
-    "timestamp": "2025-09-25T22:55:11.520Z",
-    "message": "connect ETIMEDOUT 37.139.40.109:443",
-    "counter": 2
-  },
-  "RadioDotNet": {
-    "timestamp": "2025-09-25T23:04:16.285Z",
-    "message": "connect ETIMEDOUT 37.139.40.109:443",
-    "counter": 2
+  "StevenGiesel": {
+    "timestamp": "2025-09-27T02:11:46.216Z",
+    "message": "Request failed with status code 500",
+    "counter": 1
   }
 }
