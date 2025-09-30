@@ -4,3 +4,4 @@ https://devblogs.microsoft.com/visualstudio/enhancements-to-xaml-live-preview-in
 https://devblogs.microsoft.com/visualstudio/generating-and-viewing-mermaid-diagrams-with-copilot/
 https://devblogs.microsoft.com/visualstudio/make-sense-of-your-output-window-with-copilot/
 https://devblogs.microsoft.com/visualstudio/mcp-prompts-resources-sampling/
+https://devblogs.microsoft.com/visualstudio/visual-studio-september-update/
