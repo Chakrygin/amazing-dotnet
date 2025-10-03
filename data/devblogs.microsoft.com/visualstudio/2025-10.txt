@@ -1,2 +1,3 @@
+https://devblogs.microsoft.com/visualstudio/roadmap-for-ai-in-visual-studio-october/
 https://devblogs.microsoft.com/visualstudio/unlock-vss-benefits-myvisualstudio/
 https://devblogs.microsoft.com/visualstudio/visual-studio-live-orlando-2025/
