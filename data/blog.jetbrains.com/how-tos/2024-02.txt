@@ -1,2 +1,0 @@
-https://blog.jetbrains.com/dotnet/2024/02/05/creating-custom-ai-prompts-with-resharper/
-https://blog.jetbrains.com/dotnet/2024/02/29/boost-code-quality-with-qodana-and-github-actions/
