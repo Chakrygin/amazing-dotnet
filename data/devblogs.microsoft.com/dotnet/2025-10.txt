@@ -1,1 +1,2 @@
+https://devblogs.microsoft.com/dotnet/developer-and-ai-code-reviewer-reviewing-ai-generated-code-in-dotnet/
 https://devblogs.microsoft.com/dotnet/introducing-microsoft-agent-framework-preview/
