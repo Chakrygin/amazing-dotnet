@@ -1,1 +1,2 @@
 https://steven-giesel.com/blogPost/080baaef-27d4-4d98-b0a8-9c3ab96c335e/use-cancellationtokens
+https://steven-giesel.com/blogPost/e89d7156-f3fd-4152-b78a-cb908bc43226/inlining-and-structs-in-c
