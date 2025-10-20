@@ -1,2 +1,3 @@
 https://www.meziantou.net/how-to-find-an-available-network-port-in-dotnet.htm
+https://www.meziantou.net/thread-safe-initialization-with-lazyinitializer.htm
 https://www.meziantou.net/understanding-when-type-fullname-returns-null-in-dotnet.htm
