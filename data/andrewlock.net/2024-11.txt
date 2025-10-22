@@ -1,3 +1,0 @@
-https://andrewlock.net/recent-updates-for-netescapades-enumgenerators-interceptors/
-https://andrewlock.net/understanding-security-headers-part-1-cross-origin-opener-policy-preventing-attacks-from-popups/
-https://andrewlock.net/understanding-security-headers-part-2-cross-origin-resource-policy-preventing-hotlinking/

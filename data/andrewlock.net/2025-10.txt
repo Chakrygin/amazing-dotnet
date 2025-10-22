@@ -1,0 +1,1 @@
+https://andrewlock.net/adding-metadata-to-fallback-endpoints-in-aspnetcore/
