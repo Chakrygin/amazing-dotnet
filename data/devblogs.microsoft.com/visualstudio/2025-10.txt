@@ -1,3 +1,4 @@
+https://devblogs.microsoft.com/visualstudio/introducing-planning-in-visual-studio-public-preview/
 https://devblogs.microsoft.com/visualstudio/modernizing-visual-studio-extension-compatibility-effortless-migration-for-extension-developers-and-users/
 https://devblogs.microsoft.com/visualstudio/roadmap-for-ai-in-visual-studio-october/
 https://devblogs.microsoft.com/visualstudio/unlock-vss-benefits-myvisualstudio/

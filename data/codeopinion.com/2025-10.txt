@@ -1,1 +1,2 @@
+https://codeopinion.com/authorization-domain-or-application-layer/
 https://codeopinion.com/your-api-errors-suck-heres-how-to-fix-them/
