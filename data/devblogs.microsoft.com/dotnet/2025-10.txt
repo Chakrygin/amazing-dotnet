@@ -4,3 +4,4 @@ https://devblogs.microsoft.com/dotnet/dotnet-10-rc-2/
 https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-october-2025-servicing-updates/
 https://devblogs.microsoft.com/dotnet/introducing-microsoft-agent-framework-preview/
 https://devblogs.microsoft.com/dotnet/preparing-for-dotnet-10-gc/
+https://devblogs.microsoft.com/dotnet/upgrading-to-microsoft-agent-framework-in-your-dotnet-ai-chat-app/
