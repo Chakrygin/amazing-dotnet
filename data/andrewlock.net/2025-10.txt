@@ -1,1 +1,2 @@
 https://andrewlock.net/adding-metadata-to-fallback-endpoints-in-aspnetcore/
+https://andrewlock.net/understanding-the-worst-dotnet-vulnerability-request-smuggling-and-cve-2025-55315/

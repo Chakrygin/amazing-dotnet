@@ -1,1 +1,2 @@
 https://blog.jetbrains.com/dotnet/2025/10/06/resharper-and-rider-2025-2-3/
+https://blog.jetbrains.com/dotnet/2025/10/28/resharper-and-rider-2025-1-4-2/
