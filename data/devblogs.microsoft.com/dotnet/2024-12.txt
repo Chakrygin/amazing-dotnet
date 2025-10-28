@@ -1,9 +1,0 @@
-https://devblogs.microsoft.com/dotnet/announcing-the-dotnet-community-toolkit-840/
-https://devblogs.microsoft.com/dotnet/critical-dotnet-install-links-are-changing/
-https://devblogs.microsoft.com/dotnet/dotnet-conf-2024-recap/
-https://devblogs.microsoft.com/dotnet/introducing-winforms-async-apis/
-https://devblogs.microsoft.com/dotnet/local-ai-models-with-dotnet-aspire/
-https://devblogs.microsoft.com/dotnet/top-dotnet-blogs-posts-of-2024/
-https://devblogs.microsoft.com/dotnet/top-dotnet-videos-live-streams-of-2024/
-https://devblogs.microsoft.com/dotnet/using-dependabot-to-manage-dotnet-sdk-updates/
-https://devblogs.microsoft.com/dotnet/vector-data-qdrant-ai-search-dotnet/
