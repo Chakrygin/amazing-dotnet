@@ -41,7 +41,7 @@ export class JetBrainsBlogScraper extends ScraperBase {
       .fetchPosts('.card_container a.card', ($, element) => {
 
         const image = element.find('img.wp-post-image').attr('src');
-        const title = element.find('.card__header h4').text();
+        const title = element.find('.card__body h4').text();
         const href = element.attr('href') ?? '';
         const date = element.find('.card__footer time.publish-date').attr('datetime');
 
