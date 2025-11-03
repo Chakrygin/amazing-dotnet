@@ -1,2 +1,0 @@
-https://blog.jetbrains.com/dotnet/2024/03/13/generate-unit-tests-using-ai/
-https://blog.jetbrains.com/dotnet/2024/03/26/collection-expressions-using-csharp-12-in-rider-and-resharper/
