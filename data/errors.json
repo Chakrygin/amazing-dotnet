@@ -1,7 +1,12 @@
 {
-  "JetBrains / dotInsights": {
-    "timestamp": "2025-11-05T14:51:29.837Z",
+  "JetBrains / Releases": {
+    "timestamp": "2025-11-05T16:55:08.290Z",
     "message": "Post is not valid: title is empty.",
     "counter": 1
+  },
+  "JetBrains / dotInsights": {
+    "timestamp": "2025-11-05T16:55:10.148Z",
+    "message": "Post is not valid: title is empty.",
+    "counter": 2
   }
 }
