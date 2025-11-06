@@ -1,4 +1,9 @@
 {
+  "BreslavLozhechkin": {
+    "timestamp": "2025-11-06T07:04:15.854Z",
+    "message": "connect ETIMEDOUT 89.208.221.5:443",
+    "counter": 1
+  },
   "JetBrains / Releases": {
     "timestamp": "2025-11-05T18:53:30.689Z",
     "message": "Post is not valid: title is empty.",
@@ -8,5 +13,10 @@
     "timestamp": "2025-11-05T16:55:10.148Z",
     "message": "Post is not valid: title is empty.",
     "counter": 2
+  },
+  "RadioDotNet": {
+    "timestamp": "2025-11-06T07:13:20.620Z",
+    "message": "connect ETIMEDOUT 89.208.221.5:443",
+    "counter": 1
   }
 }
