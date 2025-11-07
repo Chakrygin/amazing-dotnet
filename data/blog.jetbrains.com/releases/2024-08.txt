@@ -1,4 +1,0 @@
-https://blog.jetbrains.com/dotnet/2024/08/07/resharper-2024-2-release-candidate/
-https://blog.jetbrains.com/dotnet/2024/08/07/rider-2024-2-rc/
-https://blog.jetbrains.com/dotnet/2024/08/15/dotnet-tools-242-release/
-https://blog.jetbrains.com/dotnet/2024/08/15/rider-2024-2/
