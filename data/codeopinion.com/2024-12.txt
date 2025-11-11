@@ -1,2 +1,0 @@
-https://codeopinion.com/avoiding-a-legacy-codebase-keep-it-evergreen/
-https://codeopinion.com/net-framework-migration-to-net9/
