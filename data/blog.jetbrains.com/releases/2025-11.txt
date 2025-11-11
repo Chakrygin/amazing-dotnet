@@ -1,1 +1,4 @@
 https://blog.jetbrains.com/dotnet/2025/11/05/the-rider-2025-3-release-candidate/
+https://blog.jetbrains.com/dotnet/2025/11/11/resharper-2025-3-day-one-csharp-14-support-visual-studio-2026-compatible/
+https://blog.jetbrains.com/dotnet/2025/11/11/rider-2025-3-day-one-support-for-dotnet-10/
+https://blog.jetbrains.com/rscpp/2025/11/11/resharper-cpp-2025-3/

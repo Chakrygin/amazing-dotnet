@@ -1,1 +1,2 @@
 https://devblogs.microsoft.com/dotnet/copilot-studio-dotnet-wasm/
+https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-november-2025-servicing-updates/
