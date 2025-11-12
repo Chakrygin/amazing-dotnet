@@ -1,1 +1,2 @@
+https://devblogs.microsoft.com/visualstudio/introducing-copilot-auto-model-selection-preview/
 https://devblogs.microsoft.com/visualstudio/roadmap-for-ai-in-visual-studio-november/
