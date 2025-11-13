@@ -1,2 +1,3 @@
+https://devblogs.microsoft.com/visualstudio/a-first-look-at-the-all%e2%80%91new-ux-in-visual-studio-2026/
 https://devblogs.microsoft.com/visualstudio/introducing-copilot-auto-model-selection-preview/
 https://devblogs.microsoft.com/visualstudio/roadmap-for-ai-in-visual-studio-november/
