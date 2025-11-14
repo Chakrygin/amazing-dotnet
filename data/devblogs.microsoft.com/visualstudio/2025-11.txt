@@ -1,3 +1,4 @@
 https://devblogs.microsoft.com/visualstudio/a-first-look-at-the-all%e2%80%91new-ux-in-visual-studio-2026/
+https://devblogs.microsoft.com/visualstudio/azure-mcp-server-now-built-in-with-visual-studio-2026-a-new-era-for-agentic-workflows/
 https://devblogs.microsoft.com/visualstudio/introducing-copilot-auto-model-selection-preview/
 https://devblogs.microsoft.com/visualstudio/roadmap-for-ai-in-visual-studio-november/
