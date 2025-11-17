@@ -1,2 +1,3 @@
 https://www.meziantou.net/csharp-14-extension-members-enhancing-polyfill-libraries.htm
 https://www.meziantou.net/flushing-disk-caches-on-windows-a-comprehensive-guide.htm
+https://www.meziantou.net/optimize-guid-creation-performance-in-dotnet-applications.htm
