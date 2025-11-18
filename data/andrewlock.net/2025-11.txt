@@ -1,1 +1,2 @@
+https://andrewlock.net/companies-using-dotnet-need-to-suck-it-up-and-pay-for-support/
 https://andrewlock.net/exploring-dotnet-10-preview-features-9-easier-reflection-with-unsafeaccessortype/
