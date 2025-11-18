@@ -2,3 +2,4 @@ https://devblogs.microsoft.com/dotnet/copilot-studio-dotnet-wasm/
 https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-november-2025-servicing-updates/
 https://devblogs.microsoft.com/dotnet/introducing-csharp-14/
 https://devblogs.microsoft.com/dotnet/introducing-fsharp-10/
+https://devblogs.microsoft.com/dotnet/post-quantum-cryptography-in-dotnet/
