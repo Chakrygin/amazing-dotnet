@@ -1,0 +1,22 @@
+{
+  "AndrewLock": {
+    "timestamp": "2025-11-18T13:18:32.259Z",
+    "message": "Status code 500",
+    "counter": 1
+  },
+  "CodeMaze": {
+    "timestamp": "2025-11-18T13:18:35.138Z",
+    "message": "Request failed with status code 500",
+    "counter": 1
+  },
+  "Meziantou": {
+    "timestamp": "2025-11-18T13:18:46.426Z",
+    "message": "Request failed with status code 500",
+    "counter": 1
+  },
+  "StevenGiesel": {
+    "timestamp": "2025-11-18T13:18:49.250Z",
+    "message": "Request failed with status code 500",
+    "counter": 1
+  }
+}
