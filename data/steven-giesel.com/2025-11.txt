@@ -1,2 +1,3 @@
 https://steven-giesel.com/blogPost/63a50c08-ddba-4f23-9ce0-b47917e32875/capturing-console-output-in-xunitv3
+https://steven-giesel.com/blogPost/9c156006-3e54-45b9-8e0c-ea933e005983/no-more-public-partial-class-program-in-net-10
 https://steven-giesel.com/blogPost/b8dffa1a-84f7-49a2-9dad-3bf8f7f4e410/arraypool-benchmarks-we-have-a-problem
