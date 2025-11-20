@@ -5,3 +5,4 @@ https://devblogs.microsoft.com/dotnet/introducing-csharp-14/
 https://devblogs.microsoft.com/dotnet/introducing-fsharp-10/
 https://devblogs.microsoft.com/dotnet/modernizing-dotnet-with-github-copilot-agent-mode/
 https://devblogs.microsoft.com/dotnet/post-quantum-cryptography-in-dotnet/
+https://devblogs.microsoft.com/dotnet/reinventing-how-dotnet-builds-and-ships-again/
