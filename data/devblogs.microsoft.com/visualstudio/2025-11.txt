@@ -3,3 +3,4 @@ https://devblogs.microsoft.com/visualstudio/azure-mcp-server-now-built-in-with-v
 https://devblogs.microsoft.com/visualstudio/introducing-copilot-auto-model-selection-preview/
 https://devblogs.microsoft.com/visualstudio/roadmap-for-ai-in-visual-studio-november/
 https://devblogs.microsoft.com/visualstudio/spend-less-time-upgrading-more-time-coding-in-visual-studio-2026/
+https://devblogs.microsoft.com/visualstudio/visual-studio-built-for-the-speed-of-modern-development/
