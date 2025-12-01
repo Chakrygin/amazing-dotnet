@@ -1,7 +1,0 @@
-https://devblogs.microsoft.com/visualstudio/benchmarking-with-visual-studio-profiler/
-https://devblogs.microsoft.com/visualstudio/customizing-collapsed-text-indicators/
-https://devblogs.microsoft.com/visualstudio/enhanced-change-signature-in-c/
-https://devblogs.microsoft.com/visualstudio/iterate-across-multiple-files-more-efficiently-with-github-copilot-edits-preview/
-https://devblogs.microsoft.com/visualstudio/our-favorite-new-visual-studio-features-of-2024/
-https://devblogs.microsoft.com/visualstudio/unlocking-insights-with-meter-histogram-in-the-profiler/
-https://devblogs.microsoft.com/visualstudio/vs-live-2025-las-vegas/
