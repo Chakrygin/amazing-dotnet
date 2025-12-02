@@ -1,4 +1,0 @@
-https://codeopinion.com/design-patterns-for-building-resilient-systems/
-https://codeopinion.com/event-driven-architecture-issues-challenges/
-https://codeopinion.com/the-power-of-ubiquitous-language-in-domain-driven-design/
-https://codeopinion.com/vertical-slice-architecture-isnt-technical/
