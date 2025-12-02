@@ -1,1 +1,2 @@
+https://devblogs.microsoft.com/visualstudio/delegate-the-analysis-not-the-performance/
 https://devblogs.microsoft.com/visualstudio/upgrade-msvc-improve-c-build-performance-and-refactor-c-code-with-github-copilot/
