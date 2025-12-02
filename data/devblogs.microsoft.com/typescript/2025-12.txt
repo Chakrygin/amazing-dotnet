@@ -1,0 +1,1 @@
+https://devblogs.microsoft.com/typescript/progress-on-typescript-7-december-2025/
