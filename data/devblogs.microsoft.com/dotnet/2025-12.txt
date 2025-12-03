@@ -1,1 +1,2 @@
 https://devblogs.microsoft.com/dotnet/cross-platform-age-verification-dotnet-maui/
+https://devblogs.microsoft.com/dotnet/introducing-data-ingestion-building-blocks-preview/
