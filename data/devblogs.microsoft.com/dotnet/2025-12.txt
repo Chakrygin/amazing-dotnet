@@ -1,3 +1,4 @@
 https://devblogs.microsoft.com/dotnet/cross-platform-age-verification-dotnet-maui/
+https://devblogs.microsoft.com/dotnet/dotnet-10-networking-improvements/
 https://devblogs.microsoft.com/dotnet/dotnet-conf-2025-recap/
 https://devblogs.microsoft.com/dotnet/introducing-data-ingestion-building-blocks-preview/
