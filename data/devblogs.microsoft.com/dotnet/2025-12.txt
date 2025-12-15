@@ -3,5 +3,6 @@ https://devblogs.microsoft.com/dotnet/cross-platform-billing-dotnet-maui/
 https://devblogs.microsoft.com/dotnet/dotnet-10-networking-improvements/
 https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-december-2025-servicing-updates/
 https://devblogs.microsoft.com/dotnet/dotnet-conf-2025-recap/
+https://devblogs.microsoft.com/dotnet/how-to-build-ios-widgets-with-dotnet-maui/
 https://devblogs.microsoft.com/dotnet/introducing-data-ingestion-building-blocks-preview/
 https://devblogs.microsoft.com/dotnet/microsoft-learn-mcp-server-elevates-development/
