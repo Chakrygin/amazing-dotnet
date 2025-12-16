@@ -1,2 +1,3 @@
 https://codeopinion.com/aggregates-in-ddd-model-rules-not-relationships/
 https://codeopinion.com/domain-driven-design-misconceptions/
+https://codeopinion.com/why-microservices-debates-miss-the-point/
