@@ -6,3 +6,4 @@ https://devblogs.microsoft.com/dotnet/dotnet-conf-2025-recap/
 https://devblogs.microsoft.com/dotnet/how-to-build-ios-widgets-with-dotnet-maui/
 https://devblogs.microsoft.com/dotnet/introducing-data-ingestion-building-blocks-preview/
 https://devblogs.microsoft.com/dotnet/microsoft-learn-mcp-server-elevates-development/
+https://devblogs.microsoft.com/dotnet/microsoft-testing-platform-azure-retry/
