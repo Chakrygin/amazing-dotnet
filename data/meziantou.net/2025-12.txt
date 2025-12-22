@@ -1,2 +1,3 @@
 https://www.meziantou.net/creating-a-custom-msbuild-sdk-to-reduce-boilerplate-in-dotnet-projects.htm
 https://www.meziantou.net/resolving-overload-ambiguity-with-collection-expressions.htm
+https://www.meziantou.net/understanding-and-managing-mark-of-the-web-in-dotnet.htm
