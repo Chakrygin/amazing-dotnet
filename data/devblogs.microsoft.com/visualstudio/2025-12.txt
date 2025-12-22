@@ -1,5 +1,6 @@
 https://devblogs.microsoft.com/visualstudio/behind-the-scenes-of-the-visual-studio-feedback-system/
 https://devblogs.microsoft.com/visualstudio/delegate-the-analysis-not-the-performance/
+https://devblogs.microsoft.com/visualstudio/how-ai-fixed-my-procrastination/
 https://devblogs.microsoft.com/visualstudio/streamlining-your-git-workflow-with-visual-studio-2026/
 https://devblogs.microsoft.com/visualstudio/unlocking-the-power-of-web-with-copilot-chats-new-url-context/
 https://devblogs.microsoft.com/visualstudio/upgrade-msvc-improve-c-build-performance-and-refactor-c-code-with-github-copilot/
