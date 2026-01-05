@@ -1,5 +1,0 @@
-https://steven-giesel.com/blogPost/00443661-f75b-4694-852b-175b4a10d6c4/linq-mindmap-net-10-edition
-https://steven-giesel.com/blogPost/b6d22649-7fba-488b-b252-31efdb3686c5/c-14-nullconditional-assignment
-https://steven-giesel.com/blogPost/b705be3e-8d80-4de1-aefb-29c9262c49b7/ienumerable-vs-ienumerator-in-c-one-is-2x-faster-linkedin-edition
-https://steven-giesel.com/blogPost/d67df2e6-b8f7-4fd8-92ba-426e268b5216/validate-that-your-di-container-can-be-created-in-aspnet-core
-https://steven-giesel.com/blogPost/e4720110-d276-4591-adf2-bea2351de6da/managed-postgres-instance-neon
