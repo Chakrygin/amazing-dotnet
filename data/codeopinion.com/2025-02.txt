@@ -1,3 +1,0 @@
-https://codeopinion.com/distributed-systems-consistency-mistake-nobody-warns-you-about/
-https://codeopinion.com/multi-tenant-database-per-tenant-or-shared/
-https://codeopinion.com/persistence-ignorance-is-overrated/
