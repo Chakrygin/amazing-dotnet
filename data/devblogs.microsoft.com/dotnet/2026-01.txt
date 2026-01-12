@@ -1,2 +1,4 @@
 https://devblogs.microsoft.com/dotnet/generative-ai-with-large-language-models-in-dotnet-and-csharp/
+https://devblogs.microsoft.com/dotnet/how-to-build-android-widgets-with-dotnet-maui/
+https://devblogs.microsoft.com/dotnet/how-we-synchronize-dotnets-virtual-monorepo/
 https://devblogs.microsoft.com/dotnet/mongodb-efcore-provider-queryable-encryption-vector-search/
