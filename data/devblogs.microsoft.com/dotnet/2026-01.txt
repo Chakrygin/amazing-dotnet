@@ -1,3 +1,4 @@
+https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-january-2026-servicing-updates/
 https://devblogs.microsoft.com/dotnet/generative-ai-with-large-language-models-in-dotnet-and-csharp/
 https://devblogs.microsoft.com/dotnet/how-to-build-android-widgets-with-dotnet-maui/
 https://devblogs.microsoft.com/dotnet/how-we-synchronize-dotnets-virtual-monorepo/
