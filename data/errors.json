@@ -1,7 +1,22 @@
 {
+  "Habr / .NET": {
+    "timestamp": "2026-01-14T10:55:41.472Z",
+    "message": "Request failed with status code 502",
+    "counter": 1
+  },
+  "Habr / C#": {
+    "timestamp": "2026-01-14T10:55:48.303Z",
+    "message": "Request failed with status code 502",
+    "counter": 1
+  },
+  "Habr / F#": {
+    "timestamp": "2026-01-14T10:55:54.059Z",
+    "message": "Request failed with status code 502",
+    "counter": 1
+  },
   "StevenGiesel": {
-    "timestamp": "2026-01-13T10:54:47.111Z",
+    "timestamp": "2026-01-14T10:56:00.507Z",
     "message": "400: Bad Request: wrong type of the web page content",
-    "counter": 3
+    "counter": 4
   }
 }
