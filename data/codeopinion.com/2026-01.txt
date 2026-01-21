@@ -1,1 +1,2 @@
 https://codeopinion.com/context-is-the-bottleneck-in-software-development/
+https://codeopinion.com/you-cant-future-proof-software-architecture/
