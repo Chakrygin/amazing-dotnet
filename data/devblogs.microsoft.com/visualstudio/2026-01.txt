@@ -1,2 +1,3 @@
 https://devblogs.microsoft.com/visualstudio/copilot-memories/
+https://devblogs.microsoft.com/visualstudio/visual-studio-january-update-enhanced-editor-experience/
 https://devblogs.microsoft.com/visualstudio/vs-live-2026-immersive-learning-for-vs2026/
