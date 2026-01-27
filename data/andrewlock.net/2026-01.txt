@@ -1,3 +1,4 @@
+https://andrewlock.net/creating-and-consuming-metrics-with-system-diagnostics-metrics-apis/
 https://andrewlock.net/making-foreach-on-an-ienumerable-allocation-free-using-reflection-and-dynamic-methods/
 https://andrewlock.net/updates-to-netescapaades-enumgenerators-new-apis-and-system-memory-support/
 https://andrewlock.net/windows-explorer-replacement-filepilot-is-awesome/
