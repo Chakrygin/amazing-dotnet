@@ -1,2 +1,3 @@
 https://blog.jetbrains.com/dotnet/2026/01/22/resharper-2026-1-early-access-program/
 https://blog.jetbrains.com/dotnet/2026/01/22/rider-2026-1-early-access-program-start/
+https://blog.jetbrains.com/dotnet/2026/01/29/resharper-and-rider-2025-3-2/
