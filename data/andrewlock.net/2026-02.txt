@@ -1,0 +1,1 @@
+https://andrewlock.net/creating-strongly-typed-metics-with-a-source-generator/
