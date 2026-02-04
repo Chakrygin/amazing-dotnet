@@ -1,14 +1,4 @@
 {
-  "BreslavLozhechkin": {
-    "timestamp": "2026-02-04T15:25:13.961Z",
-    "message": "Request failed with status code 404",
-    "counter": 1
-  },
-  "RadioDotNet": {
-    "timestamp": "2026-02-04T15:25:45.201Z",
-    "message": "Request failed with status code 404",
-    "counter": 1
-  },
   "StevenGiesel": {
     "timestamp": "2026-01-20T17:02:51.964Z",
     "message": "400: Bad Request: wrong type of the web page content",
