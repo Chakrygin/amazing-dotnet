@@ -1,1 +1,2 @@
 https://devblogs.microsoft.com/visualstudio/performance-improvements-to-mef-based-editor-productivity-extensions/
+https://devblogs.microsoft.com/visualstudio/roadmap-for-ai-in-visual-studio-february/
