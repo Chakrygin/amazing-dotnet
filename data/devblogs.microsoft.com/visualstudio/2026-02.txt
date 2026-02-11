@@ -1,2 +1,3 @@
 https://devblogs.microsoft.com/visualstudio/performance-improvements-to-mef-based-editor-productivity-extensions/
 https://devblogs.microsoft.com/visualstudio/roadmap-for-ai-in-visual-studio-february/
+https://devblogs.microsoft.com/visualstudio/unlock-language-specific-rich-symbol-context-using-new-find_symbol-tool/
