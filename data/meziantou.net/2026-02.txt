@@ -1,1 +1,2 @@
 https://www.meziantou.net/getting-more-information-in-msbuild-binlogs-with-property-tracking.htm
+https://www.meziantou.net/reserved-filenames-on-windows-con-prn-aux-nul.htm
