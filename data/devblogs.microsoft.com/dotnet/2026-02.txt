@@ -3,3 +3,4 @@ https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-february-2026-
 https://devblogs.microsoft.com/dotnet/dotnet-framework-3-5-moves-to-standalone-deployment-in-new-versions-of-windows/
 https://devblogs.microsoft.com/dotnet/github-copilot-testing-for-dotnet-available-in-visual-studio/
 https://devblogs.microsoft.com/dotnet/the-dongle-died-at-midnight/
+https://devblogs.microsoft.com/dotnet/vector-data-in-dotnet-building-blocks-for-ai-part-2/
