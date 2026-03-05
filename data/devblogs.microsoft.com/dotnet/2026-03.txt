@@ -1,0 +1,1 @@
+https://devblogs.microsoft.com/dotnet/release-v10-of-the-official-mcp-csharp-sdk/
