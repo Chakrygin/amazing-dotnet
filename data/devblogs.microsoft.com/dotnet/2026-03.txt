@@ -1,4 +1,5 @@
 https://devblogs.microsoft.com/dotnet/dotnet-11-preview-2/
 https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-march-2026-servicing-updates/
 https://devblogs.microsoft.com/dotnet/extend-your-coding-agent-with-dotnet-skills/
+https://devblogs.microsoft.com/dotnet/modernize-dotnet-anywhere-with-ghcp/
 https://devblogs.microsoft.com/dotnet/release-v10-of-the-official-mcp-csharp-sdk/
