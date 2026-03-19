@@ -1,3 +1,4 @@
+https://devblogs.microsoft.com/dotnet/accelerating-dotnet-maui-with-ai-agents/
 https://devblogs.microsoft.com/dotnet/dotnet-11-preview-2/
 https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-march-2026-servicing-updates/
 https://devblogs.microsoft.com/dotnet/extend-your-coding-agent-with-dotnet-skills/
