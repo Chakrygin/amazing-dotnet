@@ -1,1 +1,3 @@
 https://blog.jetbrains.com/dotnet/2026/03/05/resharper-for-visual-studio-code-cursor-and-compatible-editors-is-out/
+https://blog.jetbrains.com/dotnet/2026/03/20/resharper-2026-1-release-candidate/
+https://blog.jetbrains.com/dotnet/2026/03/20/rider-2026-1-release-candidate/
