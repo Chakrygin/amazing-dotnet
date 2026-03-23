@@ -6,3 +6,4 @@ https://devblogs.microsoft.com/dotnet/modernize-dotnet-anywhere-with-ghcp/
 https://devblogs.microsoft.com/dotnet/pin-clustering-in-dotnet-maui-maps/
 https://devblogs.microsoft.com/dotnet/release-v10-of-the-official-mcp-csharp-sdk/
 https://devblogs.microsoft.com/dotnet/rt-assistant-a-realtime-multiagent-voice-bot-using-dotnet-and-open-ai-api/
+https://devblogs.microsoft.com/dotnet/ten-months-with-cca-in-dotnet-runtime/
