@@ -1,2 +1,3 @@
 https://codeopinion.com/coding-isnt-the-hard-part/
+https://codeopinion.com/is-event-driven-architecture-overkill-for-most-apps/
 https://codeopinion.com/vertical-slices-doesnt-mean-share-nothing/
