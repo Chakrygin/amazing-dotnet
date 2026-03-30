@@ -1,3 +1,4 @@
 https://www.meziantou.net/creating-case-sensitive-folders-on-windows-using-csharp.htm
 https://www.meziantou.net/implementing-rfc-compliant-http-caching-for-httpclient-in-dotnet.htm
 https://www.meziantou.net/split-dotnet-test-projects-into-shards-with-meziantou-shardedtest.htm
+https://www.meziantou.net/url-pattern-matching-in-dotnet.htm
