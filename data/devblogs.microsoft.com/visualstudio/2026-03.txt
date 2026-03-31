@@ -1,3 +1,4 @@
 https://devblogs.microsoft.com/visualstudio/syncfusion-for-visual-studio/
 https://devblogs.microsoft.com/visualstudio/visual-studio-dev-essentials-free-practical-tools-for-every-developer/
+https://devblogs.microsoft.com/visualstudio/visual-studio-march-update-build-your-own-custom-agents/
 https://devblogs.microsoft.com/visualstudio/vss-newsletter-opt-in/
