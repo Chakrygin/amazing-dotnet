@@ -1,1 +1,2 @@
+https://devblogs.microsoft.com/dotnet/aspnet-core-2-3-end-of-support/
 https://devblogs.microsoft.com/dotnet/csharp-15-union-types/
