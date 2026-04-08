@@ -1,7 +1,0 @@
-{
-  "CodeOpinion": {
-    "timestamp": "2026-04-07T23:20:39.548Z",
-    "message": "Hostname/IP does not match certificate's altnames: Host: codeopinion.com. is not in the cert's altnames: DNS:*.ingress-comporellon.ewp.live, DNS:ingress-comporellon.ewp.live",
-    "counter": 2
-  }
-}
