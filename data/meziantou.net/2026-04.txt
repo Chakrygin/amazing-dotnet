@@ -1,0 +1,1 @@
+https://www.meziantou.net/suppressing-roslyn-analyzer-warnings-programmatically-using-diagnosticsuppressor.htm
