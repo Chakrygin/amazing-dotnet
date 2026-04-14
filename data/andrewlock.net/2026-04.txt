@@ -1,2 +1,3 @@
 https://andrewlock.net/configuring-contextual-options-with-microsoft-extensions-options-contextual/
 https://andrewlock.net/running-ai-agents-safely-in-a-microvm-using-docker-sandbox/
+https://andrewlock.net/running-ai-agents-with-customized-templates-in-docker-sandbox/
