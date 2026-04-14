@@ -6,6 +6,7 @@ export class RadioDotNetScraper extends MaveScraperBase {
     super('radiodotnet', {
       name: 'RadioDotNet',
       title: 'RadioDotNet',
+      image: 'https://avatars.yandex.net/get-music-content/4406810/d5e4b859.a.12041961-2/600x600',
       storage: 'https://cdn.mave.digital'
     });
   }
