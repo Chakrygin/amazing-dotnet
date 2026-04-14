@@ -6,7 +6,7 @@ export class BreslavLozhechkinScraper extends MaveScraperBase {
     super('breslav-lozhechkin', {
       name: 'BreslavLozhechkin',
       title: 'Бреслав и Ложечкин',
-      storage: 'https://ru-msk-dr3-1.store.cloud.mts.ru/mave'
+      storage: 'https://cdn.mave.digital'
     });
   }
 

@@ -6,7 +6,7 @@ export class RadioDotNetScraper extends MaveScraperBase {
     super('radiodotnet', {
       name: 'RadioDotNet',
       title: 'RadioDotNet',
-      storage: 'https://ru-msk-dr3-1.store.cloud.mts.ru/mave'
+      storage: 'https://cdn.mave.digital'
     });
   }
 
