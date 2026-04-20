@@ -1,1 +1,2 @@
+https://www.meziantou.net/evaluating-cron-and-rrule-expressions-in-dotnet.htm
 https://www.meziantou.net/suppressing-roslyn-analyzer-warnings-programmatically-using-diagnosticsuppressor.htm
