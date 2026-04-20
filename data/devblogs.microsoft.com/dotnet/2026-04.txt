@@ -2,4 +2,5 @@ https://devblogs.microsoft.com/dotnet/aspnet-core-2-3-end-of-support/
 https://devblogs.microsoft.com/dotnet/csharp-15-union-types/
 https://devblogs.microsoft.com/dotnet/dotnet-11-preview-3/
 https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-april-2026-servicing-updates/
+https://devblogs.microsoft.com/dotnet/writing-nodejs-addons-with-dotnet-native-aot/
 https://devblogs.microsoft.com/dotnet/your-migrations-source-of-truth-the-modernization-assessment/
