@@ -1,2 +1,3 @@
+https://codeopinion.com/just-use-postgres-as-a-queue/
 https://codeopinion.com/testing-needs-a-seam-not-an-interface/
 https://codeopinion.com/why-clean-code-is-killing-your-velocity/
