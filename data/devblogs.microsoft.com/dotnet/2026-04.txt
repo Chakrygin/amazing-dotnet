@@ -3,5 +3,6 @@ https://devblogs.microsoft.com/dotnet/csharp-15-union-types/
 https://devblogs.microsoft.com/dotnet/dotnet-10-0-7-oob-security-update/
 https://devblogs.microsoft.com/dotnet/dotnet-11-preview-3/
 https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-april-2026-servicing-updates/
+https://devblogs.microsoft.com/dotnet/whats-new-for-dotnet-in-ubuntu-2604/
 https://devblogs.microsoft.com/dotnet/writing-nodejs-addons-with-dotnet-native-aot/
 https://devblogs.microsoft.com/dotnet/your-migrations-source-of-truth-the-modernization-assessment/
