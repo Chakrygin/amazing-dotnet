@@ -1,6 +1,7 @@
 https://devblogs.microsoft.com/visualstudio/azure-mcp-tools-now-ship-built-into-visual-studio-2022-no-extension-required/
 https://devblogs.microsoft.com/visualstudio/bookmark-studio-evolving-bookmarks-in-visual-studio/
 https://devblogs.microsoft.com/visualstudio/from-ai-to-net-20-vs-live-las-vegas-sessions-you-can-watch-now/
+https://devblogs.microsoft.com/visualstudio/sdk-style-support-for-extension-projects/
 https://devblogs.microsoft.com/visualstudio/stop-hunting-bugs-meet-the-new-visual-studio-debugger-agent/
 https://devblogs.microsoft.com/visualstudio/take-full-control-of-your-floating-windows-in-visual-studio/
 https://devblogs.microsoft.com/visualstudio/visual-studio-april-update-cloud-agent-integration/
