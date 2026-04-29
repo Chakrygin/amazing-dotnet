@@ -4,7 +4,9 @@ https://devblogs.microsoft.com/dotnet/csharp-15-union-types/
 https://devblogs.microsoft.com/dotnet/dotnet-10-0-7-oob-security-update/
 https://devblogs.microsoft.com/dotnet/dotnet-11-preview-3/
 https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-april-2026-servicing-updates/
+https://devblogs.microsoft.com/dotnet/governing-mcp-tool-calls-in-dotnet-with-the-agent-governance-toolkit/
 https://devblogs.microsoft.com/dotnet/high-performance-distributed-caching-dotnet-postgres-azure/
+https://devblogs.microsoft.com/dotnet/vs-test-is-removing-its-newtonsoft-json-dependency/
 https://devblogs.microsoft.com/dotnet/welcome-to-skia-sharp-40-preview1/
 https://devblogs.microsoft.com/dotnet/whats-new-for-dotnet-in-ubuntu-2604/
 https://devblogs.microsoft.com/dotnet/writing-nodejs-addons-with-dotnet-native-aot/
