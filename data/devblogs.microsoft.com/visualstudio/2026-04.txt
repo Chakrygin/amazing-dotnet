@@ -4,4 +4,5 @@ https://devblogs.microsoft.com/visualstudio/from-ai-to-net-20-vs-live-las-vegas-
 https://devblogs.microsoft.com/visualstudio/sdk-style-support-for-extension-projects/
 https://devblogs.microsoft.com/visualstudio/stop-hunting-bugs-meet-the-new-visual-studio-debugger-agent/
 https://devblogs.microsoft.com/visualstudio/take-full-control-of-your-floating-windows-in-visual-studio/
+https://devblogs.microsoft.com/visualstudio/typescript-7-beta-now-enabled-by-default-in-visual-studio-2026-18-6-insiders-3/
 https://devblogs.microsoft.com/visualstudio/visual-studio-april-update-cloud-agent-integration/

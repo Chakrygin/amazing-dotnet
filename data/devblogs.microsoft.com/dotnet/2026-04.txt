@@ -1,5 +1,6 @@
 https://devblogs.microsoft.com/dotnet/api-versioning-in-dotnet-10-applications/
 https://devblogs.microsoft.com/dotnet/aspnet-core-2-3-end-of-support/
+https://devblogs.microsoft.com/dotnet/building-ai-conference-app-dotnet-composable-stack/
 https://devblogs.microsoft.com/dotnet/csharp-15-union-types/
 https://devblogs.microsoft.com/dotnet/dotnet-10-0-7-oob-security-update/
 https://devblogs.microsoft.com/dotnet/dotnet-11-preview-3/
