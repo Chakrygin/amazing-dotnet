@@ -1,0 +1,1 @@
+https://www.meziantou.net/disable-http-caching-by-default-in-asp-net-core-apis.htm
