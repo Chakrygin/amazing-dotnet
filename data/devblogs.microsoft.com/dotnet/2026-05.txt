@@ -1,1 +1,2 @@
+https://devblogs.microsoft.com/dotnet/durable-workflows-in-microsoft-agent-framework/
 https://devblogs.microsoft.com/dotnet/microsoft-agent-framework-building-blocks-for-ai-part-3/
