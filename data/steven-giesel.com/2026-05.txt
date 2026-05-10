@@ -1,0 +1,1 @@
+https://steven-giesel.com/blogPost/00fcb870-6bf7-4f97-824f-8eab1b8838be/backgroundservice-exceptions-now-propagate-in-net-11
