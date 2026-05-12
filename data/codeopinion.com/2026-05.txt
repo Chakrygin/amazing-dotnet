@@ -1,1 +1,2 @@
 https://codeopinion.com/debugging-event-driven-systems-5-problems-teams-create/
+https://codeopinion.com/why-sagas-feel-broken/
