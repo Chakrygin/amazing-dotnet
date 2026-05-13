@@ -1,6 +1,0 @@
-https://devblogs.microsoft.com/visualstudio/better-models-smarter-defaults-claude-sonnet-4-gpt-4-1-and-more-control-in-visual-studio/
-https://devblogs.microsoft.com/visualstudio/cloud-academy-benefit-for-visual-studio-subscribers/
-https://devblogs.microsoft.com/visualstudio/extension-manager-updates-in-visual-studio/
-https://devblogs.microsoft.com/visualstudio/how-to-filter-c-build-insights-by-project/
-https://devblogs.microsoft.com/visualstudio/inside-access-join-us-at-vs-live-redmond-for-a-week-of-deep-developer-learning/
-https://devblogs.microsoft.com/visualstudio/next-edit-suggestions-available-in-visual-studio-github-copilot/
