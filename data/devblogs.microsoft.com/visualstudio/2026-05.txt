@@ -1,1 +1,2 @@
 https://devblogs.microsoft.com/visualstudio/agent-skills-in-visual-studio/
+https://devblogs.microsoft.com/visualstudio/vslive-microsoft-ai-hackathon-2026-send-your-team-home-with-working-code/
