@@ -1,1 +1,2 @@
 https://steven-giesel.com/blogPost/00fcb870-6bf7-4f97-824f-8eab1b8838be/backgroundservice-exceptions-now-propagate-in-net-11
+https://steven-giesel.com/blogPost/6066abb6-640a-4225-ac33-3f4d5a1a1d16/zstandard-compression-in-net-11
