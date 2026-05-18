@@ -1,2 +1,3 @@
+https://www.meziantou.net/blazor-how-to-set-a-base-component-for-all-razor-components-using-viewstart-razo.htm
 https://www.meziantou.net/disable-http-caching-by-default-in-asp-net-core-apis.htm
 https://www.meziantou.net/propagating-opentelemetry-context-in-dotnet.htm
