@@ -4,4 +4,5 @@ https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-may-2026-servi
 https://devblogs.microsoft.com/dotnet/dotnet-maui-moves-to-coreclr-in-dotnet-11/
 https://devblogs.microsoft.com/dotnet/durable-workflows-in-microsoft-agent-framework/
 https://devblogs.microsoft.com/dotnet/microsoft-agent-framework-building-blocks-for-ai-part-3/
+https://devblogs.microsoft.com/dotnet/nuget-package-pruning-in-dotnet-10/
 https://devblogs.microsoft.com/dotnet/process-api-improvements-in-dotnet-11/
