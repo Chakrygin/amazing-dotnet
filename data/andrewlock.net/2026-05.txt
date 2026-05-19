@@ -1,1 +1,2 @@
 https://andrewlock.net/exploring-the-dotnet-11-preview-1-running-background-tasks-in-blazor-with-web-workers/
+https://andrewlock.net/exploring-the-dotnet-11-preview-2-dotnet-gets-union-types/
