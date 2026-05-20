@@ -1,2 +1,3 @@
 https://codeopinion.com/debugging-event-driven-systems-5-problems-teams-create/
+https://codeopinion.com/scaling-software-architecture-without-overengineering/
 https://codeopinion.com/why-sagas-feel-broken/
