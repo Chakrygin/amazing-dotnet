@@ -1,7 +1,9 @@
 https://devblogs.microsoft.com/dotnet/announcing-agent-governance-toolkit-mcp-extensions-for-dotnet/
 https://devblogs.microsoft.com/dotnet/copilot-studio-dotnet-10-migration/
+https://devblogs.microsoft.com/dotnet/doing-more-with-github-copilot/
 https://devblogs.microsoft.com/dotnet/dotnet-11-preview-4/
 https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-may-2026-servicing-updates/
+https://devblogs.microsoft.com/dotnet/dotnet-maui-material-3/
 https://devblogs.microsoft.com/dotnet/dotnet-maui-moves-to-coreclr-in-dotnet-11/
 https://devblogs.microsoft.com/dotnet/durable-workflows-in-microsoft-agent-framework/
 https://devblogs.microsoft.com/dotnet/improving-csharp-memory-safety/

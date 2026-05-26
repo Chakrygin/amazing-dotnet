@@ -1,3 +1,4 @@
 https://devblogs.microsoft.com/visualstudio/agent-skills-in-visual-studio/
 https://devblogs.microsoft.com/visualstudio/plan-before-you-build-introducing-the-plan-agent-in-visual-studio/
+https://devblogs.microsoft.com/visualstudio/visual-studio-may-update-plan-review-refine/
 https://devblogs.microsoft.com/visualstudio/vslive-microsoft-ai-hackathon-2026-send-your-team-home-with-working-code/
