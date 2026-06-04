@@ -96,15 +96,13 @@ export class CodeOpinionScraper extends ScraperBase {
         break;
       }
 
-      if (line.startsWith('<p>') && line.endsWith('</p>')) {
-        line = stripHtml(line).trim();
+      line = stripHtml(line).trim();
 
-        if (line) {
-          description.push(line);
+      if (line) {
+        description.push(line);
 
-          if (description.length >= 3) {
-            break;
-          }
+        if (description.length >= 3) {
+          break;
         }
       }
     }
