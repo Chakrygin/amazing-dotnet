@@ -6,6 +6,7 @@ import { ScraperBase } from '@core/scrapers';
 
 const Categories = {
   'how-tos': 'How-To\'s',
+  'net-tools': '.NET Tools',
   'releases': 'Releases',
 };
 
