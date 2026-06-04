@@ -3,5 +3,20 @@
     "timestamp": "2026-06-04T00:16:46.974Z",
     "message": "Post is not valid: description is empty.",
     "counter": 9
+  },
+  "JetBrains / How-To's": {
+    "timestamp": "2026-06-04T20:36:56.715Z",
+    "message": "Request failed with status code 403",
+    "counter": 1
+  },
+  "JetBrains / Releases": {
+    "timestamp": "2026-06-04T20:36:56.722Z",
+    "message": "Request failed with status code 403",
+    "counter": 1
+  },
+  "JetBrains / dotInsights": {
+    "timestamp": "2026-06-04T20:36:56.727Z",
+    "message": "Request failed with status code 403",
+    "counter": 1
   }
 }
