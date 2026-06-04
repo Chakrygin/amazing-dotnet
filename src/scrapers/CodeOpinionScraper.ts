@@ -51,34 +51,13 @@ export class CodeOpinionScraper extends ScraperBase {
 
   private getImage(lines: readonly string[]): string | undefined {
     for (const line of lines) {
-      if (line.indexOf('container-youtube') > 0 || line.indexOf('nv-iframe-embed') > 0) {
-        if (line.indexOf('container-youtube') > 0) {
-          const search = 'href="https://www.youtube.com/watch?v=';
-          const startIndex = line.indexOf(search);
-          if (startIndex > 0) {
-            const endIndex = line.indexOf('"', startIndex + search.length);
-            if (endIndex > startIndex) {
-              const id = line.substring(startIndex + search.length, endIndex);
-              return `https://img.youtube.com/vi/${id}/maxresdefault.jpg`;
-            }
-          }
-        }
-        else if (line.indexOf('nv-iframe-embed') > 0) {
-          const search = 'src="https://www.youtube.com/embed/';
-          const startIndex = line.indexOf(search);
-          if (startIndex > 0) {
-            const endIndex = line.indexOf('"', startIndex + search.length);
-            if (endIndex > startIndex) {
-              let id = line.substring(startIndex + search.length, endIndex);
-
-              const splitIndex = id.indexOf('?');
-              if (splitIndex > 0) {
-                id = id.substring(0, splitIndex);
-              }
-
-              return `https://img.youtube.com/vi/${id}/maxresdefault.jpg`;
-            }
-          }
+      const search = 'https://youtu.be/';
+      const startIndex = line.indexOf(search);
+      if (startIndex > 0) {
+        const endIndex = line.indexOf('"', startIndex + search.length);
+        if (endIndex > startIndex) {
+          const id = line.substring(startIndex + search.length, endIndex);
+          return `https://img.youtube.com/vi/${id}/maxresdefault.jpg`;
         }
       }
     }
