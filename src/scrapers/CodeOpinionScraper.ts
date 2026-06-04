@@ -50,8 +50,8 @@ export class CodeOpinionScraper extends ScraperBase {
   }
 
   private getImage(lines: readonly string[]): string | undefined {
+    const search = 'https://youtu.be/';
     for (const line of lines) {
-      const search = 'https://youtu.be/';
       const startIndex = line.indexOf(search);
       if (startIndex > 0) {
         const endIndex = line.indexOf('"', startIndex + search.length);
