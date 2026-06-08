@@ -1,0 +1,1 @@
+https://steven-giesel.com/blogPost/d4401fd0-805a-4703-9d9e-5fe3b57c25ea/ef-core-11-makes-your-split-queries-faster
