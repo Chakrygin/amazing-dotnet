@@ -1,1 +1,2 @@
 https://devblogs.microsoft.com/commandline/announcing-intelligent-terminal-version-0-1/
+https://devblogs.microsoft.com/commandline/powertoys-0-100-is-here-new-shortcut-guide-command-palette-improvements-and-much-more/
