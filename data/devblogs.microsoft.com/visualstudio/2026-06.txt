@@ -1,1 +1,2 @@
+https://devblogs.microsoft.com/visualstudio/review-pull-requests-without-leaving-visual-studio/
 https://devblogs.microsoft.com/visualstudio/whats-coming-next-in-visual-studio-our-microsoft-build-2026-announcements/
