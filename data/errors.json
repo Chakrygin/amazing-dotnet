@@ -1,0 +1,17 @@
+{
+  "JetBrains / How-To's": {
+    "timestamp": "2026-06-16T17:36:07.120Z",
+    "message": "Request failed with status code 403",
+    "counter": 1
+  },
+  "JetBrains / Releases": {
+    "timestamp": "2026-06-16T17:36:07.124Z",
+    "message": "Request failed with status code 403",
+    "counter": 1
+  },
+  "JetBrains / dotInsights": {
+    "timestamp": "2026-06-16T17:36:07.128Z",
+    "message": "Request failed with status code 403",
+    "counter": 1
+  }
+}
