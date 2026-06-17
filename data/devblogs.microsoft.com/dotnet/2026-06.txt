@@ -2,3 +2,4 @@ https://devblogs.microsoft.com/dotnet/dotnet-11-preview-5/
 https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-june-2026-servicing-updates/
 https://devblogs.microsoft.com/dotnet/dotnet-at-microsoft-build-2026/
 https://devblogs.microsoft.com/dotnet/join-us-for-dotnet-day-on-agentic-modernization-livestream/
+https://devblogs.microsoft.com/dotnet/msbuild-binlog-mcp-server/
