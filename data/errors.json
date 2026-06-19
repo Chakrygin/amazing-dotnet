@@ -1,17 +1,7 @@
 {
-  "JetBrains / How-To's": {
-    "timestamp": "2026-06-19T11:05:44.596Z",
-    "message": "Request failed with status code 403",
-    "counter": 1
-  },
-  "JetBrains / Releases": {
-    "timestamp": "2026-06-19T11:05:44.602Z",
-    "message": "Request failed with status code 403",
-    "counter": 1
-  },
-  "JetBrains / dotInsights": {
-    "timestamp": "2026-06-19T11:05:44.607Z",
-    "message": "Request failed with status code 403",
+  "StevenGiesel": {
+    "timestamp": "2026-06-19T15:51:32.122Z",
+    "message": "Failed to parse html page. No posts found.",
     "counter": 1
   }
 }
