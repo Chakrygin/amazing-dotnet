@@ -16,7 +16,7 @@ export class StevenGieselScraper extends ScraperBase {
   protected override fetchPosts(): AsyncGenerator<Post> {
     return this
       .fromHtmlPage(this.StevenGiesel.href)
-      .fetchPosts('main .content article .blog-card', ($, element) => {
+      .fetchPosts('main article .blog-card', ($, element) => {
 
         const image = element.find('.meta .photo img').attr('src') ?? '';
         const title = element.find('.description h4.card-title').text();
