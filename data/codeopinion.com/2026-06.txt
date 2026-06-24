@@ -1,3 +1,4 @@
 https://codeopinion.com/event-driven-architecture-mistakes/
 https://codeopinion.com/modular-monolith-boundaries/
+https://codeopinion.com/resilience-patterns-can-make-your-system-less-resilient/
 https://codeopinion.com/solving-the-god-object-problem-with-shared-identity/
