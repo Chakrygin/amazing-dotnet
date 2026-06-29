@@ -1,3 +1,4 @@
 https://devblogs.microsoft.com/commandline/announcing-intelligent-terminal-version-0-1/
 https://devblogs.microsoft.com/commandline/intelligent-terminal-0-1-1-is-here-bash-support-new-slash-commands-and-customization/
 https://devblogs.microsoft.com/commandline/powertoys-0-100-is-here-new-shortcut-guide-command-palette-improvements-and-much-more/
+https://devblogs.microsoft.com/commandline/wsl-container-is-now-available-for-public-preview/
