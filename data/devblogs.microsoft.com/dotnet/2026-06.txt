@@ -3,6 +3,7 @@ https://devblogs.microsoft.com/dotnet/dotnet-8-9-end-of-support/
 https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-june-2026-servicing-updates/
 https://devblogs.microsoft.com/dotnet/dotnet-at-microsoft-build-2026/
 https://devblogs.microsoft.com/dotnet/join-us-for-dotnet-day-on-agentic-modernization-livestream/
+https://devblogs.microsoft.com/dotnet/mcp-build-diagnostics-workflows/
 https://devblogs.microsoft.com/dotnet/msbuild-binlog-mcp-server/
 https://devblogs.microsoft.com/dotnet/packaging-dotnet-apps-winapp/
 https://devblogs.microsoft.com/dotnet/skiasharp-4-0-stable/
