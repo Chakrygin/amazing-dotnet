@@ -1,0 +1,1 @@
+https://www.meziantou.net/number-comparison-in-dotnet-equals-and-ieee-754-edge-cases.htm
