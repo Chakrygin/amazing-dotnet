@@ -1,0 +1,1 @@
+https://devblogs.microsoft.com/dotnet/modernize-dotnet-in-github-copilot-app/
