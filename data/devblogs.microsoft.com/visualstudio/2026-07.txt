@@ -1,2 +1,3 @@
+https://devblogs.microsoft.com/visualstudio/built-in-agent-skills-in-visual-studio/
 https://devblogs.microsoft.com/visualstudio/the-visual-studio-dev-test-benefit-freedom-to-build-test-and-experiment-in-azure/
 https://devblogs.microsoft.com/visualstudio/visual-studio-june-update-track-your-usage-trust-your-tools/
