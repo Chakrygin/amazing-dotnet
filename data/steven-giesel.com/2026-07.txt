@@ -1,2 +1,3 @@
 https://steven-giesel.com/blogPost/1cfa82eb-1108-4355-8815-615b094bf9ec/set-loglevel-of-blazor
+https://steven-giesel.com/blogPost/605274d2-719b-4b1f-b0d5-3ad9001d9b56/adding-static-getter-thanks-to-extensions
 https://steven-giesel.com/blogPost/bf118bb2-0ea4-45ef-babb-26f67bfb0523/linkedin-what-a-dumbster-fire
