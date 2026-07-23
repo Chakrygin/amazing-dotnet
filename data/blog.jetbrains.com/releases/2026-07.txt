@@ -2,3 +2,4 @@ https://blog.jetbrains.com/dotnet/2026/07/13/rs-vsc-2026-2/
 https://blog.jetbrains.com/dotnet/2026/07/15/rider-2026-2-release-candidate-is-out/
 https://blog.jetbrains.com/dotnet/2026/07/22/resharper-2026-2-release/
 https://blog.jetbrains.com/dotnet/2026/07/22/rider-2026-2-release/
+https://blog.jetbrains.com/rscpp/2026/07/22/resharper-cpp-2026-2-cpp-26-reflection-ispc-language-support-and-more/
